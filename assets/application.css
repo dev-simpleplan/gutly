@@ -3,6 +3,9 @@
     --manrope: 'Manrope', sans-serif;
     --moret: 'Moret';
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     padding: 0;
@@ -14,32 +17,87 @@ body{
     text-rendering: optimizeLegibility;
     text-rendering: optimizeLegibility !important;
 }
-@font-face {
-    font-family: 'Dexotick By Dhan Studio';
-    src: url('DexotickByDhanStudio.woff2') format('woff2'),
-        url('DexotickByDhanStudio.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+*{
+    margin: 0;
+    padding: 0;
 }
-
-@font-face {
-    font-family: 'Dexotick Underlines';
-    src: url('DexotickUnderlines.woff2') format('woff2'),
-        url('DexotickUnderlines.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+h1, h2, h3, h4, h5, h6, p, ul, li, a{
+    margin: 0;
+    padding: 0;
 }
-@font-face {
-    font-family: 'Moret';
-    src: url('Moret-Semibold.woff2') format('woff2'),
-        url('Moret-Semibold.woff') format('woff');
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--moret);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: inherit;
+}
+button{
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+h1{
+    font-size: 160px;
+    font-style: normal;
     font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+    line-height: 80%;
+    text-transform: uppercase;
 }
-
+h2{
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 80%; /* 102.4px */
+    text-transform: uppercase;
+}
+h3{
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0.64px;
+}
+h4{
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 91%; /* 50.96px */
+    text-transform: uppercase;
+}
+h5{
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 103%;
+    letter-spacing: 0.4px;
+}
+h6{
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 94%; /* 30.08px */
+}
+p{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.16px;
+}
+p.small{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.14px;
+}
 /* Custom Class */
 .pad-180{
     padding-top: 90px;
@@ -62,5 +120,57 @@ body{
 }
 .padb-0{
     padding-top: 90px;
+}
+.txt-white{
+    color: #FDF9F3;
+}
+.txt-black{
+    color: #222;
+}
+p.white{
+    color: #fff;
+}
+p.black{
+    color: #363636;
+}
+p.gray{
+    color: #686868;
+}
+.primary-button{
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
+    letter-spacing: 0.25px;
+    text-transform: capitalize;
+    overflow: hidden;
+    padding: 16px 66.5px;
+}
+.primary-button.yellow{
+    background-color: #FFD12D;
+    color: #222;
+}
+.primary-button.black{
+    color: #FFD12D;
+    background-color: #222;
+}
+.ban-sub-head{
+    font-family: var(--dexotick);
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 94%; /* 75.2px */
+}
+.ban-sub-head.green{
+    color: #49AD53;
+}
+.ban-sub-head.yellow{
+    color: #FFD12D;
 }
 /* Custom Class Ends */
