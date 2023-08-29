@@ -1,0 +1,10 @@
+{
+    "sections": {
+      "banner": {
+        "type": "founder-banner"
+      }
+    },
+    "order": [
+      "banner"
+    ]
+  }
