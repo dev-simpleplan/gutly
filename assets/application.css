@@ -1,12 +1,66 @@
-body {
-    background-color: rgb(251, 251, 232);
+:root{
+    --dexotick: 'Dexotick By Dhan Studio';
+    --manrope: 'Manrope', sans-serif;
+    --moret: 'Moret';
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #FDF9F3;
+    font-family: var(--manrope);
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility !important;
+}
+@font-face {
+    font-family: 'Dexotick By Dhan Studio';
+    src: url('DexotickByDhanStudio.woff2') format('woff2'),
+        url('DexotickByDhanStudio.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-.homepage {
-    text-align: center;
-    padding-top: 10em;
+@font-face {
+    font-family: 'Dexotick Underlines';
+    src: url('DexotickUnderlines.woff2') format('woff2'),
+        url('DexotickUnderlines.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Moret';
+    src: url('Moret-Semibold.woff2') format('woff2'),
+        url('Moret-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
 }
 
-.logo {
-    width: 25%;
+/* Custom Class */
+.pad-180{
+    padding-top: 90px;
+    padding-bottom: 90px;
 }
+.padt-180{
+    padding-top: 180px;
+}
+.padb-180{
+    padding-bottom: 180px;
+}
+.padt-90{
+    padding-top: 90px;
+}
+.padb-90{
+    padding-bottom: 90px;
+}
+.padt-0{
+    padding-top: 90px;
+}
+.padb-0{
+    padding-top: 90px;
+}
+/* Custom Class Ends */

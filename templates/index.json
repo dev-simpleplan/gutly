@@ -1,0 +1,8 @@
+{
+    "sections": {
+        "banner-section":{
+            "type":"index_banner"
+        }
+    },
+    "order":["banner-section"]
+}
