@@ -1,3 +1,75 @@
 .founder-banner{
     background-color: #55B85F;
+    padding-bottom: 40px;
+    height: 100vh;
+    min-height: 790px;
+}
+.founder-banner-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.founder-banner .custom-container-fluid{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.founder-banner-content-top{
+    max-width: 80ch;
+}
+.founder-banner-body{
+    max-width: 55ch;
+}
+.founder-banner-image{
+    width: 35%;
+    position: relative;
+}
+.founder-banner-img{
+    border-radius: 17px;
+    overflow: hidden;
+    height:90%;
+    position: relative;
+    width: 100%;
+}
+.founder-banner-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0px;
+}
+.founder-banner-image-wrap{
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+.gutly-tag{
+    background-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Star_5.svg?v=1693315587');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #222;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 116%; /* 17.969px */
+    letter-spacing: 1.007px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 136px;
+    height: 136px;
+    position: absolute;
+    top: 30px;
+    right: -40px;
+    z-index: 1;
+    transform: rotate(0.2deg);
+}
+.gutly-tag-wrap{
+    text-align: center;
+    transform: rotate(12.539deg);
 }
