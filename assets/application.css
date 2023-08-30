@@ -1,7 +1,7 @@
 :root{
     --dexotick: 'Dexotick By Dhan Studio';
     --manrope: 'Manrope', sans-serif;
-    --moret: 'Moret';
+    --moret: 'Moret', sans-serif;
 }
 html{
     scroll-behavior: smooth;
