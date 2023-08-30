@@ -233,15 +233,6 @@ p.gray{
 .primary-button.black-green:hover:before{
     background-color: #55B85F;
 }
-
-@keyframes waveAnimation{
-    from {
-      background-position-x: 0%;
-    }
-    to {
-      background-position-x: 200%;
-    }
-  }
 .primary-button.yellow-black{
     background-color: #FFD12D;
     color: #222;
