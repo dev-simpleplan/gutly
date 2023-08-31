@@ -1,0 +1,112 @@
+<footer>
+  <div class="container">
+    <div class="foot-wrapper">
+      <div class="foot-upper">
+        <div class="fu-left">
+          <div class="foot-logo">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Gutly_logo_1_1.svg?v=1693492335"
+              alt=""
+              class="icons">
+          </div>
+          <div class="foot-form">
+            <p class="foot-form-head">email exclusives</p>
+            {% form 'customer' %}
+              {{ form.errors | default_errors }}
+              {% if form.posted_successfully? %}
+                {% else %}
+                  <input
+                    type="hidden"
+                    name="contact[tags]"
+                    value="newsletter">
+                  <input
+                    type="email"
+                    name="contact[email]"
+                    id="Email"
+                    value="{% if customer.email != blank %}{{ customer.email }}{% endif %}"
+                    placeholder="Email Address"
+                    autocorrect="off"
+                    autocapitalize="off">
+                  <button
+                    type="submit"
+                    name="commit"
+                    id="Subscribe">
+                    <span>subscribe</span>
+                  </button>
+              {% endif %}
+            {% endform %}
+            <p class="foot-form-sub-head">We never share your email</p>
+          </div>
+        </div>
+        <div class="fu-right">
+          <div class="foot-nav">
+            {% for block in section.blocks %}
+              <div class="foot-nav-wrapper">
+                <div class="foot-nav-head">
+                  <p>{{ block.settings.foot-nav-head }}</p>
+                </div>
+                {% for link in block.settings.menu.links %}
+                  <div class="foot-nav-con">
+                    <a href="{{ link.url }}" class="nm-l">{{ link.title }}</a>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <div class="fb-left">
+          <p>&#169 Gutly. All rights reserved.</p>
+        </div>
+        <div class="fb-right">
+          <p>Made with</p>
+          {% render 'heart' %}
+          <p>by</p>
+          <a href="https://www.simpleplanmedia.com/" target="_blank">SimplePlan</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Heading",
+        "default": "Subscribe to our newsletter"
+      }, {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "A short sentence describing what someone will receive by subscribing"
+      }, {
+        "type": "paragraph",
+        "content": "Any customers who sign up will have an account created for them in Shopify. [View customers](/admin/customers?query=&accepts_marketing=1)"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Footer Navigations",
+        "type": "footer-navs",
+        "limit": 7,
+        "settings": [
+          {
+            "type": "link_list",
+            "id": "menu",
+            "label": "Footer Navigation Menu",
+            "default": "main-menu"
+          }, {
+            "type": "text",
+            "id": "foot-nav-head",
+            "label": "Footer Nav Heading"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
