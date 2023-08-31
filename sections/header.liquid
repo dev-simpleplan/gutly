@@ -1,0 +1,203 @@
+<header>
+  <div class="container">
+    <div class="nav-menu">
+      <div class="nav-shop">
+        <div class="shop-dd">
+          <a href="javascript:void(0)" class="shop-dd-anchor">shop
+            <span class="shop-dd-icon">{% render 'chevron-down' %}</span>
+          </a>
+        </div>
+        <div class="shop-dd-menu">
+          <div class="container">
+            <div class="shop-dd-menu-wrap">
+              <div class="shop-left-product">
+                {% for block in section.blocks %}
+                  <div class="slp-item">
+                    <div class="slp-img">
+                      <img src="{{ block.settings.navProduct.metafields.custom.nav_image }}" alt="">
+                    </div>
+                    <div class="slp-title">
+                      <h6>{{ block.settings.navProduct.title }}</h6>
+                    </div>
+                    <div class="slp-desp">
+                      <p>{{ block.settings.navProduct.metafields.custom.description_nav }}</p>
+                    </div>
+                    <div class="slp-cta">
+                      <a href="{{ block.settings.navProduct.url }}">Buy Now</a>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+              <div class="shop-right-sample">
+                <div class="srs-head">
+                  <p>Not sure? Maybe try our sampler packs.</p>
+                </div>
+                <div class="srs-prod-wrap">
+                  <div class="srspw-img">
+                    <img src="{{ section.settings.sampleImage | img_url: "master" }}" alt="">
+                  </div>
+                  <div class="srspw-txt">
+                    <p>{{ section.settings.sampleTitle }}</p>
+                    <div class="srspwt-cta">
+                      <a href="{{ section.settings.sampleProduct }}">Try Now</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="srs-prod-wrap">
+                  <div class="srspw-img">
+                    <img src="{{ section.settings.sampleImage1 | img_url: "master" }}" alt="">
+                  </div>
+                  <div class="srspw-txt">
+                    <p>{{ section.settings.sampleTitle1 }}</p>
+                    <div class="srspwt-cta">
+                      <a href="{{ section.settings.sampleProduct1 }}">Try Now</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="srs-prod-wrap">
+                  <div class="srspw-img">
+                    <img src="{{ section.settings.sampleImage2 | img_url: "master" }}" alt="">
+                  </div>
+                  <div class="srspw-txt">
+                    <p>{{ section.settings.sampleTitle2 }}</p>
+                    <div class="srspwt-cta">
+                      <a href="{{ section.settings.sampleProduct2 }}">Try Now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-logo">
+        <a href="{{ shop.url  }}"><img
+            src="{{ section.settings.navLogo | img_url: "master" }}"
+            alt=""
+            class="icons"></a>
+      </div>
+      <div class="nav-right-wrap">
+        <div class="account">
+          {% if shop.customer_accounts_enabled %}
+            {% if customer %}
+              <a href="{{ routes.account_url }}">My Account</a>
+            {% else %}
+              <a href="{{ routes.account_login_url }}">{% render 'account-icon' %}</a>
+            {% endif %}
+          {% endif %}
+        </div>
+        <div class="nav-cart">
+          <a href="{{ routes.cart_url }}">Cart(0)</a>
+        </div>
+        <div class="ham-menu">
+          <button data-bs-toggle="offcanvas" data-bs-target="#demo">{% render 'ham-menu-icon' %}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="offcanvas offcanvas-end header" id="demo">
+  <div class="offcanvas-header">
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    {% for link in section.settings.menu.links %}
+      <div class="ham-menu-wrapper">
+        {% if link.links != blank %}
+          <div class="rl-con">
+            <p class="ham-heading">{{ link.title }}</p>
+            <div class="rl-ab">
+              {% for childlink in link.links %}
+                <a href="{{ childlink.url }}">
+                  {{ childlink.title }}
+                </a>
+              {% endfor %}
+            </div>
+          </div>
+        {% else %}
+          <a href="{{ link.url }}" class="nm-l">{{ link.title }}</a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Heading Navigation Menu",
+        "default": "main-menu"
+      },
+      {
+        "type": "image_picker",
+        "id": "sampleImage",
+        "label": "Sample Product Image"
+      },
+      {
+        "type": "text",
+        "id": "sampleTitle",
+        "label": "Sample Title",
+        "default": "Egg white sample pack (25g)"
+      },
+      {
+        "type": "text",
+        "id": "sampleProduct",
+        "label": "Sample Products",
+        "default": "#!"
+      }, {
+        "type": "image_picker",
+        "id": "sampleImage1",
+        "label": "Sample Product Image"
+      }, {
+        "type": "text",
+        "id": "sampleTitle1",
+        "label": "Sample Title",
+        "default": "Egg white sample pack (25g)"
+      }, {
+        "type": "text",
+        "id": "sampleProduct1",
+        "label": "Sample Products",
+        "default": "#!"
+      }, {
+        "type": "image_picker",
+        "id": "sampleImage2",
+        "label": "Sample Product Image"
+      }, {
+        "type": "text",
+        "id": "sampleTitle2",
+        "label": "Sample Title",
+        "default": "Egg white sample pack (25g)"
+      }, {
+        "type": "text",
+        "id": "sampleProduct2",
+        "label": "Sample Products",
+        "default": "#!"
+      }, {
+        "type": "image_picker",
+        "id": "navLogo",
+        "label": "Gutly Logo"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "productNav",
+        "name": "Product Navigation",
+        "settings": [
+          {
+            "type": "product",
+            "id": "navProduct",
+            "label": "Header Products"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
