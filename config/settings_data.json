@@ -61,8 +61,8 @@
           "d585c987-2675-466d-af7a-5bd780973eea": {
             "type": "footer-navs",
             "settings": {
-              "menu": "main-menu",
-              "foot-nav-head": ""
+              "menu": "join-share",
+              "foot-nav-head": "Join & Share"
             }
           },
           "95d28e59-81b3-4b80-b018-861df7f6ceae": {
