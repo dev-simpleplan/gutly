@@ -1,8 +1,68 @@
 {
     "sections": {
         "banner-section":{
-            "type":"index_banner"
+            "type":"index_banner",
+            "settings": {
+                "heading":"Good for your guT",
+                "subHead":"Inside and out",
+                "body":"Our protein powder is super friendly to your sensitive tummy, perfect for folks with IBS!",
+                "cta_text":"try today",
+                "cta_link":"#!",
+                "image":"shopify:\/\/shop_images\/image_2.png?v=1693565107"
+            },
+            "blocks": {
+                "ticker1":{
+                    "type":"banTicker",
+                    "settings": {
+                        "tickerImage": "shopify:\/\/shop_images\/image_5.png?v=1693572070",
+                        "tickerText":"insane taste"
+                    }
+                },
+                "ticker2":{
+                    "type":"banTicker",
+                    "settings": {
+                        "tickerImage": "shopify:\/\/shop_images\/image_6.png?v=1693572078",
+                        "tickerText":"Easy-to-digest"
+                    }
+                },
+                "ticker3":{
+                    "type":"banTicker",
+                    "settings": {
+                        "tickerImage": "shopify:\/\/shop_images\/image_7.png?v=1693572083",
+                        "tickerText":"Low FODMAP certified"
+                    }
+                },
+                "ticker4":{
+                    "type":"banTicker",
+                    "settings": {
+                        "tickerImage": "shopify:\/\/shop_images\/image_5.png?v=1693572070",
+                        "tickerText":"insane taste"
+                    }
+                },
+                "ticker5":{
+                    "type":"banTicker",
+                    "settings": {
+                        "tickerImage": "shopify:\/\/shop_images\/image_6.png?v=1693572078",
+                        "tickerText":"All-organic"
+                    }
+                },
+                "ticker6":{
+                    "type":"banTicker",
+                    "settings": {
+                        "tickerImage": "shopify:\/\/shop_images\/image_7.png?v=1693572083",
+                        "tickerText":"Donate a meal"
+                    }
+                }
+            },
+            "block_order": ["ticker1", "ticker2", "ticker3", "ticker4", "ticker5", "ticker6"]
+        },
+        "solution-section":{
+            "type":"solution-section",
+            "settings": {
+                "problemHead":"Sick of protein powders causing bloating?",
+                "problemPara":"Did you know that approximately 1 in 7 people around the world are affected by Irritable Bowel Syndrome (IBS)? - Monash University."
+            }
         }
     },
-    "order":["banner-section"]
+    "order":["banner-section", "solution-section"]
 }

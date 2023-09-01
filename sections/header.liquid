@@ -32,36 +32,38 @@
                 <div class="srs-head">
                   <p>Not sure? Maybe try our sampler packs.</p>
                 </div>
-                <div class="srs-prod-wrap">
-                  <div class="srspw-img">
-                    <img src="{{ section.settings.sampleImage | img_url: "master" }}" alt="">
-                  </div>
-                  <div class="srspw-txt">
-                    <p>{{ section.settings.sampleTitle }}</p>
-                    <div class="srspwt-cta">
-                      <a href="{{ section.settings.sampleProduct }}">Try Now</a>
+                <div class="srs-prod-con">
+                  <div class="srs-prod-wrap">
+                    <div class="srspw-img">
+                      <img src="{{ section.settings.sampleImage | img_url: "master" }}" alt="">
+                    </div>
+                    <div class="srspw-txt">
+                      <p>{{ section.settings.sampleTitle }}</p>
+                      <div class="srspwt-cta">
+                        <a href="{{ section.settings.sampleProduct }}">Try Now</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="srs-prod-wrap">
-                  <div class="srspw-img">
-                    <img src="{{ section.settings.sampleImage1 | img_url: "master" }}" alt="">
-                  </div>
-                  <div class="srspw-txt">
-                    <p>{{ section.settings.sampleTitle1 }}</p>
-                    <div class="srspwt-cta">
-                      <a href="{{ section.settings.sampleProduct1 }}">Try Now</a>
+                  <div class="srs-prod-wrap">
+                    <div class="srspw-img">
+                      <img src="{{ section.settings.sampleImage1 | img_url: "master" }}" alt="">
+                    </div>
+                    <div class="srspw-txt">
+                      <p>{{ section.settings.sampleTitle1 }}</p>
+                      <div class="srspwt-cta">
+                        <a href="{{ section.settings.sampleProduct1 }}">Try Now</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="srs-prod-wrap">
-                  <div class="srspw-img">
-                    <img src="{{ section.settings.sampleImage2 | img_url: "master" }}" alt="">
-                  </div>
-                  <div class="srspw-txt">
-                    <p>{{ section.settings.sampleTitle2 }}</p>
-                    <div class="srspwt-cta">
-                      <a href="{{ section.settings.sampleProduct2 }}">Try Now</a>
+                  <div class="srs-prod-wrap">
+                    <div class="srspw-img">
+                      <img src="{{ section.settings.sampleImage2 | img_url: "master" }}" alt="">
+                    </div>
+                    <div class="srspw-txt">
+                      <p>{{ section.settings.sampleTitle2 }}</p>
+                      <div class="srspwt-cta">
+                        <a href="{{ section.settings.sampleProduct2 }}">Try Now</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -126,6 +128,113 @@
   </div>
 </div>
 
+<div class="mobile-header">
+  <div class="container">
+    <div class="mob-head-wrapper">
+      <div class="mob-ham">
+        <button class="mob-ham-but">
+          {% render 'ham-menu-icon' %}
+        </button>
+      </div>
+      <div class="mob-logo">
+        <a href="{{ shop.url }}"><img
+            src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Gutly_logo_1.svg?v=1693376816"
+            alt=""
+            class="icons"></a>
+      </div>
+      <div class="mob-acc-cart">
+        <div class="mob-account">
+          <button>{% render 'account-icon' %}</button>
+        </div>
+        <div class="mob-cart">
+          <a href="#!">{% render 'bag-icon' %}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mob-ham-wrapper">
+  <div class="container">
+    <div class="mhw-con">
+      <div class="mhw-head">
+        <button>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/x_1.svg?v=1693554608"
+            alt=""
+            class="icons">
+        </button>
+      </div>
+      <div class="mhw-con">
+        <div class="mhw-product">
+          <div class="mob-grab">
+            <p>GRAB A PACK</p>
+          </div>
+          <div class="shop-left-product">
+            {% for block in section.blocks %}
+              <div class="slp-item">
+                <div class="slp-img">
+                  <img src="{{ block.settings.navProduct.metafields.custom.nav_image }}" alt="">
+                </div>
+                <div class="slp-title">
+                  <h6>{{ block.settings.navProduct.title }}</h6>
+                </div>
+                <div class="slp-cta">
+                  <a href="{{ block.settings.navProduct.url }}">Buy Now</a>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="mob-sample-prod">
+            <div class="mcp-wrap">
+              <a href="#!">
+                <div class="srspw-img">
+                  <img
+                    src="{{ section.settings.sampleImage | img_url: "master" }}"
+                    alt=""
+                    class="icons">
+                </div>
+                <p>{{ section.settings.sampleTitle }}</p>
+              </a>
+            </div>
+            <div class="mcp-wrap">
+              <a href="#!">
+                <div class="srspw-img">
+                  <img
+                    src="{{ section.settings.sampleImage1 | img_url: "master" }}"
+                    alt=""
+                    class="icons">
+                </div>
+                <p>{{ section.settings.sampleTitle1 }}</p>
+              </a>
+            </div>
+            <div class="mcp-wrap">
+              <a href="#!">
+                <div class="srspw-img">
+                  <img
+                    src="{{ section.settings.sampleImage2 | img_url: "master" }}"
+                    alt=""
+                    class="icons">
+                </div>
+                <p>{{ section.settings.sampleTitle2 }}</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mhw-nav">
+          <ul>
+            {% for link in section.settings.menu1.links %}
+              <li>
+                <a href="{{ link.url }}" class="mn-nav-a">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% schema %}
   {
     "name": "Header",
@@ -184,6 +293,11 @@
         "type": "image_picker",
         "id": "navLogo",
         "label": "Gutly Logo"
+      }, {
+        "type": "link_list",
+        "id": "menu1",
+        "label": "Mobile Heading Navigation Menu",
+        "default": "main-menu"
       }
     ],
     "blocks": [
@@ -201,3 +315,16 @@
     ]
   }
 {% endschema %}
+
+<script>
+  $(document).ready(function() {
+    $(".mob-ham-but").click(function() {
+      $(".mob-ham-wrapper").addClass("active");
+      $("body").addClass("overflow-hide");
+    });
+    $(".mhw-head button").click(function() {
+      $(".mob-ham-wrapper").removeClass("active");
+      $("body").removeClass("overflow-hide");
+    });
+  });
+</script>
