@@ -54,8 +54,8 @@
           "75042790-b540-422d-9289-bf2750ee26ef": {
             "type": "footer-navs",
             "settings": {
-              "menu": "main-menu",
-              "foot-nav-head": ""
+              "menu": "about",
+              "foot-nav-head": "About"
             }
           },
           "d585c987-2675-466d-af7a-5bd780973eea": {
