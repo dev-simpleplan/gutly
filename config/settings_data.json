@@ -68,8 +68,8 @@
           "95d28e59-81b3-4b80-b018-861df7f6ceae": {
             "type": "footer-navs",
             "settings": {
-              "menu": "main-menu",
-              "foot-nav-head": ""
+              "menu": "resources",
+              "foot-nav-head": "Resources"
             }
           },
           "60f3e69c-3a2d-4da0-a416-e63665976f48": {
