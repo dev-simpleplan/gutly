@@ -1,6 +1,110 @@
-<section>
-  <div>
-    <a href="#!" class="primary-button yellow-black">Our Ingredients</a>
-    <h1>i'm nowell 'N i have ibs</h1>
+<section class="indexBanner">
+  <div class="index-banner">
+    <div class="ib-txt">
+      <div class="container">
+        <div class="ibt-con">
+          <div class="ibt-up">
+            <div class="ban-head">
+              <h1 class="txt-white">{{ section.settings.heading }}</h1>
+            </div>
+            <div class="ban-subhead">
+              <p class="ban-sub-head green">
+                {{ section.settings.subHead }}
+              </p>
+            </div>
+          </div>
+          <div class="ibt-down">
+            <div class="ban-para">
+              <p>{{ section.settings.body }}</p>
+            </div>
+            <div class="ban-cta">
+              <a href="{{ section.settings.cta_link }}" class="primary-button black-green">{{ section.settings.cta_text }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ib-img">
+      <img
+        src="{{ section.settings.image | img_url: 'master' }}"
+        alt=""
+        class="img">
+    </div>
+    <div class="ban-ticker">
+      <div class="bt-con">
+        <div class="infiniteslide">
+          {% for block in section.blocks %}
+            <div class="item">
+              <img src="{{ block.settings.tickerImage | img_url: "master" }}" alt="">
+              <p>{{ block.settings.tickerText }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+{% schema %}
+  {
+    "name": "Index Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Banner Image"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Banner Heading"
+      },
+      {
+        "type": "text",
+        "id": "subHead",
+        "label": "Banner SubHead"
+      },
+      {
+        "type": "text",
+        "id": "body",
+        "label": "Banner Body"
+      }, {
+        "type": "text",
+        "id": "cta_text",
+        "label": "Text For CTA"
+      }, {
+        "type": "text",
+        "id": "cta_link",
+        "label": "Link For CTA"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "banTicker",
+        "name": "Banner Section Ticker",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "tickerImage",
+            "label": "Small Icons Before text"
+          }, {
+            "type": "text",
+            "id": "tickerText",
+            "label": "Text For ticker"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<script type="text/javascript">
+  $(function(){
+  $('.infiniteslide').infiniteslide({
+              'speed': 50, 
+              'direction': 'left', //choose  up/down/left/right
+              'pauseonhover': true, //if true,stop onmouseover
+              'responsive': false, //width/height recalculation on window resize. child element's width/height define %/vw/vh,this set true.
+              'clone': 6 //if child elements are too few (elements can't "infinite"), set 2 or over.
+            });
+          });</script>

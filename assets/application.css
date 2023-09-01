@@ -42,6 +42,9 @@ a{
 a:hover{
     color: inherit;
 }
+button:focus-visible, input:focus-visible{
+    outline: none;
+}
 button{
     margin: 0;
     padding: 0;
@@ -277,5 +280,11 @@ p.gray{
     width: 100%;
     height: auto;
     max-height: 100%;
+}
+body.overflow-hide{
+    overflow: hidden;
+}
+.container{
+    height: 100%
 }
 /* Custom Class Ends */
