@@ -75,15 +75,15 @@
           "60f3e69c-3a2d-4da0-a416-e63665976f48": {
             "type": "footer-navs",
             "settings": {
-              "menu": "main-menu",
-              "foot-nav-head": ""
+              "menu": "support",
+              "foot-nav-head": "support"
             }
           },
           "2dfbae82-617d-44c1-9a7a-b7d5c28d10b3": {
             "type": "footer-navs",
             "settings": {
-              "menu": "main-menu",
-              "foot-nav-head": ""
+              "menu": "social",
+              "foot-nav-head": "Social"
             }
           }
         },
