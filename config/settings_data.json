@@ -1,5 +1,54 @@
 {
-  "current": "Default",
+  "current": {
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "ed681805-3503-4be0-9900-ddd486dbd3ff": {
+            "type": "productNav",
+            "settings": {
+              "navProduct": "egg-white-protein-powder"
+            }
+          },
+          "20373083-d353-403b-b858-115cff3b5351": {
+            "type": "productNav",
+            "settings": {
+              "navProduct": "vegan-protein-powder"
+            }
+          }
+        },
+        "block_order": [
+          "ed681805-3503-4be0-9900-ddd486dbd3ff",
+          "20373083-d353-403b-b858-115cff3b5351"
+        ],
+        "settings": {
+          "menu": "main-menu",
+          "sampleTitle": "Egg white sample pack (25g)",
+          "sampleProduct": "#!",
+          "sampleTitle1": "Egg white sample pack (25g)",
+          "sampleProduct1": "#!",
+          "sampleTitle2": "Egg white sample pack (25g)",
+          "sampleProduct2": "#!",
+          "menu1": "main-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "section_title": "Subscribe to our newsletter",
+          "subheading": "A short sentence describing what someone will receive by subscribing"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
   "presets": {
     "Default": {
     }
