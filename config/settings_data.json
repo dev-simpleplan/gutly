@@ -43,6 +43,58 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "8f44bed8-1c4b-48b0-90ab-6553d5fde3c8": {
+            "type": "footer-navs",
+            "settings": {
+              "menu": "shop-1",
+              "foot-nav-head": "shop"
+            }
+          },
+          "298e90f9-2720-42e7-8095-13d758edd3cf": {
+            "type": "footer-navs",
+            "settings": {
+              "menu": "about",
+              "foot-nav-head": "about"
+            }
+          },
+          "54942b0a-d697-4d78-8612-5eea3f18b995": {
+            "type": "footer-navs",
+            "settings": {
+              "menu": "join-share",
+              "foot-nav-head": "join & share"
+            }
+          },
+          "2ac8d33d-513c-4b55-a34f-84e9d7195587": {
+            "type": "footer-navs",
+            "settings": {
+              "menu": "resources",
+              "foot-nav-head": "resources"
+            }
+          },
+          "1047a50b-d144-440b-a553-57a6aad960a7": {
+            "type": "footer-navs",
+            "settings": {
+              "menu": "support",
+              "foot-nav-head": "support"
+            }
+          },
+          "0139915b-d8c7-4d9e-b434-edf6b95314b6": {
+            "type": "footer-navs",
+            "settings": {
+              "menu": "social",
+              "foot-nav-head": "social"
+            }
+          }
+        },
+        "block_order": [
+          "8f44bed8-1c4b-48b0-90ab-6553d5fde3c8",
+          "298e90f9-2720-42e7-8095-13d758edd3cf",
+          "54942b0a-d697-4d78-8612-5eea3f18b995",
+          "2ac8d33d-513c-4b55-a34f-84e9d7195587",
+          "1047a50b-d144-440b-a553-57a6aad960a7",
+          "0139915b-d8c7-4d9e-b434-edf6b95314b6"
+        ],
         "settings": {
           "section_title": "Subscribe to our newsletter",
           "subheading": "A short sentence describing what someone will receive by subscribing"
