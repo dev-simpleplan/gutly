@@ -1,5 +1,58 @@
 {
-  "current": "Default",
+  "current": {
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "a74b1e74-4b4b-4cc3-a572-8dde564f42dd": {
+            "type": "productNav",
+            "settings": {
+              "navProduct": "egg-white-protein-powder"
+            }
+          },
+          "5e5bc13f-46fe-4a47-8e07-9ba155b9b0ff": {
+            "type": "productNav",
+            "settings": {
+              "navProduct": "vegan-protein-powder"
+            }
+          }
+        },
+        "block_order": [
+          "a74b1e74-4b4b-4cc3-a572-8dde564f42dd",
+          "5e5bc13f-46fe-4a47-8e07-9ba155b9b0ff"
+        ],
+        "settings": {
+          "menu": "main-menu",
+          "sampleImage": "shopify:\/\/shop_images\/Frame_17212779.png",
+          "sampleTitle": "Egg white sample pack (25g)",
+          "sampleProduct": "#!",
+          "sampleImage1": "shopify:\/\/shop_images\/Frame_17212779_1.png",
+          "sampleTitle1": "Egg white sample pack (25g)",
+          "sampleProduct1": "#!",
+          "sampleImage2": "shopify:\/\/shop_images\/Frame_17212779.png",
+          "sampleTitle2": "Egg white sample pack (25g)",
+          "sampleProduct2": "#!",
+          "navLogo": "shopify:\/\/shop_images\/Gutly_logo_1.svg",
+          "menu1": "mobile-header"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "section_title": "Subscribe to our newsletter",
+          "subheading": "A short sentence describing what someone will receive by subscribing"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
   "presets": {
     "Default": {
     }
