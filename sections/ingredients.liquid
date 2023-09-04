@@ -1,0 +1,82 @@
+<section class="pad-180">
+  <div class="container">
+    <div class="ingredients">
+      <div class="heading center">
+        <div class="head">
+          <h3>
+            {{ section.settings.head }}
+          </h3>
+        </div>
+        <div class="subhead">
+          <p>{{ section.settings.subhead }}</p>
+        </div>
+        <div class="cta">
+          <a href="{{ section.settings.cta_link }}" class="primary-button yellow-black">{{ section.settings.cta_text }}</a>
+        </div>
+      </div>
+      <div class="ing-grid">
+        {% for block in section.blocks %}
+          <div class="item">
+            <div class="ing-grid-con">
+              <p class="small ing-h">
+                {{ block.settings.head }}
+              </p>
+              <p class="ing-sh">
+                {{ block.settings.subhead }}
+              </p>
+              <p class="small ing-p">
+                {{ block.settings.para }}
+              </p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Ingredients Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section Heading"
+      }, {
+        "type": "text",
+        "id": "subhead",
+        "label": "Section Sub Heading"
+      }, {
+        "type": "text",
+        "id": "cta_link",
+        "label": "Link For CTA"
+      }, {
+        "type": "text",
+        "id": "cta_text",
+        "label": "Text For CTA"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "ing_grid",
+        "name": "Ingredients Grid",
+        "settings": [
+          {
+            "type": "text",
+            "id": "head",
+            "label": "Ingredient Heading"
+          }, {
+            "type": "text",
+            "id": "subhead",
+            "label": "Ingredient Subhead"
+          }, {
+            "type": "text",
+            "id": "para",
+            "label": "Ingredient Paragraph"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -65,14 +65,327 @@
     },
     "solution-section": {
       "type": "solution-section",
+      "blocks": {
+        "pbgrid1": {
+          "type": "problemGrid",
+          "settings": {
+            "pb_img": "shopify:\/\/shop_images\/Group_17211479.svg?v=1693573883",
+            "pb_text": "Abdominal discomfort"
+          }
+        },
+        "pbgrid2": {
+          "type": "problemGrid",
+          "settings": {
+            "pb_img": "shopify:\/\/shop_images\/Group_17211478.svg?v=1693573877",
+            "pb_text": "bloating and cramping"
+          }
+        },
+        "pbgrid3": {
+          "type": "problemGrid",
+          "settings": {
+            "pb_img": "shopify:\/\/shop_images\/Group_17211477.svg?v=1693573866",
+            "pb_text": "Diarrhea"
+          }
+        },
+        "pbgrid4": {
+          "type": "problemGrid",
+          "settings": {
+            "pb_img": "shopify:\/\/shop_images\/Group_17211476.svg?v=1693573861",
+            "pb_text": "Gas and flatulence"
+          }
+        }
+      },
+      "block_order": [
+        "pbgrid1",
+        "pbgrid2",
+        "pbgrid3",
+        "pbgrid4"
+      ],
       "settings": {
         "problemHead": "Sick of protein powders causing bloating?",
-        "problemPara": "Did you know that approximately 1 in 7 people around the world are affected by Irritable Bowel Syndrome (IBS)? - Monash University."
+        "problemPara": "Did you know that approximately 1 in 7 people around the world are affected by Irritable Bowel Syndrome (IBS)? - Monash University.",
+        "solutionHead": "Say hello to the solution",
+        "solutionPara": "Our gut-friendly formula is carefully crafted using natural ingredients that ensure easy digestion and safe consumption.",
+        "slImage": "shopify:\/\/shop_images\/can_02c2b15b-054b-4fdf-b22b-2b28864a3dc3.png?v=1693748534",
+        "sl-sm-txt": "Clean ingredients",
+        "foodmapImage": "shopify:\/\/shop_images\/logo-200x200_1.png?v=1693749553",
+        "foodmapPara": "we are fodmap certified!",
+        "foodmapCta": "#!"
+      }
+    },
+    "ingredients": {
+      "type": "ingredients",
+      "blocks": {
+        "ing1": {
+          "type": "ing_grid",
+          "settings": {
+            "head": "so yummy",
+            "subhead": "Natural Sweeteners",
+            "para": "We thoughtfully selected a maple sugar sweetener as it’s gentle on IBS triggers. Embrace the smooth, caramel-like goodness as we blend health and pleasure, caring for your gut and taste buds alike."
+          }
+        },
+        "ing2": {
+          "type": "ing_grid",
+          "settings": {
+            "head": "Good for tummy",
+            "subhead": "Easy-to-digest Protein",
+            "para": "Our protein powder is crafted with thoughtfully chosen, digestion-friendly protein sources. Each ingredient is selected for its low FODMAP nature and evidence-based benefits."
+          }
+        },
+        "ing3": {
+          "type": "ing_grid",
+          "settings": {
+            "head": "Nothing funny",
+            "subhead": "Zero Artificials",
+            "para": "We keep It real! Which is why our formulations are 100% natural, with no artificial additives. If it's hard to understand or pronounce, it's a no-go for us. Keep it simple, keep it Gutly."
+          }
+        }
+      },
+      "block_order": [
+        "ing1",
+        "ing2",
+        "ing3"
+      ],
+      "settings": {
+        "head": "Each scoop of Gutly contains",
+        "subhead": "Our protein powder boasts natural sugars for a touch of sweetness, easy-to-digest protein for a happy tummy, and a clean formula with zero artificial additives!",
+        "cta_link": "#!",
+        "cta_text": "Our Ingredients"
+      }
+    },
+    "no-if-no-but": {
+      "type": "no-if-no-but",
+      "blocks": {
+        "item1": {
+          "type": "leftGrid",
+          "settings": {
+            "head1": "EASY PROTEIN-RICH BREAKFAST",
+            "para1": "Easily meet protein goals with our simple solution, start a healthy diet with a high-protein meal."
+          }
+        },
+        "item2": {
+          "type": "leftGrid",
+          "settings": {
+            "head1": "WEIGHT MANAGEMENT",
+            "para1": "Satisfy your hunger with an excellent source of >19g of high-quality protein, ensuring lasting fullness."
+          }
+        },
+        "item3": {
+          "type": "leftGrid",
+          "settings": {
+            "head1": "SLOW-RELEASE PROTEIN",
+            "para1": "Maximise your muscle gain while you sleep, leaving behind any worries of bloating or uneasiness."
+          }
+        },
+        "item4": {
+          "type": "rightGrid",
+          "settings": {
+            "head2": "SIMPLE LOW FODMAP DIET",
+            "para2": "Following a strict diet can be tough, but we make it easy to incorporate into your meal plan."
+          }
+        },
+        "item5": {
+          "type": "rightGrid",
+          "settings": {
+            "head2": "BYE-BYE BLOATING",
+            "para2": "Begin managing your bloating problem with our third-party certified, bloating-free formula."
+          }
+        },
+        "item6": {
+          "type": "rightGrid",
+          "settings": {
+            "head2": "TRANSPARENT INGREDIENTS",
+            "para2": "No secret formula, no nasty additives, and no complicated ingredients. Gutly is a no brainer!"
+          }
+        },
+        "ticker1": {
+          "type": "ticker",
+          "settings": {
+            "tickerImage": "shopify:\/\/shop_images\/pff-emoji.png?v=1693813526",
+            "tickerText": "Try Today"
+          }
+        },
+        "ticker2": {
+          "type": "ticker",
+          "settings": {
+            "tickerImage": "shopify:\/\/shop_images\/pff-emoji.png?v=1693813526",
+            "tickerText": "Try Today"
+          }
+        },
+        "ticker3": {
+          "type": "ticker",
+          "settings": {
+            "tickerImage": "shopify:\/\/shop_images\/pff-emoji.png?v=1693813526",
+            "tickerText": "Try Today"
+          }
+        },
+        "ticker4": {
+          "type": "ticker",
+          "settings": {
+            "tickerImage": "shopify:\/\/shop_images\/pff-emoji.png?v=1693813526",
+            "tickerText": "Try Today"
+          }
+        }
+      },
+      "block_order": [
+        "item1",
+        "item2",
+        "item3",
+        "item4",
+        "item5",
+        "item6",
+        "ticker1",
+        "ticker2",
+        "ticker4"
+      ],
+      "settings": {
+        "head": "No if, no but. Happy Gut.",
+        "image": "shopify:\/\/shop_images\/image_11.png?v=1693813470"
+      }
+    },
+    "comparison-table": {
+      "type": "comparison-table",
+      "blocks": {
+        "row1": {
+          "type": "table",
+          "settings": {
+            "prodFeat": "Easy to digest formula",
+            "tick": true,
+            "cross": false,
+            "tick1": true,
+            "cross1": false
+          }
+        },
+        "row2": {
+          "type": "table",
+          "settings": {
+            "prodFeat": "Low FODMAP certified",
+            "tick": true,
+            "cross": false,
+            "tick1": true,
+            "cross1": false
+          }
+        },
+        "row3": {
+          "type": "table",
+          "settings": {
+            "prodFeat": "Simple ingredients",
+            "tick": true,
+            "cross": false,
+            "tick1": true,
+            "cross1": false
+          }
+        },
+        "row4": {
+          "type": "table",
+          "settings": {
+            "prodFeat": "Minimally processed ingredients",
+            "tick": true,
+            "cross": false,
+            "tick1": false,
+            "cross1": true
+          }
+        },
+        "row5": {
+          "type": "table",
+          "settings": {
+            "prodFeat": "Paleo friendly",
+            "tick": true,
+            "cross": false,
+            "tick1": false,
+            "cross1": true
+          }
+        },
+        "row6": {
+          "type": "table",
+          "settings": {
+            "prodFeat": "Dairy free",
+            "tick": true,
+            "cross": false,
+            "tick1": false,
+            "cross1": true
+          }
+        },
+        "row7": {
+          "type": "table",
+          "settings": {
+            "prodFeat": "Low GI (glycaemic index)",
+            "tick": true,
+            "cross": false,
+            "tick1": false,
+            "cross1": true
+          }
+        },
+        "row8": {
+          "type": "table",
+          "settings": {
+            "prodFeat": "Soy free",
+            "tick": true,
+            "cross": false,
+            "tick1": false,
+            "cross1": true
+          }
+        },
+        "row9": {
+          "type": "table",
+          "settings": {
+            "prodFeat": "Gluten Free",
+            "tick": true,
+            "cross": false,
+            "tick1": false,
+            "cross1": true
+          }
+        }
+      },
+      "block_order": [
+        "row1",
+        "row2",
+        "row3",
+        "row4",
+        "row5",
+        "row6",
+        "row7",
+        "row8",
+        "row9"
+      ],
+      "settings": {
+        "head": "We're off the chart!",
+        "subhead": "Gutly vs. others"
+      }
+    },
+    "grab-a-pack": {
+      "type": "grab-a-pack",
+      "settings": {
+        "head": "grab a pack",
+        "eggwhiteImage": "shopify:\/\/shop_images\/image_21.png?v=1693828411",
+        "eggwhiteHead": "Egg white protein powder",
+        "eggwhitePara": "Crafted from pure pasteurised egg whites, our delicious protein is low-FODMAP, dairy-free, with no artificial additives. Just clean, wholesome nutrition!",
+        "hempImage": "shopify:\/\/shop_images\/image_22.png?v=1693828406",
+        "hempHead": "Hemp protein powder",
+        "hempPara": "A nutritional powerhouse, our hemp protein powder is Edestin-based, gluten-free, and packed with PUFAs, vitamins, and antioxidants. Superb for your overall well-being!",
+        "cta_text": "Buy Now",
+        "cta_url1": "egg-white-protein-powder",
+        "cta_url2": "vegan-protein-powder",
+        "vegan-stamp": "vegan Friendly"
+      }
+    },
+    "gutly-mission": {
+      "type": "gutly-mission",
+      "settings": {
+        "head": "Gutly's Mission:<br> A Healthier ‘N Happier You",
+        "para": "Our mission is simple yet powerful – crafting clean health supplements for your gut's happiness. With natural ingredients and gut-focused formulas, Gutly aims to revolutionise your well-being.",
+        "cta_text": "about us",
+        "image": "shopify:\/\/shop_images\/sample.png?v=1693831657"
       }
     }
   },
   "order": [
     "banner-section",
-    "solution-section"
+    "solution-section",
+    "ingredients",
+    "no-if-no-but",
+    "comparison-table",
+    "grab-a-pack",
+    "gutly-mission"
   ]
 }

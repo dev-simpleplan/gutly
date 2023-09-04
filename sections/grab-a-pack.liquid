@@ -1,0 +1,102 @@
+<section class="pad-180">
+  <div class="grab-a-pack">
+    <div class="heading center">
+      <h2>{{ section.settings.head }}</h2>
+    </div>
+    <div class="gap-wrapper">
+      <div class="item">
+        <div class="gap-txt-wrap">
+          <div class="container">
+            <div class="gap-txt">
+              <h5>{{ section.settings.eggwhiteHead }}</h5>
+              <p>{{ section.settings.eggwhitePara }}</p>
+              <a href="{{ section.settings.cta_url1.url }}" class="primary-button yellow-black">{{ section.settings.cta_text }}</a>
+            </div>
+          </div>
+        </div>
+        <div class="gap-img">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/image_21.png?v=1693828411"
+            alt=""
+            class="img">
+        </div>
+      </div>
+      <div class="item">
+        <div class="gap-txt-wrap">
+          <div class="container">
+            <div class="gap-txt">
+              <h5>{{ section.settings.hempHead }}</h5>
+              <p>{{ section.settings.hempPara }}</p>
+              <a href="{{ section.settings.cta_url2.url }}" class="primary-button yellow-black">{{ section.settings.cta_text }}</a>
+            </div>
+          </div>
+        </div>
+        <div class="gap-img">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/image_22.png?v=1693828406"
+            alt=""
+            class="img">
+          <div class="vegan-stamp">
+            <p>{{ section.settings.vegan-stamp }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Grab A Pack",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section Heading"
+      },
+      {
+        "type": "image_picker",
+        "id": "eggwhiteImage",
+        "label": "Egg White Product Image"
+      },
+      {
+        "type": "text",
+        "id": "eggwhiteHead",
+        "label": "Egg White Product Heading"
+      },
+      {
+        "type": "text",
+        "id": "eggwhitePara",
+        "label": "Egg White Product Para"
+      }, {
+        "type": "image_picker",
+        "id": "hempImage",
+        "label": "Hemp Product Image"
+      }, {
+        "type": "text",
+        "id": "hempHead",
+        "label": "Hemp Product Heading"
+      }, {
+        "type": "text",
+        "id": "hempPara",
+        "label": "Hemp Product Para"
+      }, {
+        "type": "text",
+        "id": "cta_text",
+        "label": "text fpr CTA"
+      }, {
+        "type": "product",
+        "id": "cta_url1",
+        "label": "Select Product"
+      }, {
+        "type": "product",
+        "id": "cta_url2",
+        "label": "Select Product"
+      }, {
+        "type": "text",
+        "id": "vegan-stamp",
+        "label": "Vegan Stamp"
+      }
+    ]
+  }
+{% endschema %}

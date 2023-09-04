@@ -3,15 +3,63 @@
     <div class="problem">
       <div class="prob-head">
         <div class="head">
-          <h3>Sick of protein powders causing bloating?</h3>
+          <h3>{{ section.settings.problemHead }}</h3>
         </div>
         <div class="sub-head">
-          <p>Did you know that approximately 1 in 7 people around the world are affected by Irritable Bowel Syndrome (IBS)? - Monash University.</p>
+          <p>{{ section.settings.problemPara }}</p>
         </div>
       </div>
-      <div class="prob-grid"></div>
+      <div class="prob-grid">
+        {% for block in section.blocks %}
+          <div class="item">
+            <div class="pb-img">
+              <img
+                src="{{ block.settings.pb_img | img_url: "master" }}"
+                alt=""
+                class="icons">
+            </div>
+            <div class="pb-txt">
+              <p class="small">{{ block.settings.pb_text }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
     </div>
-    <div class="solution"></div>
+    <div class="solution">
+      <div class="sl-head-wrap">
+        <div class="sl-head">
+          <h3 class="txt-white">{{ section.settings.solutionHead }}</h3>
+        </div>
+        <div class="sl-para">
+          <p>{{ section.settings.solutionPara }}</p>
+        </div>
+      </div>
+      <div class="sl-img-wrap">
+        <div class="sl-img">
+          <img
+            src="{{ section.settings.slImage | img_url: "master" }}"
+            alt=""
+            class="img">
+          <div class="sl-txt">
+            <p>{{ section.settings.sl-sm-txt }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="sl-foodmap-wrap">
+        <div class="slfw-img">
+          <img
+            src="{{ section.settings.foodmapImage | img_url: 'master' }}"
+            alt=""
+            class="icons">
+        </div>
+        <div class="slfw-txt">
+          <p>{{ section.settings.foodmapPara }}</p>
+        </div>
+        <div class="slfw-cta">
+          <a href="{{ section.settings.foodmapCta }}">Learn more</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -23,10 +71,58 @@
         "type": "text",
         "id": "problemHead",
         "label": "Problem Heading"
-      }, {
+      },
+      {
         "type": "text",
         "id": "problemPara",
         "label": "Problem Subhead"
+      },
+      {
+        "type": "text",
+        "id": "solutionHead",
+        "label": "Solutiom head"
+      },
+      {
+        "type": "text",
+        "id": "solutionPara",
+        "label": "Solution Subhead"
+      }, {
+        "type": "image_picker",
+        "id": "slImage",
+        "label": "Solution Image"
+      }, {
+        "type": "text",
+        "id": "sl-sm-txt",
+        "label": "Solution label Text"
+      }, {
+        "type": "image_picker",
+        "id": "foodmapImage",
+        "label": "Fodmap Image"
+      }, {
+        "type": "text",
+        "id": "foodmapPara",
+        "label": "Fodmap Text"
+      }, {
+        "type": "text",
+        "id": "foodmapCta",
+        "label": "Fodmap Cta Link"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Problem Grid",
+        "type": "problemGrid",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "pb_img",
+            "label": "Problem Icon"
+          }, {
+            "type": "text",
+            "id": "pb_text",
+            "label": "Problem Text"
+          }
+        ]
       }
     ]
   }

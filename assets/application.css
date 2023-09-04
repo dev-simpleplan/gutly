@@ -64,6 +64,7 @@ h2{
     font-weight: 600;
     line-height: 80%; /* 102.4px */
     text-transform: uppercase;
+    color: #222;
 }
 h3{
     font-size: 64px;
@@ -98,6 +99,7 @@ p{
     font-weight: 500;
     line-height: 150%; /* 24px */
     letter-spacing: 0.16px;
+    color: #686868;
 }
 p.small{
     font-size: 14px;
@@ -286,5 +288,15 @@ body.overflow-hide{
 }
 .container{
     height: 100%
+}
+.heading.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.flex{
+    display: flex;
 }
 /* Custom Class Ends */
