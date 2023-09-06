@@ -1,0 +1,78 @@
+<section class="pad-180">
+  <div class="subscribe-section">
+    <div class="ss-left">
+      <div class="heading center">
+        <h3>{{ section.settings.head }}</h3>
+        <p>{{ section.settings.subhead }}</p>
+      </div>
+      <div class="ss-usp">
+        {% for block in section.blocks %}
+          <div class="item">
+            <div class="ssu-img">
+              <img
+                src="{{ block.settings.subImage | img_url: "master" }}"
+                alt=""
+                class="icons">
+            </div>
+            <div class="ssu-head">
+              <p class="small">
+                {{ block.settings.head }}
+              </p>
+            </div>
+            <div class="ssu-para">
+              <p>{{ block.settings.para }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="ss-right">
+      <img
+        src="{{ section.settings.sectionImage | img_url: 'master' }}"
+        alt=""
+        class="img">
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Subscribe Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section Heading"
+      }, {
+        "type": "text",
+        "id": "subhead",
+        "label": "Section Subhead"
+      }, {
+        "type": "image_picker",
+        "id": "sectionImage",
+        "label": "Section Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "subscribe-usp",
+        "name": "Subscrie Usp",
+        "settings": [
+          {
+            "type": "text",
+            "id": "head",
+            "label": "USP head"
+          }, {
+            "type": "text",
+            "id": "para",
+            "label": "USP Paragraph"
+          }, {
+            "type": "image_picker",
+            "id": "subImage",
+            "label": "USP Image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

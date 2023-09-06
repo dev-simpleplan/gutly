@@ -1,0 +1,93 @@
+<section class="pad-180">
+  <div class="container">
+    <div class="video-slider">
+      <div class="heading center">
+        <h2>{{ section.settings.head }}</h2>
+      </div>
+      <div class="owl-carousel owl-theme">
+        {% for block in section.blocks %}
+          <div class="item">
+            <div class="vs-video">
+              <video playsinline loop>
+                <source src="{{ block.settings.slideVideo }}" type="video/mp4">
+                Your browser does not support the html video tag.
+              </video>
+            </div>
+            <div class="vs-txt">
+              <p>{{ block.settings.slideText }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Protien SO Good",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "videoSlide",
+        "name": "Video Slide",
+        "settings": [
+          {
+            "type": "text",
+            "id": "slideVideo",
+            "label": "Video Link"
+          }, {
+            "type": "text",
+            "id": "slideText",
+            "label": "Video Text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+  $('.video-slider .owl-carousel').owlCarousel({
+    loop: true,
+    margin: 30,
+    dots: false,
+    nav: false,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      }
+    }
+  });
+
+  var videos = $("video");
+
+// Attach a click event handler to each video element
+  videos.click(function() {
+
+// Pause all the other videos except the one that was clicked
+    videos.not(this).each(function() {
+      this.pause();
+    });
+
+// Check if the clicked video is paused or not
+    if (this.paused) { // If paused, play the video
+      this.play();
+    } else { // If playing, pause the video
+      this.pause();
+    }
+  });
+</script>

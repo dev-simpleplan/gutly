@@ -60,6 +60,20 @@
         </div>
       </div>
     </div>
+    <div class="sl-foodmap-wrap tab-active">
+      <div class="slfw-img">
+        <img
+          src="{{ section.settings.foodmapImage | img_url: 'master' }}"
+          alt=""
+          class="icons">
+      </div>
+      <div class="slfw-txt">
+        <p>{{ section.settings.foodmapPara }}</p>
+      </div>
+      <div class="slfw-cta">
+        <a href="{{ section.settings.foodmapCta }}">Learn more</a>
+      </div>
+    </div>
   </div>
 </section>
 

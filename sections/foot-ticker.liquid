@@ -1,0 +1,62 @@
+<section class="padt-90">
+  <div class="foot-ticker">
+    <div class="owl-theme owl-carousel">
+      {% for block in section.blocks %}
+        <div class="item">
+          <div class="tick-img">
+            <img
+              src="{{ block.settings.tickImg | img_url: 'master' }}"
+              alt=""
+              class="img">
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Footer Ticker",
+    "blocks": [
+      {
+        "type": "foot-ticker-img",
+        "name": "Foot Ticker Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "tickImg",
+            "label": "Ticker Image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+  $('.foot-ticker .owl-carousel').owlCarousel({
+    loop: true,
+    margin: 14,
+    responsiveClass: true,
+    nav: false,
+    dots: false,
+    slideTransition: 'linear',
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplaySpeed: 5000,
+    autoplayHoverPause: false,
+    responsive: {
+      0: {
+        items: 1,
+        nav: true
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 4
+      }
+    }
+  });
+</script>
