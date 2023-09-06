@@ -1357,6 +1357,8 @@ footer{
     width: 45px;
     height: 45px;
     margin: 0 auto;
+    border-radius: 50%;
+    background-color: #FFD12D;
 }
 .subscribe-section .ss-right{
     width: 50%;
