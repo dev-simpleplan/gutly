@@ -1,0 +1,117 @@
+<section class="pad-180">
+  <div class="container">
+    <div class="chart-section">
+      <div class="heading">
+        <div class="head">
+          <h3>{{ section.settings.head }}</h3>
+          <p>{{ section.settings.subhead }}</p>
+        </div>
+        <div class="head-product">
+          <div class="gutly">
+            <div class="prod-img">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Group_17211529.svg?v=1693823711"
+                alt=""
+                class="img">
+            </div>
+            <p class="prod-name">
+              Gutly Protein Powder
+            </p>
+          </div>
+          <div class="other-brand">
+            <div class="prod-img">
+
+              <img
+                src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Group_17211530.png?v=1693823703"
+                alt=""
+                class="img">
+            </div>
+            <p class="prod-name">
+              Other Protein Powders
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="product-compare">
+        {% for block in section.blocks %}
+          <div class="pc-wrapper">
+            <div class="prod-feat">
+              <p>{{ block.settings.prodFeat }}</p>
+            </div>
+            <div class="prod-have">
+              <div class="gutly">
+                {% if block.settings.tick %}
+                  <div class="tick-cross">
+                    {% render 'tick' %}
+                  </div>
+                {% else %}
+                  {% render 'cross' %}
+                {% endif %}
+              </div>
+              <div class="other-brand">
+                <div class="tick-cross">
+                  {% if block.settings.tick1 %}
+                    <div class="tick-cross">
+                      {% render 'tick' %}
+                    </div>
+                  {% else %}
+                    {% render 'cross' %}
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Comparison Table Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section Heading"
+      }, {
+        "type": "text",
+        "id": "subhead",
+        "label": "Section Subheading"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Table Row",
+        "type": "table",
+        "settings": [
+          {
+            "type": "text",
+            "id": "prodFeat",
+            "label": "Product Feature"
+          },
+          {
+            "type": "checkbox",
+            "id": "tick",
+            "label": "Click on this for Tick"
+          },
+          {
+            "type": "checkbox",
+            "id": "cross",
+            "label": "Click on this for cross"
+          },
+          {
+            "type": "checkbox",
+            "id": "tick1",
+            "label": "Click on this for Tick"
+          }, {
+            "type": "checkbox",
+            "id": "cross1",
+            "label": "Click on this for cross"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

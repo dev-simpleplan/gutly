@@ -1,0 +1,67 @@
+<section class="pad-180">
+  <div class="container">
+    <div class="practices-section">
+      <div class="ps-left">
+        <img
+          src="{{ section.settings.sectionImage | img_url: 'master' }}"
+          alt=""
+          class="img">
+      </div>
+      <div class="ps-right">
+        <div class="head">
+          <h3>{{ section.settings.head }}</h3>
+        </div>
+        <div class="para-wrap">
+          {% for block in section.blocks %}
+            <div class="para">
+              <p>
+                {{ block.settings.para }}
+              </p>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="cta">
+          <a href="{{ section.settings.cta_link }}" class="primary-button yellow-black">{{ section.settings.cta_txt }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Practices Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "sectionImage",
+        "label": "Section Image"
+      }, {
+        "type": "text",
+        "id": "head",
+        "label": "Section Heading"
+      }, {
+        "type": "text",
+        "id": "cta_txt",
+        "label": "Text For Cta"
+      }, {
+        "type": "page",
+        "id": "cta_link",
+        "label": "Choose Page for Redirection"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "practiceParagraph",
+        "name": "Practice Paragraph",
+        "settings": [
+          {
+            "type": "text",
+            "id": "para",
+            "label": "Practice Paragraphs"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

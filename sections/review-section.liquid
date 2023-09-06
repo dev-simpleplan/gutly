@@ -1,0 +1,140 @@
+<section class="pad-180">
+  <div class="container">
+    <div class="review-section">
+      <div class="heading">
+        <div class="head">
+          <h2 class="txt-white">
+            {{ section.settings.head }}
+          </h2>
+        </div>
+        <div class="subhead">
+          <p>{{ section.settings.subhead }}</p>
+        </div>
+      </div>
+      <div class="review-slider">
+        <div class="owl-carousel owl-theme">
+          {% for block in section.blocks %}
+            <div class="item">
+              <div class="review-slide">
+                <div class="review-txt-con">
+                  <div class="rating">
+                    {% assign number = block.settings.number_of_stars | times: 1 %}
+                    {% assign range = (1..number) %}
+                    {% for i in range %}
+                      <div class="rating-img">
+                        <img
+                          src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/ph_star-fill.svg?v=1693901784"
+                          alt=""
+                          class="icons">
+                      </div>
+                    {% endfor %}
+                  </div>
+                  <div class="review-txt">
+                    <p>"{{ block.settings.review-txt }}"</p>
+                  </div>
+                  <div class="review-nav-con">
+                    <div class="review-author">
+                      <p>{{ block.settings.review-author }}</p>
+                      {% if block.settings.enable_author %}
+                        <p class="verify">verified buyer</p>
+                      {% endif %}
+                    </div>
+                    <div class="review-nav"></div>
+                  </div>
+                </div>
+                <div class="review-img">
+                  <img
+                    src="{{ block.settings.review_img | img_url: 'master' }}"
+                    alt=""
+                    class="img">
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Review Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section Heading"
+      }, {
+        "type": "text",
+        "id": "subhead",
+        "label": "Section Sub Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "review-section",
+        "name": "Review Slider",
+        "settings": [
+          {
+            "type": "text",
+            "id": "review-txt",
+            "label": "Review Text"
+          },
+          {
+            "type": "range",
+            "id": "number_of_stars",
+            "label": "Number of Stars",
+            "min": 1,
+            "max": 5,
+            "step": 1,
+            "default": 5
+          },
+          {
+            "type": "image_picker",
+            "id": "review_img",
+            "label": "Review Image"
+          },
+          {
+            "type": "text",
+            "id": "review-author",
+            "label": "Review author"
+          }, {
+            "type": "checkbox",
+            "id": "enable_author",
+            "default": true,
+            "label": "Display Author Name"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+  $('.review-slider .owl-carousel').owlCarousel({
+    loop: false,
+    margin: 10,
+    responsiveClass: true,
+    nav: true,
+    mouseDrag: false,
+    touchDrag: false,
+    animateOut: 'fadeOut',
+    navText: [
+      "<img src='https://cdn.shopify.com/s/files/1/0817/8067/0742/files/arrow-right_2.svg?v=1693902969'>", "<img src='https://cdn.shopify.com/s/files/1/0817/8067/0742/files/arrow-right_1.svg?v=1693902975'>"
+    ],
+    navContainer: '.review-nav-con .review-nav',
+    dots: false,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 1
+      }
+    }
+  })
+</script>
