@@ -2146,7 +2146,7 @@ footer{
         background: #FDF9F3;
     }
     div#shopify-section-header{
-        top: 20px;
+        top: 0px;
     }
     .shop-left-product .slp-item .slp-img{
         padding-top: 70%;
@@ -2353,7 +2353,7 @@ footer{
         font-size: 20px;
     }
     .chart-section .heading, .chart-section .product-compare {
-        width: 210%;
+        width: 190%;
         gap: 8px
     }
     .chart-section{
