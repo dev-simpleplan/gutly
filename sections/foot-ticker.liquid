@@ -37,10 +37,11 @@
 <script>
   $('.foot-ticker .owl-carousel').owlCarousel({
     loop: true,
-    margin: 14,
+    margin: 10,
     responsiveClass: true,
     nav: false,
     dots: false,
+    items: 4,
     slideTransition: 'linear',
     autoplay: true,
     autoplayTimeout: 5000,
@@ -48,12 +49,12 @@
     autoplayHoverPause: false,
     responsive: {
       0: {
+        items: 1
+      },
+      767: {
         items: 3
       },
-      600: {
-        items: 3
-      },
-      1000: {
+      991: {
         items: 4
       }
     }

@@ -165,7 +165,7 @@
             class="icons">
         </button>
       </div>
-      <div class="mhw-con">
+      <div class="mhw-con-inner">
         <div class="mhw-product">
           <div class="mob-grab">
             <p>GRAB A PACK</p>
@@ -326,5 +326,14 @@
       $(".mob-ham-wrapper").removeClass("active");
       $("body").removeClass("overflow-hide");
     });
+  });
+
+// Header Js
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 10) {
+      $('#shopify-section-header').addClass('backdrop');
+    } else {
+      $('#shopify-section-header').removeClass('backdrop');
+    }
   });
 </script>

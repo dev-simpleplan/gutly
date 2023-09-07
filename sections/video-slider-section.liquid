@@ -55,25 +55,28 @@
 
 <script>
   $('.video-slider .owl-carousel').owlCarousel({
-    loop: true,
+    loop: false,
     margin: 30,
     dots: false,
     nav: false,
+    items: 3,
     responsiveClass: true,
     responsive: {
       0: {
         items: 1
       },
-      600: {
+      767: {
         items: 2
       },
-      1000: {
+      991: {
         items: 3
       }
     }
   });
+</script>
 
-  var videos = $("video");
+<script>
+  var videos = $(".vs-video video");
 
 // Attach a click event handler to each video element
   videos.click(function() {
