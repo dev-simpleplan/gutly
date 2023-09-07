@@ -2430,6 +2430,9 @@ footer{
     .sample-section .sample-half {
         padding: 40px 25px 0 25px;
     }
+    .sample-section{
+        flex-direction: column;
+    }
 }
 /* Max Width 767px Ends */
 
