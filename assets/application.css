@@ -126,10 +126,10 @@ p.small{
     padding-bottom: 90px;
 }
 .padt-0{
-    padding-top: 90px;
+    padding-top: 0px;
 }
 .padb-0{
-    padding-top: 90px;
+    padding-top: 0px;
 }
 .txt-white{
     color: #FDF9F3;
@@ -300,3 +300,94 @@ body.overflow-hide{
     display: flex;
 }
 /* Custom Class Ends */
+
+/* Responsive Css Starts */
+/* Max Width 1800px */
+@media(max-width: 1800px){
+}
+/* Max Width 1800px Ends */
+/* Max Width 1700px */
+@media(max-width: 1700px){
+}
+/* Max Width 1700px Ends */
+/* Max Width 1600px */
+@media(max-width: 1600px){
+}
+/* Max Width 1600px Ends */
+/* Max Width 1500px */
+@media(max-width: 1500px){
+}
+/* Max Width 1500px Ends */
+/* Max Width 1400px */
+@media(max-width: 1400px){
+}
+/* Max Width 1400px Ends */
+/* Max Width 1300px */
+@media(max-width: 1300px){
+    .pad-180{
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .padt-180{
+        padding-top: 140px;
+    }
+    .padb-180{
+        padding-bottom: 140px;
+    }
+    .padt-90{
+        padding-top: 70px;
+    }
+    .padb-90{
+        padding-bottom: 70px;
+    }
+}
+/* Max Width 1300px Ends */
+/* Max Width 1200px */
+@media(max-width: 1200px){
+}
+/* Max Width 1200px Ends */
+/* Max Width 1100px */
+@media(max-width: 1100px){
+}
+/* Max Width 1100px Ends */
+/* Max Width 991px */
+@media(max-width: 991px){
+    .pad-180{
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+    .padt-180{
+        padding-top: 110px;
+    }
+    .padb-180{
+        padding-bottom: 110px;
+    }
+    .padt-90{
+        padding-top: 55px;
+    }
+    .padb-90{
+        padding-bottom: 55px;
+    }
+}
+/* Max Width 991px Ends */
+/* Max Width 767px */
+@media(max-width: 767px){
+    .pad-180{
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+    .padt-180{
+        padding-top: 70px;
+    }
+    .padb-180{
+        padding-bottom: 70px;
+    }
+    .padt-90{
+        padding-top: 35px;
+    }
+    .padb-90{
+        padding-bottom: 35px;
+    }
+}
+/* Max Width 767px Ends */
+/* Responsive Css Ends */

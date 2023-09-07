@@ -7,5 +7,42 @@
       <a href="#!">Shop Now</a>
       <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/image_4.png?v=1693566048" alt="">
     </div>
+    <div class="annouce-wrap mob">
+      <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/image_3.svg?v=1693566055" alt="">
+      <div class="owl-theme owl-carousel">
+        <div class="item">
+          <p class="free-shipping">FREE SHIPPING OVER $50.</p>
+        </div>
+        <div class="item">
+          <p>90-DAY MONEY-BACK GUARANTEE.</p>
+        </div>
+      </div>
+      <a href="#!">Shop Now</a>
+      <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/image_4.png?v=1693566048" alt="">
+    </div>
   </div>
 </section>
+
+<script>
+  $('.announce-bar .owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 7000,
+    autoplayHoverPause: true,
+    animateOut: 'fadeOut',
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 1
+      }
+    }
+  });
+</script>
