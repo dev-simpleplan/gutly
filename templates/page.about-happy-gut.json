@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "banner-section": {
+      "type": "about-hp-banner",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "banner-section"
+  ]
+}

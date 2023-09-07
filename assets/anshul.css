@@ -587,8 +587,6 @@ footer{
 }
 .foot-form form button span{
     color: #55B85F;
-    leading-trim: both;
-    text-edge: cap;
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
