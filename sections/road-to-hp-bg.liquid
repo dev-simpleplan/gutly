@@ -1,0 +1,79 @@
+<section class="padb-90">
+  <div class="road-to-hp bg">
+    <div class="container">
+      <div class="road-to-hp-wrap">
+        <div class="heading center">
+          <h3>{{ section.settings.head }}</h3>
+        </div>
+        <div class="road-to-hp-flex">
+          {% for block in section.blocks %}
+            <div class="item flex">
+              <div class="head" style="background-image: url('{{ block.settings.bgImg | img_url: 'master' }}');">
+                <div class="head-small">
+                  <p>{{ block.settings.smallHead }}</p>
+                </div>
+                <div class="head-big">
+                  <p>{{ block.settings.bigHead }}</p>
+                </div>
+              </div>
+              <div class="subtxt">
+                <div class="st-head">
+                  <h6>{{ block.settings.mainHead }}</h6>
+                </div>
+                <div class="para">
+                  <p>{{ block.settings.mainPara }}</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Road to Happy Gut",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Road To Happy Gut",
+        "type": "road-to-hp-bg",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "bgImg",
+            "label": "Background Image"
+          },
+          {
+            "type": "text",
+            "id": "smallHead",
+            "label": "Small Heading within Background Image"
+          },
+          {
+            "type": "text",
+            "id": "bigHead",
+            "label": "Big Heading within Background Image"
+          },
+          {
+            "type": "text",
+            "id": "mainHead",
+            "label": "Main Heading"
+          }, {
+            "type": "text",
+            "id": "mainPara",
+            "label": "Main Paragraph"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

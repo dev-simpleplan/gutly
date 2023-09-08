@@ -1,0 +1,39 @@
+<section class="pad-180">
+  <div class="founder-cta">
+    <div class="founder-cta-txt">
+      <h4>{{ section.settings.head }}</h4>
+      <a href="{{ section.settings.cta_url.url }}" class="primary-button yellow-black">{{ section.settings.cta_text }}</a>
+    </div>
+    <div class="founder-cta-img">
+      <img
+        src="{{ section.settings.sectionImg | img_url: 'master' }}"
+        alt=""
+        class="img">
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "About Founder Cta Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "sectionImg",
+        "label": "Secion Image"
+      }, {
+        "type": "text",
+        "id": "head",
+        "label": "Section Paragraph"
+      }, {
+        "type": "text",
+        "id": "cta_text",
+        "label": "Section CTA text"
+      }, {
+        "type": "page",
+        "id": "cta_url",
+        "label": "Section CTA Url"
+      }
+    ]
+  }
+{% endschema %}

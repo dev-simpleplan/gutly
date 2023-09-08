@@ -1,0 +1,56 @@
+<section class="about-hp-banner padb-90">
+  <div class="about-hp-ban">
+    <div class="ahb-left-txt">
+      <div class="container">
+        <div class="abh-txt">
+          <div class="abht-head">
+            <div class="ban-head">
+              <h1 class="txt-white">{{ section.settings.head }}</h1>
+            </div>
+            <div class="ban-subhead">
+              <p class="ban-sub-head">
+                {{ section.settings.subhead }}
+              </p>
+            </div>
+          </div>
+          <div class="abht-p">
+            <p>{{ section.settings.para }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="abh-right-img">
+      <div class="abhri-img">
+        <img
+          src="{{ section.settings.banImg | img_url: 'master' }}"
+          alt=""
+          class="img">
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "About Happy Gut Banner",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section Heading"
+      }, {
+        "type": "text",
+        "id": "subhead",
+        "label": "Section Sub Heading"
+      }, {
+        "type": "text",
+        "id": "para",
+        "label": "Section PAragraph"
+      }, {
+        "type": "image_picker",
+        "id": "banImg",
+        "label": "Banner Image"
+      }
+    ]
+  }
+{% endschema %}

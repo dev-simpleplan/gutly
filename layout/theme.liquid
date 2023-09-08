@@ -60,6 +60,11 @@
         font-style: normal;
         font-display: swap;
       }
+      {% if page.handle == 'about-happy-gut' %}
+        div#shopify-section-template--20846456963350__about-founder-cta section {
+          padding-bottom: 0;
+        }
+      {% endif %}
     </style>
     <!-- Header hook for plugins -->
     {{ 'application.css' | asset_url | stylesheet_tag }}

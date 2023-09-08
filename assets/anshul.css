@@ -1625,6 +1625,201 @@ footer{
 
 /* Homepage Css Ends */
 
+/* About Happy Gut */
+
+/* Banner Section */
+.about-hp-banner{
+    min-height: 800px;
+    height: calc( 100vh - 100px );
+    overflow: hidden;
+}
+.about-hp-ban{
+    position: relative;
+    height: 100%;
+    background: #FFD12D;
+    padding-top: 60px;
+    overflow: hidden;
+}
+.about-hp-ban .ahb-left-txt{
+    height: 100%;
+}
+.ahb-left-txt .abh-txt{
+    width: 60%;
+    height: 100%;
+    padding-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.ahb-left-txt .abh-txt .abht-p{
+    max-width: 56ch;
+}
+.ahb-left-txt .abh-txt .abht-p p{
+    color: #363636;
+    letter-spacing: 0.5px;
+}
+.ahb-left-txt .abh-txt .ban-sub-head{
+    color: #49AD53;
+}
+.about-hp-ban .abh-right-img {
+    position: absolute;
+    width: 67%;
+    right: -19%;
+    top: 70px;
+}
+.abh-right-img .abhri-img{
+    position: relative;
+    mask-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Star_5_4.svg?v=1694093977');
+    -webkit-mask-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Star_5_4.svg?v=1694093977');
+    mask-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Star_5_4.svg?v=1694093977');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    -webkit-mask-size: 100%;
+    position: relative;
+    padding-top: 100%;
+    height: 0;
+}
+.abh-right-img .abhri-img img{
+    position: absolute;
+    inset: 0;
+}
+
+/* Banner Section Ends */
+
+/* Zig Zag Section */
+.zig-zag-section{
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+.zig-zag-section .item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.zig-zag-section .item:nth-child(even){
+    flex-direction: row-reverse;
+}
+.zig-zag-section .item .zz-img{
+    width: 45%;
+    position: relative;
+    height: 0;
+    padding-top: 30%;
+    border-radius: 17px;
+    overflow: hidden;
+}
+.zig-zag-section .item .zz-img img{
+    position: absolute;
+    inset: 0;
+}
+.zig-zag-section .item .zz-txt{
+    width: 48%;
+}
+.zig-zag-section .item .zz-txt .para{
+    margin-top: 40px;
+    max-width: 57ch;
+}
+.zig-zag-section .item .zz-txt .head{
+    max-width: 63ch;
+}
+
+/* Zig Zag Section Ends */
+
+/* About Founer Cta Section */
+.founder-cta{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.founder-cta-txt{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+    padding: 50px 71px;
+    background: #F9F1E4;
+    text-align: center;
+}
+.founder-cta-img{
+    width: 50%;
+}
+/* About Founder Cta Ends */
+
+/* Road To Happy Gut */
+.road-to-hp.bg{
+    padding: 125px 0;
+    background: #FFD12D;
+}
+.road-to-hp-flex{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 56px;
+}
+.road-to-hp-flex .item{
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    flex: 1 1 33%;
+}
+.road-to-hp-flex .head-small p{
+    color: #222;
+    text-align: center;
+    font-family: var(--moret);
+    font-size: 22.019px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 96%; /* 21.138px */
+    letter-spacing: -0.22px;
+    text-transform: lowercase;
+}
+.road-to-hp-flex .head-big p{
+    color: #222;
+    text-align: center;
+    font-family: var(--moret);
+    font-size: 34.252px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 96%; /* 32.882px */
+    letter-spacing: -0.343px;
+    text-transform: lowercase;
+}
+.road-to-hp-flex .para{
+    margin: 0 auto;
+    margin-top: 16px;
+    max-width: 28ch;
+}
+.road-to-hp-flex .para p{
+    color: #4E4C4A;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 152%; /* 18.24px */
+    letter-spacing: 0.25px;
+}
+.road-to-hp-flex .head{
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+/* Road To Happy Gut */
+
+/* About Happy Gut Ends */
+
 /* Responsive Css Starts */
 
 /* Min Width 1700px */
@@ -1641,6 +1836,14 @@ footer{
 @media(min-width: 1600px){
     .solution .sl-img-wrap{
         width: 55%;
+    }
+    .about-hp-banner{
+        height: 100vh;
+    }
+    .about-hp-ban .abh-right-img{
+        width: 60%;
+        right: -14%;
+        top: 50px;
     }
 }
 
@@ -1895,12 +2098,36 @@ footer{
     .ss-left .heading {
         max-width: 37ch;
     }
+    .ahb-left-txt .abh-txt .abht-p {
+        max-width: 49ch;
+    }
+    h4{
+        font-size: 42px;
+    }
+    .road-to-hp.bg {
+        padding: 95px 0;
+    }
+    .road-to-hp-flex .head-small p{
+        font-size: 18px;
+    }
+    .road-to-hp-flex .head-big p{
+        font-size: 28px;
+    }
+    .about-hp-ban .abh-right-img{
+        right: -21%;
+        top: 100px;
+    }
+    .zig-zag-section{
+        gap: 100px;
+    }
 }
 /* Max Width 1200px Ends */
 
 /* Max Width 1100px */
 @media(max-width: 1100px){
-
+    .road-to-hp-flex{
+        gap: 20px;
+    }
 }
 /* Max Width 1100px Ends */
 
@@ -2164,6 +2391,91 @@ footer{
     .gap-wrapper .item .gap-img .vegan-stamp {
         width: 95px;
         height: 95px;
+    }
+    .ahb-left-txt .abh-txt .abht-p{
+        max-width: 100%;
+        margin-top: 36px;
+    }
+    .about-hp-ban{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 40px;
+    }
+    .about-hp-ban .abh-right-img{
+        position: static;
+    }
+    .ahb-left-txt .abh-txt{
+        width: 100%;
+        height: auto;
+        padding-bottom: 54px;
+    }
+    .about-hp-ban{
+        padding-top: 40px;
+    }
+    .about-hp-banner {
+        min-height: 600px;
+        height: 100%;
+    }
+    .zig-zag-section .item .zz-txt {
+        width: 52%;
+    }
+    .founder-cta-img {
+        width: 100%;
+        position: relative;
+        padding-top: 60%;
+    }
+    .founder-cta-img img{
+        position: absolute;
+        inset: 0;
+    }
+    .founder-cta{
+        flex-direction: column-reverse;
+    }
+    .founder-cta-txt{
+        width: 100%;
+        padding: 50px 75px;
+    }
+    h4 {
+        font-size: 36px;
+    }
+    .road-to-hp-flex {
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    .road-to-hp-flex .head-small p {
+        font-size: 16px;
+    }
+    .road-to-hp-flex .head-big p {
+        font-size: 24px;
+    }
+    .road-to-hp.bg {
+        padding: 65px 0;
+    }
+    .abht-head {
+        max-width: 50ch;
+    }
+    .zig-zag-section {
+        gap: 70px;
+    }
+    .zig-zag-section {
+        gap: 52px;
+    }
+    .zig-zag-section .item .zz-txt .head {
+        max-width: 37ch;
+    }
+    .founder-cta-txt {
+        padding: 50px 45px;
+    }
+    h4 {
+        font-size: 30px;
+    }
+    .road-to-hp-flex{
+        margin-top: 36px;
+    }
+    .road-to-hp-flex .head{
+        width: 160px;
+        height: 160px;
     }
 }
 /* Max Width 991px Ends */
@@ -2489,6 +2801,52 @@ footer{
         width: 90%;
     }
     .no-if.heading {
+        max-width: 40ch;
+    }
+    .ahb-left-txt .abh-txt .abht-p{
+        margin-top: 24px;
+    }
+    .zig-zag-section .item, .zig-zag-section .item, .zig-zag-section .item:nth-child(even){
+        flex-direction: column;
+        gap: 14px;
+    }
+    .zig-zag-section .item .zz-img{
+        width: 80%;
+        padding-top: 60%;
+    }
+    .zig-zag-section .item .zz-txt{
+        width: 100%;
+    }
+    .zig-zag-section .item .zz-txt .para {
+        margin-top: 20px;
+    }
+    .road-to-hp-flex{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 32px;
+    }
+    .road-to-hp-flex .para{
+        max-width: 100%;
+        margin-top: 12px;
+    }
+    .road-to-hp.bg {
+        padding: 45px 0;
+    }
+    .road-to-hp-flex .head-small p {
+        font-size: 14px;
+    }
+    .road-to-hp-flex .head-big p {
+        font-size: 20px;
+    }
+    .road-to-hp-flex .head {
+        width: 140px;
+        height: 140px;
+    }
+    .road-to-hp-flex .item{
+        flex: 1 1 100%;
+        gap: 16px;
+    }
+    .abht-head {
         max-width: 40ch;
     }
 }

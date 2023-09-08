@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "banner-section": {
+      "type": "subscription-banner",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "banner-section"
+  ]
+}
