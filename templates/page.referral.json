@@ -134,36 +134,18 @@
             },
             "block_order": ["faq1", "faq2", "faq3", "faq4", "faq5", "faq6"]
         },
-        "review":{
-            "type":"review-section",
-            "settings": {
-                "head":"the reviews",
-                "subhead":"hear what they're saying"
-            },
-            "blocks": {
-                "slide1":{
-                    "type": "review-section",
-                    "settings": {
-                        "review-txt":"Honestly, after two weeks of using this, I seriously have not been bloated once!",
-                        "number_of_stars": 5,
-                        "review-author":"Luke.",
-                        "enable_author":true,
-                        "review_img":"shopify:\/\/shop_images\/sample_box.png?v=1693902923"
-                    }
-                },
-                "slide2":{
-                    "type": "review-section",
-                    "settings": {
-                        "review-txt":"At Happy Gut, we're passionate about providing healthy alternatives for people with sensitive stomachs. Our protein powders are carefully formulated to support digestion without .",
-                        "number_of_stars": 5,
-                        "review-author":"John b.",
-                        "enable_author":true,
-                        "review_img":"shopify:\/\/shop_images\/sample_image.jpg?v=1693902928"
-                    }
-                }
-            },
-            "block_order": ["slide1", "slide2"]
+       "gutly-goodies":{
+        "type": "gutly-goodies",
+        "settings": {
+            "head":"Get $20 off",
+            "subhead":"unlock Gutly goodies",
+            "img":"shopify:\/\/shop_images\/sample_box.png?v=1693902923",
+            "para1":"Send your friend $20 off their first order, and get a $20 credit after each purchase.",
+            "para2":"Enter your info to generate a special sharing link, just for you.",
+            "cta":"Avail offer",
+            "bottomPara":"*Offer valid only for new customers, excluding subscription offers. By accepting this offer you agree to the Terms of Services and Privacy Policy."
         }
+       }
     },
-    "order": ["banner-section", "start-referring", "faq-section", "review"]
+    "order": ["banner-section", "start-referring", "faq-section", "gutly-goodies"]
 }

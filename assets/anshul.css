@@ -1226,7 +1226,7 @@ footer{
     transform: rotate(-2.956deg);
     margin-top: -15px;
 }
-.review-section .subhead p{
+.review-section .subhead p, .gutly-goodies .heading p{
     color: #FFD12D;
     font-family: var(--dexotick);
     font-size: 64px;
@@ -2220,6 +2220,93 @@ section.subs-banner {
 
 /* Start Referring ends */
 
+/* Gutly Goodies */
+.gutly-goodies{
+    border-radius: 7.925px;
+    background: #55B85F;
+    padding-top: 70px;
+    padding-left: 55px;
+    overflow: hidden;
+}
+.gutly-goodies .heading{
+    max-width: 69ch;
+}
+.gutly-goodies .heading p{
+    margin-top: -14px;
+    transform: rotate(-2.956deg);
+}
+.gutly-goodies .gg-wrapper{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    position: relative;
+}
+.gg-wrapper .gg-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0;
+    max-width: 69ch;
+    gap: 135px;
+}
+.gg-wrapper .gg-img-con {
+    width: 40%;
+    mask-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Group_17211489.svg?v=1694183004');
+    -webkit-mask-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Group_17211489.svg?v=1694183004');
+    mask-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Group_17211489.svg?v=1694183004');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    -webkit-mask-size: 100%;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    right: 0;
+    bottom: 0;
+    transform-origin: bottom right;
+    transition: 1s all ease;
+    margin-left: auto;
+}
+.gg-wrapper .gg-img img{
+    position: absolute;
+    inset: 0;
+}
+.gg-img {
+    width: 53%;
+    position: absolute;
+    right: -110px;
+    top: -90px;
+}
+.gg-wrapper .gg-txt-up p{
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 30px */
+    letter-spacing: 0.2px;
+    margin-bottom: 16px;
+}
+.gg-wrapper .gg-txt-up p:last-child{
+    margin-bottom: 0;
+}
+.gg-wrapper .gg-txt-up a{
+    margin-top: 46px;
+}
+.gg-wrapper .gg-txt-down p{
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.5px;
+    color: #fff;
+    max-width: 73ch;
+}
+.gg-wrapper .gg-img-con.mob{
+    display: none;
+}
+/* Gutly Goodies Ends */
+
+/* Referral Ends */
+
 /* Responsive Css Starts */
 
 /* Min Width 1700px */
@@ -2317,7 +2404,7 @@ section.subs-banner {
     .no-if-no-but .ticker{
         bottom: 40px;
     }
-    .review-slider .review-txt p{
+    .review-slider .review-txt p, .gg-wrapper .gg-txt-up p{
         font-size: 18px;
     }
     .review-nav-con{
@@ -2339,6 +2426,17 @@ section.subs-banner {
     }
     .ss-left .heading{
         max-width: 43ch;
+    }
+    .gg-wrapper .gg-txt{
+        max-width: 60ch;
+    }
+    .gutly-goodies .heading {
+        max-width: 64ch;
+    }
+    .gg-img {
+        width: 58%;
+        right: -140px;
+        top: -80px;
     }
 }
 /* Max Width 1400px Ends */
@@ -2373,7 +2471,7 @@ section.subs-banner {
     .ps-right .para-wrap{
         max-width: 49ch;
     }
-    .chart-section .heading .head p, .review-section .subhead p{
+    .chart-section .heading .head p, .review-section .subhead p, .gutly-goodies .heading p{
         font-size: 54px;
     }
     .chart-section .heading .head h3{
@@ -2398,6 +2496,7 @@ section.subs-banner {
     .rfb-txt-con h1{
         font-size: 92px;
     }
+    
 }
 /* Max Width 1300px Ends */
 
@@ -2487,7 +2586,7 @@ section.subs-banner {
         right: -80px;
         bottom: -110px;
     }
-    .review-slider .review-txt p {
+    .review-slider .review-txt p, .gg-wrapper .gg-txt-up p {
         font-size: 16px;
     }
     .review-slider .review-txt{
@@ -2561,6 +2660,18 @@ section.subs-banner {
     .start-referring {
         background: #FFD12D;
         padding: 80px 0;
+    }
+    .gutly-goodies .heading {
+        max-width: 53ch;
+    }
+    .gg-wrapper .gg-txt {
+        max-width: 53ch;
+    }
+    .gg-wrapper .gg-txt{
+        gap: 75px;
+    }
+    .gg-wrapper .gg-txt-up a {
+        margin-top: 34px;
     }
 }
 /* Max Width 1200px Ends */
@@ -2687,7 +2798,7 @@ section.subs-banner {
     .no-if-txt{
         padding-top: 40px;
     }
-    .chart-section .heading .head p, .review-section .subhead p {
+    .chart-section .heading .head p, .review-section .subhead p, .gutly-goodies .heading p {
         font-size: 44px;
     }
     .chart-section .heading .head h3 {
@@ -2981,7 +3092,35 @@ section.subs-banner {
     .start-referring {
         padding: 60px 0;
     }
-
+    .gg-img{
+        display: none;
+    }
+    .gg-wrapper .gg-img-con.mob{
+        display: block;
+        position: relative;
+        width: 70%;
+        padding-top: 70%;
+        margin: 0 auto;
+    }
+    .gg-wrapper .gg-img-con.mob img{
+        inset: 0;
+        position: absolute;
+        margin: 0 auto;
+    }
+    .gg-wrapper .gg-txt {
+        max-width: 100%;
+        padding-bottom: 0;
+        gap: 40px;
+    }
+    .gutly-goodies{
+        padding: 50px 30px;
+    }
+    .gg-wrapper .gg-txt-up{
+        text-align: center;
+    }
+    .gutly-goodies .heading {
+        max-width: 44ch;
+    }
 }
 /* Max Width 991px Ends */
 
@@ -3197,7 +3336,7 @@ section.subs-banner {
     .chart-section .heading .head h3 {
         font-size: 48px;
     }
-    .chart-section .heading .head p, .review-section .subhead p {
+    .chart-section .heading .head p, .review-section .subhead p, .gutly-goodies .heading p {
         font-size: 30px;
     }
     .chart-section .heading .prod-name {
@@ -3234,7 +3373,7 @@ section.subs-banner {
     .review-section .heading {
         width: 100%;
     }
-    .review-slider .review-txt p {
+    .review-slider .review-txt p, .gg-wrapper .gg-txt-up p {
         font-size: 14px;
     }
     .review-slider .review-img{
@@ -3453,6 +3592,9 @@ section.subs-banner {
     }
     .start-referring .sr-flex{
         margin-top: 40px;
+    }
+    .gutly-goodies {
+        padding: 30px 30px;
     }
 }
 /* Max Width 767px Ends */
