@@ -1,0 +1,109 @@
+<section class="pad-180">
+  <div class="container">
+    <div class="faq-section">
+      <div class="heading center">
+        <h2>{{ section.settings.head }}</h2>
+      </div>
+      <div class="faq-wrapper">
+        {% for block in section.blocks %}
+          <div class="item">
+            <div class="faq-head">
+              <div class="arrow">
+                {% render 'chevron-down' %}
+              </div>
+              <div class="faq-ques-div">
+                <p class="faq-ques">{{ block.settings.faqQues }}</p>
+              </div>
+            </div>
+            <div class="faq-ans">
+              <p>{{ block.settings.faqBigAns }}</p>
+              <ul>
+                <li>
+                  <span>{{ block.settings.faqAnslih }}</span>
+                  {{ block.settings.faqAnsli }}
+                </li>
+                <li>
+                  <span>{{ block.settings.faqAnslih2 }}</span>
+                  {{ block.settings.faqAnsli2 }}
+                </li>
+              </ul>
+              <a href="{{ block.settings.cta_url }}">{{ block.settings.cta_txt }}</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Faq Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Faq Section Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Faq Blocks",
+        "type": "faqBlock",
+        "settings": [
+          {
+            "type": "text",
+            "id": "faqQues",
+            "label": "FAQ Question"
+          },
+          {
+            "type": "text",
+            "id": "faqBigAns",
+            "label": "FAQ Answer in Big Text"
+          },
+          {
+            "type": "text",
+            "id": "faqAnslih",
+            "label": "FAQ answes List item Heading 1"
+          },
+          {
+            "type": "text",
+            "id": "faqAnslih2",
+            "label": "FAQ answes List item Heading 2"
+          }, {
+            "type": "text",
+            "id": "faqAnsli",
+            "label": "FAQ answes List item 1"
+          }, {
+            "type": "text",
+            "id": "faqAnsli2",
+            "label": "FAQ answes List item 2"
+          }, {
+            "type": "text",
+            "id": "cta_url",
+            "label": "CTA Url"
+          }, {
+            "type": "text",
+            "id": "cta_txt",
+            "label": "CTA Txt"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+  $(document).ready(function() {
+    $(".faq-wrapper .item:first-child").addClass("active").find(".faq-ans").slideDown();
+    $(".faq-head").click(function() {
+      $(this).parent().toggleClass("active");
+      $(this).siblings(".faq-ans").slideToggle();
+      $(".faq-wrapper .item")
+        .not($(this).parent())
+        .removeClass("active")
+        .find(".faq-ans")
+        .slideUp();
+    });
+  });
+</script>

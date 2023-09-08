@@ -1,0 +1,151 @@
+{
+    "sections": {
+        "banner-section":{
+            "type": "about-hp-banner",
+            "settings": {
+                "head":"how Gutly was born",
+                "subhead":"Unleashing a revolution",
+                "para":"Here at Gutly, we're all about making gut health cool and accessible. Discover our quirky story, our passion for wellness, and how we're shaking things up in the world of gut health.",
+                "banImg":"shopify:\/\/shop_images\/sample_hp.jpg?v=1694095065"
+            }
+        },
+        "zig-zag":{
+            "type":"zig-zag-section",
+            "blocks": {
+                "block1":{
+                    "type":"zig-zag-block",
+                    "settings": {
+                        "blockImage":"shopify:\/\/shop_images\/sample_zig1.jpg?v=1694098573",
+                        "blockTitle":"Gut-First: The Magical Hub of Wellness",
+                        "blockPara":"At Gutly, we believe your gut is the key to vitality. Recent studies show the profound link between gut health and overall well-being. Join us on a journey to prioritize your gut for a healthier you!"
+                    }
+                },
+                "block2":{
+                    "type":"zig-zag-block",
+                    "settings": {
+                        "blockImage":"shopify:\/\/shop_images\/sample.png?v=1693831657",
+                        "blockTitle":"Cutting Through the Marketing Noise",
+                        "blockPara":"In a world of buzzwords and confusion, Gutly offers clarity. Say goodbye to misleading claims and hello to authentic products. Our commitment to genuine, natural ingredients sets us apart."
+                    }
+                },
+                "block3":{
+                    "type":"zig-zag-block",
+                    "settings": {
+                        "blockImage":"shopify:\/\/shop_images\/sample_zig.jpg?v=1694098579",
+                        "blockTitle":"Gutly's Mission: A Healthier n’ Happier You",
+                        "blockPara":"Our mission is simple yet powerful – crafting clean health supplements for your gut's happiness. With natural ingredients and gut-focused formulas, Gutly aims to revolutionize your well-being."
+                    }
+                }
+            },
+            "block_order": ["block1", "block2", "block3"]
+        },
+        "about-founder-cta":{
+            "type":"about-founder-cta",
+            "settings": {
+                "head":"Born out of a passion for well-being,  Gutly was fueled by the founder’s desire to empower others...",
+                "cta_text":"read more",
+                "cta_url":"about-founder",
+                "sectionImg":"shopify:\/\/shop_images\/sample_image.jpg?v=1693902928"
+            }
+        },
+        "road-to-hp":{
+            "type": "road-to-hp-bg",
+            "settings": {
+                "head":"Paving the <br> road to a happy gut"
+            },
+            "blocks": {
+                "hp1":{
+                    "type": "road-to-hp-bg",
+                    "settings": {
+                        "bgImg":"shopify:\/\/shop_images\/Group_17211379.svg?v=1694162428",
+                        "smallHead":"Tried ‘n ",
+                        "bigHead":"tested",
+                        "mainHead":"Ultimate Gut Wellness",
+                        "mainPara":"We’ve personally tested and researched our formula. No secrets—just simple, minimally processed ingredients. Plus, it's Monash certified for suitability."
+                    }
+                },
+                "hp2":{
+                    "type": "road-to-hp-bg",
+                    "settings": {
+                        "bgImg":"shopify:\/\/shop_images\/Group_17211378.svg?v=1694162424",
+                        "smallHead":"Clean ‘n",
+                        "bigHead":"Natural",
+                        "mainHead":"Safe to consume",
+                        "mainPara":"We keep it simple! If it doesn't resemble real food, we steer clear. We're genuine about being natural and clean—no misleading claims, just wholesome products you can trust."
+                    }
+                },
+                "hp3":{
+                    "type": "road-to-hp-bg",
+                    "settings": {
+                        "bgImg":"shopify:\/\/shop_images\/Group_17211506.svg?v=1694162420",
+                        "smallHead":"Mindful ’n",
+                        "bigHead":"eco-caring",
+                        "mainHead":"Positive impact",
+                        "mainPara":"Every purchase from Gutly fuels our initiatives—meal donations, ocean cleaning, and tree planting. Thanks for supporting local business and the community."
+                    }
+                }
+            },
+            "block_order": ["hp1", "hp2", "hp3"]
+        },
+        "review":{
+            "type":"review-section",
+            "settings": {
+                "head":"the reviews",
+                "subhead":"hear what they're saying"
+            },
+            "blocks": {
+                "slide1":{
+                    "type": "review-section",
+                    "settings": {
+                        "review-txt":"Honestly, after two weeks of using this, I seriously have not been bloated once!",
+                        "number_of_stars": 5,
+                        "review-author":"Luke.",
+                        "enable_author":true,
+                        "review_img":"shopify:\/\/shop_images\/sample_box.png?v=1693902923"
+                    }
+                },
+                "slide2":{
+                    "type": "review-section",
+                    "settings": {
+                        "review-txt":"At Happy Gut, we're passionate about providing healthy alternatives for people with sensitive stomachs. Our protein powders are carefully formulated to support digestion without .",
+                        "number_of_stars": 5,
+                        "review-author":"John b.",
+                        "enable_author":true,
+                        "review_img":"shopify:\/\/shop_images\/sample_image.jpg?v=1693902928"
+                    }
+                }
+            },
+            "block_order": ["slide1", "slide2"]
+        },
+        "grab-a-pack":{
+            "type":"grab-a-pack",
+            "settings": {
+                "head":"grab a pack",
+                "eggwhiteImage":"shopify:\/\/shop_images\/image_21.png?v=1693828411",
+                "eggwhiteHead":"Egg white protein powder",
+                "eggwhitePara":"Crafted from pure pasteurised egg whites, our delicious protein is low-FODMAP, dairy-free, with no artificial additives. Just clean, wholesome nutrition!",
+                "hempImage":"shopify:\/\/shop_images\/image_22.png?v=1693828406",
+                "hempHead":"Hemp protein powder",
+                "hempPara":"A nutritional powerhouse, our hemp protein powder is Edestin-based, gluten-free, and packed with PUFAs, vitamins, and antioxidants. Superb for your overall well-being!",
+                "cta_text":"Buy Now",
+                "cta_url1":"egg-white-protein-powder",
+                "cta_url2":"vegan-protein-powder",
+                "vegan-stamp":"vegan Friendly"
+            }
+        },
+        "sample-section":{
+            "type": "sample-section",
+            "settings": {
+                "eggImg":"shopify:\/\/shop_images\/What_s_in_a_Design_Blogger_s_In-Box_on_Any_Given_Day__-_Core77_3.png?v=1693993359",
+                "eggHead":"Egg-white <br>Protein Sample",
+                "eggPara":"Our protein powder is not only delicious but also super friendly to your sensitive tummy. Say goodbye to bloating!",
+                "cta_egg_txt":"Try Today",
+                "hempImg":"shopify:\/\/shop_images\/What_s_in_a_Design_Blogger_s_In-Box_on_Any_Given_Day__-_Core77_3_1.png?v=1693993321",
+                "hempHead":"Hemp <br>Protein Sample",
+                "hempPara":"Our hemp-based alternative with superior quality, easy-to-digest ingredients for your sensitive tummy!",
+                "cta_hemp_txt":"Try Today"
+            }
+        }
+    },
+    "order": ["banner-section", "zig-zag", "about-founder-cta", "road-to-hp", "review", "grab-a-pack", "sample-section"]
+}

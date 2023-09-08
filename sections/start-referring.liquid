@@ -1,0 +1,80 @@
+<section class="padb-90">
+  <div class="start-referring">
+    <div class="container">
+      <div class="heading center">
+        <div class="head">
+          <h2>{{ section.settings.head }}</h2>
+        </div>
+        <div class="cta">
+          <a href="#!" class="primary-button black-green">{{ section.settings.cta }}</a>
+        </div>
+      </div>
+      <div class="sr-flex">
+        {% for block in section.blocks %}
+          <div class="item">
+            <div class="sr-img">
+              <img
+                src="{{ block.settings.rfImg | img_url: 'master' }}"
+                alt=""
+                class="img">
+            </div>
+            <div class="sr-txt">
+              <div class="srt-head">
+                <p class="num-head">
+                  <span class="num">{{ block.settings.rfnum }}</span>
+                  {{ block.settings.rfhead }}
+                </p>
+              </div>
+              <div class="srt-para">
+                <p class="small">{{ block.settings.rfPara }}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Start Referring Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section Heading"
+      }, {
+        "type": "text",
+        "id": "cta",
+        "label": "CTA Text"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "referring-flex",
+        "name": "Referring Steps",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "rfImg",
+            "label": "Image"
+          }, {
+            "type": "text",
+            "id": "rfnum",
+            "label": "Number"
+          }, {
+            "type": "text",
+            "id": "rfhead",
+            "label": "Heading"
+          }, {
+            "type": "text",
+            "id": "rfPara",
+            "label": "Paragraph"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

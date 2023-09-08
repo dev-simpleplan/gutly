@@ -1,0 +1,35 @@
+<section class="subs-banner">
+  <div class="subs-banner-wrapper" style="background-image: url('{{ section.settings.banImg | img_url: "master" }}');">
+    <div class="container">
+      <div class="subs-ban-txt">
+        <div class="head">
+          <h1 class="txt-white">{{ section.settings.head }}</h1>
+        </div>
+        <div class="ban-subhead">
+          <p class="ban-sub-head">{{ section.settings.subhead }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Subscription Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "banImg",
+        "label": "Banner Image"
+      }, {
+        "type": "text",
+        "id": "head",
+        "label": "Banner Heading"
+      }, {
+        "type": "text",
+        "id": "subhead",
+        "label": "Banner Sub Heading"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,51 @@
+<section class="pad-180">
+  <div class="container">
+    <div class="zig-zag-section">
+      {% for block in section.blocks %}
+        <div class="item">
+          <div class="zz-img">
+            <img
+              src="{{ block.settings.blockImage | img_url: 'master' }}"
+              alt=""
+              class="img">
+          </div>
+          <div class="zz-txt">
+            <div class="head">
+              <h3>{{ block.settings.blockTitle }}</h3>
+            </div>
+            <div class="para">
+              <p>{{ block.settings.blockPara }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Zig Zag Section",
+    "blocks": [
+      {
+        "name": "Zig Zag Block",
+        "type": "zig-zag-block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "blockImage",
+            "label": "Block Image"
+          }, {
+            "type": "text",
+            "id": "blockTitle",
+            "label": "Block Title"
+          }, {
+            "type": "text",
+            "id": "blockPara",
+            "label": "Block Paragraph"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
