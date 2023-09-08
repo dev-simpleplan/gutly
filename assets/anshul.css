@@ -1901,7 +1901,7 @@ section.subs-banner {
     position: absolute;
     inset: 0;
 }
-.sub-grab .num-head{
+.sub-grab .num-head, .sr-flex .item .srt-head .num-head{
     color: #222;
     font-family: var(--moret);
     font-size: 40px;
@@ -1910,7 +1910,7 @@ section.subs-banner {
     line-height: 103%;
     letter-spacing: 0.4px;
 }
-.sub-grab .num-head span{
+.sub-grab .num-head span, .sr-flex .item .srt-head .num-head span{
     font-size: 32px;
 }
 .sub-grab p.small{
@@ -2091,6 +2091,135 @@ section.subs-banner {
 
 /* Subscription Page Css Ends */
 
+/* Referral Page */
+.referral-banner .rf-wrapper{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: calc( 100vh - 105px);
+    min-height: 650px;
+}
+.rf-wrapper .rfb-img {
+    position: absolute;
+    width: 50%;
+    right: 0;
+    height: 100%;
+}
+.rf-wrapper .rfb-txt{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.rfb-txt-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: 100%;
+}
+.rfb-txt-con h1{
+    font-size: 104px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 84.615%;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+.rfb-txt-con .subhead{
+    margin-top: 16px;
+    max-width: 60ch;
+}
+.rfb-txt-con .subhead p{
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #222;
+}
+.rfb-txt-con .cta{
+    margin-top: 48px;
+}
+.rfban-small-txt{
+    color: #222;
+    text-align: center;
+    font-size: 12.559px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 114.5%; /* 14.38px */
+    letter-spacing: -0.188px;
+    text-transform: uppercase;
+    background-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Star_5_5.svg?v=1694176368');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -30px;
+    right: 0;
+    transform: rotate(16deg);
+}
+.rfb-txt-con .head{
+    position: relative;
+    max-width: 55ch;
+}
+/* Referral Page Ends */
+
+/* Start referring */
+.start-referring {
+    background: #FFD12D;
+    padding: 120px 0;
+}
+.start-referring .heading{
+    gap: 56px;
+}
+.start-referring .sr-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 72px;
+}
+.sr-flex .item{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+.sr-flex .item .sr-img{
+    position: relative;
+    padding-top: 51%;
+    width: 51%;
+    mask-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Group_17211489.svg?v=1694183004');
+    -webkit-mask-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Group_17211489.svg?v=1694183004');
+    mask-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Group_17211489.svg?v=1694183004');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    -webkit-mask-size: 100%;
+}
+.sr-flex .item .sr-img img{
+    position: absolute;
+    inset: 0;
+}
+.sr-flex .item .srt-para{
+    margin-top: 16px;
+}
+.sr-flex .item .srt-para p{
+    color: #504F4C;
+    text-align: center;
+    font-weight: 500;
+    line-height: 142.857%;
+    letter-spacing: 0.5px;
+}
+
+/* Start Referring ends */
+
 /* Responsive Css Starts */
 
 /* Min Width 1700px */
@@ -2115,6 +2244,9 @@ section.subs-banner {
         width: 60%;
         right: -14%;
         top: 50px;
+    }
+    .rf-wrapper{
+        height: 100vh;
     }
 }
 
@@ -2247,10 +2379,10 @@ section.subs-banner {
     .chart-section .heading .head h3{
         font-size: 78px;
     }
-    .sub-grab .num-head{
+    .sub-grab .num-head, .sr-flex .item .srt-head .num-head{
         font-size: 34px;
     }
-    .sub-grab .num-head span {
+    .sub-grab .num-head span, .sr-flex .item .srt-head .num-head span {
         font-size: 26px;
     }
     .faq-section .faq-head .faq-ques{
@@ -2262,6 +2394,9 @@ section.subs-banner {
     .faq-section .faq-head .arrow {
         width: 14px;
         height: 8px;
+    }
+    .rfb-txt-con h1{
+        font-size: 92px;
     }
 }
 /* Max Width 1300px Ends */
@@ -2413,6 +2548,19 @@ section.subs-banner {
     }
     .faq-section .faq-ans{
         padding-left: 70px;
+    }
+    .rfb-txt-con h1 {
+        font-size: 74px;
+    }
+    .rfb-txt-con .cta {
+        margin-top: 40px;
+    }
+    .start-referring .heading {
+        gap: 40px;
+    }
+    .start-referring {
+        background: #FFD12D;
+        padding: 80px 0;
     }
 }
 /* Max Width 1200px Ends */
@@ -2801,6 +2949,39 @@ section.subs-banner {
     .faq-section .faq-ans a{
         font-size: 12px;
     }
+    .rfb-txt-con h1 {
+        font-size: 60px;
+    }
+    .rfban-small-txt{
+        font-size: 10px;
+        width: 50px;
+        height: 50px;
+    }
+    .referral-banner .rf-wrapper{
+        min-height: 500px;
+        height: 50vh;
+    }
+    .start-referring .sr-flex{
+        margin-top: 60px;
+        flex-wrap: wrap;
+        gap: 80px;
+        justify-content: center;
+    }
+    .sr-flex .item .sr-img{
+        padding-top: 80%;
+        width: 80%;
+    }
+    .sr-flex .item{
+        gap: 14px;
+        width: 42%;
+    }
+    .sr-flex .item .srt-para {
+        margin-top: 12px;
+    }
+    .start-referring {
+        padding: 60px 0;
+    }
+
 }
 /* Max Width 991px Ends */
 
@@ -3225,6 +3406,53 @@ section.subs-banner {
     }
     .product-section .product-half{
         padding-top: 40px;
+    }
+    .start-referring {
+        background: #FFD12D;
+        padding: 40px 0;
+    }
+    .rf-wrapper .rfb-img{
+        position: relative;
+        width: 100%;
+        inset: 0;
+        padding-top: 70%;
+    }
+    .rf-wrapper .rfb-img img{
+        position: absolute;
+        inset: 0;
+    }
+    .referral-banner .rf-wrapper{
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+    .rfb-txt-con{
+        width: 100%;
+    }
+    .rf-wrapper .rfb-txt{
+        background: #F9F1E4;
+        padding: 30px 0;
+        padding-top: 50px;
+    }
+    .rfb-txt-con h1 {
+        font-size: 48px;
+    }
+    .rfb-txt-con .head{
+        max-width: 28ch;
+    }
+    .start-referring .sr-flex{
+        flex-direction: column;
+        gap: 35px;
+        align-items: center;
+    }
+    .sr-flex .item{
+        width: 95%;
+    }
+    .sr-flex .item .sr-img {
+        padding-top: 60%;
+        width: 60%;
+    }
+    .start-referring .sr-flex{
+        margin-top: 40px;
     }
 }
 /* Max Width 767px Ends */

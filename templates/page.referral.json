@@ -3,10 +3,186 @@
     "banner-section": {
       "type": "referral-banner",
       "settings": {
+        "img": "shopify:\/\/shop_images\/sample.jpg?v=1694189040",
+        "head": "Share the Gutly love",
+        "subhead": "Try today",
+        "para": "Our referral program is all about sharing the goodness with your friends and family. When you refer someone to Gutly, both you and your referral will be rewarded with exclusive perks and rewards.",
+        "cta": "Join now"
+      }
+    },
+    "start-referring": {
+      "type": "start-referring",
+      "blocks": {
+        "ref1": {
+          "type": "referring-flex",
+          "settings": {
+            "rfImg": "shopify:\/\/shop_images\/sample_zig.jpg?v=1694098579",
+            "rfnum": "1.",
+            "rfhead": "Share",
+            "rfPara": "Share your new favorite supplements with friend by inviting them to join Gutly’s community with your referral link."
+          }
+        },
+        "ref2": {
+          "type": "referring-flex",
+          "settings": {
+            "rfImg": "shopify:\/\/shop_images\/sample_zig1.jpg?v=1694098573",
+            "rfnum": "2.",
+            "rfhead": "Spread",
+            "rfPara": "Encourage your friends to make their first purchase using your unique referral link to enjoy exciting benefits!"
+          }
+        },
+        "ref3": {
+          "type": "referring-flex",
+          "settings": {
+            "rfImg": "shopify:\/\/shop_images\/sample.png?v=1693831657",
+            "rfnum": "3.",
+            "rfhead": "Earn",
+            "rfPara": "You both will receive $20 credits towards your next purchase as a token for being part of the Gutly family. Happy referring!"
+          }
+        }
+      },
+      "block_order": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "settings": {
+        "head": "Start referring",
+        "cta": "Join program"
+      }
+    },
+    "faq-section": {
+      "type": "faq-section",
+      "blocks": {
+        "faq1": {
+          "type": "faqBlock",
+          "settings": {
+            "faqQues": "Are Gutly products suitable for everyone?",
+            "faqBigAns": "Yes, Gutly products are designed to be inclusive and suitable for a wide range of individuals. Here are a couple of examples:",
+            "faqAnslih": "Vegan Friendly:",
+            "faqAnslih2": "Keto Friendly:",
+            "faqAnsli": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesuada cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectus.",
+            "faqAnsli2": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesua cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectu ipiscing elits.",
+            "cta_url": "#!",
+            "cta_txt": "KNOW MORE"
+          }
+        },
+        "faq2": {
+          "type": "faqBlock",
+          "settings": {
+            "faqQues": "How should I incorporate Gutly products into my daily routine?",
+            "faqBigAns": "Yes, Gutly products are designed to be inclusive and suitable for a wide range of individuals. Here are a couple of examples:",
+            "faqAnslih": "Vegan Friendly:",
+            "faqAnslih2": "Keto Friendly:",
+            "faqAnsli": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesuada cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectus.",
+            "faqAnsli2": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesua cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectu ipiscing elits.",
+            "cta_url": "#!",
+            "cta_txt": "KNOW MORE"
+          }
+        },
+        "faq3": {
+          "type": "faqBlock",
+          "settings": {
+            "faqQues": "Are Gutly products free from artificial additives or preservatives?",
+            "faqBigAns": "Yes, Gutly products are designed to be inclusive and suitable for a wide range of individuals. Here are a couple of examples:",
+            "faqAnslih": "Vegan Friendly:",
+            "faqAnslih2": "Keto Friendly:",
+            "faqAnsli": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesuada cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectus.",
+            "faqAnsli2": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesua cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectu ipiscing elits.",
+            "cta_url": "#!",
+            "cta_txt": "KNOW MORE"
+          }
+        },
+        "faq4": {
+          "type": "faqBlock",
+          "settings": {
+            "faqQues": "Where can I purchase Gutly products?",
+            "faqBigAns": "Yes, Gutly products are designed to be inclusive and suitable for a wide range of individuals. Here are a couple of examples:",
+            "faqAnslih": "Vegan Friendly:",
+            "faqAnslih2": "Keto Friendly:",
+            "faqAnsli": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesuada cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectus.",
+            "faqAnsli2": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesua cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectu ipiscing elits.",
+            "cta_url": "#!",
+            "cta_txt": "KNOW MORE"
+          }
+        },
+        "faq5": {
+          "type": "faqBlock",
+          "settings": {
+            "faqQues": "What is Gutly's return policy?",
+            "faqBigAns": "Yes, Gutly products are designed to be inclusive and suitable for a wide range of individuals. Here are a couple of examples:",
+            "faqAnslih": "Vegan Friendly:",
+            "faqAnslih2": "Keto Friendly:",
+            "faqAnsli": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesuada cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectus.",
+            "faqAnsli2": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesua cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectu ipiscing elits.",
+            "cta_url": "#!",
+            "cta_txt": "KNOW MORE"
+          }
+        },
+        "faq6": {
+          "type": "faqBlock",
+          "settings": {
+            "faqQues": "How can I get in touch with Gutly's customer support?",
+            "faqBigAns": "Yes, Gutly products are designed to be inclusive and suitable for a wide range of individuals. Here are a couple of examples:",
+            "faqAnslih": "Vegan Friendly:",
+            "faqAnslih2": "Keto Friendly:",
+            "faqAnsli": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesuada cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectus.",
+            "faqAnsli2": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesua cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectu ipiscing elits.",
+            "cta_url": "#!",
+            "cta_txt": "KNOW MORE"
+          }
+        }
+      },
+      "block_order": [
+        "faq1",
+        "faq2",
+        "faq3",
+        "faq4",
+        "faq5",
+        "faq6"
+      ],
+      "settings": {
+        "head": "FAQs"
+      }
+    },
+    "review": {
+      "type": "review-section",
+      "blocks": {
+        "slide1": {
+          "type": "review-section",
+          "settings": {
+            "review-txt": "Honestly, after two weeks of using this, I seriously have not been bloated once!",
+            "number_of_stars": 5,
+            "review_img": "shopify:\/\/shop_images\/sample_box.png?v=1693902923",
+            "review-author": "Luke.",
+            "enable_author": true
+          }
+        },
+        "slide2": {
+          "type": "review-section",
+          "settings": {
+            "review-txt": "At Happy Gut, we're passionate about providing healthy alternatives for people with sensitive stomachs. Our protein powders are carefully formulated to support digestion without .",
+            "number_of_stars": 5,
+            "review_img": "shopify:\/\/shop_images\/sample_image.jpg?v=1693902928",
+            "review-author": "John b.",
+            "enable_author": true
+          }
+        }
+      },
+      "block_order": [
+        "slide1",
+        "slide2"
+      ],
+      "settings": {
+        "head": "the reviews",
+        "subhead": "hear what they're saying"
       }
     }
   },
   "order": [
-    "banner-section"
+    "banner-section",
+    "start-referring",
+    "faq-section",
+    "review"
   ]
 }

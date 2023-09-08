@@ -1,0 +1,62 @@
+<section class="referral-banner">
+  <div class="rf-wrapper">
+    <div class="rfb-txt">
+      <div class="container">
+        <div class="rfb-txt-con">
+          <div class="heading center">
+            <div class="head">
+              <h1>{{ section.settings.head }}</h1>
+              <p class="rfban-small-txt">
+                {{ section.settings.subhead }}
+              </p>
+            </div>
+            <div class="subhead">
+              <p>{{ section.settings.para }}</p>
+            </div>
+            <div class="cta">
+              <a href="#!" class="primary-button yellow-black">{{ section.settings.cta }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rfb-img">
+      <img
+        src="{{ section.settings.img | img_url: 'master' }}"
+        alt=""
+        class="img">
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Referral Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Section Image"
+      },
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Banner Heading"
+      },
+      {
+        "type": "text",
+        "id": "subhead",
+        "label": "Banner Small Sub Heading"
+      },
+      {
+        "type": "text",
+        "id": "para",
+        "label": "Banner Paragraph"
+      }, {
+        "type": "text",
+        "id": "cta",
+        "label": "Banner CTA Text"
+      }
+    ]
+  }
+{% endschema %}
