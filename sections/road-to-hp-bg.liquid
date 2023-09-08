@@ -5,6 +5,11 @@
         <div class="heading center">
           <h3>{{ section.settings.head }}</h3>
         </div>
+        {% if section.settings.body_enable %}
+          <div class="body center">
+            <p>{{ section.settings.bod }}</p>
+          </div>
+        {% endif %}
         <div class="road-to-hp-flex">
           {% for block in section.blocks %}
             <div class="item flex">
@@ -31,6 +36,13 @@
     </div>
   </div>
 </section>
+{% style %}
+  .road-to-hp.bg {
+    background: {{ section.settings.color_bg }}
+    ;
+  }
+{% endstyle %}
+
 
 {% schema %}
   {
@@ -40,6 +52,18 @@
         "type": "text",
         "id": "head",
         "label": "Section Heading"
+      }, {
+        "type": "text",
+        "id": "bod",
+        "label": "Section Body"
+      }, {
+        "type": "color",
+        "id": "color_bg",
+        "label": "Background Color For Section"
+      }, {
+        "type": "checkbox",
+        "id": "body_enable",
+        "label": "Do you want to add body text?"
       }
     ],
     "blocks": [

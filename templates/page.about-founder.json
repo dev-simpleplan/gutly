@@ -2,9 +2,195 @@
     "sections": {
       "banner": {
         "type": "founder-banner"
+      },
+      "no-if-no-but":{
+        "type":"no-if-no-but",
+        "settings": {
+            "head":"No if, no but. Happy Gut.",
+            "image":"shopify:\/\/shop_images\/image_11.png?v=1693813470"
+        },
+        "blocks": {
+            "item1":{
+                "type":"leftGrid",
+                "settings": {
+                    "head1":"EASY PROTEIN-RICH BREAKFAST",
+                    "para1":"Easily meet protein goals with our simple solution, start a healthy diet with a high-protein meal."
+                }
+            },
+            "item2":{
+                "type":"leftGrid",
+                "settings": {
+                    "head1":"WEIGHT MANAGEMENT",
+                    "para1":"Satisfy your hunger with an excellent source of >19g of high-quality protein, ensuring lasting fullness."
+                }
+            },
+            "item3":{
+                "type":"leftGrid",
+                "settings": {
+                    "head1":"SLOW-RELEASE PROTEIN",
+                    "para1":"Maximise your muscle gain while you sleep, leaving behind any worries of bloating or uneasiness."
+                }
+            },
+            "item4":{
+                "type":"rightGrid",
+                "settings": {
+                    "head2":"SIMPLE LOW FODMAP DIET",
+                    "para2":"Following a strict diet can be tough, but we make it easy to incorporate into your meal plan."
+                }
+            },
+            "item5":{
+                "type":"rightGrid",
+                "settings": {
+                    "head2":"BYE-BYE BLOATING",
+                    "para2":"Begin managing your bloating problem with our third-party certified, bloating-free formula."
+                }
+            },
+            "item6":{
+                "type":"rightGrid",
+                "settings": {
+                    "head2":"TRANSPARENT INGREDIENTS",
+                    "para2":"No secret formula, no nasty additives, and no complicated ingredients. Gutly is a no brainer!"
+                }
+            },
+            "ticker1":{
+                "type":"ticker",
+                "settings": {
+                    "tickerImage":"shopify:\/\/shop_images\/pff-emoji.png?v=1693813526",
+                    "tickerText":"Try Today"
+                }
+            },
+            "ticker2":{
+                "type":"ticker",
+                "settings": {
+                    "tickerImage":"shopify:\/\/shop_images\/pff-emoji.png?v=1693813526",
+                    "tickerText":"Try Today"
+                }
+            },
+            "ticker3":{
+                "type":"ticker",
+                "settings": {
+                    "tickerImage":"shopify:\/\/shop_images\/pff-emoji.png?v=1693813526",
+                    "tickerText":"Try Today"
+                }
+            },
+            "ticker4":{
+                "type":"ticker",
+                "settings": {
+                    "tickerImage":"shopify:\/\/shop_images\/pff-emoji.png?v=1693813526",
+                    "tickerText":"Try Today"
+                }
+            }
+        },
+        "block_order": ["item1", "item2", "item3", "item4", "item5", "item6", "ticker1", "ticker2", "ticekr3", "ticker4"]
+    },
+    "product-section":{
+      "type": "product-section",
+      "settings": {
+          "eggImg":"shopify:\/\/shop_images\/image_22_1.png?v=1694183409",
+          "eggHead":"Egg-white <br>Protein powder",
+          "eggPara":"Our deliciously clean, dairy-free protein powder is perfect for your sensitive tummy. Say goodby to bloating!",
+          "cta_egg_txt":"Buy now",
+          "hempImg":"shopify:\/\/shop_images\/image_21_1.png?v=1694182946",
+          "hempHead":"Hemp <br>Protein powder",
+          "hempPara":"Our power packed, hemp-based protein powder contains cleansing fibres and antioxidants that your gut will love!",
+          "cta_hemp_txt":"Buy now"
       }
+  },
+  "road-to-hp":{
+    "type": "road-to-hp-bg",
+    "settings": {
+        "head":"Bringing you the<br>road to a happy gut",
+        "bod":"Our protein powder is not only delicious but also super friendly to your sensitive tummy, perfect for folks with IBS! Say goodbye to bloating and discomfort.",
+        "color_bg":"#FDF9F3",
+        "body_enable": true
+    },
+    "blocks": {
+        "hp1":{
+            "type": "road-to-hp-bg",
+            "settings": {
+                "bgImg":"shopify:\/\/shop_images\/svg-found3.svg",
+                "smallHead":"vegan-",
+                "bigHead":"friendly",
+                "mainHead":"Plant-powered goodness",
+                "mainPara":"Proudly crafted from a blend of plant-based ingredients, making it perfect for vegans."
+            }
+        },
+        "hp2":{
+            "type": "road-to-hp-bg",
+            "settings": {
+                "bgImg":"shopify:\/\/shop_images\/svg-found2.svg",
+                "smallHead":"tastes",
+                "bigHead":"delightful",
+                "mainHead":"Smooth ‘n’ creamy",
+                "mainPara":"Prepare for a taste sensation like no other! Our protein boasts a smooth and creamy texture."
+            }
+        },
+        "hp3":{
+            "type": "road-to-hp-bg",
+            "settings": {
+                "bgImg":"shopify:\/\/shop_images\/svg-found1.svg",
+                "smallHead":"gut",
+                "bigHead":"loving",
+                "mainHead":"Gut wellness at its best",
+                "mainPara":"Gutly protein powder is specially formulated to support digestive health."
+            }
+        }
+    },
+    "block_order": ["hp1", "hp2", "hp3"]
+},
+"recipes":{
+  "type": "what-learned",
+   "settings":{
+     "head":"What I’ve learned"
+   },
+   "blocks": {
+    "card1":{
+        "type": "recipeCard",
+        "settings": {
+          "imgLink":"shopify:\/\/shop_images\/recipe-1.jpg",
+          "headText":"Unleashing the power of paleo diet for optimal...",
+          "bodText":"Proudly crafted from a blend of plant-based ingredients, making it perfect for vegans..."
+        }
+    },
+    "card2":{
+        "type": "recipeCard",
+        "settings": {
+          "imgLink":"shopify:\/\/shop_images\/recipe2.jpg",
+          "headText":"Unleashing the power of paleo diet for optimal...",
+          "bodText":"Proudly crafted from a blend of plant-based ingredients, making it perfect for vegans..."
+        }
+    },
+    "card3":{
+        "type": "recipeCard",
+        "settings": {
+          "imgLink":"shopify:\/\/shop_images\/recipe-1.jpg",
+          "headText":"Unleashing the power of paleo diet for optimal...",
+          "bodText":"Proudly crafted from a blend of plant-based ingredients, making it perfect for vegans..."
+        }
+    }
+},
+"block_order": ["card1", "card2", "card3"]
+},
+  "sample-section":{
+    "type": "sample-section",
+    "settings": {
+        "eggImg":"shopify:\/\/shop_images\/What_s_in_a_Design_Blogger_s_In-Box_on_Any_Given_Day__-_Core77_3.png?v=1693993359",
+        "eggHead":"Egg-white <br>Protein Sample",
+        "eggPara":"Our protein powder is not only delicious but also super friendly to your sensitive tummy. Say goodbye to bloating!",
+        "cta_egg_txt":"Try Today",
+        "hempImg":"shopify:\/\/shop_images\/What_s_in_a_Design_Blogger_s_In-Box_on_Any_Given_Day__-_Core77_3_1.png?v=1693993321",
+        "hempHead":"Hemp <br>Protein Sample",
+        "hempPara":"Our hemp-based alternative with superior quality, easy-to-digest ingredients for your sensitive tummy!",
+        "cta_hemp_txt":"Try Today"
+    }
+}
     },
     "order": [
-      "banner"
+      "banner",
+      "no-if-no-but",
+      "product-section",
+      "road-to-hp",
+      "recipes",
+      "sample-section"
     ]
   }

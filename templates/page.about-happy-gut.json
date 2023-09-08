@@ -51,7 +51,9 @@
         "road-to-hp":{
             "type": "road-to-hp-bg",
             "settings": {
-                "head":"Paving the <br> road to a happy gut"
+                "head":"Paving the <br> road to a happy gut",
+                "color_bg":"#FFD12D",
+                "body_enable": false
             },
             "blocks": {
                 "hp1":{

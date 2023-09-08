@@ -386,7 +386,7 @@ div#shopify-section-header.backdrop{
 div#shopify-section-header{
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 990;
 }
 .annouce-wrap{
     display: flex;
@@ -1751,7 +1751,6 @@ footer{
 /* Road To Happy Gut */
 .road-to-hp.bg{
     padding: 125px 0;
-    background: #FFD12D;
 }
 .road-to-hp-flex{
     display: flex;
@@ -1805,8 +1804,8 @@ footer{
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 200px;
-    width: 200px;
+    height: 240px;
+    width: 240px;
     margin: 0 auto;
     text-align: center;
     display: flex;
