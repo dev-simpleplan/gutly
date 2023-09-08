@@ -1,0 +1,68 @@
+<section class="pad-180">
+  <div class="container">
+    <div class="heading center">
+      <h2>
+        {{ section.settings.head }}
+      </h2>
+    </div>
+    <div class="sub-grab">
+      {% for block in section.blocks %}
+        <div class="item">
+          <div class="txt">
+            <p class="num-head">
+              <span class="num">{{ block.settings.num }}</span>
+              {{ block.settings.subHead }}
+            </p>
+            <p class="small">{{ block.settings.subPara }}</p>
+          </div>
+          <div class="sub-img">
+            <div class="shape-img">
+              <img
+                src="{{ block.settings.subImg | img_url: 'master' }}"
+                alt=""
+                class="img">
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Subs Grab a Pack",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "subsGrab",
+        "name": "Subs Grab",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "subImg",
+            "label": "Block Image"
+          }, {
+            "type": "text",
+            "id": "num",
+            "label": "Block Number"
+          }, {
+            "type": "text",
+            "id": "subHead",
+            "label": "Block Head"
+          }, {
+            "type": "text",
+            "id": "subPara",
+            "label": "Block Para"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

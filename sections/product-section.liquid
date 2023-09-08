@@ -1,0 +1,98 @@
+<section class="pad-180">
+  <div class="product-section">
+    <div class="egg-product product-half">
+      <div class="up-txt">
+        <div class="head">
+          <h3>{{ section.settings.eggHead }}</h3>
+        </div>
+        <div class="para">
+          <p>{{ section.settings.eggPara }}</p>
+        </div>
+        <div class="cta">
+          <a href="{{ section.settings.cta_egg_url.url }}" class="primary-button yellow-black">{{ section.settings.cta_egg_txt }}</a>
+        </div>
+      </div>
+      <div class="bt-img">
+        <div class="prod-img">
+          <img
+            src="{{ section.settings.eggImg | img_url: 'master' }}"
+            alt=""
+            class="icons">
+        </div>
+      </div>
+    </div>
+    <div class="hemp-product product-half">
+      <div class="up-txt">
+        <div class="head">
+          <h3>{{ section.settings.hempHead }}</h3>
+        </div>
+        <div class="para">
+          <p>{{ section.settings.hempPara }}</p>
+        </div>
+        <div class="cta">
+          <a href="{{ section.settings.cta_hemp_url.url }}" class="primary-button yellow-black">{{ section.settings.cta_hemp_txt }}</a>
+        </div>
+      </div>
+      <div class="bt-img">
+        <div class="prod-img">
+          <img
+            src="{{ section.settings.hempImg | img_url: 'master' }}"
+            alt=""
+            class="icons">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Product Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "eggImg",
+        "label": "Egg  Image"
+      },
+      {
+        "type": "text",
+        "id": "eggHead",
+        "label": "Egg  Heading"
+      },
+      {
+        "type": "text",
+        "id": "eggPara",
+        "label": "Egg  Paragraph"
+      },
+      {
+        "type": "text",
+        "id": "cta_egg_txt",
+        "label": "Egg  CTA Text"
+      }, {
+        "type": "product",
+        "id": "cta_egg_url",
+        "label": "Select Egg Product"
+      }, {
+        "type": "image_picker",
+        "id": "hempImg",
+        "label": "Egg  Image"
+      }, {
+        "type": "text",
+        "id": "hempHead",
+        "label": "Egg  Heading"
+      }, {
+        "type": "text",
+        "id": "hempPara",
+        "label": "Egg  Paragraph"
+      }, {
+        "type": "text",
+        "id": "cta_hemp_txt",
+        "label": "Egg  CTA Text"
+      }, {
+        "type": "product",
+        "id": "cta_hemp_url",
+        "label": "Select Hemp Product "
+      }
+    ]
+  }
+{% endschema %}

@@ -3,10 +3,217 @@
     "banner-section": {
       "type": "subscription-banner",
       "settings": {
+        "banImg": "shopify:\/\/shop_images\/Frame_17212588.png?v=1694173583",
+        "head": "live a healthy lifestyle",
+        "subhead": "Unleash your potential"
+      }
+    },
+    "subscribe": {
+      "type": "subscribe-section",
+      "blocks": {
+        "usp1": {
+          "type": "subscribe-usp",
+          "settings": {
+            "head": "15% discount",
+            "para": "More savings = a happier, healthier gut.",
+            "subImage": "shopify:\/\/shop_images\/Group_17211399.svg?v=1693910777"
+          }
+        },
+        "usp2": {
+          "type": "subscribe-usp",
+          "settings": {
+            "head": "free shipping",
+            "para": "Delivered to your doorstep at no extra cost.",
+            "subImage": "shopify:\/\/shop_images\/Group_17211400.svg?v=1693910770"
+          }
+        },
+        "usp3": {
+          "type": "subscribe-usp",
+          "settings": {
+            "head": "Never run out",
+            "para": "Always stocked and hassle-free ordering.",
+            "subImage": "shopify:\/\/shop_images\/Group_17211401.svg?v=1693910765"
+          }
+        }
+      },
+      "block_order": [
+        "usp1",
+        "usp2",
+        "usp3"
+      ],
+      "settings": {
+        "head": "It all starts with our subscription model",
+        "subhead": "Avail<br> Today!!",
+        "sectionImage": "shopify:\/\/shop_images\/sample_image.png?v=1693913194"
+      }
+    },
+    "grab-a-pack": {
+      "type": "subs-grab-a-pack",
+      "blocks": {
+        "block1": {
+          "type": "subsGrab",
+          "settings": {
+            "subImg": "shopify:\/\/shop_images\/sample_zig.jpg?v=1694098579",
+            "num": "1.",
+            "subHead": "Explore",
+            "subPara": "Choose from our flexible subscription options based on your needs and preferences."
+          }
+        },
+        "block2": {
+          "type": "subsGrab",
+          "settings": {
+            "subImg": "shopify:\/\/shop_images\/sample_zig1.jpg?v=1694098573",
+            "num": "2.",
+            "subHead": "Customise",
+            "subPara": "Pick your favorite protein powder flavors, quantities and delivery frequency to suit your taste and lifestyle."
+          }
+        },
+        "block3": {
+          "type": "subsGrab",
+          "settings": {
+            "subImg": "shopify:\/\/shop_images\/sample.png?v=1693831657",
+            "num": "3.",
+            "subHead": "Enjoy",
+            "subPara": "Relax, as we deliver your new go-to protein at your doorstep on your schedule. Enjoy gut-friendly goodness!"
+          }
+        }
+      },
+      "block_order": [
+        "block1",
+        "block2",
+        "block3"
+      ],
+      "settings": {
+        "head": "grab a pack"
+      }
+    },
+    "product-section": {
+      "type": "product-section",
+      "settings": {
+        "eggImg": "shopify:\/\/shop_images\/image_22_1.png?v=1694183409",
+        "eggHead": "Egg-white <br>Protein powder",
+        "eggPara": "Our deliciously clean, dairy-free protein powder is perfect for your sensitive tummy. Say goodby to bloating!",
+        "cta_egg_txt": "Buy now",
+        "hempImg": "shopify:\/\/shop_images\/image_21_1.png?v=1694182946",
+        "hempHead": "Hemp <br>Protein powder",
+        "hempPara": "Our power packed, hemp-based protein powder contains cleansing fibres and antioxidants that your gut will love!",
+        "cta_hemp_txt": "Buy now"
+      }
+    },
+    "faq-section": {
+      "type": "faq-section",
+      "blocks": {
+        "faq1": {
+          "type": "faqBlock",
+          "settings": {
+            "faqQues": "Are Gutly products suitable for everyone?",
+            "faqBigAns": "Yes, Gutly products are designed to be inclusive and suitable for a wide range of individuals. Here are a couple of examples:",
+            "faqAnslih": "Vegan Friendly:",
+            "faqAnslih2": "Keto Friendly:",
+            "faqAnsli": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesuada cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectus.",
+            "faqAnsli2": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesua cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectu ipiscing elits.",
+            "cta_url": "#!",
+            "cta_txt": "KNOW MORE"
+          }
+        },
+        "faq2": {
+          "type": "faqBlock",
+          "settings": {
+            "faqQues": "How should I incorporate Gutly products into my daily routine?",
+            "faqBigAns": "Yes, Gutly products are designed to be inclusive and suitable for a wide range of individuals. Here are a couple of examples:",
+            "faqAnslih": "Vegan Friendly:",
+            "faqAnslih2": "Keto Friendly:",
+            "faqAnsli": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesuada cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectus.",
+            "faqAnsli2": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesua cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectu ipiscing elits.",
+            "cta_url": "#!",
+            "cta_txt": "KNOW MORE"
+          }
+        },
+        "faq3": {
+          "type": "faqBlock",
+          "settings": {
+            "faqQues": "Are Gutly products free from artificial additives or preservatives?",
+            "faqBigAns": "Yes, Gutly products are designed to be inclusive and suitable for a wide range of individuals. Here are a couple of examples:",
+            "faqAnslih": "Vegan Friendly:",
+            "faqAnslih2": "Keto Friendly:",
+            "faqAnsli": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesuada cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectus.",
+            "faqAnsli2": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesua cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectu ipiscing elits.",
+            "cta_url": "#!",
+            "cta_txt": "KNOW MORE"
+          }
+        },
+        "faq4": {
+          "type": "faqBlock",
+          "settings": {
+            "faqQues": "Where can I purchase Gutly products?",
+            "faqBigAns": "Yes, Gutly products are designed to be inclusive and suitable for a wide range of individuals. Here are a couple of examples:",
+            "faqAnslih": "Vegan Friendly:",
+            "faqAnslih2": "Keto Friendly:",
+            "faqAnsli": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesuada cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectus.",
+            "faqAnsli2": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesua cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectu ipiscing elits.",
+            "cta_url": "#!",
+            "cta_txt": "KNOW MORE"
+          }
+        },
+        "faq5": {
+          "type": "faqBlock",
+          "settings": {
+            "faqQues": "What is Gutly's return policy?",
+            "faqBigAns": "Yes, Gutly products are designed to be inclusive and suitable for a wide range of individuals. Here are a couple of examples:",
+            "faqAnslih": "Vegan Friendly:",
+            "faqAnslih2": "Keto Friendly:",
+            "faqAnsli": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesuada cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectus.",
+            "faqAnsli2": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesua cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectu ipiscing elits.",
+            "cta_url": "#!",
+            "cta_txt": "KNOW MORE"
+          }
+        },
+        "faq6": {
+          "type": "faqBlock",
+          "settings": {
+            "faqQues": "How can I get in touch with Gutly's customer support?",
+            "faqBigAns": "Yes, Gutly products are designed to be inclusive and suitable for a wide range of individuals. Here are a couple of examples:",
+            "faqAnslih": "Vegan Friendly:",
+            "faqAnslih2": "Keto Friendly:",
+            "faqAnsli": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesuada cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectus.",
+            "faqAnsli2": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra habitant malesua cras lectus augue. Non velit risus, vestibulum, enim netus mauris. Ultrices mi enim vel sodales sed senectu ipiscing elits.",
+            "cta_url": "#!",
+            "cta_txt": "KNOW MORE"
+          }
+        }
+      },
+      "block_order": [
+        "faq1",
+        "faq2",
+        "faq3",
+        "faq4",
+        "faq5",
+        "faq6"
+      ],
+      "settings": {
+        "head": "FAQs"
+      }
+    },
+    "sample-section": {
+      "type": "sample-section",
+      "settings": {
+        "eggImg": "shopify:\/\/shop_images\/What_s_in_a_Design_Blogger_s_In-Box_on_Any_Given_Day__-_Core77_3.png?v=1693993359",
+        "eggHead": "Egg-white <br>Protein Sample",
+        "eggPara": "Our protein powder is not only delicious but also super friendly to your sensitive tummy. Say goodbye to bloating!",
+        "cta_egg_txt": "Try Today",
+        "hempImg": "shopify:\/\/shop_images\/What_s_in_a_Design_Blogger_s_In-Box_on_Any_Given_Day__-_Core77_3_1.png?v=1693993321",
+        "hempHead": "Hemp <br>Protein Sample",
+        "hempPara": "Our hemp-based alternative with superior quality, easy-to-digest ingredients for your sensitive tummy!",
+        "cta_hemp_txt": "Try Today"
       }
     }
   },
   "order": [
-    "banner-section"
+    "banner-section",
+    "subscribe",
+    "grab-a-pack",
+    "product-section",
+    "faq-section",
+    "sample-section"
   ]
 }

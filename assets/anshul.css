@@ -626,7 +626,7 @@ footer{
 }
 .ban-subhead{
     padding-bottom: 20px;
-    margin-top: -28px;
+    margin-top: -32px;
 }
 .ib-img{
     position: absolute;
@@ -1416,7 +1416,7 @@ footer{
     bottom: -50px;
     width: 95px;
     height: 95px;
-    background-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Star_5.png?v=1693832830');
+    background-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Star_5_5.svg?v=1694176368');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -1820,6 +1820,277 @@ footer{
 
 /* About Happy Gut Ends */
 
+/* Subscription Page Css */
+
+/* Banner Section */
+section.subs-banner {
+    min-height: 700px;
+    height: calc( 100vh - 105px);
+}
+.subs-banner-wrapper {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 75px;
+    position: relative;
+    z-index: 9;
+}
+.subs-banner-wrapper::after{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: "";
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 24.76%, rgba(0, 0, 0, 0.88) 82%);
+}
+.subs-ban-txt{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.subs-ban-txt .ban-subhead p{
+    color: #FFD12D;
+}
+.subs-ban-txt .ban-subhead {
+    margin-top: -42px;
+  }
+/* Banner Section Ends */
+
+/* Subs Grab a Pack */
+.sub-grab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 72px;
+}
+.sub-grab .item{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 25%;
+    margin-top: 60px;
+}
+.sub-grab .item:nth-child(even){
+    flex-direction: column-reverse;
+    margin-top: 0;
+    margin-bottom: 60px;
+}
+.sub-img{
+    width: 100%;
+}
+.sub-img .shape-img{
+    position: relative;
+    height: 0;
+    padding-top: 100%;
+    mask-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Star_5.png?v=1693832830');
+    -webkit-mask-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Star_5.png?v=1693832830');
+    mask-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Star_5.png?v=1693832830');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    -webkit-mask-size: 100%;
+}
+.sub-img .shape-img img{
+    position: absolute;
+    inset: 0;
+}
+.sub-grab .num-head{
+    color: #222;
+    font-family: var(--moret);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 103%;
+    letter-spacing: 0.4px;
+}
+.sub-grab .num-head span{
+    font-size: 32px;
+}
+.sub-grab p.small{
+    font-weight: 500;
+    line-height: 142.857%;
+    letter-spacing: 0.5px;
+    margin-top: 16px;
+    max-width: 34ch;
+}
+/* Subs Grab a Pack Ends */
+
+/* Product Section */
+.product-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.product-section .product-half{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    text-align: center;
+    padding: 0 90px;
+    padding-top: 71px;
+    gap: 100px;
+    overflow: hidden;
+}
+.egg-product.product-half{
+    background: #FCF6EC;
+}
+.hemp-product.product-half{
+    background: #F8EEDF;
+}
+.product-half .up-txt .para{
+    margin-top: 24px;
+}
+.product-half .up-txt .cta{
+    margin-top: 40px;
+}
+.product-half{
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+.product-half .bt-img{
+    position: relative;
+}
+.product-half .bt-img::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    bottom: -50px;
+    left: 0;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: -1;
+}
+.egg-product.product-half .bt-img::after{
+    background-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Group_17211489.svg?v=1694183004');
+}
+.hemp-product.product-half .bt-img::after{
+    bottom: 0;
+    height: 100%;
+    background-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Gutly_logo_1_2.svg?v=1694183969');
+    background-repeat: repeat-y;
+}
+.product-half .prod-img{
+    position: relative;
+    height: 0;
+    padding-top: 50%;
+    width: 100%;
+    margin: 0 auto;
+}
+.product-half .prod-img img{
+    position: absolute;
+    inset: 0;
+}
+
+/* Product Section Ends */
+
+/* Faq Section */
+.faq-section .faq-head{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    cursor: pointer;
+}
+.faq-section .faq-head .arrow{
+    width: 16px;
+    height: 10px;
+    transform: rotate(0deg);
+    transition: 0.6s all ease;
+    position: relative;
+}
+.faq-section .faq-head .arrow svg{
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    position: absolute;
+    inset: 0;
+}
+.faq-wrapper .item.active .arrow{
+    transform: rotate(180deg);
+}
+.faq-section .faq-head .faq-ques{
+    color: #333;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: var(--moret);
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 94%; /* 24.44px */
+    letter-spacing: 0.5px;
+}
+.faq-section .faq-ans{
+    display: none;
+    padding-left: 120px;
+    margin-top: -12px;
+    padding-bottom: 36px;
+    max-width: 80ch;
+}
+.faq-section .faq-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 72px;
+}
+.faq-wrapper .item{
+    border-top: 1px solid #B5B5B5;
+}
+.faq-wrapper .item:last-child{
+    border-bottom: 1px solid #B5B5B5;
+}
+.faq-section .faq-ans p{
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+.faq-section .faq-ans ul {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.faq-section .faq-ans ul li{
+    color: #333;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.5px;
+}
+.faq-section .faq-ans ul li span{
+    font-weight: 600;
+}
+.faq-section .faq-ans a{
+    margin-top: 28px;
+    border-bottom: 1px solid #55B85F;
+    color: #55B85F;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 144%; /* 20.16px */
+    letter-spacing: 0.84px;
+    text-transform: uppercase;
+    display: inline-flex;
+}
+.faq-wrapper .item.active .faq-head{
+    pointer-events: none;
+}
+/* Faq Section Ends */
+
+/* Subscription Page Css Ends */
+
 /* Responsive Css Starts */
 
 /* Min Width 1700px */
@@ -1935,7 +2206,7 @@ footer{
         font-size: 14px;
     }
     .ss-left .heading{
-        max-width: 40ch;
+        max-width: 43ch;
     }
 }
 /* Max Width 1400px Ends */
@@ -1962,7 +2233,7 @@ footer{
         font-size: 18px;
     }
     .subscribe-section .ss-left{
-        padding: 35px 120px;
+        padding: 35px 90px;
     }
     .video-slider .vs-txt p{
         font-size: 76px;
@@ -1975,6 +2246,22 @@ footer{
     }
     .chart-section .heading .head h3{
         font-size: 78px;
+    }
+    .sub-grab .num-head{
+        font-size: 34px;
+    }
+    .sub-grab .num-head span {
+        font-size: 26px;
+    }
+    .faq-section .faq-head .faq-ques{
+        font-size: 22px;
+    }
+    .faq-section .faq-ans p {
+        font-size: 16px;
+    }
+    .faq-section .faq-head .arrow {
+        width: 14px;
+        height: 8px;
     }
 }
 /* Max Width 1300px Ends */
@@ -2093,7 +2380,7 @@ footer{
         font-size: 16px;
     }
     .subscribe-section .ss-left {
-        padding: 35px 80px;
+        padding: 35px 70px;
     }
     .ss-left .heading {
         max-width: 37ch;
@@ -2119,6 +2406,13 @@ footer{
     }
     .zig-zag-section{
         gap: 100px;
+    }
+    .product-section .product-half{
+        padding: 0 60px;
+        padding-top: 71px;
+    }
+    .faq-section .faq-ans{
+        padding-left: 70px;
     }
 }
 /* Max Width 1200px Ends */
@@ -2477,6 +2771,36 @@ footer{
         width: 160px;
         height: 160px;
     }
+    .faq-section .faq-ans {
+        padding-left: 50px;
+        max-width: 60ch;
+    }
+    .faq-section .faq-ans p {
+        font-size: 14px;
+    }
+    .faq-section .faq-ans ul li{
+        font-size: 12px;
+    }
+    .faq-section .faq-ans ul li{
+        font-size: 12px;
+    }
+    .faq-section .faq-head .faq-ques {
+        font-size: 20px;
+    }
+    .product-section .product-half {
+        padding: 0 35px;
+        padding-top: 71px;
+    }
+    .faq-section .faq-wrapper{
+        width: 90%;
+        margin-top: 60px;
+    }
+    .sub-grab{
+        margin-top: 60px;
+    }
+    .faq-section .faq-ans a{
+        font-size: 12px;
+    }
 }
 /* Max Width 991px Ends */
 
@@ -2754,7 +3078,7 @@ footer{
         width: 100%;
     }
     .ss-left .heading {
-        max-width: 25ch;
+        max-width: 26ch;
         margin: 0 auto;
     }
     .ss-left .heading p{
@@ -2849,6 +3173,59 @@ footer{
     .abht-head {
         max-width: 40ch;
     }
+    .faq-section .faq-head{
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+    .faq-section .faq-ans{
+        padding-bottom: 28px;
+    }
+    .faq-section .faq-head .faq-ques {
+        font-size: 18px;
+    }
+    .product-section{
+        flex-direction: column;
+    }
+    .product-section .product-half{
+        width: 100%;
+    }
+    .sub-grab{
+        margin-top: 30px;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .sub-grab .item{
+        flex-direction: column-reverse;
+        gap: 16px;
+        width: 100%;
+    }
+    .sub-grab p.small{
+        max-width: 100%;
+    }
+    .sub-img .shape-img{
+        width: 70%;
+        padding-top: 70%;
+        margin: 0 auto;
+    }
+    .sub-grab .item:nth-child(even){
+        margin-bottom: 0;
+    }
+    .sub-grab .item{
+        margin-top: 0;
+    }
+    section.subs-banner {
+        min-height: 600px;
+        height: 60svh;
+    }
+    .subs-banner-wrapper{
+        padding-bottom: 44px;
+    }
+    .subs-ban-txt .ban-subhead {
+        margin-top: -18px;
+    }
+    .product-section .product-half{
+        padding-top: 40px;
+    }
 }
 /* Max Width 767px Ends */
 
@@ -2856,6 +3233,10 @@ footer{
 @media (max-width: 500px) {
     .solution .sl-img-wrap {
         width: 70%;
+    }
+    .faq-section .faq-wrapper {
+        width: 95%;
+        margin-top: 40px;
     }
 }
 /* Max width 500px Ends */

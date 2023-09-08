@@ -65,6 +65,28 @@
           padding-bottom: 0;
         }
       {% endif %}
+
+      {% if page.handle == 'subscription' %}
+        @media(min-width: 0px) {
+          .ss-left .heading {
+            padding-bottom: 4px;
+          }
+
+        }
+        @media(min-width: 991px) {
+          .ss-left .heading {
+            padding-bottom: 8px;
+          }
+        }
+        @media(min-width: 1400px) {
+          .ss-left .heading {
+            padding-bottom: 25px;
+          }
+        }
+        div#shopify-section-template--20860832252182__subscribe section {
+          padding-top: 0;
+        }
+      {% endif %}
     </style>
     <!-- Header hook for plugins -->
     {{ 'application.css' | asset_url | stylesheet_tag }}
