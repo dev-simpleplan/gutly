@@ -348,6 +348,9 @@ body.overflow-hide{
 /* Max Width 1200px Ends */
 /* Max Width 1100px */
 @media(max-width: 1100px){
+    .custom-container-fluid{
+        padding: 0 40px;
+    }
 }
 /* Max Width 1100px Ends */
 /* Max Width 991px */
@@ -387,6 +390,9 @@ body.overflow-hide{
     }
     .padb-90{
         padding-bottom: 35px;
+    }
+    .custom-container-fluid{
+        padding: 0 20px;
     }
 }
 /* Max Width 767px Ends */

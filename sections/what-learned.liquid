@@ -1,0 +1,65 @@
+<section class="padb-90">
+  <div class="container">
+    <div class="recipe-learned">
+      <div class="heading center">
+        <h2>{{ section.settings.head }}</h2>
+      </div>
+      <div class="recipe-cards">
+        {% for block in section.blocks %}
+          <a href="#!">
+            <div class="recipe-card">
+              <div class="recipe-card-img">
+                <img src="{{ block.settings.imgLink | img_url: 'master' }}" alt="">
+              </div>
+              <div class="recipe-card-content">
+                <div class="recipe-card-content-head">
+                  <h6>{{ block.settings.headText }}</h6>
+                </div>
+                <div class="recipe-card-content-body">
+                  <p>{{ block.settings.bodText }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="recipe-card-cta">
+              <p>Read more</p>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Learned Recipes",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section Heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "recipeCard",
+        "name": "Recipe Card",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "imgLink",
+            "label": "Image Link"
+          }, {
+            "type": "text",
+            "id": "headText",
+            "label": "Recipe Name"
+          }, {
+            "type": "text",
+            "id": "bodText",
+            "label": "Recipe Body"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
