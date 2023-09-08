@@ -1,0 +1,78 @@
+<section class="pad-180">
+  <div class="container">
+    <div class="gutly-goodies">
+      <div class="heading">
+        <h2 class="txt-white">{{ section.settings.head }}</h2>
+        <p>{{ section.settings.subhead }}</p>
+      </div>
+      <div class="gg-wrapper">
+        <div class="gg-txt">
+          <div class="gg-img-con mob">
+            <img
+              src="{{ section.settings.img | img_url: 'master' }}"
+              alt=""
+              class="img">
+          </div>
+          <div class="gg-txt-up">
+            <div class="gg-txt-up-p">
+              <p>{{ section.settings.para1 }}</p>
+              <p>{{ section.settings.para2 }}</p>
+            </div>
+            <a href="#!" class="primary-button yellow-black">{{ section.settings.cta }}</a>
+          </div>
+          <div class="gg-txt-down">
+            <p class="small">{{ section.settings.bottomPara }}</p>
+          </div>
+        </div>
+        <div class="gg-img">
+          <div class="gg-img-con">
+            <img
+              src="{{ section.settings.img | img_url: 'master' }}"
+              alt=""
+              class="img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Gutly Goodies",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section heading"
+      },
+      {
+        "type": "text",
+        "id": "subhead",
+        "label": "Section Sub Head"
+      },
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Section Image"
+      },
+      {
+        "type": "text",
+        "id": "para1",
+        "label": "Section Para 1"
+      }, {
+        "type": "text",
+        "id": "para2",
+        "label": "Section Para 2"
+      }, {
+        "type": "text",
+        "id": "cta",
+        "label": "Section CTA text"
+      }, {
+        "type": "text",
+        "id": "bottomPara",
+        "label": "Bottom Paragraph"
+      }
+    ]
+  }
+{% endschema %}
