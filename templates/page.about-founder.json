@@ -3,6 +3,28 @@
       "banner": {
         "type": "founder-banner"
       },
+      "slidesParallax":{
+        "type":"parallax-slides",
+        "blocks": {
+            "slide1":{
+                "type": "parallaxSlide",
+                "settings": {
+                    "imgLink":"shopify:\/\/shop_images\/parallax1.jpg",
+                    "headText":"Do you suffer from IBS too?",
+                    "bodText":"You're not alone in this struggle. I understand the pain, discomfort, and setbacks. Gutly is here to help. Let's support each other, find relief, and embark on a path to wellness."
+                }
+            },
+            "slide2":{
+                "type": "parallaxSlide",
+                "settings": {
+                    "imgLink":"shopify:\/\/shop_images\/parallax2.jpg",
+                    "headText":"Let’s fight it together!",
+                    "bodText":"Join the Gutly community, where proactive minds unite. We're on a mission to empower you with clean, gut-friendly supplements. Together, let's reclaim control over our health and happiness."
+                }
+            }
+        },
+        "block_order": ["slide1", "slide2"]
+      },
       "no-if-no-but":{
         "type":"no-if-no-but",
         "settings": {
@@ -187,6 +209,7 @@
     },
     "order": [
       "banner",
+      "slidesParallax",
       "no-if-no-but",
       "product-section",
       "road-to-hp",
