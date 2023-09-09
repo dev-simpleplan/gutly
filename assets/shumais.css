@@ -168,6 +168,103 @@
     opacity: 1;
     transform: translateY(0) rotate(-3.435deg);
 }
+.parallax-slide{
+    display: flex;
+    position: relative;
+    height: 100vh;
+}
+.parallax-slides{
+    overflow: hidden;
+    height: 100vh;
+}
+.parallax-slide-content{
+    background-color:#F9F1E4;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.parallax-slide-image{
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+}
+.parallax-slide.fixed .parallax-slide-image{
+    position: fixed;
+}
+.parallax-slide-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.parallax-slide-head h3{
+    text-align: center;
+    color: #222;
+}
+.parallax-slide-body p{
+    text-align: center;
+}
+.parallax-slide-content-wrap{
+    width: 74%;
+    margin: 0 auto;
+}
+.parallax-slide-body{
+    padding-top: 28px;
+}
+.parallax-slide-head{
+    max-width: 45ch;
+    margin: 0 auto;
+}
+.parallax-slides-wrap .parallax-slide:nth-child(1) .parallax-slide-image{
+    z-index: 1;
+}
+.parallax-slide-mob{
+    display: flex;
+    flex-direction: column;
+}
+.parallax-slides-mobile{
+  background-color: #F9F1E4;
+  padding-bottom: 40px;
+  display: none;
+  overflow: hidden;
+}
+.parallax-slide-content-mob{
+    padding: 40px 0;
+}
+.parallax-slide-image-mob{
+    position: relative;
+    padding-top: 80%;
+}
+.parallax-slide-image-mob img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    position: absolute;
+    inset: 0px;
+}
+.parallax-slide-content-mob-wrap{
+    width: 70%;
+    margin: 0 auto;
+}
+.parallax-slides-mobile-nav{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.parallax-slides-mobile-nav img{
+    filter: invert(1);
+}
+.parallax-slides-mobile-nav-prev img{
+    transform: rotate(-180deg);
+}
+.parallax-slides-mobile-nav-prev.swiper-button-disabled , .parallax-slides-mobile-nav-next.swiper-button-disabled{
+    opacity: 0.4;
+}
 @media only screen and (max-width:1400px){
     .founder-banner-content-top{
         max-width: 70ch;
@@ -177,6 +274,9 @@
     }
     .recipe-card-content{
         width: 82%;
+    }
+    .parallax-slide-head{
+        max-width: 35ch;
     }
 }
 @media only screen and (max-width:1300px){
@@ -190,6 +290,9 @@
     }
     .founder-banner{
         max-height: 640px;
+    }
+    .parallax-slide-head{
+        max-width: 30ch;
     }
    
 }
@@ -230,6 +333,18 @@
     .recipe-cards a{
         width: 47%;
     }
+    .parallax-slide-head{
+        max-width: 25ch;
+    }
+    .parallax-slide-content-wrap{
+        width: 85%;
+    }
+    .parallax-slides-mobile{
+        display: block;
+    }
+    .parallax-slides{
+        display: none;
+    }
 }
 
 @media only screen and (max-width:767px){
@@ -248,5 +363,11 @@
         font-size: 10px;
         width: 86px;
         height: 86px;
+    }
+    .parallax-slide-content-mob-wrap{
+        width: 90%;
+    }
+    .parallax-slides-mobile-nav{
+        width: 90%;
     }
 }
