@@ -54,15 +54,22 @@
         font-display: swap;
       }
       @font-face {
-        font-family: 'Moret';
-        src: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Moret-Semibold.woff2?v=1693307732') format('woff2'), url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Moret-Semibold.woff?v=1693307730') format('woff');
+        font-family: 'MoretSemibold';
+        src: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/font.woff2?v=1694507256') format('woff2'), url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/font.woff?v=1694507256') format('woff');
         font-weight: 600;
         font-style: normal;
         font-display: swap;
       }
+      /*@font-face {
+        font-family: 'Moret';
+        src: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Moret-SemiboldOblique.woff2?v=1694413565') format('woff2'), url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Moret-SemiboldOblique.woff?v=1694413572') format('woff');
+        font-weight: 600;
+        font-style: italic;
+        font-display: swap;
+      }*/
       {% if page.handle == 'about-happy-gut' %}
-        div#shopify-section-template--20846456963350__about-founder-cta section {
-          padding-bottom: 0;
+        .about-founder-cta {
+          padding-bottom: 0 !important;
         }
       {% endif %}
 
@@ -83,8 +90,14 @@
             padding-bottom: 25px;
           }
         }
-        div#shopify-section-template--20860832252182__subscribe section {
-          padding-top: 0;
+        .subscribe {
+          padding-top: 0 !important;
+        }
+      {% endif %}
+
+      {% if page.handle == 'sustainability' %}
+        .start-referring-section {
+          padding-bottom: 0 !important;
         }
       {% endif %}
     </style>

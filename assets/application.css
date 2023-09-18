@@ -1,7 +1,7 @@
 :root{
     --dexotick: 'Dexotick By Dhan Studio';
     --manrope: 'Manrope', sans-serif;
-    --moret: 'Moret', sans-serif;
+    --moret: 'MoretSemibold', sans-serif;
 }
 html{
     scroll-behavior: smooth;
@@ -53,10 +53,16 @@ button{
 }
 h1{
     font-size: 160px;
-    font-style: normal;
     font-weight: 600;
     line-height: 80%;
     text-transform: uppercase;
+}
+h1 span{
+    font-family: var(--moret);
+    font-style: italic;
+}
+h1 span.rot-180{
+    transform: rotate(180deg);
 }
 h2{
     font-size: 128px;

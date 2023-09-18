@@ -1,0 +1,72 @@
+<section class="pad-180">
+  <div class="container">
+    <div class="zig-zag-big">
+      {% for block in section.blocks %}
+        <div class="item">
+          <div class="zzb-img">
+            <div class="zzb-big-img">
+              <img
+                src="{{ block.settings.bigImg | img_url: 'master' }}"
+                alt=""
+                class="img">
+            </div>
+            {% if block.settings.monash %}
+              <div class="zzb-small-img">
+                <img
+                  src="{{ block.settings.smallImg | img_url: 'master' }}"
+                  alt=""
+                  class="img">
+              </div>
+            {% endif %}
+          </div>
+          <div class="zzb-txt">
+            <div class="head">
+              <h3>{{ block.settings.head }}</h3>
+            </div>
+            <div class="zzbt-p">
+              {{ block.settings.para }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Zig Zag Big Content",
+    "blocks": [
+      {
+        "name": "Zig Zag Block",
+        "type": "zig-zag-block",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "monash",
+            "label": "Enable Small Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "bigImg",
+            "label": "Big Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "smallImg",
+            "label": "Small Image"
+          },
+          {
+            "type": "text",
+            "id": "head",
+            "label": "Heading"
+          }, {
+            "type": "richtext",
+            "id": "para",
+            "label": "Block Para"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

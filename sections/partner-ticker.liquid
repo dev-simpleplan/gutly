@@ -1,0 +1,73 @@
+<section class="pad-180">
+  <div class="container">
+    <div class="partner-ticker">
+      <div class="heading center">
+        <h2>{{ section.settings.head }}</h2>
+      </div>
+      <div class="partner-wrapper">
+        <div class="prod-img">
+          <img
+            src="{{ section.settings.img | img_url: 'master' }}"
+            alt=""
+            class="icons">
+        </div>
+        <div class="part-ticker">
+          <div class="infiniteslide flex">
+            {% for block in section.blocks %}
+              <a href="{{ block.settings.cta_url }}" target="_blank">
+                <div class="item">
+                  <img src="{{ block.settings.tickerImage | img_url: "master" }}" alt="">
+                </div>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Partner Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section Heading"
+      }, {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Product Image"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Partner Ticker",
+        "type": "partnerTicker",
+        "settings": [
+          {
+            "type": "text",
+            "id": "cta_url",
+            "label": "URL for Partner's Website"
+          }, {
+            "type": "image_picker",
+            "id": "tickerImage",
+            "label": "Ticker Image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<script type="text/javascript">
+  $(function(){
+  $('.infiniteslide').infiniteslide({
+                                      'speed': 50, 
+                                      'direction': 'left', //choose  up/down/left/right
+                                      'pauseonhover': true, //if true,stop onmouseover
+                                      'responsive': false, //width/height recalculation on window resize. child element's width/height define %/vw/vh,this set true.
+                                      'clone':  12//if child elements are too few (elements can't "infinite"), set 2 or over.
+                                    });
+                                  });</script>

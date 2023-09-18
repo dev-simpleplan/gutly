@@ -1,0 +1,51 @@
+{
+  "sections": {
+    "contact-form":{
+      "type": "contact",
+      "settings": {
+        "head":"Get in touch",
+        "para":"Have a specific question for us or custom inquiry? Let us know below!",
+        "email":"support@happygut.com.au",
+        "ph-no":"1-844-782-2387"
+      },
+      "blocks": {
+        "sm1":{
+          "type": "social-links",
+          "settings": {
+            "link":"#!",
+            "link_img":"shopify:\/\/shop_images\/Vector_8.svg?v=1694587528"
+          }
+        },
+        "sm2":{
+          "type": "social-links",
+          "settings": {
+            "link":"#!",
+            "link_img":"shopify:\/\/shop_images\/Vector_9.svg?v=1694587555"
+          }
+        },
+        "sm3":{
+          "type": "social-links",
+          "settings": {
+            "link":"#!",
+            "link_img":"shopify:\/\/shop_images\/Group_17211515.svg?v=1694587549"
+          }
+        }
+      },
+      "block_order": ["sm1", "sm2", "sm3"]
+    },
+    "sample-section":{
+      "type": "sample-section",
+      "settings": {
+          "eggImg":"shopify:\/\/shop_images\/What_s_in_a_Design_Blogger_s_In-Box_on_Any_Given_Day__-_Core77_3.png?v=1693993359",
+          "eggHead":"Egg-white <br>Protein Sample",
+          "eggPara":"Our protein powder is not only delicious but also super friendly to your sensitive tummy. Say goodbye to bloating!",
+          "cta_egg_txt":"Try Today",
+          "hempImg":"shopify:\/\/shop_images\/What_s_in_a_Design_Blogger_s_In-Box_on_Any_Given_Day__-_Core77_3_1.png?v=1693993321",
+          "hempHead":"Hemp <br>Protein Sample",
+          "hempPara":"Our hemp-based alternative with superior quality, easy-to-digest ingredients for your sensitive tummy!",
+          "cta_hemp_txt":"Try Today"
+      }
+  }
+  },
+  "order": ["contact-form", "sample-section"]
+}

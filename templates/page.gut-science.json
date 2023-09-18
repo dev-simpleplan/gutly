@@ -1,0 +1,200 @@
+{
+    "sections": {
+        "banner-section":{
+            "type": "gut-science-banner",
+            "settings": {
+                "head":"The Gutly Inside Scoop",
+                "subhead":"Understanding gut science",
+                "para":"Research is the backbone of our commitment to providing top-quality supplements. At Gutly, we pour our heart and soul into formulating supplements that nurture your gut.",
+                "img":"shopify:\/\/shop_images\/recipe2.jpg?v=1694210207"
+            }
+        },
+        "happy-gut":{
+            "type": "gut-science-happy-gut",
+            "settings": {
+                "head":"Happy Gut = Happy Brain = Happy You"
+            },
+            "blocks": {
+                "para1":{
+                    "type": "hg-para",
+                    "settings": {
+                        "para":"Have you ever experienced a gut-wrenching moment? Or those butterflies in your stomach? These expressions are no coincidence! It’s the gut-brain connection. Your brain and stomach directly influence each other."
+                    }
+                },
+                "para2":{
+                    "type": "hg-para",
+                    "settings": {
+                        "para":"A distressed intestine can signal the brain, just as a troubled brain can signal the gut. At times, this balance can get out of whack and can lead to a spectrum of problems known as IBS."
+                    }
+                }
+            },
+            "block_order": ["para1", "para2"]
+        },
+        "zig-zag":{
+            "type": "zig-zag-big",
+            "blocks": {
+                "block1":{
+                    "type":"zig-zag-block",
+                    "settings":{
+                        "bigImg":"shopify:\/\/shop_images\/parallax2.jpg?v=1694287787",
+                        "head": "What's The Deal With IBS?",
+                        "para":"<p>Irritable bowel syndrome (IBS) is a common disorder that affects the stomach and intestines. While the cause of this chronic condition isn’t known, factors like muscle contractions in the intestines, early life stress, and changes in gut microbes appear to play a role. Did you know? IBS occurs more frequently in people under the age of 50 and is more common among women.Common Symptoms of IBS: Abdominal pain, cramping, changes in the frequency of bowel movement, and of course bloating.</p> ",
+                        "monash": false
+                    }
+                },
+                "block2":{
+                    "type":"zig-zag-block",
+                    "settings": {
+                        "bigImg":"shopify:\/\/shop_images\/sample.png?v=1693831657",
+                        "head":"Decoding FODMAPs",
+                        "para":"<p>FODMAPs are naturally occurring carbohydrates (sugars) present in foods and additives, with a notorious reputation for triggering IBS symptoms. Upon reaching the large intestine, gut bacteria eagerly feast on FODMAPs for survival, generating gas as a result. These processes occur in all people, with and without IBS. However, those with IBS might encounter issues linked to gut motility or heightened gut sensitivity. According to Monash University, consuming a low FODMAP diet showed improved IBS symptoms in 3 out of 4 people! Learn more aBOUT FODMAP</p>",
+                        "monash": true,
+                        "smallImg":"shopify:\/\/shop_images\/certificationstamp_1.png?v=1694610586"
+                    }
+                }
+            },
+            "block_order": ["block1", "block2"]
+        },
+        "what-you-eat":{
+            "type": "what-you-eat",
+            "settings": {
+                "head":"you are what you eat",
+                "img":"shopify:\/\/shop_images\/Mask_group_5.png?v=1694693837"
+            }
+        },
+        "gut-goodness":{
+            "type": "gut-goodness",
+            "settings": {
+                "head":"Nothing But Gut Goodness"
+            },
+            "blocks": {
+                "block1":{
+                    "type": "ggBlock",
+                    "settings": {
+                        "img":"shopify:\/\/shop_images\/Group_17211731.svg?v=1694673497",
+                        "para":"Clean Ingredients"
+                    }
+                },
+                "block2":{
+                    "type": "ggBlock",
+                    "settings": {
+                        "img":"shopify:\/\/shop_images\/Group_17211712.svg?v=1694673491",
+                        "para":"protein packed"
+                    }
+                },
+                "block3":{
+                    "type": "ggBlock",
+                    "settings": {
+                        "img":"shopify:\/\/shop_images\/Group_17211711.svg?v=1694673474",
+                        "para":"FREE FROM FILLERS"
+                    }
+                }
+            },
+            "block_order": ["block1", "block2", "block3"]
+        },
+        "gutly-way":{
+            "type": "gutly-way",
+            "settings": {
+                "head":"The Gutly Way",
+                "img":"shopify:\/\/shop_images\/parallax1.jpg?v=1694287786"
+            },
+            "blocks": {
+                "para1":{
+                    "type": "paraBlock",
+                    "settings": {
+                        "para":"Gutly's approach to formulating supplements draws inspiration from Dr. Mark Hyman's book 'Food', prioritising simplicity, minimal processing, and genuine ingredients. We include only easily digestible, nutritious essentials and exclude all unnecessary fillers."
+                    }
+                },
+                "para2":{
+                    "type": "paraBlock",
+                    "settings": {
+                        "para":"Every ingredient in Gutly's supplements is meticulously selected through thorough self-research and rigorous personal testing by our founder Nowell."
+                    }
+                }
+            },
+            "block_order": ["para1", "para2"]
+        },
+        "commited-section":{
+            "type": "commited-gut-science",
+            "settings": {
+                "head":"Gutly is committed to authenticity. What you see outside is what you’ll find inside!",
+                "bg1":"shopify:\/\/shop_images\/Star_5_5.svg?v=1694176368",
+                "bg2":"shopify:\/\/shop_images\/Star_5_6.svg?v=1694681978"
+            },
+            "blocks": {
+                "block1":{
+                    "type": "cardBlock",
+                    "settings": {
+                        "head":"Egg White",
+                        "card-head":"Packed With Protein",
+                        "card-para":"A protein source with minimal fermentable carbohydrates and a simple protein structure, making you less likely to experience digestive discomfort.",
+                        "cta_link":"#!",
+                        "cta_txt":"Learn More"
+                    }
+                },
+                "block2":{
+                    "type": "cardBlock",
+                    "settings": {
+                        "head":"organic coconut milk",
+                        "card-head":"Free From Lactose",
+                        "card-para":"An excellent dairy and soy-free milk alternative that is rich and creamy and adds a delicious texture that you’ll love.",
+                        "cta_link":"#!",
+                        "cta_txt":"Learn More"
+                    }
+                },
+                "block3":{
+                    "type": "cardBlock",
+                    "settings": {
+                        "head":"organic cacao",
+                        "card-head":"Metabolism Booster",
+                        "card-para":"A natural flavour and superfood that infuses the beloved dark chocolate flavour you crave.",
+                        "cta_link":"#!",
+                        "cta_txt":"Learn More"
+                    }
+                },
+                "block4":{
+                    "type": "cardBlock",
+                    "settings": {
+                        "head":"organic maple sugar",
+                        "card-head":"Healthy Deliciousness",
+                        "card-para":"A low GI (glyceamic index) natural sweetener, carefully added to provide the perfect touch of sweetness for your taste buds (Yay! No blood glucose level spike). We keep it at a minimum to ensure a healthy and satisfying flavour.",
+                        "cta_link":"#!",
+                        "cta_txt":"Learn More"
+                    }
+                },
+                "block5":{
+                    "type": "cardBlock",
+                    "settings": {
+                        "head":"Maltod-extrin",
+                        "card-head":"Smooth Texture",
+                        "card-para":"Derived from organic tapioca starch, that serves as a natural stabiliser to prevent clumping. We use a tiny amount of maltodextrin (<1.8%) to ensure a smooth and creamy texture.",
+                        "cta_link":"#!",
+                        "cta_txt":"Learn More"
+                    }
+                },
+                "block6":{
+                    "type": "cardBlock",
+                    "settings": {
+                        "head":"organic hemp",
+                        "card-head":"Packed With Protein",
+                        "card-para":"One of the few complete plant-based protein sources that is super easy to digest as it contains the proteins edestin and albumin, that your body can break down quickly. 91–98% of the protein in ground hemp seed is digestible. ",
+                        "cta_link":"#!",
+                        "cta_txt":"Learn More"
+                    }
+                },
+                "block7":{
+                    "type": "cardBlock",
+                    "settings": {
+                        "head":"vanilla",
+                        "card-head":"Tasty Natural flavour",
+                        "card-para":"Unlike artificial vanilla flavours, we exclusively use Grade A vanilla bean powder to ensure a genuine and premium taste without any cheap or harmful additives.",
+                        "cta_link":"#!",
+                        "cta_txt":"Learn More"
+                    }
+                }
+            },
+            "block_order": ["block1", "block2", "block3", "block4", "block5", "block6", "block7"]
+        }
+    },
+    "order": ["banner-section", "happy-gut", "zig-zag", "what-you-eat", "gut-goodness", "gutly-way", "commited-section"]
+}

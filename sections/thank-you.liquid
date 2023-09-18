@@ -1,0 +1,78 @@
+<section class="padb-180 padt-90 thank-you">
+  <div class="thank-you-wrapper">
+    <div class="ty-image one">
+      <div class="ty-img">
+        <img
+          src="{{ section.settings.img1 | img_url: 'master' }}"
+          alt=""
+          class="img">
+      </div>
+
+    </div>
+    <div class="ty-image two">
+      <div class="ty-img">
+        <img
+          src="{{ section.settings.img1 | img_url: 'master' }}"
+          alt=""
+          class="img">
+      </div>
+
+    </div>
+    <div class="ty-image three">
+      <div class="ty-img">
+        <img
+          src="{{ section.settings.img1 | img_url: 'master' }}"
+          alt=""
+          class="img">
+      </div>
+    </div>
+    <div class="ty-txt">
+      <h2>{{ section.settings.head }}</h2>
+      <p>{{ section.settings.para }}</p>
+      <div class="ty-cta">
+        <a href="{{ section.settings.link.url }}">{{ section.settings.link_txt }}</a>
+      </div>
+      <a href="{{ shop.url  }}" class="primary-button yellow-black">Back To Home</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Thank You Page",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section Heading"
+      },
+      {
+        "type": "text",
+        "id": "para",
+        "label": "Section Paragraph"
+      },
+      {
+        "type": "page",
+        "id": "link",
+        "label": "Learn More Link"
+      },
+      {
+        "type": "text",
+        "id": "link_txt",
+        "label": "Text For Learn More"
+      }, {
+        "type": "image_picker",
+        "id": "img1",
+        "label": "Select Image"
+      }, {
+        "type": "image_picker",
+        "id": "img2",
+        "label": "Select Image"
+      }, {
+        "type": "image_picker",
+        "id": "img3",
+        "label": "Select Image"
+      }
+    ]
+  }
+{% endschema %}

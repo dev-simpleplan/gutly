@@ -1,0 +1,96 @@
+<section class="padt-90">
+  <div class="what-you-eat-wrapper">
+    <div class="container">
+      <div class="heading center">
+        <h2>{{ section.settings.head }}</h2>
+      </div>
+      <div class="wyew-wrap">
+        <div class="left-txt-con">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when left-side %}
+              <div class="item">
+                <div class="head-num">
+                  <p>{{ block.settings.num }}</p>
+                </div>
+                <div class="line"></div>
+                <div class="bt-txt">
+                  <p>{{ block.settings.txt }}</p>
+                </div>
+              </div>
+            {% endcase %}
+          {% endfor %}
+        </div>
+        <div class="mid-img">
+          <img src="{{ section.settings.img | img_url: 'master' }}" alt="">
+        </div>
+        <div class="right-txt-con">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when right-side %}
+              <div class="item">
+                <div class="head-num">
+                  <p>{{ block.settings.num }}</p>
+                </div>
+                <div class="line"></div>
+                <div class="bt-txt">
+                  <p>{{ block.settings.txt }}</p>
+                </div>
+              </div>
+            {% endcase %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "What You Eat",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section Heading"
+      }, {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Section Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "left-side",
+        "name": "Left Side",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "text",
+            "id": "num",
+            "label": "Number"
+          }, {
+            "type": "text",
+            "id": "txt",
+            "label": "Text"
+          }
+        ]
+      }, {
+        "type": "right-side",
+        "name": "Right Side",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "text",
+            "id": "num",
+            "label": "Number"
+          }, {
+            "type": "text",
+            "id": "txt",
+            "label": "Text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

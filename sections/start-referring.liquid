@@ -1,13 +1,15 @@
-<section class="padb-90">
+<section class="padb-90 start-referring-section">
   <div class="start-referring">
     <div class="container">
       <div class="heading center">
         <div class="head">
           <h2>{{ section.settings.head }}</h2>
         </div>
-        <div class="cta">
-          <a href="#!" class="primary-button black-green">{{ section.settings.cta }}</a>
-        </div>
+        {% if section.settings.enable_cta %}
+          <div class="cta">
+            <a href="#!" class="primary-button black-green">{{ section.settings.cta }}</a>
+          </div>
+        {% endif %}
       </div>
       <div class="sr-flex">
         {% for block in section.blocks %}
@@ -48,6 +50,11 @@
         "type": "text",
         "id": "cta",
         "label": "CTA Text"
+      }, {
+        "type": "checkbox",
+        "id": "enable_cta",
+        "default": true,
+        "label": "Enable CTA"
       }
     ],
     "blocks": [

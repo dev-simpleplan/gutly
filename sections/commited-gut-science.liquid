@@ -1,0 +1,117 @@
+<section class="pad-180">
+  <div class="container">
+    <div class="committed-gs">
+      <div class="heading center">
+        <h3>{{ section.settings.head }}</h3>
+      </div>
+      <div class="click-open-cards">
+        {% for block in section.blocks %}
+          <div class="item">
+            <div class="head">
+              <div class="head-wrap">
+                <p>{{ block.settings.head }}</p>
+                <a href="javascript:void(0)" class="plusminus"></a>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box-con">
+                <div class="cardheading">
+                  <h6>{{ block.settings.card-head }}</h6>
+                </div>
+                <div class="para">
+                  <p>{{ block.settings.card-para }}</p>
+                </div>
+                <div class="cta">
+                  <a href="{{ block.settings.cta_link }}">{{ block.settings.cta_txt }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .click-open-cards .item .head-wrap {
+    background-image: url('{{ section.settings.bg1 | img_url: 'master' }}');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .click-open-cards .item:nth-child(even) .head-wrap {
+    background-image: url("{{ section.settings.bg2 | img_url: 'master' }}");
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Commited Gut Science",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section Heading"
+      }, {
+        "type": "image_picker",
+        "id": "bg1",
+        "label": "Yellow Background"
+      }, {
+        "type": "image_picker",
+        "id": "bg2",
+        "label": "Green Background"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Card Block",
+        "type": "cardBlock",
+        "settings": [
+          {
+            "type": "text",
+            "id": "head",
+            "label": "Background Heading"
+          },
+          {
+            "type": "text",
+            "id": "card-head",
+            "label": "Card Heading"
+          },
+          {
+            "type": "text",
+            "id": "card-para",
+            "label": "Card Para"
+          },
+          {
+            "type": "text",
+            "id": "cta_link",
+            "label": "Card Cta Link"
+          }, {
+            "type": "text",
+            "id": "cta_txt",
+            "label": "Card Cta Text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+  $(document).ready(function() {
+    $('.plusminus').click(function() {
+
+// Check if the closest 'item' element already has the 'active' class
+      var $closestItem = $(this).closest('.item');
+      if ($closestItem.hasClass('active')) {
+        $closestItem.removeClass('active');
+      } else { // Remove 'active' class from all 'item' elements
+        $('.item').removeClass('active');
+
+// Add 'active' class to the parent 'item' element of the clicked 'plusminus'
+        $closestItem.addClass('active');
+      }
+    });
+  });
+</script>

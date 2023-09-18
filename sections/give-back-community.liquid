@@ -1,0 +1,45 @@
+<section class="referral-banner give-back padt-90">
+  <div class="rf-wrapper">
+    <div class="rfb-txt">
+      <div class="container">
+        <div class="rfb-txt-con">
+          <div class="heading center">
+            <div class="head">
+              <h3>{{ section.settings.head }}</h3>
+            </div>
+            <div class="subhead">
+              <p>{{ section.settings.para }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rfb-img">
+      <img
+        src="{{ section.settings.img | img_url: 'master' }}"
+        alt=""
+        class="img">
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Referral Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Section Image"
+      }, {
+        "type": "text",
+        "id": "head",
+        "label": "Banner Heading"
+      }, {
+        "type": "text",
+        "id": "para",
+        "label": "Banner Paragraph"
+      }
+    ]
+  }
+{% endschema %}

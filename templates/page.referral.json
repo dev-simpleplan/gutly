@@ -14,7 +14,8 @@
             "type": "start-referring",
             "settings": {
                 "head":"Start referring",
-                "cta":"Join program"
+                "cta":"Join program",
+                "enable_cta": true
             },
             "blocks": {
                 "ref1":{

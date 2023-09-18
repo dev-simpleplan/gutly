@@ -1,0 +1,146 @@
+<style>
+  .account-page::after {
+    background-image: url('{{ section.settings.side-prod-img | img_url: 'master' }}');
+  }
+</style>
+
+<section>
+  <div class="account-page">
+    <div class="acc-img">
+      <img
+        src="{{ section.settings.img | img_url: 'master' }}"
+        alt=""
+        class="img">
+    </div>
+    <div class="acc-form">
+      <div class="accf-head">
+        <h5>{{ section.settings.head }}</h5>
+      </div>
+      <div class="acc-social-login"></div>
+      <div class="form-or">
+        <div class="line"></div>
+        <div class="or">or</div>
+        <div class="line"></div>
+      </div>
+      <div class="acc-form-con">
+        <div class="form">
+          {% form 'customer_login' %}
+            {% if form.errors %}
+              {{ form.errors | default_errors }}
+            {% endif %}
+            <div class="form-con">
+              <label for="email">Email</label><br>
+              <input
+                type="email"
+                name="customer[email]"
+                id="email"
+                required
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" />
+            </div>
+            <div class="form-con">
+              <label for="password">password</label><br>
+              <input
+                type="password"
+                name="customer[password]"
+                id="password"
+                required
+                pattern=".{8,}"
+                title="8+ characters" />
+              <a href="javascript:void(0)" class="forgot-password">Forgot Password?</a>
+            </div>
+            <div class="form-con submit-but">
+              <button class="custom-button" type="submit">
+                Log In
+              </button>
+            </div>
+          {% endform %}
+        </div>
+      </div>
+      <div class="acc-method">
+        <p class="small">Don't have an account? {{ 'SignUp' | customer_register_link }}</p>
+      </div>
+    </div>
+    <div class="forgot-pass">
+      <div class="accf-head">
+        <h5>{{ section.settings.fg-head }}</h5>
+      </div>
+      <div class="fg-para">
+        <p>{{ section.settings.fg-para1 }}</p>
+        <p>{{ section.settings.fg-para2 }}</p>
+      </div>
+      <div class="fg-form">
+        {% form 'recover_customer_password' %}
+          {% if form.errors %}
+            {{ form.errors | default_errors }}
+          {% endif %}
+          <div class="form-con">
+            <div class="email">
+              <label for="email">Email</label><br>
+              <input
+                type="email"
+                name="email"
+                id="email-forgot"
+                required
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" />
+            </div>
+          </div>
+          <div class="form-con submit-but">
+            <button class="custom-button" type="submit">
+              {{ section.settings.fg-cta-txt }}
+            </button>
+            {{ 'login' | customer_login_link }}
+          </div>
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Login Page",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Select Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "side-prod-img",
+        "label": "Select Product Image"
+      },
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "fg-head",
+        "label": "Forgot Password Heading"
+      }, {
+        "type": "text",
+        "id": "fg-para1",
+        "label": "Forgot Password Para 1"
+      }, {
+        "type": "text",
+        "id": "fg-para2",
+        "label": "Forgot Password Para 2"
+      }, {
+        "type": "text",
+        "id": "fg-cta-txt",
+        "label": "Forgot Password Submit Button Text"
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+  $(document).ready(function() {
+    $(".forgot-password").click(function() {
+      $(".forgot-pass").show();
+      $(".acc-form").hide();
+    });
+  });
+</script>

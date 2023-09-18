@@ -1,0 +1,17 @@
+{
+    "sections":{
+        "login":{
+            "type":"template-customer-login",
+            "settings":{
+                "img":"shopify:\/\/shop_images\/Frame_17212585.svg?v=1694510336",
+                "side-prod-img":"shopify:\/\/shop_images\/image_11.png?v=1693813470",
+                "head":"Log In to Gutly",
+                "fg-head":"Forgot Password?",
+                "fg-para1":"Enter the email address you used when you joined and we’ll send you instructions to reset your password.",
+                "fg-para2":"For security reasons, we do NOT store your password. So rest assured that we will never send your password via email.",
+                "fg-cta-txt":"Send Instructions"
+            }
+        }
+    },
+    "order":["login"]
+}

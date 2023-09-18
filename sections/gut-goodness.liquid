@@ -1,0 +1,56 @@
+<section class="gut-goodness">
+  <div class="container">
+    <div class="gg-wrapper">
+      <div class="heading">
+        <p class="ban-sub-head green">
+          {{ section.settings.head }}
+        </p>
+      </div>
+      <div class="gg-blocks">
+        {% for block in section.blocks %}
+          <div class="item">
+            <div class="ggb-img">
+              <img
+                src="{{ block.settings.img | img_url: 'master' }}"
+                alt=""
+                class="icons">
+            </div>
+            <div class="gg-p">
+              <p>{{ block.settings.para }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Gut Goodness",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "ggBlock",
+        "name": "Gut Goodness Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Select Image"
+          }, {
+            "type": "text",
+            "id": "para",
+            "label": "Enter Text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

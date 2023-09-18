@@ -1,0 +1,65 @@
+<section class="pad-180">
+  <div class="container">
+    <div class="zig-zag-org">
+      {% for block in section.blocks %}
+        <div class="item">
+          <div class="zzo-img">
+            <img
+              src="{{ block.settings.img | img_url: 'master' }}"
+              alt=""
+              class="img">
+          </div>
+          <div class="zzo-txt">
+            <div class="head">
+              <h3>{{ block.settings.head }}</h3>
+            </div>
+            <div class="org-cta">
+              <a href="{{ block.settings.org_cta_url }}" target="_blank">{{ block.settings.org_cta_txt }}</a>
+            </div>
+            <div class="para">
+              <p>{{ block.settings.para }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Zig Zag Section With ORG",
+    "blocks": [
+      {
+        "type": "zig-zag-org",
+        "name": "Zig Zag Org Block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Block Image"
+          },
+          {
+            "type": "text",
+            "id": "head",
+            "label": "BLock Heading"
+          },
+          {
+            "type": "text",
+            "id": "para",
+            "label": "Block Paragraph"
+          },
+          {
+            "type": "text",
+            "id": "org_cta_url",
+            "label": "Organization Url"
+          }, {
+            "type": "text",
+            "id": "org_cta_txt",
+            "label": "Organization Text"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

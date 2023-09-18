@@ -1,0 +1,54 @@
+<section class="gut-science-banner">
+  <div class="gs-banner-wrap">
+    <div class="gsb-txt-con">
+      <div class="container">
+        <div class="gsb-txt">
+          <div class="heading">
+            <div class="head">
+              <h1 class="txt-white">{{ section.settings.head }}</h1>
+            </div>
+            <div class="sub-head">
+              <p class="ban-sub-head green">{{ section.settings.subhead }}</p>
+            </div>
+          </div>
+          <div class="para">
+            <p>{{ section.settings.para }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gsb-img-con">
+      <div class="gsb-img">
+        <img
+          src="{{ section.settings.img | img_url: 'master' }}"
+          alt=""
+          class="img">
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Gut Science Banner",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Banner Image"
+      }, {
+        "type": "text",
+        "id": "head",
+        "label": "Section heading"
+      }, {
+        "type": "text",
+        "id": "subhead",
+        "label": "Section sub heading"
+      }, {
+        "type": "text",
+        "id": "para",
+        "label": "Section Paragraph"
+      }
+    ]
+  }
+{% endschema %}

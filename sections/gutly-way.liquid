@@ -1,0 +1,51 @@
+<section class="padb-90">
+  <div class="gutly-way">
+    <div class="gw-left">
+      <div class="head">
+        <h3>{{ section.settings.head }}</h3>
+      </div>
+      <div class="para">
+        {% for block in section.blocks %}
+          <p>{{ block.settings.para }}</p>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="gw-right">
+      <img
+        src="{{ section.settings.img | img_url: 'master' }}"
+        alt=""
+        class="img">
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Gutly Way",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section Heading"
+      }, {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Section Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "paraBlock",
+        "name": "Paragraph Block",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "text",
+            "id": "para",
+            "label": "Paragraph"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

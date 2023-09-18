@@ -1,0 +1,16 @@
+{
+    "sections": {
+        "thank-you":{
+            "type": "thank-you",
+            "settings": {
+                "head":"Thank you for contacting",
+                "para":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing tincidunt id risus diam sagittis morbi feugiat. Convallis euismod.",
+                "link_txt":" Learn more about how we give back.",
+                "img1":"shopify:\/\/shop_images\/recipe2.jpg?v=1694210207",
+                "img2":"shopify:\/\/shop_images\/recipe2.jpg?v=1694210207",
+                "img3":"shopify:\/\/shop_images\/recipe2.jpg?v=1694210207"
+            }
+        }
+    },
+    "order": ["thank-you"]
+}

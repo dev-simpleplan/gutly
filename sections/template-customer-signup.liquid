@@ -1,0 +1,111 @@
+<style>
+  .account-page::after {
+    background-image: url('{{ section.settings.side-prod-img | img_url: 'master' }}');
+  }
+</style>
+
+<section>
+  <div class="account-page">
+    <div class="acc-img">
+      <img
+        src="{{ section.settings.img | img_url: 'master' }}"
+        alt=""
+        class="img">
+    </div>
+    <div class="acc-form">
+      <div class="accf-head">
+        <h5>{{ section.settings.head }}</h5>
+      </div>
+      <div class="acc-social-login"></div>
+      <div class="form-or">
+        <div class="line"></div>
+        <div class="or">or</div>
+        <div class="line"></div>
+      </div>
+      <div class="acc-form-con">
+        <div class="form">
+          {% form 'create_customer' %}
+            {% if form.errors %}
+              {{ form.errors | default_errors }}
+            {% endif %}
+            <div class="form-con">
+              <label for="full-name">Full name</label><br>
+              <input
+                type="text"
+                name="customer[first_name]"
+                id="full-name"
+                pattern="^(\w\w+)\s(\w+)$" />
+            </div>
+            <div class="form-con">
+              <label for="email">Email</label><br>
+              <input
+                type="email"
+                name="customer[email]"
+                id="email"
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" />
+            </div>
+            <div class="form-con">
+              <label for="password">password</label><br>
+              <input
+                type="password"
+                name="customer[password]"
+                id="password"
+                placeholder="input field"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" />
+            </div>
+            <div class="form-con checkbox">
+              <div class="fcc-con">
+                <input type="checkbox" required>
+                <p class="small">Creating an account means you’re okay with our
+                  <a href="{{ section.settings.tnc.url }}">Terms of Service</a>,and our
+                  <a href="{{ section.settings.pp.url }}">Privacy Policy.</a>
+                </p>
+              </div>
+            </div>
+            <div class="form-con submit-but">
+              <button class="custom-button" type="submit">
+                Sign in
+              </button>
+            </div>
+          {% endform %}
+        </div>
+      </div>
+      <div class="acc-method">
+        <p class="small">Already have an account? {{ 'LOGIN' | customer_login_link }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Sign Up Page",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Select Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "side-prod-img",
+        "label": "Select Product Image"
+      },
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Heading"
+      },
+      {
+        "type": "page",
+        "id": "tnc",
+        "label": "Terms And Condition page"
+      }, {
+        "type": "page",
+        "id": "pp",
+        "label": "Privacy Policy page"
+      }
+    ]
+  }
+{% endschema %}

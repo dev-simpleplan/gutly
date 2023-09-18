@@ -1,7 +1,14 @@
 {
     "sections": {
       "banner": {
-        "type": "founder-banner"
+        "type": "founder-banner",
+        "settings": {
+            "img":"shopify:\/\/shop_images\/Rectangle_24376.png?v=1693315294",
+            "image_tag":"dietitian approved",
+            "head":"i’m nowell ‘N i have ibs",
+            "subhead":"Unleashing a revolution",
+            "para":"My journey with IBS inspired Gutly's creation. Frustration turned into determination. Countless trials led to a formula that's gentle yet powerful. Let's share our stories and support one another on this journey to wellness.."
+        }
       },
       "slidesParallax":{
         "type":"parallax-slides",
@@ -115,11 +122,12 @@
           "hempImg":"shopify:\/\/shop_images\/image_21_1.png?v=1694182946",
           "hempHead":"Hemp <br>Protein powder",
           "hempPara":"Our power packed, hemp-based protein powder contains cleansing fibres and antioxidants that your gut will love!",
-          "cta_hemp_txt":"Buy now"
+          "cta_hemp_txt":"Buy now",
+          "vegan":"Vegan Friendly"
       }
   },
   "road-to-hp":{
-    "type": "road-to-hp-bg",
+    "type": "road-to-hp-white",
     "settings": {
         "head":"Bringing you the<br>road to a happy gut",
         "bod":"Our protein powder is not only delicious but also super friendly to your sensitive tummy, perfect for folks with IBS! Say goodbye to bloating and discomfort.",
@@ -128,7 +136,7 @@
     },
     "blocks": {
         "hp1":{
-            "type": "road-to-hp-bg",
+            "type": "road-to-hp-white",
             "settings": {
                 "bgImg":"shopify:\/\/shop_images\/svg-found3.svg",
                 "smallHead":"vegan-",
@@ -138,7 +146,7 @@
             }
         },
         "hp2":{
-            "type": "road-to-hp-bg",
+            "type": "road-to-hp-white",
             "settings": {
                 "bgImg":"shopify:\/\/shop_images\/svg-found2.svg",
                 "smallHead":"tastes",
@@ -148,7 +156,7 @@
             }
         },
         "hp3":{
-            "type": "road-to-hp-bg",
+            "type": "road-to-hp-white",
             "settings": {
                 "bgImg":"shopify:\/\/shop_images\/svg-found1.svg",
                 "smallHead":"gut",
@@ -217,3 +225,4 @@
       "sample-section"
     ]
   }
+  
