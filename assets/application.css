@@ -3810,6 +3810,78 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
 }
 /* About Founder Page Ends */
 
+
+/* 404 Page Starts */
+.error-template{
+    min-height: 100vh;
+    padding: 96px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.error-template-four{
+    color: #222;
+    font-family: var(--moret);
+    font-size: 440px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 82%; /* 360.8px */
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+.error-template-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error-template-sad-smile{
+    width: 506px;
+    height: 506px;
+    overflow: hidden;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.error-template-sad-smile > img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    inset: 0px;
+}
+.error-template-sad-smile-image{
+    overflow: hidden;
+    height: 186px;
+    width: 239px;
+    margin-bottom: 40px;
+}
+.error-template-sad-smile-image img{
+    width: 100%;
+}
+.error-template-body{
+    max-width: 65ch;
+    margin: 0 auto;
+}
+.error-template-body p{
+    color: #353535;
+    text-align: center;
+}
+.error-template-button{
+    text-align: center;
+    padding-top: 56px;
+}
+.error-template-bottom{
+    padding-top: 20px;
+}
+.error-template-wrapper{
+    width: 80%;
+    margin: 0 auto;
+}
+/* 404 Page Ends */
+
 /* Store CSS Ends */
 
 
@@ -3954,6 +4026,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .parallax-slide-head{
         max-width: 35ch;
     }
+    .error-template-body{
+        max-width: 57ch;
+    }
 
 }
 /* Max Width 1400px Ends */
@@ -4066,6 +4141,18 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     }
     .founder-banner-image{
         width: 38%;
+    }
+    .error-template-four{
+        font-size: 340px;
+    }
+    .error-template-sad-smile{
+        width: 406px;
+        height: 406px;
+    }
+    .error-template-sad-smile-image {
+        height: 146px;
+        width: 200px;
+        margin-bottom: 35px;
     }
 }
 /* Max Width 1300px Ends */
@@ -4890,6 +4977,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .parallax-slides{
         display: none;
     }
+    .error-template-wrapper{
+        width: 95%;
+    }
 }
 /* Max Width 991px Ends */
 /* Max Width 767px */
@@ -5469,6 +5559,25 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     }
     .parallax-slides-mobile-nav{
         width: 90%;
+    }
+    .error-template-wrapper{
+        width: 100%;
+        padding: 0 10px;
+    }
+    .error-template-four{
+        font-size: 140px;
+    }
+    .error-template-sad-smile{
+        width: 160px;
+        height: 160px;
+    }
+    .error-template-sad-smile-image {
+        height: 55px;
+        width: 80px;
+        margin-bottom: 14px;
+    }
+    .error-template{
+        min-height: 80vh;
     }
 }
 /* Max Width 767px Ends */
