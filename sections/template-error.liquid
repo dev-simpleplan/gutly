@@ -1,22 +1,54 @@
 <section class="error-template">
   <div class="error-template-wrapper">
     <div class="error-template-top">
-      <div class="error-template-four">4</div>
+      <div class="error-template-four">{{ section.settings.head }}</div>
       <div class="error-template-sad-smile">
-        <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/gutly-svg.png?v=1695021770" alt="">
+        <img src="{{ section.settings.img1 | img_url: 'master' }}" alt="">
         <div class="error-template-sad-smile-image">
-          <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/404-can.png?v=1695021933" alt="">
+          <img src="{{ section.settings.img2 | img_url: 'master' }}" alt="">
         </div>
       </div>
-      <div class="error-template-four">4</div>
+      <div class="error-template-four">{{ section.settings.head }}</div>
     </div>
     <div class="error-template-bottom">
       <div class="error-template-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing tincidunt id risus diam sagittis morbi feugiat. Convallis euismod sollicitudin ut pretium.</p>
+        <p>{{ section.settings.body }}</p>
       </div>
       <div class="error-template-button">
-        <a href="#!" class="primary-button yellow-black">Back to home</a>
+        <a href="{{ shop.url  }}" class="primary-button yellow-black">{{ section.settings.link_txt }}</a>
       </div>
     </div>
   </div>
 </section>
+
+{% schema %}
+  {
+    "name": "404 Page",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section Heading"
+      },
+      {
+        "type": "text",
+        "id": "body",
+        "label": "404 Body"
+      },
+      {
+        "type": "text",
+        "id": "link_txt",
+        "label": "Button"
+      },
+      {
+        "type": "image_picker",
+        "id": "img1",
+        "label": "Select Background Image"
+      }, {
+        "type": "image_picker",
+        "id": "img2",
+        "label": "Select Product Image"
+      }
+    ]
+  }
+{% endschema %}

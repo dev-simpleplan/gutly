@@ -3,7 +3,11 @@
         "404":{
             "type": "template-error",
             "settings": {
-              
+              "head":"4",
+              "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing tincidunt id risus diam sagittis morbi feugiat. Convallis euismod sollicitudin ut pretium.",
+              "link_txt":"Back to home",
+              "img1":"shopify:\/\/shop_images\/gutly-svg.png",
+              "img2":"shopify:\/\/shop_images\/404-can.png"
             }
         }
     },
