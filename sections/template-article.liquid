@@ -19,10 +19,71 @@
     <div class="article-template-bottom">
       {{ article.content }}
     </div>
-    <div class="article-images-carousel">
-      {% for image in article.metafields.custom.carousel %}
-        {{ image }}
+  </div>
+  <div class="article-images-carousel">
+    <div id="article-carousel" class="owl-carousel owl-theme">
+      {% assign carousel_metafield = article.metafields.custom.carousel.value %}
+      {% for image_url in carousel_metafield %}
+        <div class="item">
+          <img src={{ image_url | img_url: 'master' }} alt="Image">
+        </div>
       {% endfor %}
     </div>
   </div>
+  <div class="blogs-template-share-icons">
+    <div class="blogs-template-share-icons-wrap">
+      <div class="blogs-template-share-icon">
+        <a
+          style="display: flex; align-items:center; gap:5px;"
+          href="javascript:void(0)"
+          class="copy-link-cta">
+          <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/copyLink.svg?v=1695215533" alt="">
+          <div style="display: none;" class="copied-clipboard-message">
+            Copied to Clipboard!
+          </div>
+        </a>
+      </div>
+      <div class="blogs-template-share-icon">
+        <a target="_blank" href="//twitter.com/share?text={{ article.title | url_param_escape }}&amp;url={{ shop.url | append: article.url }}">
+          <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/twitterShare.svg?v=1695215534" alt="">
+        </a>
+      </div>
+      <div class="blogs-template-share-icon">
+        <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A{{  shop.url | append: article.url | remove: 'https:'}}">
+          <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/linkedinShare.svg?v=1695215534" alt="">
+        </a>
+      </div>
+      <div class="blogs-template-share-icon">
+        <a target="_blank" href="//www.facebook.com/sharer.php?u={{ shop.url | append: article.url}}">
+          <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/facebookShare.svg?v=1695215534" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
+
+
+<script>
+  $('#article-carousel').owlCarousel({
+    animateOut: 'fadeOut',
+    loop: false,
+    margin: 0,
+    dots: true,
+    nav: false,
+    items: 1
+  })
+
+  var $temp = $("<input>");
+  var $url = $(location).attr('href');
+
+  $('.copy-link-cta').on('click', function() {
+    $("body").append($temp);
+    $temp.val($url).select();
+    document.execCommand("copy");
+    $(".copied-clipboard-message").fadeIn();
+    setInterval(() => {
+      $(".copied-clipboard-message").fadeOut();
+    }, 2000)
+    $temp.remove();
+  })
+</script>

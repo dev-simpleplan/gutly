@@ -6,6 +6,12 @@
            
           }
       },
+      "similar":{
+        "type": "similar-blogs",
+        "settings": {
+
+        }
+      },
       "product-section":{
         "type": "product-section",
         "settings": {
@@ -22,5 +28,5 @@
         }
     }
   },
-  "order": ["article", "product-section"]
+  "order": ["article","similar","product-section"]
 }
