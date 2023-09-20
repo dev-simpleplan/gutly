@@ -1,0 +1,24 @@
+<section class="similar-blogs">
+  <div class="similar-blogs-container">
+    <div class="similar-blogs-head">
+      <h2>Similar blogs</h2>
+    </div>
+    <div class="similar-blogs-grid">
+      <div class="blogs-rest-container-wrap">
+        {% for article in blog.articles limit: 4 %}
+          <a href="{{ article.url }}">
+            <div class="blogs-rest-blog">
+              <div class="blogs-rest-blog-image">
+                <img src="{{ article.image | img_url: 'master' }}" alt="">
+              </div>
+              <div class="blogs-rest-blog-content">
+                <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
+                <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
+              </div>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
