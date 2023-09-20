@@ -1,0 +1,28 @@
+<section class="article-template">
+  <div class="article-template-container">
+    <div class="article-template-top">
+      <div class="article-heading">
+        <h3>{{ article.title }}</h3>
+      </div>
+      <div class="article-metafield">
+        <p>{{ article.metafields.custom.short_content }}</p>
+      </div>
+      <div class="article-date-author">
+        <span>By: {{ article.author }}</span>
+        <span class="date-author-separator"></span>
+        <span>{{ article.published_at | date: "%d,%B %Y" }}</span>
+      </div>
+      <div class="article-product-cta">
+        <a href="#!">Checkout our protein powder</a>
+      </div>
+    </div>
+    <div class="article-template-bottom">
+      {{ article.content }}
+    </div>
+    <div class="article-images-carousel">
+      {% for image in article.metafields.custom.carousel %}
+        {{ image }}
+      {% endfor %}
+    </div>
+  </div>
+</section>

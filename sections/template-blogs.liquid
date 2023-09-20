@@ -66,15 +66,17 @@
           {% for article in blog.articles %}
             {% for tag in article.tags %}
               {% if tag == 'latest' %}
-                <div class="blogs-bottom-bottom-left-blog">
-                  <div class="blogs-bottom-left-blog-img">
-                    <img src="{{ article.image | img_url: 'master' }}" alt="">
+                <a href="{{ article.url }}">
+                  <div class="blogs-bottom-bottom-left-blog">
+                    <div class="blogs-bottom-left-blog-img">
+                      <img src="{{ article.image | img_url: 'master' }}" alt="">
+                    </div>
+                    <div class="blogs-bottom-left-blog-content">
+                      <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
+                      <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
+                    </div>
                   </div>
-                  <div class="blogs-bottom-left-blog-content">
-                    <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
-                    <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
-                  </div>
-                </div>
+                </a>
               {% endif %}
             {% endfor %}
           {% endfor %}
@@ -118,15 +120,17 @@
           {% for article in blog.articles %}
             {% for tag in article.tags %}
               {% if tag == 'popular' %}
-                <div class="blogs-bottom-bottom-left-blog">
-                  <div class="blogs-bottom-left-blog-img">
-                    <img src="{{ article.image | img_url: 'master' }}" alt="">
+                <a href="{{ article.url }}">
+                  <div class="blogs-bottom-bottom-left-blog">
+                    <div class="blogs-bottom-left-blog-img">
+                      <img src="{{ article.image | img_url: 'master' }}" alt="">
+                    </div>
+                    <div class="blogs-bottom-left-blog-content">
+                      <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
+                      <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
+                    </div>
                   </div>
-                  <div class="blogs-bottom-left-blog-content">
-                    <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
-                    <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
-                  </div>
-                </div>
+                </a>
               {% endif %}
             {% endfor %}
           {% endfor %}
@@ -137,15 +141,17 @@
       <div class="blogs-rest-container">
         <div class="blogs-rest-container-wrap">
           {% for article in blog.articles %}
-            <div class="blogs-rest-blog">
-              <div class="blogs-rest-blog-image">
-                <img src="{{ article.image | img_url: 'master' }}" alt="">
+            <a href="{{ article.url }}">
+              <div class="blogs-rest-blog">
+                <div class="blogs-rest-blog-image">
+                  <img src="{{ article.image | img_url: 'master' }}" alt="">
+                </div>
+                <div class="blogs-rest-blog-content">
+                  <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
+                  <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
+                </div>
               </div>
-              <div class="blogs-rest-blog-content">
-                <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
-                <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
-              </div>
-            </div>
+            </a>
           {% endfor %}
         </div>
       </div>

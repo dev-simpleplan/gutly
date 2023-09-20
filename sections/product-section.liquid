@@ -1,4 +1,8 @@
+{% if section.settings.padding %}
 <section class="pad-180">
+ {% else %}
+ <section>
+{% endif %}  
   <div class="product-section">
     <div class="egg-product product-half">
       <div class="up-txt">
@@ -97,6 +101,11 @@
         "type": "product",
         "id": "cta_hemp_url",
         "label": "Select Hemp Product "
+      }, {
+        "type": "checkbox",
+        "id": "padding",
+        "label": "Padding to be enabled?",
+        "default": true
       }
     ]
   }
