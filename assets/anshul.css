@@ -40,6 +40,128 @@
 
 /* Static Page Ends */
 
+/* Gut Science */
+
+.what-you-eat-wrapper{
+    padding: 0px 20px;
+    padding-top: 65px;
+}
+.what-you-eat-wrapper .heading{
+    max-width: 76ch;
+    margin: 0 auto;
+}
+.wyew-wrap{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    position: relative;
+    margin-top: -40px;
+}
+.wyew-wrap .mob-slider{
+    display: none;
+}
+.wyew-wrap .item .head-num p {
+    color: #55B85F;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: var(--moret);
+    font-size: 69.312px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 103%;
+    letter-spacing: 0.693px;
+}
+.wyew-wrap .item .head-num p span {
+    font-size: 43.32px;
+    letter-spacing: 0.433px;
+}
+.wyew-wrap .item .bt-txt p{
+    color: #222;
+    font-weight: 700;
+    line-height: 110.5%; /* 14.996px */
+    letter-spacing: 1.086px;
+    text-transform: uppercase;
+}
+.wyew-wrap .item .line{
+    background-color: #616A5D;
+    height: 1px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 9px;
+}
+.wyew-wrap .right-txt-con{
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 33%;
+    margin-top: -90px;
+}
+.wyew-wrap .left-txt-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 33%;
+}
+.wyew-wrap .right-txt-con .item{
+    margin-right: auto;
+}
+.wyew-wrap .left-txt-con .item{
+    margin-left: auto;
+}
+.wyew-wrap .right-txt-con .item .head-num{
+    direction: ltr;
+    display: inline-block;
+}
+.wyew-wrap .left-txt-con .item:first-child .line{ 
+    width: 150%;
+}
+.wyew-wrap .left-txt-con .item:nth-child(2) .line{
+    width: 143%;
+}
+.wyew-wrap .left-txt-con .item:nth-child(3) .line{
+    width: 140%;
+}
+.wyew-wrap .right-txt-con .item:first-child .line{
+    width: 165%;
+}
+.wyew-wrap .right-txt-con .item:nth-child(2) .line{
+    width: 128%;
+}
+.wyew-wrap .right-txt-con .item:nth-child(3) .line{
+    width: 180%;
+}
+.wyew-wrap .right-txt-con .item:nth-child(4) .line{
+    width: 170%;
+}
+.wyew-wrap .left-txt-con .item:first-child{
+    width: 40%;
+}
+.wyew-wrap .left-txt-con .item:nth-child(2){
+    width: 85%;
+    margin-top: 35px;
+}
+.wyew-wrap .left-txt-con .item:nth-child(3){
+    width: 55%;
+    margin-top: 24px;
+}
+.wyew-wrap .right-txt-con .item:first-child{
+    width: 45%;
+}
+.wyew-wrap .right-txt-con .item:nth-child(2){
+    width: 95%;
+    margin-top: -40px;
+}
+.wyew-wrap .right-txt-con .item:nth-child(3){
+    width: 55%;
+    margin-top: 13px;
+}
+.wyew-wrap .right-txt-con .item:nth-child(4){
+    width: 45%;
+    margin-top: 20px;
+}
+/* Gut Science Ends */
+
 /* Responsive Css Starts */
 
 /* Max Width 1800px */
@@ -60,10 +182,22 @@
 /* Max Width 1500px Ends */
 /* Max Width 1400px */
 @media(max-width: 1400px){
+    .click-open-cards .item{
+        width: 25%;
+    }
 }
 /* Max Width 1400px Ends */
 /* Max Width 1300px */
 @media(max-width: 1300px){
+    .zig-zag-big .item .zzb-img .zzb-small-img{
+        height: 105px;
+    }
+    .wyew-wrap .item .head-num p{
+        font-size: 60px;
+    }
+    .wyew-wrap .item .head-num p span {
+        font-size: 34.32px;
+    }
 }
 /* Max Width 1300px Ends */
 /* Max Width 1200px */
@@ -74,11 +208,77 @@
     .static-page .page-content h6{
         font-size: 22px;
     }
+    .gs-banner-wrap .gsb-img-con{
+        right: -20%;
+        width: 60%;
+    }
+    .gut-science-banner{
+        min-height: 600px;
+        height: 90vh;
+    }
+    .what-you-eat-wrapper .heading{
+        max-width: 70ch;
+    }
+    .wyew-wrap{
+        margin-top: -30px;
+    }
+    .wyew-wrap .item .head-num p span {
+        font-size: 24.32px;
+    }
+    .wyew-wrap .item .head-num p {
+        font-size: 50px;
+    }
+    .what-you-eat-wrapper{
+        padding-top: 50px;
+    }
+    .what-you-eat-wrapper .heading {
+        max-width: 60ch;
+    }
+    .wyew-wrap {
+        margin-top: -20px;
+    }
+    .wyew-wrap .item .head-num p span {
+        font-size: 20.32px;
+    }
+    .wyew-wrap .item .head-num p {
+        font-size: 38px;
+    }
+    .wyew-wrap .item .bt-txt p{
+        font-size: 12px;
+    }
+    .wyew-wrap .right-txt-con .item:nth-child(2){
+        margin-top: -25px;
+    }
+    .click-open-cards .item {
+        width: 20%;
+    }
+    .click-open-cards{
+        width: 80%;
+    }
 }
 /* Max Width 1200px Ends */
 /* Max Width 1100px */
 @media(max-width: 1100px){
-
+    .gs-banner-wrap .gsb-img-con{
+        top: 170px;
+    }
+    .gut-goodness .gg-wrapper{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 120px;
+    }
+    .gut-goodness .gg-blocks .item{
+        flex: 1 1 100%;
+    }
+    .gut-goodness .heading{
+        width: 100%;
+        text-align: center;
+    }
+    .gut-goodness .gg-blocks{
+        width: 100%;
+        justify-content: space-between;
+    }
 }
 /* Max Width 1100px Ends */
 /* Max Width 991px */
@@ -88,6 +288,86 @@
     }
     .static-page .page-content h5, .static-page .page-content h6{
         margin-top: 30px;
+    }
+    .gs-banner-wrap .gsb-txt-con .gsb-txt{
+        width: 90%;
+        height: auto;
+        gap: 60px;
+        padding-bottom: 45px;
+    }
+    .gut-science-banner .gs-banner-wrap{
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+    .gs-banner-wrap .gsb-img-con{
+        position: static;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .gut-science-banner {
+        min-height: 100%;
+        height: 100%;
+        padding-top: 40px;
+    }
+    .gs-banner-wrap .gsb-txt-con .gsb-txt .para{
+        max-width: 100%;
+    }
+    .zig-zag-big .item, .zig-zag-big .item:nth-child(even){
+        flex-direction: column;
+    }
+    .zig-zag-big .item .zzb-img {
+        width: 95%;
+        position: relative;
+        margin: 0 auto;
+    }
+    .zig-zag-big .item .zzb-txt {
+        width: 100%;
+    }
+    .zig-zag-big .item .zzb-txt .zzbt-p {
+        margin-top: 24px;
+        max-width: 100%;
+    }
+    .zig-zag-big{
+        gap: 80px;
+    }
+    .zig-zag-big .item .zzb-img .zzb-small-img {
+        left: 0;
+        right: 0;
+        height: 105px;
+        width: 35%;
+        margin: 0 auto;
+    }
+    .zig-zag-big .item{
+        gap: 45px;
+    }
+    .gutly-way{
+        flex-direction: column-reverse;
+    }
+    .gutly-way .gw-left{
+        width: 100%;
+        padding: 40px 60px;
+        gap: 28px;
+    }
+    .gutly-way .gw-right{
+        width: 100%;
+        padding-top: 60%;
+    }
+    .gutly-way .gw-left .para{
+        max-width: 100%;
+    }
+    .gutly-way .gw-left .para p{
+        margin-bottom: 16px;
+    }
+    .click-open-cards .item {
+        width: 35%;
+    }
+    .click-open-cards {
+        width: 90%;
+    }
+    .click-open-cards .item .box{
+        top: 135px;
+        width: 140%;
+        left: -52px;
     }
 }
 /* Max Width 991px Ends */
@@ -104,6 +384,118 @@
     }
     .static-page .page-content h5, .static-page .page-content h6{
         margin-top: 26px;
+    }
+    .gs-banner-wrap .gsb-txt-con .gsb-txt{
+        width: 80%;
+        gap: 30px;
+    }
+    .gs-banner-wrap .gsb-txt-con .gsb-txt .sub-head {
+        margin-top: -20px;
+    }
+    .gut-science-banner{
+        padding-top: 30px;
+    }
+    .gs-banner-wrap .gsb-txt-con .gsb-txt{
+        padding-bottom: 30px;
+    }
+    .zig-zag-big .item .zzb-img .zzb-small-img{
+        width: 55%;
+    }
+    .zig-zag-big .item .zzb-txt .zzbt-p{
+        margin-top: 16px;
+    }
+    .gut-goodness .gg-wrapper{
+        gap: 60px;
+    }
+    .gut-goodness .gg-blocks .item .ggb-img{
+        width: 60px;
+        height: 60px;
+    }
+    .gut-goodness .gg-blocks{
+        flex-wrap: wrap;
+        gap: 35px;
+    }
+    .gutly-way .gw-left{
+        padding: 30px 20px;
+    }
+    .wyew-wrap .mob-slider{
+        display: block;
+        text-align: center;
+        position: absolute;
+        bottom: 60px;
+        background: #fff;
+        left: 0;
+        padding: 20px;
+        border-radius: 16px;
+        width: 100%;
+    }
+    .wyew-wrap .left-txt-con, .wyew-wrap .right-txt-con, .wyew-wrap .item .line{
+        display: none;
+    }
+    .wyew-wrap{
+        flex-direction: column;
+        margin-top: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+    .wyew-wrap .item{
+        width: 100%;
+        text-align: center;
+    }
+    .what-you-eat-wrapper .wyew-wrap .mid-img{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .wyew-wrap .owl-carousel .owl-item p{
+        transform: translateY(100%);
+        opacity: 0;
+        transition: 1s all ease;
+    }
+    .wyew-wrap .owl-carousel .owl-item.active p{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    .wyew-wrap .item .head-num, .wyew-wrap .item .bt-txt{
+        overflow: hidden;
+    }
+    .click-open-cards .item {
+        width: 60%;
+    }
+    .committed-gs .heading {
+        margin: 0 auto;
+        margin-bottom: 40px;
+        max-width: 100%;
+    }
+    .click-open-cards {
+        width: 100%;
+        gap: 40px;
+    }
+    .click-open-cards .item .box {
+        top: 205px;
+        width: 145%;
+        left: -55px;
+    }
+    .click-open-cards .item .box .para{
+        max-width: 100%;
+    }
+
+}
+@media(max-width: 500px){
+    .gs-banner-wrap .gsb-txt-con .gsb-txt{
+        width: 100%;
+    }
+    .click-open-cards .item .box{
+        top: 175px;
+    }
+}
+@media(max-width: 440px){
+    .click-open-cards .item .box{
+        top: 150px;
+    }
+}
+@media(max-width: 390px){
+    .click-open-cards .item .box{
+        top: 130px;
     }
 }
 /* Max Width 767px Ends */

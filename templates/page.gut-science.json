@@ -60,7 +60,59 @@
             "settings": {
                 "head":"you are what you eat",
                 "img":"shopify:\/\/shop_images\/Mask_group_5.png?v=1694693837"
-            }
+            },
+            "blocks": {
+                "left1":{
+                    "type": "left-side",
+                    "settings": {
+                        "num":"2-7<span>%</span>",
+                        "txt":"flavour"
+                    }
+                },
+                "left2":{
+                    "type": "left-side",
+                    "settings": {
+                        "num":"71-76<span>%</span>",
+                        "txt":"protein source"
+                    }
+                },
+                "left3":{
+                    "type": "left-side",
+                    "settings": {
+                        "num":"71-76<span>%</span>",
+                        "txt":"protein source"
+                    }
+                },
+                "right1":{
+                    "type": "right-side",
+                    "settings": {
+                        "num":"<1.9<span>%</span>",
+                        "txt":"Maltodextrin"
+                    }
+                },
+                "right2":{
+                    "type": "right-side",
+                    "settings": {
+                        "num":"7-8<span>%</span>",
+                        "txt":"sweeteners"
+                    }
+                },
+                "right3":{
+                    "type": "right-side",
+                    "settings": {
+                        "num":"12-13<span>%</span>",
+                        "txt":"milk"
+                    }
+                },
+                "right4":{
+                    "type": "right-side",
+                    "settings": {
+                        "num":"12-13<span>%</span>",
+                        "txt":"milk"
+                    }
+                }
+            },
+            "block_order": ["left1", "left2", "left3", "right1", "right2", "right3", "right4"]
         },
         "gut-goodness":{
             "type": "gut-goodness",
@@ -194,7 +246,20 @@
                 }
             },
             "block_order": ["block1", "block2", "block3", "block4", "block5", "block6", "block7"]
+        },
+        "sample-section":{
+            "type": "sample-section",
+            "settings": {
+                "eggImg":"shopify:\/\/shop_images\/What_s_in_a_Design_Blogger_s_In-Box_on_Any_Given_Day__-_Core77_3.png?v=1693993359",
+                "eggHead":"Egg-white <br>Protein Sample",
+                "eggPara":"Our protein powder is not only delicious but also super friendly to your sensitive tummy. Say goodbye to bloating!",
+                "cta_egg_txt":"Try Today",
+                "hempImg":"shopify:\/\/shop_images\/What_s_in_a_Design_Blogger_s_In-Box_on_Any_Given_Day__-_Core77_3_1.png?v=1693993321",
+                "hempHead":"Hemp <br>Protein Sample",
+                "hempPara":"Our hemp-based alternative with superior quality, easy-to-digest ingredients for your sensitive tummy!",
+                "cta_hemp_txt":"Try Today"
+            }
         }
     },
-    "order": ["banner-section", "happy-gut", "zig-zag", "what-you-eat", "gut-goodness", "gutly-way", "commited-section"]
+    "order": ["banner-section", "happy-gut", "zig-zag", "what-you-eat", "gut-goodness", "gutly-way", "commited-section", "sample-section"]
 }
