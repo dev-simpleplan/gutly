@@ -1,17 +1,6 @@
 <section class="padt-90">
   <div class="foot-ticker">
-    <div class="owl-theme owl-carousel">
-      {% for block in section.blocks %}
-        <div class="item">
-          <div class="tick-img">
-            <img
-              src="{{ block.settings.tickImg | img_url: 'master' }}"
-              alt=""
-              class="img">
-          </div>
-        </div>
-      {% endfor %}
-    </div>
+    <div id="footTicker" class="owl-theme owl-carousel"></div>
   </div>
 </section>
 
@@ -35,28 +24,57 @@
 {% endschema %}
 
 <script>
-  $('.foot-ticker .owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
-    responsiveClass: true,
-    nav: false,
-    dots: false,
-    items: 4,
-    slideTransition: 'linear',
-    autoplay: true,
-    autoplayTimeout: 5000,
-    autoplaySpeed: 5000,
-    autoplayHoverPause: false,
-    responsive: {
-      0: {
-        items: 1
-      },
-      767: {
-        items: 3
-      },
-      991: {
-        items: 4
+  const accessToken = 'IGQWRNZAnRmS042NFEzTUtrLUFpd08ycUtBU25zcF8tUm1IZADRySXctUGc3WDRjeWstb3k0R0hWd2VBbkRHMHd3NFd4czJQUnFxN09VQUpJam5nMlo5TW9IQXhWYUQteHpENEJ4OE02TGdISHltblNnOU9BbFVTX0xOa0hVc0JXXzYtQQZDZD';
+  const apiUrl = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url&access_token=${accessToken}`;
+  fetch(apiUrl).then(response => response.json()).then(data => {
+
+// Process the data and extract the media URLs for posts with media_type "IMAGE"
+    const posts = data.data;
+    const imagePosts = posts.filter(post => post.media_type === 'IMAGE');
+    const mediaUrls = imagePosts.map(post => post.media_url);
+
+// Get the feedContainer element
+    const feedContainer = document.getElementById('footTicker');
+
+// Loop through mediaUrls and create an .item for each image
+    mediaUrls.forEach(url => {
+      const itemElement = document.createElement('div');
+      itemElement.classList.add('item');
+
+      const imageElement = document.createElement('img');
+      imageElement.src = url;
+
+// Append the image to the .item
+      itemElement.appendChild(imageElement);
+
+// Append the .item to the feedContainer
+      feedContainer.appendChild(itemElement);
+    });
+    $('.foot-ticker .owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      responsiveClass: true,
+      nav: false,
+      dots: false,
+      items: 4,
+      slideTransition: 'linear',
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplaySpeed: 5000,
+      autoplayHoverPause: false,
+      responsive: {
+        0: {
+          items: 1
+        },
+        767: {
+          items: 3
+        },
+        991: {
+          items: 4
+        }
       }
-    }
+    });
+  }).catch(error => {
+    console.error('Error fetching Instagram posts:', error);
   });
 </script>
