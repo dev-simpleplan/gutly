@@ -57,163 +57,110 @@
         </div>
       </div>
     </div>
-    <div class="blogs-bottom">
-      <div class="blogs-bottom-left">
-        <div class="blogs-top-right-head">
-          <h6>Latest blogs</h6>
-        </div>
-        <div class="blogs-bottom-bottom-left-blogs">
-          {% for article in blog.articles %}
-            {% for tag in article.tags %}
-              {% if tag == 'latest' %}
-                <a href="{{ article.url }}">
-                  <div class="blogs-bottom-bottom-left-blog">
-                    <div class="blogs-bottom-left-blog-img">
-                      <img src="{{ article.image | img_url: 'master' }}" alt="">
-                    </div>
-                    <div class="blogs-bottom-left-blog-content">
-                      <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
-                      <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
-                    </div>
-                  </div>
-                </a>
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-        </div>
-      </div>
-      <div class="blogs-bottom-middle">
-        <div class="blogs-top-left-head">
-          <h1>Must Read</h1>
-        </div>
-        <div class="blogs-bottom-middle-blog">
-          {% for article in blog.articles %}
-            {% for tag in article.tags %}
-              {% if tag == 'must' %}
-                <a href="{{ article.url }}">
-                  <div class="blogs-bottom-middle-blog-wrap">
-                    <div class="blogs-bottom-middle-blog-img">
-                      <img src="{{ article.image | img_url: 'master' }}" alt="">
-                    </div>
-                    <div class="blogs-bottom-middle-blog-content">
-                      <div class="blogs-top-left-article-title">
-                        <h5>{{ article.title }}</h5>
+    {% paginate blog.articles by 5 %}
+      <div class="blogs-bottom" style="{% if paginate.current_page > 1 %}display: none; {% else %}display: flex; {% endif %}">
+        <div class="blogs-bottom-left">
+          <div class="blogs-top-right-head">
+            <h6>Latest blogs</h6>
+          </div>
+          <div class="blogs-bottom-bottom-left-blogs">
+            {% for article in blog.articles %}
+              {% for tag in article.tags %}
+                {% if tag == 'latest' %}
+                  <a href="{{ article.url }}">
+                    <div class="blogs-bottom-bottom-left-blog">
+                      <div class="blogs-bottom-left-blog-img">
+                        <img src="{{ article.image | img_url: 'master' }}" alt="">
                       </div>
-                      <div class="blogs-top-left-article-author-date">
-                        <span>By: {{ article.author }}</span>
-                        <span class="author-separator"></span>
-                        <span>{{ article.published_at | date: "%d,%B %Y" }}</span>
+                      <div class="blogs-bottom-left-blog-content">
+                        <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
+                        <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
                       </div>
                     </div>
-                  </div>
-                </a>
-              {% endif %}
+                  </a>
+                {% endif %}
+              {% endfor %}
             {% endfor %}
-          {% endfor %}
+          </div>
         </div>
-      </div>
-      <div class="blogs-bottom-right">
-        <div class="blogs-top-right-head">
-          <h6>Popular blogs</h6>
-        </div>
-        <div class="blogs-bottom-bottom-left-blogs">
-          {% for article in blog.articles %}
-            {% for tag in article.tags %}
-              {% if tag == 'popular' %}
-                <a href="{{ article.url }}">
-                  <div class="blogs-bottom-bottom-left-blog">
-                    <div class="blogs-bottom-left-blog-img">
-                      <img src="{{ article.image | img_url: 'master' }}" alt="">
+        <div class="blogs-bottom-middle">
+          <div class="blogs-top-left-head">
+            <h1>Must Read</h1>
+          </div>
+          <div class="blogs-bottom-middle-blog">
+            {% for article in blog.articles %}
+              {% for tag in article.tags %}
+                {% if tag == 'must' %}
+                  <a href="{{ article.url }}">
+                    <div class="blogs-bottom-middle-blog-wrap">
+                      <div class="blogs-bottom-middle-blog-img">
+                        <img src="{{ article.image | img_url: 'master' }}" alt="">
+                      </div>
+                      <div class="blogs-bottom-middle-blog-content">
+                        <div class="blogs-top-left-article-title">
+                          <h5>{{ article.title }}</h5>
+                        </div>
+                        <div class="blogs-top-left-article-author-date">
+                          <span>By: {{ article.author }}</span>
+                          <span class="author-separator"></span>
+                          <span>{{ article.published_at | date: "%d,%B %Y" }}</span>
+                        </div>
+                      </div>
                     </div>
-                    <div class="blogs-bottom-left-blog-content">
-                      <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
-                      <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
-                    </div>
-                  </div>
-                </a>
-              {% endif %}
+                  </a>
+                {% endif %}
+              {% endfor %}
             {% endfor %}
-          {% endfor %}
+          </div>
+        </div>
+        <div class="blogs-bottom-right">
+          <div class="blogs-top-right-head">
+            <h6>Popular blogs</h6>
+          </div>
+          <div class="blogs-bottom-bottom-left-blogs">
+            {% for article in blog.articles %}
+              {% for tag in article.tags %}
+                {% if tag == 'popular' %}
+                  <a href="{{ article.url }}">
+                    <div class="blogs-bottom-bottom-left-blog">
+                      <div class="blogs-bottom-left-blog-img">
+                        <img src="{{ article.image | img_url: 'master' }}" alt="">
+                      </div>
+                      <div class="blogs-bottom-left-blog-content">
+                        <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
+                        <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
+                      </div>
+                    </div>
+                  </a>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
         </div>
       </div>
-    </div>
-    {% paginate blog.articles by 3 %}
-      <div class="blogs-rest-container">
-        <div class="blogs-rest-container-wrap">
-          {% for article in blog.articles %}
-            <a href="{{ article.url }}">
-              <div class="blogs-rest-blog">
-                <div class="blogs-rest-blog-image">
-                  <img src="{{ article.image | img_url: 'master' }}" alt="">
+      {% if paginate.current_page > 1 %}
+        <div class="blogs-rest-container">
+          <div class="blogs-rest-container-wrap">
+            {% for article in blog.articles %}
+              <a href="{{ article.url }}">
+                <div class="blogs-rest-blog">
+                  <div class="blogs-rest-blog-image">
+                    <img src="{{ article.image | img_url: 'master' }}" alt="">
+                  </div>
+                  <div class="blogs-rest-blog-content">
+                    <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
+                    <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
+                  </div>
                 </div>
-                <div class="blogs-rest-blog-content">
-                  <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
-                  <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
-                </div>
-              </div>
-            </a>
-          {% endfor %}
+              </a>
+            {% endfor %}
+          </div>
         </div>
-      </div>
+      {% endif %}
     </div>
-
-    {% if paginate.pages > 1 %}
-      <div class="blogs-template-pagination">
-
-        <button class="blogs-template-pagination-prev">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="42"
-            height="24"
-            viewBox="0 0 42 24"
-            fill="none">
-            <path
-              d="M6.5 12.0001L36.5 12.0001"
-              stroke="#222222"
-              stroke-width="2"
-              stroke-linecap="square" />
-            <path
-              d="M30.5 5.00006L37.5 12.0001L30.5 19.0001"
-              stroke="#222222"
-              stroke-width="2"
-              stroke-linecap="square" />
-          </svg>
-        </button>
-        <ul>
-          {% for i in (1..paginate.pages) %}
-            {% if i == 1 %}
-              <li class="active">
-                <a href="{{ blog.url }}?page={{ i }}">{{ i }}</a>
-              </li>
-            {% else %}
-              <li>
-                <a href="{{ blog.url }}?page={{ i }}">{{ i }}</a>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-        <button class="blogs-template-pagination-next active">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="42"
-            height="24"
-            viewBox="0 0 42 24"
-            fill="none">
-            <path
-              d="M6.5 12.0001L36.5 12.0001"
-              stroke="#222222"
-              stroke-width="2"
-              stroke-linecap="square" />
-            <path
-              d="M30.5 5.00006L37.5 12.0001L30.5 19.0001"
-              stroke="#222222"
-              stroke-width="2"
-              stroke-linecap="square" />
-          </svg>
-        </button>
-
-      </div>
-    {% endif %}
+    <div class="pagination-section">
+      {% render 'paginate', pagination: paginate %}
+    </div>
 
   {% endpaginate %}
 </section>

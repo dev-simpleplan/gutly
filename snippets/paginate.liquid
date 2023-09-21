@@ -1,0 +1,56 @@
+{% if pagination.pages > 0 %}
+  <nav role="navigation">
+    {% if pagination.previous %}
+      <a href="{{ pagination.previous.url }}" class="prev-page">
+        <svg
+          width="42"
+          height="24"
+          viewBox="0 0 42 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M35.5 12.0001L5.5 12.0001"
+            stroke="#222222"
+            stroke-width="2"
+            stroke-linecap="square" />
+          <path
+            d="M11.5 5.00006L4.5 12.0001L11.5 19.0001"
+            stroke="#222222"
+            stroke-width="2"
+            stroke-linecap="square" />
+        </svg>
+      </a>
+    {% endif %}
+
+    {% for part in pagination.parts %}
+      {% if part.is_link %}
+        <a href="{{ part.url }}">{{ part.title }}</a>
+      {% else %}
+        <span>{{ part.title }}</span>
+      {% endif %}
+
+    {% endfor %}
+
+    {% if pagination.next %}
+      <a href="{{ pagination.next.url }}" class="next-page">
+        <svg
+          width="42"
+          height="24"
+          viewBox="0 0 42 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M6.5 12.0001L36.5 12.0001"
+            stroke="#222222"
+            stroke-width="2"
+            stroke-linecap="square" />
+          <path
+            d="M30.5 5.00006L37.5 12.0001L30.5 19.0001"
+            stroke="#222222"
+            stroke-width="2"
+            stroke-linecap="square" />
+        </svg>
+      </a>
+    {% endif %}
+  </nav>
+{% endif %}

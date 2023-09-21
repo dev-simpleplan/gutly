@@ -1,7 +1,111 @@
 /* Static Page */
 
 .static-page{
+    max-width: 84ch;
+    margin: 0 auto;
+}
+.static-page .page-title{
     text-align: center;
+    margin-bottom: 24px;
+}
+.static-page .page-content p{
+    margin-top: 16px;
+    display: inline-block;
+    letter-spacing: 0.5px;
+    color: #353535;
+}
+.static-page .page-content h5, .static-page .page-content h6{
+    margin-top: 40px;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+.static-page .page-content h5{
+    color: #222;
+    font-family: var(--moret);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 103%; /* 32.96px */
+    letter-spacing: 0.32px;
+}
+.static-page .page-content h6{
+    color: #222;
+    font-family: var(--moret);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 103%; /* 24.72px */
+    letter-spacing: 0.24px;
 }
 
 /* Static Page Ends */
+
+/* Responsive Css Starts */
+
+/* Max Width 1800px */
+@media(max-width: 1800px){
+}
+/* Max Width 1800px Ends */
+/* Max Width 1700px */
+@media(max-width: 1700px){
+}
+/* Max Width 1700px Ends */
+/* Max Width 1600px */
+@media(max-width: 1600px){
+}
+/* Max Width 1600px Ends */
+/* Max Width 1500px */
+@media(max-width: 1500px){
+}
+/* Max Width 1500px Ends */
+/* Max Width 1400px */
+@media(max-width: 1400px){
+}
+/* Max Width 1400px Ends */
+/* Max Width 1300px */
+@media(max-width: 1300px){
+}
+/* Max Width 1300px Ends */
+/* Max Width 1200px */
+@media(max-width: 1200px){
+    .static-page .page-content h5{
+        font-size: 28px;
+    }
+    .static-page .page-content h6{
+        font-size: 22px;
+    }
+}
+/* Max Width 1200px Ends */
+/* Max Width 1100px */
+@media(max-width: 1100px){
+
+}
+/* Max Width 1100px Ends */
+/* Max Width 991px */
+@media(max-width: 991px){
+    .static-page .page-title{
+        margin-bottom: 16px;
+    }
+    .static-page .page-content h5, .static-page .page-content h6{
+        margin-top: 30px;
+    }
+}
+/* Max Width 991px Ends */
+/* Max Width 767px */
+@media(max-width: 767px){
+    .static-page .page-content h5{
+        font-size: 24px;
+    }
+    .static-page .page-content h6{
+        font-size: 20px;
+    }
+    .static-page .page-content p{
+        margin-top: 12px;
+    }
+    .static-page .page-content h5, .static-page .page-content h6{
+        margin-top: 26px;
+    }
+}
+/* Max Width 767px Ends */
+
+/* Responsive Css Ends */
