@@ -1,40 +1,70 @@
 <section class="padt-90">
   <div class="what-you-eat-wrapper">
-    <div class="container">
-      <div class="heading center">
-        <h2>{{ section.settings.head }}</h2>
+    <div class="heading center">
+      <h2>{{ section.settings.head }}</h2>
+    </div>
+    <div class="wyew-wrap">
+      <div class="left-txt-con">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'left-side' %}
+            <div class="item">
+              <div class="head-num">
+                <p>{{ block.settings.num }}</p>
+              </div>
+              <div class="line"></div>
+              <div class="bt-txt">
+                <p class="small">{{ block.settings.txt }}</p>
+              </div>
+            </div>
+          {% endcase %}
+        {% endfor %}
       </div>
-      <div class="wyew-wrap">
-        <div class="left-txt-con">
+      <div class="mid-img">
+        <img src="{{ section.settings.img | img_url: 'master' }}" alt="">
+      </div>
+      <div class="right-txt-con">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'right-side' %}
+            <div class="item">
+              <div class="head-num">
+                <p>{{ block.settings.num }}</p>
+              </div>
+              <div class="line"></div>
+              <div class="bt-txt">
+                <p class="small">{{ block.settings.txt }}</p>
+              </div>
+            </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+      <div class="mob-slider">
+        <div class="owl-theme owl-carousel">
           {% for block in section.blocks %}
             {% case block.type %}
-              {% when left-side %}
+              {% when 'left-side' %}
               <div class="item">
                 <div class="head-num">
                   <p>{{ block.settings.num }}</p>
                 </div>
                 <div class="line"></div>
                 <div class="bt-txt">
-                  <p>{{ block.settings.txt }}</p>
+                  <p class="small">{{ block.settings.txt }}</p>
                 </div>
               </div>
             {% endcase %}
           {% endfor %}
-        </div>
-        <div class="mid-img">
-          <img src="{{ section.settings.img | img_url: 'master' }}" alt="">
-        </div>
-        <div class="right-txt-con">
           {% for block in section.blocks %}
             {% case block.type %}
-              {% when right-side %}
+              {% when 'right-side' %}
               <div class="item">
                 <div class="head-num">
                   <p>{{ block.settings.num }}</p>
                 </div>
                 <div class="line"></div>
                 <div class="bt-txt">
-                  <p>{{ block.settings.txt }}</p>
+                  <p class="small">{{ block.settings.txt }}</p>
                 </div>
               </div>
             {% endcase %}
@@ -68,7 +98,7 @@
           {
             "type": "text",
             "id": "num",
-            "label": "Number"
+            "label": "Number for % use <span>%</span>"
           }, {
             "type": "text",
             "id": "txt",
@@ -78,12 +108,12 @@
       }, {
         "type": "right-side",
         "name": "Right Side",
-        "limit": 3,
+        "limit": 4,
         "settings": [
           {
             "type": "text",
             "id": "num",
-            "label": "Number"
+            "label": "Number for % use <span>%</span>"
           }, {
             "type": "text",
             "id": "txt",
@@ -94,3 +124,28 @@
     ]
   }
 {% endschema %}
+
+<script>
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: false,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 8000,
+    autoplayHoverPause: false,
+    animateOut: 'fadeOut',
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 1
+      }
+    }
+  })
+</script>
