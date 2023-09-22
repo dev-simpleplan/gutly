@@ -82,7 +82,20 @@
         <div class="account">
           {% if shop.customer_accounts_enabled %}
             {% if customer %}
-              <a href="{{ routes.account_url }}">My Account</a>
+              <div class="cust-login">
+                <a href="javascript:void(0)">{% render 'account-icon' %}</a>
+                <div class="cust-login-dd">
+                  <ul>
+                    <li>
+                      <a href="{{ routes.account_url }}">Account</a>
+                    </li>
+                    <li>
+                      <a href="#!">Customer support</a>
+                    </li>
+                    <li>{{ 'Log Out' | customer_logout_link }}</li>
+                  </ul>
+                </div>
+              </div>
             {% else %}
               <a href="{{ routes.account_login_url }}">{% render 'account-icon' %}</a>
             {% endif %}
@@ -150,7 +163,7 @@
           <button>{% render 'account-icon' %}</button>
         </div>
         <div class="mob-cart nav-cart">
-          <a href="#!" data-ajax-cart-section>{% render 'bag-icon' %}<span>({{ cart.item_count }})</span>
+          <a href="javascript:void(0)" data-ajax-cart-section>{% render 'bag-icon' %}<span>({{ cart.item_count }})</span>
           </a>
         </div>
       </div>

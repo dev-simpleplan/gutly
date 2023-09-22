@@ -11,14 +11,25 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $(".remove").click(function(){
-        if ($(this)) {
-            $(".cart-remove-confirm ").addClass("active");
-        }
+    // Event delegation for .remove
+    $(document).on('click', '.remove', function() {
+        // Find the closest .cart_prod ancestor and then locate .cart-remove-confirm within it
+        var $cartProd = $(this).closest('.cart_prod');
+        $cartProd.find(".cart-remove-confirm").addClass("active");
     });
-    $(".remove-active").click(function(){
-        if ($(this)) {
-        $(".cart-remove-confirm").removeClass("active");  
-        }
-    })     
+
+    // Event delegation for .remove-active
+    $(document).on('click', '.remove-active', function() {
+        // Find the closest .cart_prod ancestor and then locate .cart-remove-confirm within it
+        var $cartProd = $(this).closest('.cart_prod');
+        $cartProd.find(".cart-remove-confirm").removeClass("active");
+    });
 });
+
+
+
+
+
+
+
+

@@ -1,0 +1,103 @@
+<section class="accounts-page pad-180">
+  <div class="container">
+    <div class="ap-con body-bg2">
+      <div class="left-con">
+        <div class="cust-name">
+          {% render 'profile' %}
+          <p>{{ customer.name }}</p>
+          {{ 'Log Out' | customer_logout_link }}
+        </div>
+        <div class="tab">
+          <button
+            class="tablinks"
+            onclick="openCity(event, 'details')"
+            id="defaultOpen">
+            <div class="ca-but-con">Account Details</div>
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'orders')">
+            <div class="ca-but-con">Orders</div>
+          </button>
+        </div>
+      </div>
+      <div class="right-con">
+        <div id="details" class="tabcontent txt-center">
+          <div class="account-details">
+            {% for address in customer.addresses %}
+              {{ address | format_address }}
+            {% endfor %}
+            <a href="{{ routes.account_addresses_url }}" class="plain-cta">
+              <div class="button-plain-con">
+                View All Address
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div id="orders" class="tabcontent">
+          {% assign number_of_orders = customer.orders | size %}
+          {% if number_of_orders > 0 %}
+            <div class="order-con flex">
+              {% for order in customer.orders %}
+                <div class="order-wrapper">
+                  <div class="order-img">
+                    {% if order.line_items.first.image %}
+                      <img src="{{ order.line_items.first.image | img_url: 'master' }}" alt="{{ order.line_items.first.image.alt }}">
+                    {% else %}
+                      {{ 'product-1' | placeholder_svg_tag }}
+                    {% endif %}
+                  </div>
+                  <div class="order-desp">
+                    <div class="order-desp-item">
+                      <p class="order-text">Order Id</p>
+                      <p class="order-text">{{ order.name | link_to: order.customer_url }}</p>
+                    </div>
+                    <div class="order-desp-item">
+                      <p class="order-text">Payment Status</p>
+                      <p class="order-text">{{ order.financial_status_label }}</p>
+                    </div>
+                    <div class="order-desp-item">
+                      <p class="order-text">Fulillment Status</p>
+                      <p class="order-text">{{ order.fulfillment_status_label }}</p>
+                    </div>
+                    <div class="order-desp-item">
+                      <p class="order-text">Total</p>
+                      <p class="order-text">{{ order.total_price | money }}</p>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          {% else %}
+            <div class="cart-empty">
+              <h3 class="head-text">You dont have any orders</h3>
+              <a href="{{ routes.all_products_collection_url }}" class="primary-button black-yellow">
+                Back To Homepage
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function openCity(evt, cityName) {
+    var i,
+      tabcontent,
+      tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "flex";
+    evt.currentTarget.className += " active";
+  }
+
+// Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
