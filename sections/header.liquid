@@ -89,7 +89,10 @@
           {% endif %}
         </div>
         <div class="nav-cart">
-          <a href="{{ routes.cart_url }}">Cart(0)</a>
+          <a
+            href="#!"
+            data-ajax-cart-section
+            class="cart-open">Cart ({{ cart.item_count }})</a>
         </div>
         <div class="ham-menu">
           <button data-bs-toggle="offcanvas" data-bs-target="#demo">{% render 'ham-menu-icon' %}</button>
@@ -146,8 +149,9 @@
         <div class="mob-account">
           <button>{% render 'account-icon' %}</button>
         </div>
-        <div class="mob-cart">
-          <a href="#!">{% render 'bag-icon' %}</a>
+        <div class="mob-cart nav-cart">
+          <a href="#!" data-ajax-cart-section>{% render 'bag-icon' %}<span>({{ cart.item_count }})</span>
+          </a>
         </div>
       </div>
     </div>

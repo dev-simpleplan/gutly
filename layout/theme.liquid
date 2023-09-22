@@ -109,6 +109,13 @@
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"></script>
+    <script type="application/json" data-ajax-cart-initial-state>
+      {{ cart | json }}
+    </script>
+
+    <script type="module">
+      import '{{ "liquid-ajax-cart-v2.0.0.js" | asset_url }}';
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
@@ -141,6 +148,18 @@
       {% section 'header' %}
       {{ content_for_layout }}
     </main>
+    {% section 'ajax-cart' %}
     {% section 'footer' %}
   </body>
+  <script>
+    function runWhenInit() {
+      console.log("The current cart state is: ", window.liquidAjaxCart.cart);
+    }
+
+    if (window.liquidAjaxCart ?. init) { // if Liquid Ajax Cart is already initialized
+      runWhenInit();
+    } else { // wait for Liquid Ajax Cart to be initialized
+      document.addEventListener("liquid-ajax-cart:init", runWhenInit);
+    }
+  </script>
 </html>
