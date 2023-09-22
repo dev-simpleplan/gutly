@@ -24,6 +24,7 @@
 {% endschema %}
 
 <script>
+  /*
   const accessToken = 'IGQWRNZAnRmS042NFEzTUtrLUFpd08ycUtBU25zcF8tUm1IZADRySXctUGc3WDRjeWstb3k0R0hWd2VBbkRHMHd3NFd4czJQUnFxN09VQUpJam5nMlo5TW9IQXhWYUQteHpENEJ4OE02TGdISHltblNnOU9BbFVTX0xOa0hVc0JXXzYtQQZDZD';
   const apiUrl = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url&access_token=${accessToken}`;
   fetch(apiUrl).then(response => response.json()).then(data => {
@@ -50,31 +51,34 @@
 // Append the .item to the feedContainer
       feedContainer.appendChild(itemElement);
     });
-    $('.foot-ticker .owl-carousel').owlCarousel({
-      loop: true,
-      margin: 10,
-      responsiveClass: true,
-      nav: false,
-      dots: false,
-      items: 4,
-      slideTransition: 'linear',
-      autoplay: true,
-      autoplayTimeout: 5000,
-      autoplaySpeed: 5000,
-      autoplayHoverPause: false,
-      responsive: {
-        0: {
-          items: 1
-        },
-        767: {
-          items: 3
-        },
-        991: {
-          items: 4
-        }
+    */
+  $('.foot-ticker .owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    responsiveClass: true,
+    nav: false,
+    dots: false,
+    items: 4,
+    slideTransition: 'linear',
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplaySpeed: 5000,
+    autoplayHoverPause: false,
+    responsive: {
+      0: {
+        items: 1
+      },
+      767: {
+        items: 3
+      },
+      991: {
+        items: 4
       }
-    });
-  }).catch(error => {
-    console.error('Error fetching Instagram posts:', error);
+    }
   });
+
+// }).catch(error => {
+// console.error('Error fetching Instagram posts:', error);
+// }
+// );
 </script>
