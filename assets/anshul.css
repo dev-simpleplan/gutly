@@ -1276,6 +1276,19 @@ body.cart-open::after{
     .faq-page-main-wrapper .faq-section .faq-ans{
         padding-left: 32px;
     }
+    .my-cart .cart-remove-confirm{
+        padding: 20px 35px;
+    }
+    .my-cart .cart-container .my-cart__items .cart-prod-wrap{
+        padding: 30px 0;
+    }
+
+    .my-cart .cart-container .my-cart__items .cart-prod-wrap:last-child, .my-cart .cart-container .my-cart__items .cart-prod-wrap:first-child{
+        padding: 30px 0;
+    }
+    .my-cart .cart-head-con{
+        margin-bottom: 35px;
+    }
 }
 @media(max-width: 500px){
     .gs-banner-wrap .gsb-txt-con .gsb-txt{
