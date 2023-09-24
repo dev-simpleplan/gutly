@@ -805,6 +805,56 @@ body.cart-open::after{
 
 /* Accounts and Addresses Ends */
 
+/* FAQ Page */
+.faq-banner-section {
+    max-height: 600px;
+    overflow: hidden;
+}
+.faq-banner-section .faq-ban-img {
+    height: 100%;
+}
+.faq-section-wrapper .faq-contact .para{
+    margin-top: 56px;
+}
+.faq-section-wrapper .faq-contact .para p{
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: #222;
+}
+.faq-section-wrapper .faq-contact .cta{
+    margin-top: 24px;
+}
+.faq-page-main-wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+.faq-page-main-wrapper .faq-contact{
+    width: 25%;
+}
+.faq-page-main-wrapper .faq-section{
+    width: 70%;
+}
+.faq-page-main-wrapper .faq-section .faq-wrapper{
+    width: 100%;
+    margin: 0;
+}
+.faq-page-main-wrapper .faq-section .faq-ans{
+    max-width: 76ch;
+    padding-left: 72px;
+}
+.faq-page-main-wrapper .faq-section .faq-ans p{
+    color: #333;
+}
+.faq-page-main-wrapper .faq-wrapper .item:first-child{
+    border-top: 0;
+    padding-top: 0;
+}
+/* FAQ Page Ends */
+
 /* Responsive Css Starts */
 
 /* Max Width 1800px */
@@ -846,6 +896,12 @@ body.cart-open::after{
     }
     .order-desp-item p{
         font-size: 20px;
+    }
+    .faq-section-wrapper .faq-contact .para p{
+        font-size: 16px;
+    }
+    .faq-page-main-wrapper{
+        width: 100%;
     }
 }
 /* Max Width 1300px Ends */
@@ -927,6 +983,9 @@ body.cart-open::after{
     }
     .address-card-con{
         width: 45%;
+    }
+    .faq-page-main-wrapper{
+        margin-top: 65px;
     }
 }
 /* Max Width 1200px Ends */
@@ -1060,6 +1119,30 @@ body.cart-open::after{
     .address-card-con{
         width: 47%;
     }
+    .faq-page-main-wrapper{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .faq-page-main-wrapper .faq-contact{
+        width: 100%;
+        text-align: center;
+    }
+    .faq-page-main-wrapper .faq-section{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 45px;
+    }
+    .faq-section-wrapper .faq-contact .para {
+        margin-top: 26px;
+    }
+    .faq-section-wrapper .faq-contact .para p{
+        font-size: 14px;
+    }
+    .faq-section-wrapper .faq-contact .cta {
+        margin-top: 16px;
+    }
 }
 /* Max Width 991px Ends */
 /* Max Width 767px */
@@ -1187,6 +1270,12 @@ body.cart-open::after{
     .address-card-con{
         width: 100%;
     }
+    .faq-banner-section{
+        height: 400px;
+    }
+    .faq-page-main-wrapper .faq-section .faq-ans{
+        padding-left: 32px;
+    }
 }
 @media(max-width: 500px){
     .gs-banner-wrap .gsb-txt-con .gsb-txt{
@@ -1197,6 +1286,9 @@ body.cart-open::after{
     }
     .order-con .order-wrapper {
         width: 90%;
+    }
+    .faq-page-main-wrapper .faq-section{
+        width: 100%;
     }
 }
     
