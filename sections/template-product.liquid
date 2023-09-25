@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+<section class="product-page">
+  <div class="container">
+    <div class="product-page-wrapper">
+      <div class="product-slider">
+        <div class="main-slider">
+          <div id="main-slider" class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                {% for media in product.media %}
+                  <li class="splide__slide">
+                    <div class="prod-main-img">
+                      {% render 'product-media' | media: media %}
+                    </div>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="thumb-slider">
+          <div id="thumbnail-slider" class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                {% for media in product.media %}
+                  <li class="splide__slide">
+                    <div class="prod-thumb-img">
+                      {% render 'product-media' | media: media %}
+                    </div>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-desp"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var main = new Splide('#main-slider', {
+      type: 'fade',
+      rewind: true,
+      pagination: false,
+      arrows: false
+    });
+
+
+    var thumbnails = new Splide('#thumbnail-slider', {
+      fixedWidth: 72,
+      fixedHeight: 78,
+      rewind: true,
+      arrows: false,
+      pagination: false,
+      cover: true,
+      isNavigation: true,
+      breakpoints: {
+        600: {
+          fixedWidth: 60,
+          fixedHeight: 44
+        }
+      }
+    });
+
+
+    main.sync(thumbnails);
+    main.mount();
+    thumbnails.mount();
+  });
+</script>

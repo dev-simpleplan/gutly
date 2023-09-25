@@ -855,6 +855,27 @@ body.cart-open::after{
 }
 /* FAQ Page Ends */
 
+/* Product Page */
+.product-slider {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 30px;
+}
+.product-slider .thumb-slider .splide__list{
+    flex-direction: column;
+    gap: 16px;
+}
+.product-slider .prod-thumb-img{
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.product-slider .prod-thumb-img img{
+    object-position: top;
+}
+/* Product Page Ends */
+
 /* Responsive Css Starts */
 
 /* Max Width 1800px */

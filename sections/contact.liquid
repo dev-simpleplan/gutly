@@ -23,7 +23,7 @@
                 <p>Call us at</p>
               </div>
               <div class="cfsl-link">
-                <a href="tel: {{ section.settings.ph-no }}">{{ section.settings.ph-no }}</a>
+                <a href="#!" class="chat-button">{{ section.settings.ph-no }}</a>
               </div>
             </li>
             <li>
@@ -142,3 +142,20 @@
     ]
   }
 {% endschema %}
+
+<script>
+  (function() {
+    function onTidioChatApiReady() {
+      window.tidioChatApi.hide();
+    }
+
+    if (window.tidioChatApi) {
+      window.tidioChatApi.on("ready", onTidioChatApiReady);
+    }
+
+    document.querySelector(".chat-button").addEventListener("click", function() {
+      window.tidioChatApi.show();
+      window.tidioChatApi.open();
+    });
+  })();
+</script>
