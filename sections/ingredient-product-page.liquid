@@ -1,4 +1,4 @@
-<section class="pad-180">
+<section class="pad-180 bg-color">
   <div class="container">
     <div class="prod-ing">
       <div class="heading center">
@@ -11,25 +11,21 @@
       </div>
       <div class="pi-wrapper">
         <div class="click-open-cards">
-          {% assign number = product.metafields.custom.number_of_ingredients | plus: 0 %}
-          {% for i in (1..number) %}
+          {% for item in product.metafields.custom.ingredient.value %}
             <div class="item">
               <div class="head">
                 <div class="head-wrap">
-                  <p>{{ block.settings.head }}</p>
+                  <p>{{ item.heading }}</p>
                   <a href="javascript:void(0)" class="plusminus"></a>
                 </div>
               </div>
               <div class="box">
                 <div class="box-con">
                   <div class="cardheading">
-                    <h6>{{ block.settings.card-head }}</h6>
+                    <h6>{{ item.para }}</h6>
                   </div>
                   <div class="para">
-                    <p>{{ block.settings.card-para }}</p>
-                  </div>
-                  <div class="cta">
-                    <a href="{{ block.settings.cta_link }}">{{ block.settings.cta_txt }}</a>
+                    <p>{{ item.sub_head }}</p>
                   </div>
                 </div>
               </div>
@@ -51,6 +47,10 @@
   .click-open-cards .item:nth-child(even) .head-wrap {
     background-image: url("{{ section.settings.bg2 | img_url: 'master' }}");
   }
+  .bg-color {
+    background-color: {{ section.settings.background-color }}
+    ;
+  }
 </style>
 
 {% schema %}
@@ -59,13 +59,20 @@
     "settings": [
       {
         "type": "text",
+        "id": "background-color",
+        "label": "Background Color"
+      },
+      {
+        "type": "text",
         "id": "head",
         "label": "Heading"
-      }, {
+      },
+      {
         "type": "text",
         "id": "para",
         "label": "Paragraph"
-      }, {
+      },
+      {
         "type": "image_picker",
         "id": "bg1",
         "label": "Yellow Background"

@@ -1172,6 +1172,181 @@ ul.variant-wrapper li.variant-cats label p span{
 .product-desp .prod-add-to-bag{
     margin-top: 26px;
 }
+.prod-ing .heading .head{
+    margin: 0 auto;
+    max-width: 60ch;
+}
+.prod-ing .heading .para{
+    margin: 0 auto;
+    margin-top: 28px;
+    max-width: 83ch;
+}
+.prod-ing .pi-wrapper{
+    margin-top: 54px;
+}
+.prod-ing .pi-wrapper .click-open-cards{
+    width: 100%;
+}
+.prod-ing .pi-wrapper .click-open-cards .item{
+    width: 12%;
+}
+.prod-ing .pi-wrapper .click-open-cards .item .box{
+    background-color: #FDF9F3;
+}
+.nutrition-facts .nf-left .nflt-serve-pack p{
+    color: #454545;
+    line-height: 160%;
+    font-weight: 400;
+}
+.nutrition-facts .nf-left .nflt-serve-pack{
+    margin-top: 12px;
+}
+.nutrition-facts .nf-left .nflt-serve-pack p span{
+    margin-left: 2px;
+}
+.nutrition-facts .nf-left .nflt-serve-size{
+    margin-top: 4px;
+}
+.nutrition-facts .nf-left .nflt-serve-size p{
+    color: #454545;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+}
+.nutrition-facts .nf-left .nflt-serve-size p span{
+    margin-left: 5px;
+}
+.nutrition-facts .nf-left .nflt-table{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-top: 2px solid #FFD12D;
+    border-bottom: 2px solid #FFD12D;
+    margin-top: 30px;
+}
+.nutrition-facts .nf-left .nflt-table .item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 16px;
+}
+.nutrition-facts .nf-left .nflt-table .item > div{
+    text-align: right;
+}
+.nutrition-facts .nf-left .nflt-table .item .it1{
+    text-align: left;
+}
+.nutrition-facts .nf-left .nflt-table .item.head > head{
+    text-align: left;
+}
+.nutrition-facts .nf-left .nflt-table .item.head .it2 p, .nutrition-facts .nf-left .nflt-table .item.head .it3 p{
+    color: #222;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 115.5%; /* 13.86px */
+}
+.nutrition-facts .nf-left .nflt-table .item .it1 p{
+    color: #222;
+    font-weight: 600;
+    line-height: 160%;
+}
+.nutrition-facts .nf-left .nflt-table .item .it2, .nutrition-facts .nf-left .nflt-table .item .it3{
+    color: #5E5E5E;
+    font-weight: 400;
+    line-height: 160%;
+}
+.nutrition-facts .nf-left .nflt-table .item.head{
+    padding-top: 0;
+    padding-bottom: 17px;
+}
+.nutrition-facts .nf-left .nflt-table .item{
+    padding: 12px;
+    border-top: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+}
+.nutrition-facts .nf-left .nflt-table .item:first-child{
+    border-top: 0;
+}
+.nutrition-facts .nf-left .nflt-table .item:last-child{
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+.nutrition-facts .nf-left {
+    border-radius: 17px;
+    padding: 41px 59px;
+    background: #FFF;
+    width: 50%;
+}
+.nutrition-facts .nf-right{
+    width: 50%;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.nutrition-facts .nf-right .ei-prod .ei-para{
+    margin-top: 24px;
+}
+.nutrition-facts .nf-right .direction{
+    margin-top: 31px;
+}
+.nutrition-facts .nf-right .direction .d-title p{
+    color: #222;
+    font-family: var(--moret);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 101%; /* 22.22px */
+}
+.nutrition-facts .nf-right .direction .d-para{
+    margin-top: 16px;
+}
+.nutrition-facts .disclaimer p{
+    color: #686868;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 18px */
+    letter-spacing: 0.12px;
+}
+.nutrition-facts .disclaimer .head p{
+    color: #222;
+    font-family: var(--moret);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 101%; /* 18.18px */
+}
+.nutrition-facts .disclaimer p a{
+    color: #444;
+    font-weight: 600;
+    text-decoration-line: underline;
+}
+.nutrition-facts .disclaimer{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 8px;
+    border: 1px solid #BAB6B0;
+    padding: 19px 23px;
+}
+.nutrition-facts {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 100px;
+    width: 80%;
+    margin: 0 auto;
+}
+.nutrition-facts .nf-left .nflt-table .item .it1 p.extrapad{
+    font-weight: 400;
+    padding-left: 20px;
+}
+.product-faq .faq-section .faq-ans p{
+    color: #333;
+}
+
 /* Product Page Ends */
 
 /* Responsive Css Starts */

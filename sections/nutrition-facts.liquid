@@ -1,0 +1,122 @@
+<section class="pad-180">
+  <div class="container">
+    <div class="nutrition-facts">
+      <div class="nf-left">
+        <div class="nfl-table">
+          <div class="nflt-head">
+            <h5>{{ section.settings.head }}</h5>
+          </div>
+          <div class="nflt-serve-pack">
+            <p>{{ section.settings.serve-pack }}
+              <span>{{ product.metafields.custom.serving_per_pack }}</span>
+            </p>
+          </div>
+          <div class="nflt-serve-size">
+            <p>{{ section.settings.serve-size }}
+              <span>{{ product.metafields.custom.serving_size }}</span>
+            </div>
+            <div class="nflt-table">
+              <div class="item head">
+                <div class="it1"></div>
+                <div class="it2">
+                  <p>
+                    Amount Per Serving ({{ product.metafields.custom.serving_per_pack }})</p>
+                </div>
+                <div class="it3">
+                  <p>Amount Per {{ product.metafields.custom.serving_size }}</p>
+                </div>
+              </div>
+              {% for item in product.metafields.custom.serving_sizes.value %}
+                <div class="item">
+                  <div class="it1">
+                    <p
+                      class=" {% if item.type == "Saturated Fat" or item.type == "Sugars" %}extrapad{% endif %}">
+                      {{ item.type }}</p>
+                  </div>
+                  <div class="it2">{{ item.amont_per_serving }}</div>
+                  <div class="it3">{{ item.amount_per_pack }}</div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="nf-right">
+          <div class="nfr-up">
+            <div class="extra-infor">
+              <div class="ei-prod">
+                <div class="ei-title">
+                  <h5>{{ product.title }}</h5>
+                </div>
+                <div class="ei-para">
+                  <p>{{ product.metafields.custom.nutrients_para }}</p>
+                </div>
+              </div>
+
+            </div>
+            <div class="direction">
+              <div class="d-title">
+                <p>Direction For Use</p>
+              </div>
+              <div class="d-para">
+                <p>{{ product.metafields.custom.direction_to_use }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="disclaimer">
+            <div class="head">
+              <p>{{ section.settings.disclaimer-head }}</p>
+            </div>
+            <div class="para">
+              <p>{{ section.settings.disclaimer-para }}</p>
+            </div>
+            <div class="cta">
+              <p>For complete information,
+                <a href="{{ section.settings.disclaimer-cta-link }}">{{ section.settings.disclaimer-cta }}</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Nutrition Facts",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "serve-pack",
+        "label": "Serving Package"
+      },
+      {
+        "type": "text",
+        "id": "serve-size",
+        "label": "Serving Size"
+      },
+      {
+        "type": "text",
+        "id": "disclaimer-head",
+        "label": "Disclaimer Heading"
+      }, {
+        "type": "text",
+        "id": "disclaimer-para",
+        "label": "Disclaimer Paragraph"
+      }, {
+        "type": "text",
+        "id": "disclaimer-cta",
+        "label": "Disclaimer CTA"
+      }, {
+        "type": "text",
+        "id": "disclaimer-cta-link",
+        "label": "Disclaimer CTA Link"
+      }
+    ]
+  }
+{% endschema %}

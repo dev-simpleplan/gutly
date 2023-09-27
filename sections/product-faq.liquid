@@ -1,0 +1,54 @@
+<section class="pad-180 product-faq">
+  <div class="container">
+    <div class="faq-section">
+      <div class="heading center">
+        <h2>{{ section.settings.head }}</h2>
+      </div>
+      <div class="faq-wrapper">
+        {% for item in product.metafields.custom.faq.value %}
+          <div class="item">
+            <div class="faq-head">
+              <div class="arrow">
+                {% render 'chevron-down' %}
+              </div>
+              <div class="faq-ques-div">
+                <p class="faq-ques">{{ item.faq_question }}</p>
+              </div>
+            </div>
+            <div class="faq-ans">
+              {{ item.faq_answer | metafield_tag }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Faq Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Faq Section Heading"
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+  $(document).ready(function() {
+    $(".faq-wrapper .item:first-child").addClass("active").find(".faq-ans").slideDown();
+    $(".faq-head").click(function() {
+      $(this).parent().toggleClass("active");
+      $(this).siblings(".faq-ans").slideToggle();
+      $(".faq-wrapper .item")
+        .not($(this).parent())
+        .removeClass("active")
+        .find(".faq-ans")
+        .slideUp();
+    });
+  });
+</script>

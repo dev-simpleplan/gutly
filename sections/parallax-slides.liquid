@@ -69,11 +69,10 @@
       }
     }
   })
+
   tl.to(".parallax-slide-content", {transform: 'translate3d(0,-100vh,0)'}).to(".parallax-slides-wrap .parallax-slide:nth-child(1) .parallax-slide-image", {
     clipPath: 'inset(100% 0% 0% 0%)'
   }, 0);
-
-
   const swiper = new Swiper('.parallax-swiper', {
     loop: false,
     autoHeight: true,
