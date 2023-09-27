@@ -19,6 +19,11 @@
               </ul>
             </div>
           </div>
+          {% if section.settings.enable_savemore %}
+            <div class="save-more">
+              <p>{{ section.settings.save-more }}</p>
+            </div>
+          {% endif %}
         </div>
         <div class="thumb-slider">
           <div id="thumbnail-slider" class="splide">
@@ -36,10 +41,273 @@
           </div>
         </div>
       </div>
-      <div class="product-desp"></div>
+      <div class="product-desp">
+        {% assign selected_variant = product.selected_or_first_available_variant %}
+        <ajax-cart-product-form>
+          {% form 'product', product, id: 'product-form', novalidate: 'novalidate' %}
+            <input
+              type="hidden"
+              name="id"
+              value="{{ selected_variant.id }}">
+            <div class="desp-wrapper">
+              <div class="prod-heading">
+                <div class="app-review">
+                  review
+                </div>
+                <div class="prod-name">
+                  <h1>{{ product.title }}</h1>
+                </div>
+              </div>
+              <div class="prod-inner-desp">
+                <div class="prod-desp">
+                  <p>{{ product.description }}</p>
+                </div>
+                <div class="variant">
+                  {% unless product.has_only_default_variant %}
+                    <variant-selector data-url="{{ product.url }}" data-section="{{ section.id }}">
+                      <ul class="variant-wrapper">
+                        {% for variant in product.variants limit: 1 %}
+                          {% for option in product.options_with_values %}
+                            <li class="{{ option.name }} variant-cats">
+                              <label>
+                                {% if option.name == 'Material' %}
+                                  <p class="small">{{ product.metafields.custom.flavor }}
+                                    {% if option.selected_value %}
+                                      <span>{{ option.selected_value }}</span>
+                                    {% endif %}
+                                  </p>
+                                {% else %}
+                                  <p class="small">{{ product.metafields.custom.pack_size }}
+                                    {% if option.selected_value %}
+                                      <span>{{ option.selected_value }}</span>
+                                    {% endif %}
+                                  </p>
+                                {% endif %}
+                              </label>
+                              <ul>
+                                {% for value in option.values %}
+                                  <li
+                                    data-value="{{ value | escape }}"
+                                    data-category="{{ option.name | handle }}"
+                                    {% if option.selected_value == value %}
+                                    data-selected="true"
+                                    {% endif %}>
+                                    {% if option.name == 'Material' %}
+                                      {% if value == 'Chocolate' %}
+                                        <div class="var-img">
+                                          <img
+                                            src="{{ product.metafields.custom.variant_image }}"
+                                            alt="Image"
+                                            class="">
+                                        </div>
+                                      {% endif %}
+                                      {% if value == 'Vanilla' %}
+                                        <div class="var-img">
+                                          <img
+                                            src="{{ product.metafields.custom.variant_image_2 }}"
+                                            alt="Image"
+                                            class="">
+                                        </div>
+                                      {% endif %}
+                                    {% endif %}
+                                    {% if option.name == 'Size' %}
+                                      {% if value == '1Kg' %}
+                                        <p class="size-val">{{ product.metafields.custom.variant_text }}</p>
+                                      {% endif %}
+                                      {% if value == '25g' %}
+                                        <p class="size-val">{{ product.metafields.custom.variant_text_1 }}</p>
+                                      {% endif %}
+                                    {% endif %}
+                                    <p>{{ value }}</p>
+                                  </li>
+                                {% endfor %}
+                              </ul>
+                            </li>
+                          {% endfor %}
+                        {% endfor %}
+
+                      </ul>
+                      <script type="application/json">{{ product.variants | json }}</script>
+                    </variant-selector>
+                  {% endunless %}
+                </div>
+                <div class="subscription-app">
+                  <h4>Subscription App</h4>
+                </div>
+              </div>
+              <div class="prod-add-to-bag">
+                <div class="cart-cta nav-cart">
+                  <button
+                    type="submit"
+                    name="add"
+                    {% if selected_variant.available == false %}
+                    disabled
+                    {% endif %}
+                    class="primary-button yellow-black">
+                    {% if selected_variant.available == false %}
+                      <div class="sold-out">
+                        Sold Out
+                      </div>
+                    {% else %}
+                      <div class="available">
+                        <div class="atc">
+                          <div class="cta-bag">
+                            {% render 'add-to-cart' %}
+                          </div>
+                          Add to Bag
+                        </div>
+                        <div class="price" id="price-{{ section.id }}">
+                          <strike class="real-price">{{ selected_variant.compare_at_price | money }}</strike>
+                          <span class="sell-price">
+                            {{ selected_variant.price | money }}
+                          </span>
+
+                          {% if selected_variant.price < selected_variant.compare_at_price %}
+                            <span>Sale</span>
+                          {% endif %}
+                        </div>
+                      </div>
+                    {% endif %}
+                  </button>
+                </div>
+                <div class="pm-wrapper">
+                  <div class="payment-merchant">
+                    <p>or pay with</p>
+                  </div>
+                </div>
+                <div class="we-donate">
+                  <p>{% render 'red-heart' %} {{ section.settings.donateText }}</p>
+                </div>
+              </div>
+              <div class="prod-desp-accordion"></div>
+            </div>
+          {% endform %}
+        </ajax-cart-product-form>
+
+      </div>
     </div>
   </div>
 </section>
+
+{% schema %}
+  {
+    "name": "Product Page",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_savemore",
+        "default": true,
+        "label": "Enable Save More Tag"
+      }, {
+        "type": "text",
+        "id": "save-more",
+        "label": "Save More Tag Text"
+      }, {
+        "type": "text",
+        "id": "donateText",
+        "label": "Donation Text"
+      }
+    ]
+  }
+{% endschema %}
+
+<script defer>
+  class VariantSelector extends HTMLElement {
+  constructor() {
+                                                super();
+                                                this.addEventListener("click", this.onVariantClick);
+                                                }
+                                                
+                                                onVariantClick(event) {
+                                                const clickedOption = event.target.closest("li[data-value]");
+                                                if (!clickedOption) return;
+                                                
+                                                const category = clickedOption.getAttribute("data-category");
+                                                
+                                                // Deselect all variants in the same category
+                                                const variantsInCategory = Array.from(this.querySelectorAll(`li[data-category="${category}"]`));
+                                                variantsInCategory.forEach((variant) => {
+                                                variant.removeAttribute("data-selected");
+                                                });
+                                                
+                                                this.toggleOptionSelection(clickedOption);
+                                                this.getSelectedOptions();
+                                                this.getSelectedVariant();
+                                                
+                                                if (this.currentVariant) {
+                                                this.updateURL();
+                                                this.updateFormID();
+                                                this.updatePrice(); // Update the price when the variant changes
+                                                }
+                                                }
+                                                
+                                                toggleOptionSelection(optionElement) {
+                                                const isSelected = optionElement.getAttribute("data-selected") === "true";
+                                                if (isSelected) {
+                                                optionElement.removeAttribute("data-selected");
+                                                } else {
+                                                optionElement.setAttribute("data-selected", "true");
+                                                }
+                                                }
+                                                
+                                                getSelectedOptions() {
+                                                this.options = Array.from(this.querySelectorAll('li[data-selected="true"]'), (li) =>
+                                                li.getAttribute("data-value")
+                                                );
+                                                console.log(this.options);
+                                                }
+                                                
+                                                getVariantJSON() {
+                                                this.variantData = this.variantData || JSON.parse(this.querySelector('[type="application/json"]').textContent);
+                                                return this.variantData;
+                                                }
+                                                
+                                                getSelectedVariant() {
+                                                this.currentVariant = this.getVariantJSON().find((variant) => {
+                                                const findings = !variant.options.map((option, index) => {
+                                                return this.options[index] === option;
+                                                }).includes(false);
+                                                
+                                                if (findings) return variant;
+                                                });
+                                                
+                                                console.log(this.currentVariant);
+                                                }
+                                                
+                                                updateURL() {
+                                                if (!this.currentVariant) return;
+                                                window.history.replaceState({}, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
+                                                }
+                                                
+                                                updateFormID() {
+                                                const form_input = document.querySelector("#product-form").querySelector('input[name="id"]');
+                                                form_input.value = this.currentVariant.id;
+                                                }
+                                                
+                                                updatePrice() {
+                                                fetch(`${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${this.dataset.section}`)
+                                                  .then((response) => response.text())
+                                                  .then((responseText) => {
+                                                    const html = new DOMParser().parseFromString(responseText, 'text/html');
+                                                    const oldPrice = document.getElementById('price-{{ section.id }}');
+  const newPrice = html.getElementById('price-{{ section.id }}');
+  if (oldPrice && newPrice) {
+                                                      oldPrice.innerHTML = newPrice.innerHTML;
+                                                      
+                                                      // Update the variant name in the label
+                                                      const selectedVariantLabels = document.querySelectorAll(".variant-cats label p.small span");
+                                        selectedVariantLabels.forEach((label, index) => {
+                                          const optionValue = this.options[index]; // Get the selected option value
+                                          label.textContent = optionValue; // Update label with option value
+                                        });
+                                      }
+                                    });
+                                              }
+                                                }
+                                                
+                                                customElements.define("variant-selector", VariantSelector);</script>
+
+
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -49,7 +317,6 @@
       pagination: false,
       arrows: false
     });
-
 
     var thumbnails = new Splide('#thumbnail-slider', {
       fixedWidth: 72,

@@ -1,8 +1,22 @@
 {
   "sections": {
     "product":{
-      "type": "template-product"
+      "type": "template-product",
+      "settings": {
+        "save-more":"save <br> more",
+        "enable_savemore": true,
+        "donateText":"For every order we donate $1 or equivalent to two meals!"
+      }
+    },
+    "ingredient":{
+      "type": "ingredient-product-page",
+      "settings": {
+        "head":"Here’s everything that goes into each scoop",
+        "para":"We've meticulously curated a blend of premium ingredients to craft our exceptional protein powder formula. With every scoop, you'll experience the perfect balance of taste and nutrition, ensuring that you can conquer any challenge that comes your way while maintaining a happy gut.",
+        "bg1":"shopify:\/\/shop_images\/Star_5_5.svg?v=1694176368",
+        "bg2":"shopify:\/\/shop_images\/Star_5_6.svg?v=1694681978"
+      }
     }
   },
-  "order": ["product"]
+  "order": ["product", "ingredient"]
 }
