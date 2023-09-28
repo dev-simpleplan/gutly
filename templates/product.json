@@ -8,6 +8,9 @@
         "donateText":"For every order we donate $1 or equivalent to two meals!"
       }
     },
+    "action-toggle":{
+        "type": "action-toggle"
+    },
     "ingredient":{
       "type": "ingredient-product-page",
       "settings": {
@@ -277,7 +280,16 @@
       "settings": {
         "head":"FAQs"
       }
+    },
+    "sample-section":{
+        "type": "product-page-sample"
+    },
+    "related-products":{
+        "type": "related_products",
+        "settings": {
+            "head":"Wait, there's more"
+        }
     }
   },
-  "order": ["product", "ingredient", "nutrition-facts", "solution-section", "comparison-table", "protien-so-good", "practices-section", "slidesParallax", "faq"]
+  "order": ["product", "action-toggle", "ingredient", "nutrition-facts", "solution-section", "comparison-table", "protien-so-good", "practices-section", "slidesParallax", "faq", "sample-section", "related-products"]
 }

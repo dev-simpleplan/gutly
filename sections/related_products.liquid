@@ -1,0 +1,41 @@
+<section class="pad-180 product-related" id="stop-trigger">
+  <div class="grab-a-pack">
+    <div class="heading center">
+      <h2>{{ section.settings.head }}</h2>
+    </div>
+    <div class="gap-wrapper">
+      {% for item in product.metafields.shopify--discovery--product_recommendation.related_products.value %}
+        <div class="item">
+          <div class="gap-txt-wrap">
+            <div class="container">
+              <div class="gap-txt">
+                <h5>{{ item.title }}</h5>
+                <p>{{ item.description }}</p>
+                <a href="{{ item.url }}" class="primary-button yellow-black">Buy Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="gap-img">
+            <img
+              src="{{ product.metafields.custom.related_product_image | img_url: 'master' }}"
+              alt=""
+              class="img">
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Related Products",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Section heading"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,43 @@
+<div class="action-toggle">
+  <div class="container">
+    <div class="click-to-section">
+      <div class="click-buttons">
+        <ul>
+          <li><a href="#ingredients" id="ingredient">Ingredients</a></li>
+          <li><a href="#nutrition" id="nutri">Nutrition</a></li>
+          <li><a href="#how-to-use" id="use">How to use</a></li>
+          <li><a href="#us-v-them" id="compare">Us v tHem</a></li>
+          <li><a href="#benefits" id="benefit">benefits</a></li>
+          <li><a href="#faqs" id="faq">faqs</a></li>
+        </ul>
+      </div>
+      <div class="back-top-top">
+        <a href="#" class="primary-button yellow-black">back to top</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    var screenWidth = window.innerWidth || document.documentElement.clientWidth;
+    var top;
+    
+    $(document).ready(function() {
+        if (screenWidth < 768) {
+            top = "55px"; // Set the offset for screens less than 768px wide
+        } 
+        else{
+            top = "60px";
+        }
+    $(".action-toggle").parent(".shopify-section").css({
+        "position" : "sticky",
+        "top" : "60px",
+        "z-index": "989"
+    });
+});
+</script>
+
+
+
+
+

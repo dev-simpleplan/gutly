@@ -1,4 +1,4 @@
-<section class="pad-180">
+<section class="pad-180" id="nutrition">
   <div class="container">
     <div class="nutrition-facts">
       <div class="nf-left">
@@ -29,8 +29,7 @@
               {% for item in product.metafields.custom.serving_sizes.value %}
                 <div class="item">
                   <div class="it1">
-                    <p
-                      class=" {% if item.type == "Saturated Fat" or item.type == "Sugars" %}extrapad{% endif %}">
+                    <p class=" {% if item.type == "Saturated Fat" or item.type == "Sugars" %}extrapad{% endif %}">
                       {{ item.type }}</p>
                   </div>
                   <div class="it2">{{ item.amont_per_serving }}</div>
@@ -120,3 +119,23 @@
     ]
   }
 {% endschema %}
+<script>
+  // init controller
+  var controller1 = new ScrollMagic.Controller({
+    globalSceneOptions: {
+      duration: '100%'
+    }
+  });
+
+// build scenes
+  new ScrollMagic
+    .Scene({triggerElement: "#nutrition"})
+    .setClassToggle("#nutri", "active") // add class toggle
+    .addTo(controller1);
+</script>
+<script>
+    var controller = new ScrollMagic.Controller();
+    new ScrollMagic.Scene({triggerElement: "#nutrition"})
+					.setClassToggle(".back-top-top", "active") // add class toggle
+					.addTo(controller);
+</script>

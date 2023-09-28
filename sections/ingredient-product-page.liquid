@@ -1,4 +1,4 @@
-<section class="pad-180 bg-color">
+<section class="pad-180 bg-color" id="ingredients">
   <div class="container">
     <div class="prod-ing">
       <div class="heading center">
@@ -101,4 +101,19 @@
       }
     });
   });
+</script>
+
+<script>
+  // init controller
+  var controller1 = new ScrollMagic.Controller({
+    globalSceneOptions: {
+      duration: '97%'
+    }
+  });
+
+// build scenes
+  new ScrollMagic
+    .Scene({triggerElement: "#ingredients"})
+    .setClassToggle("#ingredient", "active") // add class toggle
+    .addTo(controller1);
 </script>

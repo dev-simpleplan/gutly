@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
-<section class="product-page">
+<section class="product-page padb-90">
   <div class="container">
     <div class="product-page-wrapper">
       <div class="product-slider">
@@ -183,11 +183,37 @@
             </div>
           {% endform %}
         </ajax-cart-product-form>
-
+        <div class="product-desp-acc">
+          <div class="pda-head">
+            <div class="head">Description</div>
+            <div class="arrow">
+              {% render 'chevron-down' %}
+            </div>
+          </div>
+          <div class="pda-desp">
+            <p>{{ product.metafields.custom.description }}</p>
+            <div class="desp-usp">
+              {% for item in product.metafields.custom.description_usp.value %}
+                <div class="item">
+                  <div class="du-img">
+                    <img
+                      src="{{ item.image | img_url: 'master'}}"
+                      alt=""
+                      class="icons">
+                  </div>
+                  <div class="du-para">
+                    <p>{{ item.text }}</p>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+<div id="trigger"></div>
 
 {% schema %}
   {
@@ -214,98 +240,98 @@
 <script defer>
   class VariantSelector extends HTMLElement {
   constructor() {
-                                                super();
-                                                this.addEventListener("click", this.onVariantClick);
-                                                }
-                                                
-                                                onVariantClick(event) {
-                                                const clickedOption = event.target.closest("li[data-value]");
-                                                if (!clickedOption) return;
-                                                
-                                                const category = clickedOption.getAttribute("data-category");
-                                                
-                                                // Deselect all variants in the same category
-                                                const variantsInCategory = Array.from(this.querySelectorAll(`li[data-category="${category}"]`));
-                                                variantsInCategory.forEach((variant) => {
-                                                variant.removeAttribute("data-selected");
-                                                });
-                                                
-                                                this.toggleOptionSelection(clickedOption);
-                                                this.getSelectedOptions();
-                                                this.getSelectedVariant();
-                                                
-                                                if (this.currentVariant) {
-                                                this.updateURL();
-                                                this.updateFormID();
-                                                this.updatePrice(); // Update the price when the variant changes
-                                                }
-                                                }
-                                                
-                                                toggleOptionSelection(optionElement) {
-                                                const isSelected = optionElement.getAttribute("data-selected") === "true";
-                                                if (isSelected) {
-                                                optionElement.removeAttribute("data-selected");
-                                                } else {
-                                                optionElement.setAttribute("data-selected", "true");
-                                                }
-                                                }
-                                                
-                                                getSelectedOptions() {
-                                                this.options = Array.from(this.querySelectorAll('li[data-selected="true"]'), (li) =>
-                                                li.getAttribute("data-value")
-                                                );
-                                                console.log(this.options);
-                                                }
-                                                
-                                                getVariantJSON() {
-                                                this.variantData = this.variantData || JSON.parse(this.querySelector('[type="application/json"]').textContent);
-                                                return this.variantData;
-                                                }
-                                                
-                                                getSelectedVariant() {
-                                                this.currentVariant = this.getVariantJSON().find((variant) => {
-                                                const findings = !variant.options.map((option, index) => {
-                                                return this.options[index] === option;
-                                                }).includes(false);
-                                                
-                                                if (findings) return variant;
-                                                });
-                                                
-                                                console.log(this.currentVariant);
-                                                }
-                                                
-                                                updateURL() {
-                                                if (!this.currentVariant) return;
-                                                window.history.replaceState({}, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
-                                                }
-                                                
-                                                updateFormID() {
-                                                const form_input = document.querySelector("#product-form").querySelector('input[name="id"]');
-                                                form_input.value = this.currentVariant.id;
-                                                }
-                                                
-                                                updatePrice() {
-                                                fetch(`${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${this.dataset.section}`)
-                                                  .then((response) => response.text())
-                                                  .then((responseText) => {
-                                                    const html = new DOMParser().parseFromString(responseText, 'text/html');
-                                                    const oldPrice = document.getElementById('price-{{ section.id }}');
+                                                                                        super();
+                                                                                        this.addEventListener("click", this.onVariantClick);
+                                                                                        }
+                                                                                        
+                                                                                        onVariantClick(event) {
+                                                                                        const clickedOption = event.target.closest("li[data-value]");
+                                                                                        if (!clickedOption) return;
+                                                                                        
+                                                                                        const category = clickedOption.getAttribute("data-category");
+                                                                                        
+                                                                                        // Deselect all variants in the same category
+                                                                                        const variantsInCategory = Array.from(this.querySelectorAll(`li[data-category="${category}"]`));
+                                                                                        variantsInCategory.forEach((variant) => {
+                                                                                        variant.removeAttribute("data-selected");
+                                                                                        });
+                                                                                        
+                                                                                        this.toggleOptionSelection(clickedOption);
+                                                                                        this.getSelectedOptions();
+                                                                                        this.getSelectedVariant();
+                                                                                        
+                                                                                        if (this.currentVariant) {
+                                                                                        this.updateURL();
+                                                                                        this.updateFormID();
+                                                                                        this.updatePrice(); // Update the price when the variant changes
+                                                                                        }
+                                                                                        }
+                                                                                        
+                                                                                        toggleOptionSelection(optionElement) {
+                                                                                        const isSelected = optionElement.getAttribute("data-selected") === "true";
+                                                                                        if (isSelected) {
+                                                                                        optionElement.removeAttribute("data-selected");
+                                                                                        } else {
+                                                                                        optionElement.setAttribute("data-selected", "true");
+                                                                                        }
+                                                                                        }
+                                                                                        
+                                                                                        getSelectedOptions() {
+                                                                                        this.options = Array.from(this.querySelectorAll('li[data-selected="true"]'), (li) =>
+                                                                                        li.getAttribute("data-value")
+                                                                                        );
+                                                                                        console.log(this.options);
+                                                                                        }
+                                                                                        
+                                                                                        getVariantJSON() {
+                                                                                        this.variantData = this.variantData || JSON.parse(this.querySelector('[type="application/json"]').textContent);
+                                                                                        return this.variantData;
+                                                                                        }
+                                                                                        
+                                                                                        getSelectedVariant() {
+                                                                                        this.currentVariant = this.getVariantJSON().find((variant) => {
+                                                                                        const findings = !variant.options.map((option, index) => {
+                                                                                        return this.options[index] === option;
+                                                                                        }).includes(false);
+                                                                                        
+                                                                                        if (findings) return variant;
+                                                                                        });
+                                                                                        
+                                                                                        console.log(this.currentVariant);
+                                                                                        }
+                                                                                        
+                                                                                        updateURL() {
+                                                                                        if (!this.currentVariant) return;
+                                                                                        window.history.replaceState({}, '', `${this.dataset.url}?variant=${this.currentVariant.id}`);
+                                                                                        }
+                                                                                        
+                                                                                        updateFormID() {
+                                                                                        const form_input = document.querySelector("#product-form").querySelector('input[name="id"]');
+                                                                                        form_input.value = this.currentVariant.id;
+                                                                                        }
+                                                                                        
+                                                                                        updatePrice() {
+                                                                                        fetch(`${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${this.dataset.section}`)
+                                                                                          .then((response) => response.text())
+                                                                                          .then((responseText) => {
+                                                                                            const html = new DOMParser().parseFromString(responseText, 'text/html');
+                                                                                            const oldPrice = document.getElementById('price-{{ section.id }}');
   const newPrice = html.getElementById('price-{{ section.id }}');
   if (oldPrice && newPrice) {
-                                                      oldPrice.innerHTML = newPrice.innerHTML;
-                                                      
-                                                      // Update the variant name in the label
-                                                      const selectedVariantLabels = document.querySelectorAll(".variant-cats label p.small span");
-                                        selectedVariantLabels.forEach((label, index) => {
-                                          const optionValue = this.options[index]; // Get the selected option value
-                                          label.textContent = optionValue; // Update label with option value
-                                        });
-                                      }
-                                    });
-                                              }
-                                                }
-                                                
-                                                customElements.define("variant-selector", VariantSelector);</script>
+                                                                                              oldPrice.innerHTML = newPrice.innerHTML;
+                                                                                              
+                                                                                              // Update the variant name in the label
+                                                                                              const selectedVariantLabels = document.querySelectorAll(".variant-cats label p.small span");
+                                                                                selectedVariantLabels.forEach((label, index) => {
+                                                                                  const optionValue = this.options[index]; // Get the selected option value
+                                                                                  label.textContent = optionValue; // Update label with option value
+                                                                                });
+                                                                              }
+                                                                            });
+                                                                                      }
+                                                                                        }
+                                                                                        
+                                                                                        customElements.define("variant-selector", VariantSelector);</script>
 
 
 
@@ -328,8 +354,16 @@
       isNavigation: true,
       breakpoints: {
         600: {
+          fixedWidth: 50,
+          fixedHeight: 50
+        },
+        1000: {
+          fixedWidth: 100,
+          fixedHeight: 100
+        },
+        1250: {
           fixedWidth: 60,
-          fixedHeight: 44
+          fixedHeight: 64
         }
       }
     });
@@ -338,5 +372,14 @@
     main.sync(thumbnails);
     main.mount();
     thumbnails.mount();
+  });
+</script>
+
+<script>
+  $(document).ready(function() {
+    $('.pda-head').click(function() {
+      $('.pda-desp').slideToggle('slow');
+      $(this).toggleClass('active')
+    })
   });
 </script>
