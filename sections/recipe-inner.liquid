@@ -1,0 +1,90 @@
+<section class="pad-180">
+  <div class="container">
+    <div class="recipe-inner-wrapper">
+      <div class="riw-left">
+        <div class="prep-data">
+          {% for item in article.metafields.custom.recipe_preparation.value %}
+            <div class="cat-name">
+              <div class="head">
+                <p class="small">Category</p>
+              </div>
+              <div class="data">Smoothie</div>
+            </div>
+            <div class="serve">
+              <div class="head">
+                <p class="small">Servings</p>
+              </div>
+              <div class="data">{{ item.servings }}</div>
+            </div>
+            <div class="prep-time">
+              <div class="head">
+                <p class="small">Prep Time</p>
+              </div>
+              <div class="data">{{ item.prep_time }}</div>
+            </div>
+            <div class="cook-time">
+              <div class="head">
+                <p class="small">Cook Time</p>
+              </div>
+              <div class="data">{{ item.cook_time }}</div>
+            </div>
+            <div class="diff">
+              <div class="head">
+                <p class="small">Difficulty</p>
+              </div>
+              <div class="data">{{ item.difficulty }}</div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="ingre-top">
+          <div class="ingre-data">
+            <div class="head">
+              <p class="small">Ingredients</p>
+            </div>
+            <div class="steps">
+              <ul>
+                {% for item in article.metafields.custom.recipe_ingredients.value %}
+                  <li>
+                    {{ item.recipe_ingredient }}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="topping-data">
+            <div class="head">
+              <p class="small">Toppings</p>
+            </div>
+            <div class="steps">
+              <ul>
+                {% for item in article.metafields.custom.toppings.value %}
+                  <li>
+                    {{ item.topping }}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="direc-data">
+          <div class="head">
+            <p class="small">Directions</p>
+          </div>
+          <ol>
+            {% for item in article.metafields.custom.directions.value %}
+              <li>
+                <p>{{ item.direction }}</p>
+              </li>
+            {% endfor %}
+          </ol>
+        </div>
+      </div>
+      <div class="riw-img">
+        <img
+          src="{{ article.metafields.custom.recipe_image | img_url: 'master' }}"
+          alt=""
+          class="img">
+      </div>
+    </div>
+  </div>
+</section>

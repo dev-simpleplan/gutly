@@ -1,0 +1,114 @@
+<section class="recipe-banner">
+  <div class="container">
+    <div class="recipe-banner-wrapper">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="slide-1">
+            <div class="slide1-img">
+              <img
+                src="{{ section.settings.ban_img | img_url: 'master' }}"
+                alt=""
+                class="img">
+            </div>
+            <div class="slide1-txt">
+              <div class="head">
+                <h1 class="txt-white">{{ section.settings.head }}</h1>
+              </div>
+              <div class="sub-head">
+                <p class="ban-sub-head yellow">{{ section.settings.sub-head }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% assign recipe = blogs.recipe.articles %}
+        {% for article in recipe %}
+          <div class="item">
+            <div class="recipe-slides">
+              <div class="rs-left">
+                <div class="sub-head">
+                  <p>{{ section.settings.try }}</p>
+                </div>
+                <div class="head">
+                  <h3>{{ article.title }}</h3>
+                </div>
+                <div class="para">
+                  <p>{{ article.content }}</p>
+                </div>
+                <div class="cta">
+                  <a href="{{ article.url }}" class="primary-button yellow-black">{{ section.settings.cta_text }}</a>
+                </div>
+              </div>
+              <div class="rs-right">
+                <div class="rfr-img">
+                  <img
+                    src="{{ article.image | img_url: 'master' }}"
+                    alt=""
+                    class="img">
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Recipe Banner",
+    "settings": [
+      {
+        "type": "text",
+        "id": "head",
+        "label": "Banner Heading"
+      },
+      {
+        "type": "text",
+        "id": "sub-head",
+        "label": "Banner Sub Head"
+      },
+      {
+        "type": "image_picker",
+        "id": "ban_img",
+        "label": "Banner image"
+      },
+      {
+        "type": "text",
+        "id": "try",
+        "label": "Recipe Slide Try New Text"
+      }, {
+        "type": "text",
+        "id": "cta_text",
+        "label": "Recipe Cta Text"
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+  $('.recipe-banner-wrapper .owl-carousel').owlCarousel({
+    loop: false,
+    margin: 10,
+    responsiveClass: true,
+    mouseDrag: false,
+    touchDrag: false,
+    animateOut: 'fadeOut',
+    navText: [
+      "<img src='https://cdn.shopify.com/s/files/1/0817/8067/0742/files/arrow-right_6.svg?v=1695971957' class=icons>", "<img src='https://cdn.shopify.com/s/files/1/0817/8067/0742/files/arrow-right_5.svg?v=1695971952' class=icons>"
+    ],
+    nav: true,
+    dots: false,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 1
+      }
+    }
+  })
+</script>

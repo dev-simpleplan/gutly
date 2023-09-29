@@ -1,0 +1,396 @@
+<section class="padt-180 padb-90">
+  <div class="container">
+    <div class="recipe-main-wrapper">
+      <div class="recipe-tabs">
+        <button
+          class="tablinks"
+          onclick="openCity(event, 'all')"
+          id="defaultOpen">
+          <span><img
+              src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Frame_17212486.svg?v=1695980601"
+              alt=""
+              class="icons"></span>
+          ALL recipes</button>
+        <button class="tablinks" onclick="openCity(event, 'breakfast')">
+          <span><img
+              src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Frame_17212487.svg?v=1695980588"
+              alt=""
+              class="icons"></span>Breakfast</button>
+        <button class="tablinks" onclick="openCity(event, 'salad')">
+          <span><img
+              src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Frame_17212488.svg?v=1695980581"
+              alt=""
+              class="icons"></span>Salad</button>
+        <button class="tablinks" onclick="openCity(event, 'smoothies')">
+          <span><img
+              src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Frame_17212489.svg?v=1695980562"
+              alt=""
+              class="icons"></span>Smoothies</button>
+        <button class="tablinks" onclick="openCity(event, 'snack')">
+          <span><img
+              src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Frame_17212490.svg?v=1695980552"
+              alt=""
+              class="icons"></span>Snack</button>
+      </div>
+      <div class="recipe-cards-wrapper">
+        <div id="all" class="tabcontent">
+          {% assign recipe = blogs.recipe.articles %}
+          {% paginate blogs.recipe.articles by 3 %}
+            <div class="tab-grid">
+              {% for article in recipe %}
+                <div class="item">
+                  <a href="{{ article.url }}">
+                    <div class="recipe-img">
+                      <div class="ri-img">
+                        <img
+                          src="{{ article.image | img_url: 'master' }}"
+                          alt=""
+                          class="img">
+                      </div>
+                    </div>
+                    <div class="recipe-title">
+                      <p>{{ article.title }}</p>
+                    </div>
+                    <div class="recipe-prep-cook">
+                      <div class="prep">
+                        <div class="icon">
+                          <img
+                            src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Frame_17212492.svg?v=1695983931"
+                            alt=""
+                            class="icons">
+                        </div>
+                        {% for item in article.metafields.custom.recipe_preparation.value %}
+                          <div class="para">Prep:
+                            <span>{{ item.prep_time }}</span>
+                          </div>
+                        {% endfor %}
+                      </div>
+                      <div class="cook">
+                        <div class="icon">
+                          <img
+                            src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Frame_17212493.svg?v=1695983901"
+                            alt=""
+                            class="icons">
+                        </div>
+                        {% for item in article.metafields.custom.recipe_preparation.value %}
+                          <div class="para">Cook:
+                            <span>{{ item.cook_time }}</span>
+                          </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                    <div class="see-recipe">
+                      <p>See Recipe</p>
+                    </div>
+                  </a>
+                </div>
+              {% endfor %}
+            </div>
+            <div class="pagination-section">
+              {% render 'paginate', pagination: paginate %}
+            </div>
+          {% endpaginate %}
+        </div>
+
+        <div id="breakfast" class="tabcontent">
+          {% paginate blogs.recipe.articles by 3 %}
+            <div class="tab-grid">
+              {% for article in recipe %}
+                {% if article.tags contains 'breakfast' %}
+                  <div class="item">
+                    <a href="{{ article.url }}">
+                      <div class="recipe-img">
+                        <div class="ri-img">
+                          <img
+                            src="{{ article.image | img_url: 'master' }}"
+                            alt=""
+                            class="img">
+                        </div>
+                      </div>
+                      <div class="recipe-title">
+                        <p>{{ article.title }}</p>
+                      </div>
+                      <div class="recipe-prep-cook">
+                        <div class="prep">
+                          <div class="icon">
+                            <img
+                              src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Frame_17212492.svg?v=1695983931"
+                              alt=""
+                              class="icons">
+                          </div>
+                          {% for item in article.metafields.custom.recipe_preparation.value %}
+                            <div class="para">Prep:
+                              <span>{{ item.prep_time }}</span>
+                            </div>
+                          {% endfor %}
+                        </div>
+                        <div class="cook">
+                          <div class="icon">
+                            <img
+                              src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Frame_17212493.svg?v=1695983901"
+                              alt=""
+                              class="icons">
+                          </div>
+                          {% for item in article.metafields.custom.recipe_preparation.value %}
+                            <div class="para">Cook:
+                              <span>{{ item.cook_time }}</span>
+                            </div>
+                          {% endfor %}
+                        </div>
+                      </div>
+                      <div class="see-recipe">
+                        <p>See Recipe</p>
+                      </div>
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div class="pagination-section">
+              {% render 'paginate', pagination: paginate %}
+            </div>
+          {% endpaginate %}
+        </div>
+
+        <div id="salad" class="tabcontent">
+          {% paginate blogs.recipe.articles by 3 %}
+            <div class="tab-grid">
+              {% for article in recipe %}
+                {% if article.tags contains 'Salad' %}
+                  <div class="item">
+                    <a href="{{ article.url }}">
+                      <div class="recipe-img">
+                        <div class="ri-img">
+                          <img
+                            src="{{ article.image | img_url: 'master' }}"
+                            alt=""
+                            class="img">
+                        </div>
+                      </div>
+                      <div class="recipe-title">
+                        <p>{{ article.title }}</p>
+                      </div>
+                      <div class="recipe-prep-cook">
+                        <div class="prep">
+                          <div class="icon">
+                            <img
+                              src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Frame_17212492.svg?v=1695983931"
+                              alt=""
+                              class="icons">
+                          </div>
+                          {% for item in article.metafields.custom.recipe_preparation.value %}
+                            <div class="para">Prep:
+                              <span>{{ item.prep_time }}</span>
+                            </div>
+                          {% endfor %}
+                        </div>
+                        <div class="cook">
+                          <div class="icon">
+                            <img
+                              src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Frame_17212493.svg?v=1695983901"
+                              alt=""
+                              class="icons">
+                          </div>
+                          {% for item in article.metafields.custom.recipe_preparation.value %}
+                            <div class="para">Cook:
+                              <span>{{ item.cook_time }}</span>
+                            </div>
+                          {% endfor %}
+                        </div>
+                      </div>
+                      <div class="see-recipe">
+                        <p>See Recipe</p>
+                      </div>
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div class="pagination-section">
+              {% render 'paginate', pagination: paginate %}
+            </div>
+          {% endpaginate %}
+        </div>
+
+        <div id="smoothies" class="tabcontent">
+          {% paginate blogs.recipe.articles by 3 %}
+            <div class="tab-grid">
+              {% for article in recipe %}
+                {% if article.tags contains 'Smoothies' %}
+                  <div class="item">
+                    <a href="{{ article.url }}">
+                      <div class="recipe-img">
+                        <div class="ri-img">
+                          <img
+                            src="{{ article.image | img_url: 'master' }}"
+                            alt=""
+                            class="img">
+                        </div>
+                      </div>
+                      <div class="recipe-title">
+                        <p>{{ article.title }}</p>
+                      </div>
+                      <div class="recipe-prep-cook">
+                        <div class="prep">
+                          <div class="icon">
+                            <img
+                              src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Frame_17212492.svg?v=1695983931"
+                              alt=""
+                              class="icons">
+                          </div>
+                          {% for item in article.metafields.custom.recipe_preparation.value %}
+                            <div class="para">Prep:
+                              <span>{{ item.prep_time }}</span>
+                            </div>
+                          {% endfor %}
+                        </div>
+                        <div class="cook">
+                          <div class="icon">
+                            <img
+                              src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Frame_17212493.svg?v=1695983901"
+                              alt=""
+                              class="icons">
+                          </div>
+                          {% for item in article.metafields.custom.recipe_preparation.value %}
+                            <div class="para">Cook:
+                              <span>{{ item.cook_time }}</span>
+                            </div>
+                          {% endfor %}
+                        </div>
+                      </div>
+                      <div class="see-recipe">
+                        <p>See Recipe</p>
+                      </div>
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div class="pagination-section">
+              {% render 'paginate', pagination: paginate %}
+            </div>
+          {% endpaginate %}
+        </div>
+
+        <div id="snack" class="tabcontent">
+          {% paginate blogs.recipe.articles by 3 %}
+            <div class="tab-grid">
+              {% for article in recipe %}
+                {% if article.tags contains 'Snack' %}
+                  <div class="item">
+                    <a href="{{ article.url }}">
+                      <div class="recipe-img">
+                        <div class="ri-img">
+                          <img
+                            src="{{ article.image | img_url: 'master' }}"
+                            alt=""
+                            class="img">
+                        </div>
+                      </div>
+                      <div class="recipe-title">
+                        <p>{{ article.title }}</p>
+                      </div>
+                      <div class="recipe-prep-cook">
+                        <div class="prep">
+                          <div class="icon">
+                            <img
+                              src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Frame_17212492.svg?v=1695983931"
+                              alt=""
+                              class="icons">
+                          </div>
+                          {% for item in article.metafields.custom.recipe_preparation.value %}
+                            <div class="para">Prep:
+                              <span>{{ item.prep_time }}</span>
+                            </div>
+                          {% endfor %}
+                        </div>
+                        <div class="cook">
+                          <div class="icon">
+                            <img
+                              src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Frame_17212493.svg?v=1695983901"
+                              alt=""
+                              class="icons">
+                          </div>
+                          {% for item in article.metafields.custom.recipe_preparation.value %}
+                            <div class="para">Cook:
+                              <span>{{ item.cook_time }}</span>
+                            </div>
+                          {% endfor %}
+                        </div>
+                      </div>
+                      <div class="see-recipe">
+                        <p>See Recipe</p>
+                      </div>
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div class="pagination-section">
+              {% render 'paginate', pagination: paginate %}
+            </div>
+          {% endpaginate %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function openCity(evt, cityName) {
+    var i,
+      tabcontent,
+      tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+// Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
+
+<script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+      "@type": "Article",
+      "articleBody": {{ article.content | strip_html | json }},
+  "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": {{ request.origin | append: page.url | json }}
+  },
+  "headline": {{ article.title | json }},
+  {% if article.excerpt != blank %}
+    "description": {{ article.excerpt | strip_html | json }},
+  {% endif %}
+  {% if article.image %}
+    "image": [
+    {{ article | image_url: width: article.image.width | prepend: "https:" | json }}
+    ],
+  {% endif %}
+  "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+  "author": {
+        "@type": "Person",
+        "name": {{ article.author | json }}
+  },
+  "publisher": {
+        "@type": "Organization",{% if settings.share_image %}
+    "logo": {
+    "@type": "ImageObject",
+                "height": {{ settings.share_image.height | json }},
+    "url": {{ settings.share_image | image_url: width: settings.share_image.width | prepend: "https:" | json }},
+    "width": {{ settings.share_image.width | json }}
+    },
+  {% endif %}
+  "name": {{ shop.name | json }}
+  }
+  }
+</script>

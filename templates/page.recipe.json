@@ -1,8 +1,83 @@
 {
     "sections": {
         "banner":{
-            "type": "recipe-banner"
+            "type": "recipe-banner",
+            "settings": {
+                "head":"Build new recipes ",
+                "sub-head":"Become a Michelin chef",
+                "ban_img":"shopify:\/\/shop_images\/sample_zig.jpg?v=1694098579",
+                "cta_text":"See recipe",
+                "try":"Try new!"
+            }
+        },
+        "recipe":{
+            "type":"recipe-cards"
+        },
+        "grab-a-pack":{
+            "type":"grab-a-pack",
+            "settings": {
+                "head":"grab a pack",
+                "eggwhiteImage":"shopify:\/\/shop_images\/image_21.png?v=1693828411",
+                "eggwhiteHead":"Egg white protein powder",
+                "eggwhitePara":"Crafted from pure pasteurised egg whites, our delicious protein is low-FODMAP, dairy-free, with no artificial additives. Just clean, wholesome nutrition!",
+                "hempImage":"shopify:\/\/shop_images\/image_22.png?v=1693828406",
+                "hempHead":"Hemp protein powder",
+                "hempPara":"A nutritional powerhouse, our hemp protein powder is Edestin-based, gluten-free, and packed with PUFAs, vitamins, and antioxidants. Superb for your overall well-being!",
+                "cta_text":"Buy Now",
+                "cta_url1":"egg-white-protein-powder",
+                "cta_url2":"vegan-protein-powder",
+                "vegan-stamp":"vegan Friendly"
+            }
+        },
+        "foot-ticker":{
+            "type": "foot-ticker",
+            "blocks": {
+                "tickImg1":{
+                    "type": "foot-ticker-img",
+                    "settings": {
+                        "tickImg":"shopify:\/\/shop_images\/sample_img.png?v=1693832264"
+                    }
+                },
+                "tickImg2":{
+                    "type": "foot-ticker-img",
+                    "settings": {
+                        "tickImg":"shopify:\/\/shop_images\/sample.png?v=1693831657"
+                    }
+                   
+                },
+                "tickImg3":{
+                    "type": "foot-ticker-img",
+                    "settings": {
+                        "tickImg":"shopify:\/\/shop_images\/Frame17212759_1.png?v=1693378306"
+                    }
+                },
+                "tickImg4":{
+                    "type": "foot-ticker-img",
+                    "settings": {
+                        "tickImg":"shopify:\/\/shop_images\/sample_img.png?v=1693832264"
+                    }
+                },
+                "tickImg5":{
+                    "type": "foot-ticker-img",
+                    "settings": {
+                        "tickImg":"shopify:\/\/shop_images\/Frame17212759_1.png?v=1693378306"
+                    }
+                },
+                "tickImg6":{
+                    "type": "foot-ticker-img",
+                    "settings": {
+                        "tickImg":"shopify:\/\/shop_images\/sample.png?v=1693831657"
+                    }
+                },
+                "tickImg7":{
+                    "type": "foot-ticker-img",
+                    "settings": {
+                        "tickImg":"shopify:\/\/shop_images\/sample_img.png?v=1693832264"
+                    }
+                }
+            },
+            "block_order": ["tickImg1", "tickImg2", "tickImg3", "tickImg4", "tickImg5", "tickImg6", "tickImg7"]
         }
     },
-    "order": ["banner"]
+    "order": ["banner", "recipe", "grab-a-pack", "foot-ticker"]
 }

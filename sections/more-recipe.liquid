@@ -1,0 +1,60 @@
+<section class="pad-180">
+  <div class="container">
+    <div class="more-recipe">
+      <div class="heading center">
+        <h2>More recipes</h2>
+      </div>
+      {% assign recipe = blogs.recipe.articles %}
+      <div class="tab-grid">
+        {% for article in recipe limit: 3 %}
+          <div class="item">
+            <a href="{{ article.url }}">
+              <div class="recipe-img">
+                <div class="ri-img">
+                  <img
+                    src="{{ article.image | img_url: 'master' }}"
+                    alt=""
+                    class="img">
+                </div>
+              </div>
+              <div class="recipe-title">
+                <p>{{ article.title }}</p>
+              </div>
+              <div class="recipe-prep-cook">
+                <div class="prep">
+                  <div class="icon">
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Frame_17212492.svg?v=1695983931"
+                      alt=""
+                      class="icons">
+                  </div>
+                  {% for item in article.metafields.custom.recipe_preparation.value %}
+                    <div class="para">Prep:
+                      <span>{{ item.prep_time }}</span>
+                    </div>
+                  {% endfor %}
+                </div>
+                <div class="cook">
+                  <div class="icon">
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Frame_17212493.svg?v=1695983901"
+                      alt=""
+                      class="icons">
+                  </div>
+                  {% for item in article.metafields.custom.recipe_preparation.value %}
+                    <div class="para">Cook:
+                      <span>{{ item.cook_time }}</span>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+              <div class="see-recipe">
+                <p>See Recipe</p>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
