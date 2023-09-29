@@ -1,0 +1,8 @@
+{
+    "sections": {
+        "banner":{
+            "type": "recipe-banner"
+        }
+    },
+    "order": ["banner"]
+}
