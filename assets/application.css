@@ -740,8 +740,8 @@ div#shopify-section-header{
     background: #F8F2EA;
     position: relative;
     width: 100%;
-    z-index: 992;
     top: 0;
+    z-index: 988;
 }
 .annouce-wrap.mob{
     display: none;

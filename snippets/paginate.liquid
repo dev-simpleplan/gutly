@@ -26,9 +26,10 @@
       {% if part.is_link %}
         <a href="{{ part.url }}">{{ part.title }}</a>
       {% else %}
-        <span>{{ part.title }}</span>
+        <div class="active">
+          <span>{{ part.title }}</span>
+        </div>
       {% endif %}
-
     {% endfor %}
 
     {% if pagination.next %}

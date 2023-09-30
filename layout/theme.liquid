@@ -145,8 +145,8 @@
     <script src="{{ 'application.js' | asset_url }}" defer></script>
   </head>
   <body>
-    {% section 'announcement-bar' %}
     <main role="main">
+      {% section 'announcement-bar' %}
       {% section 'header' %}
       {{ content_for_layout }}
     </main>

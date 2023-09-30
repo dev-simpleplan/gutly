@@ -1548,7 +1548,6 @@ ul.variant-wrapper li.variant-cats label p span{
 /* Recipe Page */
 .recipe-banner{
     height: 100%;
-    min-height: 700px;
     overflow: hidden;
     margin-top: 14px;
 }
@@ -1608,6 +1607,8 @@ ul.variant-wrapper li.variant-cats label p span{
 .recipe-banner .slide-1 .slide1-txt .sub-head{
     margin-top: -32px;
     overflow: hidden;
+    transform: rotate(-2.956deg);
+    padding-bottom: 12px;
 }
 .recipe-banner-wrapper .owl-theme .owl-nav button{
     margin: 0;
@@ -1884,10 +1885,11 @@ ul.variant-wrapper li.variant-cats label p span{
     right: 0;
     margin: 0 auto;
     text-align: center;
-    transform: translateY(100%);
+    clip-path: inset(100% 0% 0% 0);
+    padding-bottom: 10px;
     opacity: 0;
     visibility: hidden;
-    transition: 0.4s all ease;
+    transition: 0.4s clip-path ease;
 }
 .see-recipe p{
     color: #222;
@@ -1899,7 +1901,7 @@ ul.variant-wrapper li.variant-cats label p span{
     transform: rotate(-5.424deg);
 }
 .tab-grid .item a:hover .see-recipe{
-    transform: translateY(0%);
+    clip-path: inset(0% 0% 0% 0);
     opacity: 1;
     visibility: visible;
 }
@@ -2082,6 +2084,52 @@ section.recipe-inner-banner{
 
 /* Recipe Inner Ends */
 
+/* Pagination */
+
+.pagination-section{
+    text-align: center;
+    margin-top: 48px;
+}
+.pagination-section nav{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+.pagination-section nav span{
+    display: flex;
+    color: #FFF;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 150% */
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    background: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/gutlyNav.svg?v=1695153948');
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+}
+.pagination-section nav a{
+    color: #5E5E5E;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 150% */
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+}
+
+
+/* Pagination Ends */
+
 /* Responsive Css Starts */
 
 /* Max Width 1800px */
@@ -2120,6 +2168,23 @@ section.recipe-inner-banner{
     .nutrition-facts{
         gap: 70px;
         width: 90%;
+    }
+    .recipe-prep-cook .icon {
+        width: 22px;
+        height: 22px;
+        position: relative;
+    }
+    .recipe-prep-cook .para{
+        font-size: 12px;
+    }
+    .recipe-title p{
+        font-size: 32px;
+    }
+    .recipe-title{
+        max-width: 23ch;
+    }
+    .recipe-banner .slide-1 .slide1-img{
+        padding-top: 65%;
     }
 }
 /* Max Width 1400px Ends */
@@ -2293,6 +2358,15 @@ section.recipe-inner-banner{
     .nutrition-facts {
         gap: 30px;
         width: 95%;
+    }
+    .recipe-banner .slide-1 .slide1-img {
+        padding-top: 75%;
+    }
+    .recipe-slides .rs-left {
+        width: 50%;
+    }
+    .tab-grid{
+        grid-template-columns: 1fr 1fr;
     }
 }
 /* Max Width 1200px Ends */
@@ -2516,6 +2590,48 @@ section.recipe-inner-banner{
         padding-top: 35px;
         gap: 50px;
     }
+    .recipe-banner-wrapper .recipe-slides{
+        padding-left: 55px;
+        padding-right: 55px;
+        flex-direction: column-reverse;
+        gap: 40px;
+        padding-bottom: 115px;
+    }
+    .recipe-slides .rs-left {
+        width: 100%;
+    }
+    .recipe-slides .rs-right{
+        position: static;
+        width: 85%;
+        margin: 0 auto;
+    }
+    .recipe-banner-wrapper .owl-theme .owl-nav{
+        bottom: 35px;
+    }
+    .recipe-slides .para{
+        max-width: 100%;
+    }
+    .recipe-slides .head{
+        max-width: 100%;
+    }
+    .recipe-slides .rs-right{
+        transform-origin: center;
+    }
+    .recipe-banner .slide-1 .slide1-img{
+        height: 100%;
+    }
+    .recipe-banner .slide-1{
+        height: 100%;
+    }
+    .recipe-tabs button{
+        padding: 6px 20px;
+    }
+    .recipe-banner .slide-1 .slide1-txt{
+        bottom: 120px;
+    }
+    .recipe-tabs{
+        width: max-content;
+    }
 }
 /* Max Width 991px Ends */
 /* Max Width 767px */
@@ -2709,6 +2825,37 @@ section.recipe-inner-banner{
     .action-toggle.active{
         top: 55px;
     }
+    .recipe-banner .slide-1 .slide1-txt{
+        left: 25px;
+    }
+    .recipe-banner-wrapper .recipe-slides{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .recipe-slides .rs-right{
+        width: 95%;
+    }
+    .tab-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }    
+    .recipe-cards-wrapper{
+        margin-top: 54px;
+    }
+    .recipe-tabs-wrapper{
+        width: 100%;
+        overflow: hidden;
+        overflow-x: auto;
+    }
+    .recipe-banner-wrapper .owl-theme .owl-nav{
+        left: 26px;
+    }
+    .recipe-title p {
+        font-size: 28px;
+    }
+    .recipe-title {
+        max-width: 20ch;
+    }    
 }
 @media(max-width: 500px){
     .gs-banner-wrap .gsb-txt-con .gsb-txt{
