@@ -55,6 +55,10 @@
     line-height: 144.5%; /* 23.12px */
     letter-spacing: 0.16px;
 }
+div#shopify-section-announcement-bar{
+    position: relative;
+    z-index: 997;
+}
 /* Header Ends */
 
 /* Static Page */
