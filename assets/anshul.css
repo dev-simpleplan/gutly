@@ -2186,6 +2186,12 @@ section.recipe-inner-banner{
     .recipe-banner .slide-1 .slide1-img{
         padding-top: 65%;
     }
+    .rib-text-wrapper .head h1{
+        font-size: 86px;
+    }
+    .rib-wrapper .riv-img{
+        width: 58%;
+    }
 }
 /* Max Width 1400px Ends */
 /* Max Width 1300px */
@@ -2235,6 +2241,15 @@ section.recipe-inner-banner{
     }
     .nutrition-facts .nf-left{
         padding: 30px 40px;
+    }
+    .recipe-inner-wrapper .riw-left .prep-data .data{
+        font-size: 22px;
+    }
+    .recipe-inner-wrapper .riw-left .ingre-top .steps ul li{
+        font-size: 18px;
+    }
+    .recipe-inner-wrapper .riw-img{
+        width: 45%;
     }
 }
 /* Max Width 1300px Ends */
@@ -2367,6 +2382,32 @@ section.recipe-inner-banner{
     }
     .tab-grid{
         grid-template-columns: 1fr 1fr;
+    }
+    .recipe-inner-wrapper{
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+    .recipe-inner-wrapper .riw-left{
+        width: 100%;
+    }
+    .recipe-inner-wrapper .riw-left > div{
+        padding: 36px 0;
+    }
+    .rib-wrapper .riv-img {
+        width: 56%;
+    }
+    .rib-text-wrapper .rib-text {
+        width: 60%;
+    }
+    .rib-text-wrapper .para{
+        max-width: 50ch;
+    }
+    .recipe-inner-wrapper .riw-img {
+        width: 65%;
+        margin: 0 auto;
+    }
+    .rib-text-wrapper .head h1 {
+        font-size: 70px;
     }
 }
 /* Max Width 1200px Ends */
@@ -2632,6 +2673,31 @@ section.recipe-inner-banner{
     .recipe-tabs{
         width: max-content;
     }
+    section.recipe-inner-banner{
+        min-height: 100%;
+        height: 100%;
+        padding-bottom: 40px;
+    }
+    .rib-wrapper .riv-img{
+        position: static;
+        margin: 0 auto;
+        width: 70%;
+    }
+    .rib-text-wrapper .rib-text{
+        width: 100%;
+    }
+    .rib-text-wrapper .para {
+        max-width: 90%;
+    }
+    .recipe-inner-banner .rib-wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .rib-text-wrapper .head h1 {
+        font-size: 56px;
+        max-width: 20ch;
+        line-height: 100%;
+    }
 }
 /* Max Width 991px Ends */
 /* Max Width 767px */
@@ -2855,7 +2921,36 @@ section.recipe-inner-banner{
     }
     .recipe-title {
         max-width: 20ch;
-    }    
+    }
+    .rib-text-wrapper .head h1 {
+        font-size: 46px;
+    }   
+    .recipe-inner-wrapper .riw-img {
+        width: 100%;
+    }
+    .recipe-inner-wrapper .riw-left > div:first-child{
+        gap: 30px;
+        flex-wrap: wrap;
+    } 
+    .recipe-inner-wrapper{
+        gap: 40px;
+    }
+    .recipe-inner-wrapper .riw-left .ingre-top{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .recipe-inner-wrapper .riw-left .ingre-top .steps {
+        margin-top: 16px;
+    }
+    .recipe-inner-wrapper .riw-left > div {
+        padding: 26px 0;
+    }
+    .rib-text-wrapper {
+        padding-top: 30px;
+    }
+    .rib-wrapper .riv-img{
+        width: 90%;
+    }
 }
 @media(max-width: 500px){
     .gs-banner-wrap .gsb-txt-con .gsb-txt{
@@ -2869,6 +2964,9 @@ section.recipe-inner-banner{
     }
     .faq-page-main-wrapper .faq-section{
         width: 100%;
+    }
+    .rib-text-wrapper .head h1{
+        max-width: 100%;
     }
 }
     
