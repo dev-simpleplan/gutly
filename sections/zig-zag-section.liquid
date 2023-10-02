@@ -2,19 +2,19 @@
   <div class="container">
     <div class="zig-zag-section">
       {% for block in section.blocks %}
-        <div class="item">
+        <div class="item trans">
           <div class="zz-img">
             <img
               src="{{ block.settings.blockImage | img_url: 'master' }}"
               alt=""
-              class="img">
+              class="img trans-img">
           </div>
           <div class="zz-txt">
-            <div class="head">
-              <h3>{{ block.settings.blockTitle }}</h3>
+            <div class="head over-hid">
+              <h3 class="trans-first">{{ block.settings.blockTitle }}</h3>
             </div>
-            <div class="para">
-              <p>{{ block.settings.blockPara }}</p>
+            <div class="para over-hid">
+              <p class="trans-sec">{{ block.settings.blockPara }}</p>
             </div>
           </div>
         </div>

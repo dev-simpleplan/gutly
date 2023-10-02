@@ -2244,6 +2244,9 @@ footer{
     transition: 1s all ease;
     transform-origin: bottom right;
 }
+.about-hp-ban.active .abh-right-img{
+    transform: scale(1);
+}
 .abh-right-img .abhri-img{
     position: relative;
     mask-image: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Star_5_4.svg?v=1694093977');
@@ -2299,6 +2302,7 @@ footer{
 }
 .zig-zag-section .item .zz-txt .head{
     max-width: 63ch;
+    padding-bottom: 4px;
 }
 
 /* Zig Zag Section Ends */
