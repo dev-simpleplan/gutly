@@ -1,0 +1,27 @@
+<div class="loader" style="background-color: {{ section.settings.bg_color }};">
+  <img src="{{ section.settings.img | img_url: 'master' }}" alt="">
+</div>
+
+{% schema %}
+  {
+    "name": "loader",
+    "settings": [
+      {
+        "type": "text",
+        "id": "bg_color",
+        "label": "Loader Background",
+        "default": "#FFD12D"
+      }, {
+        "type": "image_picker",
+        "id": "img",
+        "label": "Loader Image"
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+  setTimeout(function() {
+    $('.loader').addClass('active');
+  }, 2000);
+</script>

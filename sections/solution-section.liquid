@@ -1,15 +1,15 @@
 <section class="padb-90 trans" id="how-to-use">
   <div class="solution-problem-wrapper">
-    <div class="problem">
+    <div class="problem trans">
       <div class="prob-head">
-        <div class="head">
-          <h3>{{ section.settings.problemHead }}</h3>
+        <div class="head over-hid">
+          <h3 class="trans-first">{{ section.settings.problemHead }}</h3>
         </div>
-        <div class="sub-head">
-          <p>{{ section.settings.problemPara }}</p>
+        <div class="sub-head over-hid">
+          <p class="trans-first">{{ section.settings.problemPara }}</p>
         </div>
       </div>
-      <div class="prob-grid">
+      <div class="prob-grid trans">
         {% for block in section.blocks %}
           <div class="item">
             <div class="pb-img">
@@ -25,16 +25,16 @@
         {% endfor %}
       </div>
     </div>
-    <div class="solution">
-      <div class="sl-head-wrap">
-        <div class="sl-head">
-          <h3 class="txt-white">{{ section.settings.solutionHead }}</h3>
+    <div class="solution over-hid">
+      <div class="sl-head-wrap trans">
+        <div class="sl-head over-hid">
+          <h3 class="txt-white trans-first">{{ section.settings.solutionHead }}</h3>
         </div>
-        <div class="sl-para">
-          <p>{{ section.settings.solutionPara }}</p>
+        <div class="sl-para over-hid">
+          <p class="trans-sec">{{ section.settings.solutionPara }}</p>
         </div>
       </div>
-      <div class="sl-img-wrap">
+      <div class="sl-img-wrap trans">
         <div class="sl-img">
           <img
             src="{{ section.settings.slImage | img_url: "master" }}"

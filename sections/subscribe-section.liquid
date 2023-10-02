@@ -1,11 +1,11 @@
 <section class="pad-180 subscribe">
-  <div class="subscribe-section">
+  <div class="subscribe-section over-hid">
     <div class="ss-left">
-      <div class="heading center">
-        <h3>{{ section.settings.head }}</h3>
-        <p>{{ section.settings.subhead }}</p>
+      <div class="heading center trans">
+        <h3 class="trans-first">{{ section.settings.head }}</h3>
+        <p class="trans-sec">{{ section.settings.subhead }}</p>
       </div>
-      <div class="ss-usp">
+      <div class="ss-usp trans">
         {% for block in section.blocks %}
           <div class="item">
             <div class="ssu-img">
@@ -26,11 +26,11 @@
         {% endfor %}
       </div>
     </div>
-    <div class="ss-right">
+    <div class="ss-right trans">
       <img
         src="{{ section.settings.sectionImage | img_url: 'master' }}"
         alt=""
-        class="img">
+        class="img trans-img">
     </div>
   </div>
 </section>

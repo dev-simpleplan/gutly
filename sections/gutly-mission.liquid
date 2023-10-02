@@ -1,22 +1,22 @@
 <section class="pad-180">
   <div class="container">
     <div class="gutly-mission-wrapper">
-      <div class="gmw-txt">
-        <div class="head">
-          <h3>{{ section.settings.head }}</h3>
+      <div class="gmw-txt trans">
+        <div class="head over-hid">
+          <h3 class="trans-first">{{ section.settings.head }}</h3>
         </div>
-        <div class="para">
-          <p>{{ section.settings.para }}</p>
+        <div class="para over-hid">
+          <p class="trans-sec">{{ section.settings.para }}</p>
         </div>
-        <div class="cta">
+        <div class="cta over-hid trans-third">
           <a href="{{ section.settings.cta_link.url }}" class="primary-button yellow-black">{{ section.settings.cta_text }}</a>
         </div>
       </div>
-      <div class="gmw-img">
+      <div class="gmw-img trans">
         <img
           src="{{ section.settings.image | img_url: "master" }}"
           alt=""
-          class="img">
+          class="img trans-img">
       </div>
     </div>
   </div>

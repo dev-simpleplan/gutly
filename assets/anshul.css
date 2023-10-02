@@ -57,7 +57,7 @@
 }
 div#shopify-section-announcement-bar{
     position: relative;
-    z-index: 997;
+    z-index: 998;
 }
 /* Header Ends */
 
@@ -423,7 +423,7 @@ div#shopify-section-announcement-bar{
 }
 #shopify-section-ajax-cart {
     position: fixed;
-    z-index: 998;
+    z-index: 1000;
     right: 0;
     top: 0;
     width: 35%;

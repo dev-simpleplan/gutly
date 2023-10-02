@@ -4,7 +4,7 @@
       <div class="container">
         <div class="abh-txt">
           <div class="abht-head">
-            <div class="ban-head">
+            <div class="ban-head over-hid">
               <h1 class="txt-white">{{ section.settings.head }}</h1>
             </div>
             <div class="ban-subhead">
@@ -29,6 +29,12 @@
     </div>
   </div>
 </section>
+
+<script>
+  setTimeout(function() {
+    $('.about-hp-ban').addClass('active');
+  }, 3000);
+</script>
 
 {% schema %}
   {
