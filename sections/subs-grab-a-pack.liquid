@@ -7,20 +7,20 @@
     </div>
     <div class="sub-grab">
       {% for block in section.blocks %}
-        <div class="item">
-          <div class="txt">
-            <p class="num-head">
+        <div class="item trans">
+          <div class="txt over-hid">
+            <p class="num-head trans-first">
               <span class="num">{{ block.settings.num }}</span>
               {{ block.settings.subHead }}
             </p>
-            <p class="small">{{ block.settings.subPara }}</p>
+            <p class="small trans-sec">{{ block.settings.subPara }}</p>
           </div>
           <div class="sub-img">
             <div class="shape-img">
               <img
                 src="{{ block.settings.subImg | img_url: 'master' }}"
                 alt=""
-                class="img">
+                class="img trans-img">
             </div>
           </div>
         </div>

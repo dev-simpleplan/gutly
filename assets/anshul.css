@@ -354,7 +354,7 @@ div#shopify-section-announcement-bar{
 }
 .my-cart .cart-container{
     overflow: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: calc(100% - 100px);
     display: flex;
     flex-direction: column;
@@ -2965,6 +2965,9 @@ section.recipe-inner-banner{
     .prod-sample-section{
         padding: 0 20px;
         padding-top: 30px;
+    }
+    .prod-sample-section .cta {
+        margin-top: 32px;
     }
 }
 @media(max-width: 500px){
