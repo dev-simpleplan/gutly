@@ -2962,6 +2962,10 @@ section.recipe-inner-banner{
     .rib-wrapper .riv-img{
         width: 90%;
     }
+    .prod-sample-section{
+        padding: 0 20px;
+        padding-top: 30px;
+    }
 }
 @media(max-width: 500px){
     .gs-banner-wrap .gsb-txt-con .gsb-txt{

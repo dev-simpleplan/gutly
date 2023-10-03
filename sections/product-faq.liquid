@@ -1,12 +1,12 @@
 <section class="pad-180 product-faq" id="faqs">
   <div class="container">
-    <div class="faq-section">
-      <div class="heading center">
-        <h2>{{ section.settings.head }}</h2>
+    <div class="faq-section trans">
+      <div class="heading center over-hid">
+        <h2 class="trans-first">{{ section.settings.head }}</h2>
       </div>
       <div class="faq-wrapper">
         {% for item in product.metafields.custom.faq.value %}
-          <div class="item">
+          <div class="item" data-aos="fade-up">
             <div class="faq-head">
               <div class="arrow">
                 {% render 'chevron-down' %}
@@ -38,6 +38,11 @@
     ]
   }
 {% endschema %}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 <script>
   $(document).ready(function() {
@@ -62,8 +67,5 @@
     }
   });
 
-  new ScrollMagic
-    .Scene({triggerElement: "#faqs"})
-    .setClassToggle("#faq", "active") // add class toggle
-    .addTo(controller1);
+  new ScrollMagic.Scene({triggerElement: "#faqs"}).setClassToggle("#faq", "active") // add class toggle.addTo(controller1);
 </script>

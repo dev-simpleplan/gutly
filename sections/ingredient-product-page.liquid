@@ -1,16 +1,16 @@
 <section class="pad-180 bg-color" id="ingredients">
   <div class="container">
     <div class="prod-ing">
-      <div class="heading center">
-        <div class="head">
-          <h3>{{ section.settings.head }}</h3>
+      <div class="heading center trans">
+        <div class="head over-hid">
+          <h3 class="trans-first">{{ section.settings.head }}</h3>
         </div>
-        <div class="para">
-          <p>{{ section.settings.para }}</p>
+        <div class="para over-hid">
+          <p class="trans-first">{{ section.settings.para }}</p>
         </div>
       </div>
       <div class="pi-wrapper">
-        <div class="click-open-cards">
+        <div class="click-open-cards trans">
           {% for item in product.metafields.custom.ingredient.value %}
             <div class="item">
               <div class="head">
@@ -112,8 +112,5 @@
   });
 
 // build scenes
-  new ScrollMagic
-    .Scene({triggerElement: "#ingredients"})
-    .setClassToggle("#ingredient", "active") // add class toggle
-    .addTo(controller1);
+  new ScrollMagic.Scene({triggerElement: "#ingredients"}).setClassToggle("#ingredient", "active").addTo(controller1);
 </script>

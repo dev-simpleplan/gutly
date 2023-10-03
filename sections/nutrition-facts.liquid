@@ -1,7 +1,7 @@
 <section class="pad-180" id="nutrition">
   <div class="container">
-    <div class="nutrition-facts">
-      <div class="nf-left">
+    <div class="nutrition-facts trans">
+      <div class="nf-left trans-img">
         <div class="nfl-table">
           <div class="nflt-head">
             <h5>{{ section.settings.head }}</h5>
@@ -43,25 +43,25 @@
           <div class="nfr-up">
             <div class="extra-infor">
               <div class="ei-prod">
-                <div class="ei-title">
-                  <h5>{{ product.title }}</h5>
+                <div class="ei-title over-hid">
+                  <h5 class="trans-first">{{ product.title }}</h5>
                 </div>
-                <div class="ei-para">
-                  <p>{{ product.metafields.custom.nutrients_para }}</p>
+                <div class="ei-para over-hid">
+                  <p class="trans-sec">{{ product.metafields.custom.nutrients_para }}</p>
                 </div>
               </div>
 
             </div>
             <div class="direction">
-              <div class="d-title">
-                <p>Direction For Use</p>
+              <div class="d-title over-hid">
+                <p class="trans-third">Direction For Use</p>
               </div>
-              <div class="d-para">
-                <p>{{ product.metafields.custom.direction_to_use }}</p>
+              <div class="d-para over-hid">
+                <p class="trans-fourth">{{ product.metafields.custom.direction_to_use }}</p>
               </div>
             </div>
           </div>
-          <div class="disclaimer">
+          <div class="disclaimer trans-img">
             <div class="head">
               <p>{{ section.settings.disclaimer-head }}</p>
             </div>
@@ -128,14 +128,9 @@
   });
 
 // build scenes
-  new ScrollMagic
-    .Scene({triggerElement: "#nutrition"})
-    .setClassToggle("#nutri", "active") // add class toggle
-    .addTo(controller1);
+  new ScrollMagic.Scene({triggerElement: "#nutrition"}).setClassToggle("#nutri", "active").addTo(controller1);
 </script>
 <script>
-    var controller = new ScrollMagic.Controller();
-    new ScrollMagic.Scene({triggerElement: "#nutrition"})
-					.setClassToggle(".back-top-top", "active") // add class toggle
-					.addTo(controller);
+  var controller = new ScrollMagic.Controller();
+  new ScrollMagic.Scene({triggerElement: "#nutrition"}).setClassToggle(".back-top-top", "active").addTo(controller);
 </script>

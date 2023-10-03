@@ -16,7 +16,7 @@
               </div>
               <div class="data">{{ item.servings }}</div>
             </div>
-            <div class="prep-time trans-thrid">
+            <div class="prep-time trans-third">
               <div class="head">
                 <p class="small">Prep Time</p>
               </div>
@@ -39,12 +39,12 @@
         <div class="ingre-top trans">
           <div class="ingre-data">
             <div class="head over-hid">
-              <p class="small trans-first">Ingredients</p>
+              <p class="small trans-sec">Ingredients</p>
             </div>
             <div class="steps over-hid">
               <ul>
                 {% for item in article.metafields.custom.recipe_ingredients.value %}
-                  <li class="trans-first">
+                  <li class="trans-sec">
                     {{ item.recipe_ingredient }}
                   </li>
                 {% endfor %}
@@ -53,12 +53,12 @@
           </div>
           <div class="topping-data">
             <div class="head over-hid">
-              <p class="small">Toppings</p>
+              <p class="small trans-sec">Toppings</p>
             </div>
             <div class="steps over-hid">
               <ul>
                 {% for item in article.metafields.custom.toppings.value %}
-                  <li class="trans-first">
+                  <li class="trans-sec">
                     {{ item.topping }}
                   </li>
                 {% endfor %}
@@ -67,12 +67,12 @@
           </div>
         </div>
         <div class="direc-data trans">
-          <div class="head">
-            <p class="small">Directions</p>
+          <div class="head over-hid">
+            <p class="small trans-sec">Directions</p>
           </div>
           <ol>
             {% for item in article.metafields.custom.directions.value %}
-              <li>
+              <li class="trans-sec">
                 <p>{{ item.direction }}</p>
               </li>
             {% endfor %}
