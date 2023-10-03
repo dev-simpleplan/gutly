@@ -2,16 +2,22 @@
   <div class="subs-banner-wrapper" style="background-image: url('{{ section.settings.banImg | img_url: "master" }}');">
     <div class="container">
       <div class="subs-ban-txt">
-        <div class="head">
-          <h1 class="txt-white">{{ section.settings.head }}</h1>
+        <div class="head over-hid">
+          <h1 class="txt-white trans-first">{{ section.settings.head }}</h1>
         </div>
-        <div class="ban-subhead">
-          <p class="ban-sub-head">{{ section.settings.subhead }}</p>
+        <div class="ban-subhead over-hid">
+          <p class="ban-sub-head trans-sec">{{ section.settings.subhead }}</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  setTimeout(function() {
+    $('.subs-banner').addClass('active');
+  }, 3000);
+</script>
 
 {% schema %}
   {
