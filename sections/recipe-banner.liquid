@@ -54,6 +54,33 @@
   </div>
 </section>
 
+<script>
+  $('.recipe-banner-wrapper .owl-carousel').owlCarousel({
+    loop: false,
+    margin: 10,
+    responsiveClass: true,
+    mouseDrag: false,
+    touchDrag: false,
+    animateOut: 'fadeOut',
+    navText: [
+      "<img src='https://cdn.shopify.com/s/files/1/0817/8067/0742/files/arrow-right_6.svg?v=1695971957' class=icons>", "<img src='https://cdn.shopify.com/s/files/1/0817/8067/0742/files/arrow-right_5.svg?v=1695971952' class=icons>"
+    ],
+    nav: true,
+    dots: false,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 1
+      }
+    }
+  })
+</script>
+
 {% schema %}
   {
     "name": "Recipe Banner",
@@ -85,30 +112,3 @@
     ]
   }
 {% endschema %}
-
-<script>
-  $('.recipe-banner-wrapper .owl-carousel').owlCarousel({
-    loop: false,
-    margin: 10,
-    responsiveClass: true,
-    mouseDrag: false,
-    touchDrag: false,
-    animateOut: 'fadeOut',
-    navText: [
-      "<img src='https://cdn.shopify.com/s/files/1/0817/8067/0742/files/arrow-right_6.svg?v=1695971957' class=icons>", "<img src='https://cdn.shopify.com/s/files/1/0817/8067/0742/files/arrow-right_5.svg?v=1695971952' class=icons>"
-    ],
-    nav: true,
-    dots: false,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 1
-      },
-      1000: {
-        items: 1
-      }
-    }
-  })
-</script>

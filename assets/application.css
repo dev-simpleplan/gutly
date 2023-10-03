@@ -2011,6 +2011,7 @@ footer{
     position: relative;
     border-radius: 17px;
     overflow: hidden;
+    cursor: pointer;
 }
 /* .video-slider .vs-video::after{
     content: "";

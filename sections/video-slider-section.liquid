@@ -1,13 +1,13 @@
 <section class="pad-180">
   <div class="container">
-    <div class="video-slider">
-      <div class="heading center">
-        <h2>{{ section.settings.head }}</h2>
+    <div class="video-slider trans">
+      <div class="heading center over-hid">
+        <h2 class="trans-first">{{ section.settings.head }}</h2>
       </div>
       <div class="owl-carousel owl-theme">
         {% for block in section.blocks %}
           <div class="item">
-            <div class="vs-video">
+            <div class="vs-video trans-img">
               <video playsinline loop>
                 <source src="{{ block.settings.slideVideo }}" type="video/mp4">
                 Your browser does not support the html video tag.
