@@ -99,6 +99,18 @@
           "section_title": "Subscribe to our newsletter",
           "subheading": "A short sentence describing what someone will receive by subscribing"
         }
+      },
+      "loader": {
+        "type": "loader",
+        "settings": {
+          "bg_color": "#FFD12D",
+          "img": "shopify:\/\/shop_images\/Gutly_logo_1_3.svg"
+        }
+      },
+      "ajax-cart": {
+        "type": "ajax-cart",
+        "settings": {
+        }
       }
     },
     "content_for_index": [
