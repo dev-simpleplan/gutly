@@ -1,14 +1,14 @@
 <section class="gut-goodness">
   <div class="container">
-    <div class="gg-wrapper">
-      <div class="heading">
+    <div class="gg-wrapper trans">
+      <div class="heading trans-first">
         <p class="ban-sub-head green">
           {{ section.settings.head }}
         </p>
       </div>
       <div class="gg-blocks">
         {% for block in section.blocks %}
-          <div class="item">
+          <div class="item trans-first">
             <div class="ggb-img">
               <img
                 src="{{ block.settings.img | img_url: 'master' }}"

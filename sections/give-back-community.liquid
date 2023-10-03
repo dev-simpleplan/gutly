@@ -2,23 +2,23 @@
   <div class="rf-wrapper">
     <div class="rfb-txt">
       <div class="container">
-        <div class="rfb-txt-con">
-          <div class="heading center">
-            <div class="head">
+        <div class="rfb-txt-con trans">
+          <div class="heading center over-hid">
+            <div class="head trans-first">
               <h3>{{ section.settings.head }}</h3>
             </div>
-            <div class="subhead">
-              <p>{{ section.settings.para }}</p>
+            <div class="subhead over-hid">
+              <p class="trans-sec">{{ section.settings.para }}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="rfb-img">
+    <div class="rfb-img trans">
       <img
         src="{{ section.settings.img | img_url: 'master' }}"
         alt=""
-        class="img">
+        class="img trans-img">
     </div>
   </div>
 </section>

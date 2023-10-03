@@ -5,15 +5,15 @@
         <div class="rfb-txt-con">
           <div class="heading center">
             <div class="head">
-              <h1>{{ section.settings.head }}</h1>
+              <h1 class="trans-first">{{ section.settings.head }}</h1>
               <p class="rfban-small-txt">
                 {{ section.settings.subhead }}
               </p>
             </div>
-            <div class="subhead">
-              <p>{{ section.settings.para }}</p>
+            <div class="subhead over-hid">
+              <p class="trans-sec">{{ section.settings.para }}</p>
             </div>
-            <div class="cta">
+            <div class="cta trans-third">
               <a href="#!" class="primary-button yellow-black">{{ section.settings.cta }}</a>
             </div>
           </div>
@@ -24,10 +24,16 @@
       <img
         src="{{ section.settings.img | img_url: 'master' }}"
         alt=""
-        class="img">
+        class="img trans-img">
     </div>
   </div>
 </section>
+
+<script>
+  setTimeout(function() {
+    $('.referral-banner').addClass('active');
+  }, 3000);
+</script>
 
 {% schema %}
   {

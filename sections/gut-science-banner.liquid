@@ -4,15 +4,15 @@
       <div class="container">
         <div class="gsb-txt">
           <div class="heading">
-            <div class="head">
-              <h1 class="txt-white">{{ section.settings.head }}</h1>
+            <div class="head over-hid">
+              <h1 class="txt-white trans-first">{{ section.settings.head }}</h1>
             </div>
-            <div class="sub-head">
+            <div class="sub-head trans-sec">
               <p class="ban-sub-head green">{{ section.settings.subhead }}</p>
             </div>
           </div>
-          <div class="para">
-            <p>{{ section.settings.para }}</p>
+          <div class="para over-hid">
+            <p class="trans-third">{{ section.settings.para }}</p>
           </div>
         </div>
       </div>
@@ -27,6 +27,12 @@
     </div>
   </div>
 </section>
+
+<script>
+  setTimeout(function() {
+    $('.gut-science-banner').addClass('active');
+  }, 3000);
+</script>
 
 {% schema %}
   {

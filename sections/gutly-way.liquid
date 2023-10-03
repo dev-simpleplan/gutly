@@ -1,12 +1,12 @@
 <section class="padb-90">
-  <div class="gutly-way">
+  <div class="gutly-way trans">
     <div class="gw-left">
-      <div class="head">
-        <h3>{{ section.settings.head }}</h3>
+      <div class="head over-hid">
+        <h3 class="trans-first">{{ section.settings.head }}</h3>
       </div>
-      <div class="para">
+      <div class="para over-hid">
         {% for block in section.blocks %}
-          <p>{{ block.settings.para }}</p>
+          <p class="trans-sec">{{ block.settings.para }}</p>
         {% endfor %}
       </div>
     </div>
@@ -14,7 +14,7 @@
       <img
         src="{{ section.settings.img | img_url: 'master' }}"
         alt=""
-        class="img">
+        class="img trans-img">
     </div>
   </div>
 </section>

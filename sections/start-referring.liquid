@@ -1,17 +1,17 @@
 <section class="padb-90 start-referring-section">
   <div class="start-referring">
     <div class="container">
-      <div class="heading center">
-        <div class="head">
-          <h2>{{ section.settings.head }}</h2>
+      <div class="heading center trans">
+        <div class="head over-hid">
+          <h2 class="trans-first">{{ section.settings.head }}</h2>
         </div>
         {% if section.settings.enable_cta %}
-          <div class="cta">
+          <div class="cta trans-sec">
             <a href="#!" class="primary-button black-green">{{ section.settings.cta }}</a>
           </div>
         {% endif %}
       </div>
-      <div class="sr-flex">
+      <div class="sr-flex trans">
         {% for block in section.blocks %}
           <div class="item">
             <div class="sr-img">
@@ -21,13 +21,13 @@
                 class="img">
             </div>
             <div class="sr-txt">
-              <div class="srt-head">
+              <div class="srt-head over-hid">
                 <p class="num-head">
                   <span class="num">{{ block.settings.rfnum }}</span>
                   {{ block.settings.rfhead }}
                 </p>
               </div>
-              <div class="srt-para">
+              <div class="srt-para over-hid">
                 <p class="small">{{ block.settings.rfPara }}</p>
               </div>
             </div>

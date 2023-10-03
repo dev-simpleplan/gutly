@@ -4,16 +4,16 @@
       <div class="container">
         <div class="rib-text">
           <div class="sub-head">
-            <p>New recipe</p>
+            <p class="trans-first">New recipe</p>
           </div>
-          <div class="head">
-            <h1>{{ article.title }}</h1>
+          <div class="head over-hid">
+            <h1 class="trans-sec">{{ article.title }}</h1>
           </div>
-          <div class="para">
-            <p>{{ article.content }}</p>
+          <div class="para over-hid">
+            <p class="trans-sec">{{ article.content }}</p>
           </div>
-          <div class="author">
-            <p>by:
+          <div class="author over-hid">
+            <p class="trans-third">by:
               <span class="autor">{{ article.author }}</span>
               <span class="date">
                 <time datetime="{{ article.published_at | date: '%B %d, %Y' }}">{{ article.published_at | date: '%B %d, %Y' }}</time>
@@ -33,3 +33,9 @@
     </div>
   </div>
 </section>
+
+<script>
+  setTimeout(function() {
+    $('.recipe-inner-banner').addClass('active');
+  }, 3000);
+</script>

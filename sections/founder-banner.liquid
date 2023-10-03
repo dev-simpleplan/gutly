@@ -25,12 +25,21 @@
           </div>
         </div>
         <div class="founder-banner-img">
-          <img src="{{ section.settings.img | img_url: 'master' }}" alt="">
+          <img
+            src="{{ section.settings.img | img_url: 'master' }}"
+            alt=""
+            class="trans-img">
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  setTimeout(function() {
+    $('.founder-banner').addClass('active');
+  }, 3000);
+</script>
 
 {% schema %}
   {

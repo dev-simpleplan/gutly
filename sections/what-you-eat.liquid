@@ -1,14 +1,14 @@
 <section class="padt-90">
   <div class="what-you-eat-wrapper">
-    <div class="heading center">
-      <h2>{{ section.settings.head }}</h2>
+    <div class="heading center trans over-hid">
+      <h2 class="trans-first">{{ section.settings.head }}</h2>
     </div>
-    <div class="wyew-wrap">
+    <div class="wyew-wrap trans">
       <div class="left-txt-con">
         {% for block in section.blocks %}
           {% case block.type %}
             {% when 'left-side' %}
-            <div class="item">
+            <div class="item trans-img">
               <div class="head-num">
                 <p>{{ block.settings.num }}</p>
               </div>
@@ -27,7 +27,7 @@
         {% for block in section.blocks %}
           {% case block.type %}
             {% when 'right-side' %}
-            <div class="item">
+            <div class="item trans-img">
               <div class="head-num">
                 <p>{{ block.settings.num }}</p>
               </div>

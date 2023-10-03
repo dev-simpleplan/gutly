@@ -333,6 +333,12 @@ body.overflow-hide{
     transform: translateY(100%);
     opacity: 0;
 }
+.trans-fifth {
+    transition: 1s ease all;
+    transition-delay: 1.4s;
+    transform: translateY(100%);
+    opacity: 0;
+}
 .trans-cta{
     transition: 1s ease all;
     transition-delay: 1.1s;
@@ -370,6 +376,10 @@ body.overflow-hide{
     transform: translateY(0%);
     opacity: 1;
 }
+.active .trans-fifth{
+    transform: translateY(0%);
+    opacity: 1;
+}
 .active .transHeader .trans-first {
     transition: 1s ease all;
     transition-delay: 1.5s;
@@ -392,6 +402,7 @@ body.overflow-hide{
     justify-content: center;
     z-index: 99999;
     transition: opacity 0.8s cubic-bezier(0.82, 0, 0.36, 1),height 0.6s cubic-bezier(0.82, 0, 0.36, 1);
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.2);
 }
 .loader img {
     width: 200px;
@@ -1066,7 +1077,7 @@ footer{
 }
 
 .ban-subhead{
-    padding-bottom: 20px;
+    padding-bottom: 24px;
     margin-top: -32px;
 }
 .ib-img{
@@ -1609,6 +1620,9 @@ footer{
 /* Comparison Table Ends */
 
 /* Grab A Pack */
+.grab-a-pack{
+    overflow: hidden;
+}
 .grab-a-pack .gap-wrapper {
     margin-top: 40px;
     display: flex;
@@ -2095,11 +2109,21 @@ footer{
     padding: 71px 33px 0 33px;
     width: 50%;
 }
-.sample-section  .egg-sample{
+.sample-section .egg-sample{
     background-color: #FCF6EC;
+    transition: 1.2s cubic-bezier(.51,.01,0,1.06);
+    clip-path: inset(0 0% 0 100%);
+}
+.sample-section.active .egg-sample{
+    clip-path: inset(0 0% 0 0);
 }
 .sample-section  .hemp-sample{
     background-color: #F8EEDF;
+    transition: 1.2s cubic-bezier(.51,.01,0,1.06);
+    clip-path: inset(0 100% 0 0%);
+}
+.sample-section.active .hemp-sample{
+    clip-path: inset(0 0% 0 0);
 }
 .sample-section .sample-half img{
     object-position: bottom;
@@ -2371,6 +2395,42 @@ footer{
     margin: 0 auto;
     margin-top: 16px;
     max-width: 28ch;
+    overflow: hidden;
+}
+.road-to-hp-flex .para p{
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 1s all ease;
+    transition-delay: 0.4s;
+}
+.road-to-hp-flex.active .para p{
+    transform: translateY(0%);
+    opacity: 1;
+}
+.road-to-hp-flex .item:nth-child(2) .para p{
+    transition-delay: 0.6s;
+}
+.road-to-hp-flex .item:nth-child(3) .para p{
+    transition-delay: 0.8s;
+}
+.road-to-hp-flex .st-head{
+    overflow: hidden;
+}
+.road-to-hp-flex .st-head h6{
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 1s all ease;
+    transition-delay: 0.2s;
+}
+.road-to-hp-flex.active .st-head h6{
+    transform: translateY(0%);
+    opacity: 1;
+}
+.road-to-hp-flex .item:nth-child(2) .st-head h6{
+    transition-delay: 0.4s;
+}
+.road-to-hp-flex .item:nth-child(3) .st-head h6{
+    transition-delay: 0.6s;
 }
 .road-to-hp-flex .para p{
     color: #4E4C4A;
@@ -2394,6 +2454,18 @@ footer{
     align-items: center;
     justify-content: center;
     gap: 3px;
+    transform: scale(0);
+    transition: 1s all ease;
+    transition-delay: 0.2s;
+}
+.road-to-hp-flex.active .head{
+    transform: scale(1);
+}
+.road-to-hp-flex .item:nth-child(2) .head{
+    transition-delay: 0.4s;
+}
+.road-to-hp-flex .item:nth-child(3) .head{
+    transition-delay: 0.6s;
 }
 
 /* Road To Happy Gut */
@@ -2521,9 +2593,19 @@ section.subs-banner {
 }
 .egg-product.product-half{
     background: #FCF6EC;
+    clip-path: inset(0 0 0 100%);
+    transition: .9s cubic-bezier(.51,.01,0,1.06);
+}
+.active .egg-product.product-half{
+    clip-path: inset(0 0 0 0%);
 }
 .hemp-product.product-half{
     background: #F8EEDF;
+    clip-path: inset(0 100% 0 0%);
+    transition: .9s cubic-bezier(.51,.01,0,1.06);
+}
+.active .hemp-product.product-half{
+    clip-path: inset(0 0 0 0%);
 }
 .product-half .up-txt .para{
     margin-top: 24px;
@@ -2766,7 +2848,12 @@ section.subs-banner {
     position: absolute;
     top: -30px;
     right: 0;
-    transform: rotate(16deg);
+    transform: scale(0) rotate(0deg);
+    transition: 1s all ease;
+    transition-delay: 0.2s;
+}
+.active .rfban-small-txt{
+    transform: scale(1) rotate(16deg);
 }
 .rfb-txt-con .head{
     position: relative;
@@ -2797,6 +2884,24 @@ section.subs-banner {
     justify-content: center;
     gap: 20px;
     text-align: center;
+    transition: 1.6s all ease;
+    transition-delay: 0.3s;
+}
+.sr-flex .item:nth-child(1){
+    transform: translateX(100%);
+    opacity: 0;
+}
+.sr-flex .item:nth-child(3){
+    transform: translateX(-100%);
+    opacity: 0;
+}
+.sr-flex.active .item:nth-child(1){
+    transform: translateX(0%);
+    opacity: 1;
+}
+.sr-flex.active .item:nth-child(3){
+    transform: translateX(0%);
+    opacity: 1;
 }
 .sr-flex .item .sr-img{
     position: relative;
@@ -2955,6 +3060,13 @@ section.subs-banner {
     border-bottom: 1px solid transparent;
     text-transform: uppercase;
     transition: 0.4s all ease;
+    transform: translateY(100%);
+    opacity: 0;
+    display: inline-block;
+}
+.zig-zag-org .item.active .zzo-txt .org-cta a{
+    transform: translateY(0%);
+    opacity: 1;
 }
 .zig-zag-org .item .zzo-txt .org-cta a:hover{
     border-bottom: 1px solid #686868;
@@ -2999,6 +3111,7 @@ section.subs-banner {
     position: relative;
     z-index: 1;
     padding: 7px 0;
+    transition-delay: 0.4s;
 }
 .part-ticker .infiniteslide{
     gap: 42px;
@@ -3453,6 +3566,13 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     width: 70%;
     right: -27%;
     top: 100px;
+    transition: 1s all ease;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition-delay: 0.3s;
+}
+.active .gs-banner-wrap .gsb-img-con{
+    transform: scale(1);
 }
 .gs-banner-wrap .gsb-img-con .gsb-img{
     position: relative;
@@ -3699,9 +3819,13 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     position: relative;
     z-index: 10;
     width: 20%;
+    transform: scale(0);
+    transition: 1s transform ease;
   }
-  
-  .click-open-cards .item.active{
+  .click-open-cards.active .item{
+    transform: scale(1);
+  }
+  .click-open-cards .item.active {
     z-index: 11;
   }
   .click-open-cards .item .head{
@@ -3795,6 +3919,12 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
 .what-you-eat-wrapper .wyew-wrap .mid-img{
     width: 33%;
     position: relative;
+    clip-path: inset(100% 0 0% 0);
+    transition: 1s clip-path ease;
+    transition-delay: 0.3s;
+}
+.what-you-eat-wrapper .wyew-wrap.active .mid-img{
+    clip-path: inset(0 0 0% 0);
 }
 .what-you-eat-wrapper .wyew-wrap .mid-img img{
     width: 100%;
@@ -3831,9 +3961,46 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
 .founder-banner-content-top{
     max-width: 80ch;
 }
+.founder-banner-content-top .founder-banner-heading{
+    overflow: hidden;
+}
+.founder-banner-content-top .founder-banner-heading h1{
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 1s all ease;
+    transition-delay: 0.2s;
+}
+.active .founder-banner-content-top .founder-banner-heading h1{
+    transform: translateY(0%);
+    opacity: 1;
+}
+.founder-banner-content-top .ban-subhead{
+    overflow: hidden;
+}
+.founder-banner-content-top .founder-banner-subtext{
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 1s all ease;
+    transition-delay: 0.4s;
+}
+.active .founder-banner-content-top .founder-banner-subtext{
+    transform: translateY(0%) rotate(-2.956deg);
+    opacity: 1;
+}
 .founder-banner-body{
     max-width: 55ch;
     margin-top: 36px;
+    overflow: hidden;
+}
+.founder-banner-body p{
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 1s all ease;
+    transition-delay: 0.6s;
+}
+.active .founder-banner-body p{
+    transform: translateY(0%);
+    opacity: 1;
 }
 .founder-banner-image{
     width: 38%;
@@ -3881,7 +4048,12 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     top: 30px;
     right: -40px;
     z-index: 1;
-    transform: rotate(0.2deg);
+    transform: scale(0) rotate(0);
+    transition: 1s all ease;
+    transition-delay: 0.8s;
+}
+.active .gutly-tag{
+    transform: scale(1) rotate(0.2deg);
 }
 .gutly-tag-wrap{
     text-align: center;
@@ -3904,6 +4076,23 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
 .recipe-cards a{
     width: 32%;   
     position: relative;
+    transition: 1s all ease;
+}
+.recipe-cards a:nth-child(1){
+    transform: translateX(100%);
+    opacity: 0;
+}
+.recipe-cards a:nth-child(3){
+    transform: translateX(-100%);
+    opacity: 0;
+}
+.recipe-cards.active a:nth-child(1){
+    transform: translateX(0%);
+    opacity: 1;
+}
+.recipe-cards.active a:nth-child(3){
+    transform: translateX(0%);
+    opacity: 1;
 }
 .recipe-cards .recipe-card{
     position: relative;

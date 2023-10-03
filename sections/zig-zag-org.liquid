@@ -2,22 +2,22 @@
   <div class="container">
     <div class="zig-zag-org">
       {% for block in section.blocks %}
-        <div class="item">
+        <div class="item trans">
           <div class="zzo-img">
             <img
               src="{{ block.settings.img | img_url: 'master' }}"
               alt=""
-              class="img">
+              class="img trans-img">
           </div>
           <div class="zzo-txt">
-            <div class="head">
-              <h3>{{ block.settings.head }}</h3>
+            <div class="head over-hid">
+              <h3 class="trans-first">{{ block.settings.head }}</h3>
             </div>
-            <div class="org-cta">
+            <div class="org-cta over-hid">
               <a href="{{ block.settings.org_cta_url }}" target="_blank">{{ block.settings.org_cta_txt }}</a>
             </div>
-            <div class="para">
-              <p>{{ block.settings.para }}</p>
+            <div class="para over-hid">
+              <p class="trans-sec">{{ block.settings.para }}</p>
             </div>
           </div>
         </div>

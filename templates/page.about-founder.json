@@ -125,95 +125,95 @@
           "cta_hemp_txt":"Buy now",
           "vegan":"Vegan Friendly"
       }
-  },
-  "road-to-hp":{
-    "type": "road-to-hp-white",
-    "settings": {
-        "head":"Bringing you the<br>road to a happy gut",
-        "bod":"Our protein powder is not only delicious but also super friendly to your sensitive tummy, perfect for folks with IBS! Say goodbye to bloating and discomfort.",
-        "color_bg":"#FDF9F3",
-        "body_enable": true
+    },
+    "road-to-hp":{
+        "type": "road-to-hp-white",
+        "settings": {
+            "head":"Bringing you the<br>road to a happy gut",
+            "bod":"Our protein powder is not only delicious but also super friendly to your sensitive tummy, perfect for folks with IBS! Say goodbye to bloating and discomfort.",
+            "color_bg":"#FDF9F3",
+            "body_enable": true
+        },
+        "blocks": {
+            "hp1":{
+                "type": "road-to-hp-white",
+                "settings": {
+                    "bgImg":"shopify:\/\/shop_images\/svg-found3.svg",
+                    "smallHead":"vegan-",
+                    "bigHead":"friendly",
+                    "mainHead":"Plant-powered goodness",
+                    "mainPara":"Proudly crafted from a blend of plant-based ingredients, making it perfect for vegans."
+                }
+            },
+            "hp2":{
+                "type": "road-to-hp-white",
+                "settings": {
+                    "bgImg":"shopify:\/\/shop_images\/svg-found2.svg",
+                    "smallHead":"tastes",
+                    "bigHead":"delightful",
+                    "mainHead":"Smooth ‘n’ creamy",
+                    "mainPara":"Prepare for a taste sensation like no other! Our protein boasts a smooth and creamy texture."
+                }
+            },
+            "hp3":{
+                "type": "road-to-hp-white",
+                "settings": {
+                    "bgImg":"shopify:\/\/shop_images\/svg-found1.svg",
+                    "smallHead":"gut",
+                    "bigHead":"loving",
+                    "mainHead":"Gut wellness at its best",
+                    "mainPara":"Gutly protein powder is specially formulated to support digestive health."
+                }
+            }
+        },
+        "block_order": ["hp1", "hp2", "hp3"]
+    },
+    "recipes":{
+    "type": "what-learned",
+    "settings":{
+        "head":"What I’ve learned"
     },
     "blocks": {
-        "hp1":{
-            "type": "road-to-hp-white",
+        "card1":{
+            "type": "recipeCard",
             "settings": {
-                "bgImg":"shopify:\/\/shop_images\/svg-found3.svg",
-                "smallHead":"vegan-",
-                "bigHead":"friendly",
-                "mainHead":"Plant-powered goodness",
-                "mainPara":"Proudly crafted from a blend of plant-based ingredients, making it perfect for vegans."
+            "imgLink":"shopify:\/\/shop_images\/recipe-1.jpg",
+            "headText":"Unleashing the power of paleo diet for optimal...",
+            "bodText":"Proudly crafted from a blend of plant-based ingredients, making it perfect for vegans..."
             }
         },
-        "hp2":{
-            "type": "road-to-hp-white",
+        "card2":{
+            "type": "recipeCard",
             "settings": {
-                "bgImg":"shopify:\/\/shop_images\/svg-found2.svg",
-                "smallHead":"tastes",
-                "bigHead":"delightful",
-                "mainHead":"Smooth ‘n’ creamy",
-                "mainPara":"Prepare for a taste sensation like no other! Our protein boasts a smooth and creamy texture."
+            "imgLink":"shopify:\/\/shop_images\/recipe2.jpg",
+            "headText":"Unleashing the power of paleo diet for optimal...",
+            "bodText":"Proudly crafted from a blend of plant-based ingredients, making it perfect for vegans..."
             }
         },
-        "hp3":{
-            "type": "road-to-hp-white",
+        "card3":{
+            "type": "recipeCard",
             "settings": {
-                "bgImg":"shopify:\/\/shop_images\/svg-found1.svg",
-                "smallHead":"gut",
-                "bigHead":"loving",
-                "mainHead":"Gut wellness at its best",
-                "mainPara":"Gutly protein powder is specially formulated to support digestive health."
+            "imgLink":"shopify:\/\/shop_images\/recipe-1.jpg",
+            "headText":"Unleashing the power of paleo diet for optimal...",
+            "bodText":"Proudly crafted from a blend of plant-based ingredients, making it perfect for vegans..."
             }
         }
     },
-    "block_order": ["hp1", "hp2", "hp3"]
-},
-"recipes":{
-  "type": "what-learned",
-   "settings":{
-     "head":"What I’ve learned"
-   },
-   "blocks": {
-    "card1":{
-        "type": "recipeCard",
-        "settings": {
-          "imgLink":"shopify:\/\/shop_images\/recipe-1.jpg",
-          "headText":"Unleashing the power of paleo diet for optimal...",
-          "bodText":"Proudly crafted from a blend of plant-based ingredients, making it perfect for vegans..."
-        }
+    "block_order": ["card1", "card2", "card3"]
     },
-    "card2":{
-        "type": "recipeCard",
+    "sample-section":{
+        "type": "sample-section",
         "settings": {
-          "imgLink":"shopify:\/\/shop_images\/recipe2.jpg",
-          "headText":"Unleashing the power of paleo diet for optimal...",
-          "bodText":"Proudly crafted from a blend of plant-based ingredients, making it perfect for vegans..."
-        }
-    },
-    "card3":{
-        "type": "recipeCard",
-        "settings": {
-          "imgLink":"shopify:\/\/shop_images\/recipe-1.jpg",
-          "headText":"Unleashing the power of paleo diet for optimal...",
-          "bodText":"Proudly crafted from a blend of plant-based ingredients, making it perfect for vegans..."
+            "eggImg":"shopify:\/\/shop_images\/What_s_in_a_Design_Blogger_s_In-Box_on_Any_Given_Day__-_Core77_3.png?v=1693993359",
+            "eggHead":"Egg-white <br>Protein Sample",
+            "eggPara":"Our protein powder is not only delicious but also super friendly to your sensitive tummy. Say goodbye to bloating!",
+            "cta_egg_txt":"Try Today",
+            "hempImg":"shopify:\/\/shop_images\/What_s_in_a_Design_Blogger_s_In-Box_on_Any_Given_Day__-_Core77_3_1.png?v=1693993321",
+            "hempHead":"Hemp <br>Protein Sample",
+            "hempPara":"Our hemp-based alternative with superior quality, easy-to-digest ingredients for your sensitive tummy!",
+            "cta_hemp_txt":"Try Today"
         }
     }
-},
-"block_order": ["card1", "card2", "card3"]
-},
-  "sample-section":{
-    "type": "sample-section",
-    "settings": {
-        "eggImg":"shopify:\/\/shop_images\/What_s_in_a_Design_Blogger_s_In-Box_on_Any_Given_Day__-_Core77_3.png?v=1693993359",
-        "eggHead":"Egg-white <br>Protein Sample",
-        "eggPara":"Our protein powder is not only delicious but also super friendly to your sensitive tummy. Say goodbye to bloating!",
-        "cta_egg_txt":"Try Today",
-        "hempImg":"shopify:\/\/shop_images\/What_s_in_a_Design_Blogger_s_In-Box_on_Any_Given_Day__-_Core77_3_1.png?v=1693993321",
-        "hempHead":"Hemp <br>Protein Sample",
-        "hempPara":"Our hemp-based alternative with superior quality, easy-to-digest ingredients for your sensitive tummy!",
-        "cta_hemp_txt":"Try Today"
-    }
-}
     },
     "order": [
       "banner",

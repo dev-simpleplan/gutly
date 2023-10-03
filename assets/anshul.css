@@ -1978,6 +1978,13 @@ section.recipe-inner-banner{
     position: absolute;
     right: -16%;
     bottom: -160px;
+    transform: scale(0);
+    transition: 1s all ease;
+    transform-origin: bottom right;
+    transition-delay: 0.3s;
+}
+.active .rib-wrapper .riv-img{
+    transform: scale(1);
 }
 .rib-wrapper .riv-img .rivi-img{
     position: relative;

@@ -2,33 +2,33 @@
   <div class="container">
     <div class="recipe-inner-wrapper">
       <div class="riw-left">
-        <div class="prep-data">
+        <div class="prep-data trans">
           {% for item in article.metafields.custom.recipe_preparation.value %}
-            <div class="cat-name">
+            <div class="cat-name trans-first">
               <div class="head">
                 <p class="small">Category</p>
               </div>
               <div class="data">Smoothie</div>
             </div>
-            <div class="serve">
+            <div class="serve trans-sec">
               <div class="head">
                 <p class="small">Servings</p>
               </div>
               <div class="data">{{ item.servings }}</div>
             </div>
-            <div class="prep-time">
+            <div class="prep-time trans-thrid">
               <div class="head">
                 <p class="small">Prep Time</p>
               </div>
               <div class="data">{{ item.prep_time }}</div>
             </div>
-            <div class="cook-time">
+            <div class="cook-time trans-fourth">
               <div class="head">
                 <p class="small">Cook Time</p>
               </div>
               <div class="data">{{ item.cook_time }}</div>
             </div>
-            <div class="diff">
+            <div class="diff trans-fifth">
               <div class="head">
                 <p class="small">Difficulty</p>
               </div>
@@ -36,15 +36,15 @@
             </div>
           {% endfor %}
         </div>
-        <div class="ingre-top">
+        <div class="ingre-top trans">
           <div class="ingre-data">
-            <div class="head">
-              <p class="small">Ingredients</p>
+            <div class="head over-hid">
+              <p class="small trans-first">Ingredients</p>
             </div>
-            <div class="steps">
+            <div class="steps over-hid">
               <ul>
                 {% for item in article.metafields.custom.recipe_ingredients.value %}
-                  <li>
+                  <li class="trans-first">
                     {{ item.recipe_ingredient }}
                   </li>
                 {% endfor %}
@@ -52,13 +52,13 @@
             </div>
           </div>
           <div class="topping-data">
-            <div class="head">
+            <div class="head over-hid">
               <p class="small">Toppings</p>
             </div>
-            <div class="steps">
+            <div class="steps over-hid">
               <ul>
                 {% for item in article.metafields.custom.toppings.value %}
-                  <li>
+                  <li class="trans-first">
                     {{ item.topping }}
                   </li>
                 {% endfor %}
@@ -66,7 +66,7 @@
             </div>
           </div>
         </div>
-        <div class="direc-data">
+        <div class="direc-data trans">
           <div class="head">
             <p class="small">Directions</p>
           </div>
@@ -79,11 +79,11 @@
           </ol>
         </div>
       </div>
-      <div class="riw-img">
+      <div class="riw-img trans">
         <img
           src="{{ article.metafields.custom.recipe_image | img_url: 'master' }}"
           alt=""
-          class="img">
+          class="img trans-img">
       </div>
     </div>
   </div>

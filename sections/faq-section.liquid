@@ -1,12 +1,12 @@
 <section class="pad-180">
   <div class="container">
     <div class="faq-section">
-      <div class="heading center">
-        <h2>{{ section.settings.head }}</h2>
+      <div class="heading center trans over-hid">
+        <h2 class="trans-first">{{ section.settings.head }}</h2>
       </div>
       <div class="faq-wrapper">
         {% for block in section.blocks %}
-          <div class="item">
+          <div class="item" data-aos="fade-up">
             <div class="faq-head">
               <div class="arrow">
                 {% render 'chevron-down' %}
@@ -92,6 +92,11 @@
     ]
   }
 {% endschema %}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 <script>
   $(document).ready(function() {

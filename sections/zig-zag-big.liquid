@@ -2,28 +2,28 @@
   <div class="container">
     <div class="zig-zag-big">
       {% for block in section.blocks %}
-        <div class="item">
+        <div class="item trans">
           <div class="zzb-img">
             <div class="zzb-big-img">
               <img
                 src="{{ block.settings.bigImg | img_url: 'master' }}"
                 alt=""
-                class="img">
+                class="img trans-img">
             </div>
             {% if block.settings.monash %}
               <div class="zzb-small-img">
                 <img
                   src="{{ block.settings.smallImg | img_url: 'master' }}"
                   alt=""
-                  class="img">
+                  class="img trans-img">
               </div>
             {% endif %}
           </div>
           <div class="zzb-txt">
-            <div class="head">
-              <h3>{{ block.settings.head }}</h3>
+            <div class="head over-hid">
+              <h3 class="trans-first">{{ block.settings.head }}</h3>
             </div>
-            <div class="zzbt-p">
+            <div class="zzbt-p over-hid trans-sec">
               {{ block.settings.para }}
             </div>
           </div>

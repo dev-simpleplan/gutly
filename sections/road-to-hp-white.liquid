@@ -1,16 +1,16 @@
 <section class="pad-180">
   <div class="road-to-hp">
     <div class="container">
-      <div class="road-to-hp-wrap">
-        <div class="heading center">
-          <h3>{{ section.settings.head }}</h3>
+      <div class="road-to-hp-wrap trans">
+        <div class="heading center over-hid">
+          <h3 class="trans-first">{{ section.settings.head }}</h3>
         </div>
         {% if section.settings.body_enable %}
-          <div class="body center">
-            <p>{{ section.settings.bod }}</p>
+          <div class="body center over-hid">
+            <p class="trans-sec">{{ section.settings.bod }}</p>
           </div>
         {% endif %}
-        <div class="road-to-hp-flex">
+        <div class="road-to-hp-flex trans">
           {% for block in section.blocks %}
             <div class="item flex">
               <div class="head" style="background-image: url('{{ block.settings.bgImg | img_url: 'master' }}');">

@@ -26,16 +26,14 @@ $(document).ready(function () {
     });
 });
 
-const transElements = document.querySelectorAll('.trans');
+const transElements = document.querySelectorAll('.trans, .show');
 
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-    const threshold = windowHeight; // You can adjust this value to your desired threshold (e.g., 50%)
-    
+    const threshold = windowHeight;
     return rect.top <= threshold && rect.bottom >= threshold;
 }
-
 function toggleActiveClass() {
     transElements.forEach(function (element) {
         if (isInViewport(element)) {
@@ -45,12 +43,10 @@ function toggleActiveClass() {
         // }
     });
 }
-
 window.addEventListener('scroll', toggleActiveClass);
 window.addEventListener('resize', toggleActiveClass);
-
-// Initial check in case elements are already in the viewport when the page loads
 toggleActiveClass();
+
 
 
 
