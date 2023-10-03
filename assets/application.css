@@ -481,7 +481,7 @@ body.overflow-hide{
 }
 .shop-dd-menu-wrap{
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: space-between;
 }
 main{
@@ -611,6 +611,10 @@ div#shopify-section-header.backdrop{
 }
 .nav-logo{
     width: 10%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
 }
 .nav-logo a{
     width: 100%;
@@ -621,6 +625,7 @@ div#shopify-section-header.backdrop{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 .nav-right-wrap {
     display: flex;
@@ -689,6 +694,7 @@ div#shopify-section-header.backdrop{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 .mob-logo a{
     width: 100%;
@@ -696,6 +702,10 @@ div#shopify-section-header.backdrop{
 }
 .mob-logo{
     width: 20%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 .mob-acc-cart{
     display: flex;
@@ -1304,34 +1314,35 @@ footer{
 }
 .sl-foodmap-wrap{
     background: #FFD12D;
-    padding: 9px 0;
+    padding: 26.7px 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: 0;
+    bottom: -20px;
 }
 .slfw-img{
     width: 47px;
     height: 47px;
+    margin-right: 15px;
 }
-.slfw-txt p{
-    color: #404040;
-    font-weight: 800;
-    line-height: 144%; /* 23.04px */
-    letter-spacing: 0.96px;
-    text-transform: uppercase;
+.slfw-txt p, .slfw-cta a{
+    color: #222;
+    leading-trim: both;
+    text-edge: cap;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: var(--moret);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 119%; /* 38.08px */
 }
 .slfw-cta a{
-    color: #404040;
-    font-weight: 600;
-    line-height: 144%; /* 23.04px */
-    letter-spacing: 0.96px;
+    color: #44904C;
     text-decoration-line: underline;
-    text-transform: uppercase;
+    margin-left: 7px;
 }
 .sl-foodmap-wrap.tab-active{
     display: none;
@@ -1628,6 +1639,7 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 90px;
+    overflow: hidden;
 }
 .gap-wrapper .item{
     display: flex;
@@ -1911,7 +1923,8 @@ footer{
 .subscribe-section {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
+    background-color: #F9F1E4;
 }
 .subscribe-section .ss-left{
     width: 50%;
@@ -5087,6 +5100,10 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         width: 200px;
         margin-bottom: 35px;
     }
+    .sl-foodmap-wrap{
+        bottom: -30px;
+        padding: 18px 0;
+    }
 }
 /* Max Width 1300px Ends */
 /* Max Width 1200px */
@@ -5306,7 +5323,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .blogs-bottom-middle{
         width: 56%;
     }
-
+    .slfw-txt p, .slfw-cta a{
+        font-size: 28px;
+    }
 }
 /* Max Width 1200px Ends */
 /* Max Width 1100px */
@@ -5420,9 +5439,6 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     }
     .solution .sl-img-wrap{
         width: 70%;
-    }
-    .sl-foodmap-wrap{
-        display: none;
     }
     .sl-foodmap-wrap.tab-active{
         display: flex;
@@ -5983,7 +5999,12 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .article-template{
         padding-bottom: 100px;
     }
-
+    .sl-foodmap-wrap{
+        bottom: 0;
+    }
+    .slfw-txt p, .slfw-cta a {
+        font-size: 24px;
+    }
 }
 /* Max Width 991px Ends */
 /* Max Width 767px */
@@ -6147,15 +6168,15 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         height: 95px;
         padding: 5px;
     }
-    .slfw-txt p{
-        font-size: 10px;
+    .sl-foodmap-wrap{
+        padding: 12px 8px;
     }
     .slfw-img {
         width: 37px;
         height: 37px;
     }
-    .slfw-cta a{
-        font-size: 12px;
+    .slfw-txt p, .slfw-cta a {
+        font-size: 16px;
     }
     .solution-problem-wrapper {
         padding-bottom: 55px;
@@ -6165,6 +6186,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     }
     .ingredients .heading {
         margin-bottom: 40px;
+    }
+    .slfw-img{
+        margin-right: 10px;
     }
     .ingredients .ing-grid {
         grid-auto-columns: 85%;

@@ -3,7 +3,7 @@
         "banner":{
             "type": "recipe-banner",
             "settings": {
-                "head":"Build new recipes ",
+                "head":"Build new recipes",
                 "sub-head":"Become a Michelin chef",
                 "ban_img":"shopify:\/\/shop_images\/sample_zig.jpg?v=1694098579",
                 "cta_text":"See recipe",

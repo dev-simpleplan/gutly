@@ -838,6 +838,26 @@ body.cart-open::after{
 }
 .faq-page-main-wrapper .faq-contact{
     width: 25%;
+    position: sticky;
+    top: 100px;
+}
+.faq-page-main-wrapper .faq-contact .tab{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    margin-top: 60px;
+}
+.faq-page-main-wrapper .faq-contact .tab button{
+    padding: 12px 0;
+    border-bottom: 1px solid #222;
+    transition: 0.4s all ease;
+}
+.faq-page-main-wrapper .faq-contact .tab button:hover{
+    color: #6a6a6a;
+}
+.faq-page-main-wrapper .faq-contact .tab button:first-child{
+    padding-top: 0;
 }
 .faq-page-main-wrapper .faq-section{
     width: 70%;
@@ -857,6 +877,13 @@ body.cart-open::after{
     border-top: 0;
     padding-top: 0;
 }
+.faq-page-main-wrapper .faq-section .tabcontent{
+    animation: fadeEffect 1s;
+}
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
 /* FAQ Page Ends */
 
 /* Product Page */
@@ -2561,6 +2588,15 @@ section.recipe-inner-banner{
     .faq-page-main-wrapper .faq-contact{
         width: 100%;
         text-align: center;
+        position: static;
+    }
+    .faq-page-main-wrapper .faq-contact .tab{
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .faq-page-main-wrapper .faq-contact .tab button{
+        padding: 0;
     }
     .faq-page-main-wrapper .faq-section{
         width: 90%;

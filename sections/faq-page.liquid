@@ -20,35 +20,122 @@
           <div class="cta">
             <a href="{{ section.settings.page_url.url }}" class="primary-button yellow-black">{{ section.settings.page_txt }}</a>
           </div>
+          <div class="tab">
+            {% if section.settings.cat1 %}
+              <button
+                class="tablinks"
+                onclick="openCity(event, 'London')"
+                id="defaultOpen">
+                <h6>{{ section.settings.cat1_txt }}</h6>
+              </button>
+            {% endif %}
+            {% if section.settings.cat2 %}
+              <button class="tablinks" onclick="openCity(event, 'Paris')">
+                <h6>{{ section.settings.cat2_txt }}</h6>
+              </button>
+            {% endif %}
+            {% if section.settings.cat3 %}
+              <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+                <h6>{{ section.settings.cat3_txt }}</h6>
+              </button>
+            {% endif %}
+          </div>
         </div>
         <div class="faq-section">
-          <div class="faq-wrapper">
-            {% for block in section.blocks %}
-              <div class="item">
-                <div class="faq-head">
-                  <div class="arrow">
-                    {% render 'chevron-down' %}
+          <div id="London" class="tabcontent">
+            <div class="faq-wrapper">
+              {% assign faq1 = section.blocks | where: 'type', 'faqBlock1' %}
+              {% for block in faq1 %}
+                <div class="item">
+                  <div class="faq-head">
+                    <div class="arrow">
+                      {% render 'chevron-down' %}
+                    </div>
+                    <div class="faq-ques-div">
+                      <p class="faq-ques">{{ block.settings.faqQues }}</p>
+                    </div>
                   </div>
-                  <div class="faq-ques-div">
-                    <p class="faq-ques">{{ block.settings.faqQues }}</p>
+                  <div class="faq-ans">
+                    <p>{{ block.settings.faqBigAns }}</p>
+                    <ul>
+                      <li>
+                        <span>{{ block.settings.faqAnslih }}</span>
+                        {{ block.settings.faqAnsli }}
+                      </li>
+                      <li>
+                        <span>{{ block.settings.faqAnslih2 }}</span>
+                        {{ block.settings.faqAnsli2 }}
+                      </li>
+                    </ul>
+                    <a href="{{ block.settings.cta_url }}">{{ block.settings.cta_txt }}</a>
                   </div>
                 </div>
-                <div class="faq-ans">
-                  <p>{{ block.settings.faqBigAns }}</p>
-                  <ul>
-                    <li>
-                      <span>{{ block.settings.faqAnslih }}</span>
-                      {{ block.settings.faqAnsli }}
-                    </li>
-                    <li>
-                      <span>{{ block.settings.faqAnslih2 }}</span>
-                      {{ block.settings.faqAnsli2 }}
-                    </li>
-                  </ul>
-                  <a href="{{ block.settings.cta_url }}">{{ block.settings.cta_txt }}</a>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div id="Paris" class="tabcontent">
+            <div class="faq-wrapper">
+              {% assign faq2 = section.blocks | where: 'type', 'faqBlock2' %}
+              {% for block in faq2 %}
+                <div class="item">
+                  <div class="faq-head">
+                    <div class="arrow">
+                      {% render 'chevron-down' %}
+                    </div>
+                    <div class="faq-ques-div">
+                      <p class="faq-ques">{{ block.settings.faqQues }}</p>
+                    </div>
+                  </div>
+                  <div class="faq-ans">
+                    <p>{{ block.settings.faqBigAns }}</p>
+                    <ul>
+                      <li>
+                        <span>{{ block.settings.faqAnslih }}</span>
+                        {{ block.settings.faqAnsli }}
+                      </li>
+                      <li>
+                        <span>{{ block.settings.faqAnslih2 }}</span>
+                        {{ block.settings.faqAnsli2 }}
+                      </li>
+                    </ul>
+                    <a href="{{ block.settings.cta_url }}">{{ block.settings.cta_txt }}</a>
+                  </div>
                 </div>
-              </div>
-            {% endfor %}
+              {% endfor %}
+            </div>
+          </div>
+
+          <div id="Tokyo" class="tabcontent">
+            <div class="faq-wrapper">
+              {% assign faq3 = section.blocks | where: 'type', 'faqBlock3' %}
+              {% for block in faq3 %}
+                <div class="item">
+                  <div class="faq-head">
+                    <div class="arrow">
+                      {% render 'chevron-down' %}
+                    </div>
+                    <div class="faq-ques-div">
+                      <p class="faq-ques">{{ block.settings.faqQues }}</p>
+                    </div>
+                  </div>
+                  <div class="faq-ans">
+                    <p>{{ block.settings.faqBigAns }}</p>
+                    <ul>
+                      <li>
+                        <span>{{ block.settings.faqAnslih }}</span>
+                        {{ block.settings.faqAnsli }}
+                      </li>
+                      <li>
+                        <span>{{ block.settings.faqAnslih2 }}</span>
+                        {{ block.settings.faqAnsli2 }}
+                      </li>
+                    </ul>
+                    <a href="{{ block.settings.cta_url }}">{{ block.settings.cta_txt }}</a>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
           </div>
         </div>
       </div>
@@ -56,6 +143,27 @@
     </div>
   </div>
 </section>
+
+<script>
+  function openCity(evt, cityName) {
+    var i,
+      tabcontent,
+      tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+// Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+</script>
 
 {% schema %}
   {
@@ -84,12 +192,121 @@
         "type": "text",
         "id": "page_txt",
         "label": "CTA Inner Text"
+      }, {
+        "type": "checkbox",
+        "id": "cat1",
+        "default": true,
+        "label": "Display Category 1"
+      }, {
+        "type": "checkbox",
+        "id": "cat2",
+        "default": true,
+        "label": "Display Category 2"
+      }, {
+        "type": "checkbox",
+        "id": "cat3",
+        "default": true,
+        "label": "Display Category 3"
+      }, {
+        "type": "text",
+        "id": "cat1_txt",
+        "label": "Category 1 Text"
+      }, {
+        "type": "text",
+        "id": "cat2_txt",
+        "label": "Category 2 Text"
+      }, {
+        "type": "text",
+        "id": "cat3_txt",
+        "label": "Category 3 Text"
       }
     ],
     "blocks": [
       {
-        "name": "Faq Blocks",
-        "type": "faqBlock",
+        "name": "Faq Blocks One",
+        "type": "faqBlock1",
+        "settings": [
+          {
+            "type": "text",
+            "id": "faqQues",
+            "label": "FAQ Question"
+          },
+          {
+            "type": "text",
+            "id": "faqBigAns",
+            "label": "FAQ Answer in Big Text"
+          },
+          {
+            "type": "text",
+            "id": "faqAnslih",
+            "label": "FAQ answes List item Heading 1"
+          },
+          {
+            "type": "text",
+            "id": "faqAnslih2",
+            "label": "FAQ answes List item Heading 2"
+          }, {
+            "type": "text",
+            "id": "faqAnsli",
+            "label": "FAQ answes List item 1"
+          }, {
+            "type": "text",
+            "id": "faqAnsli2",
+            "label": "FAQ answes List item 2"
+          }, {
+            "type": "text",
+            "id": "cta_url",
+            "label": "CTA Url"
+          }, {
+            "type": "text",
+            "id": "cta_txt",
+            "label": "CTA Txt"
+          }
+        ]
+      }, {
+        "name": "Faq Blocks Two",
+        "type": "faqBlock2",
+        "settings": [
+          {
+            "type": "text",
+            "id": "faqQues",
+            "label": "FAQ Question"
+          },
+          {
+            "type": "text",
+            "id": "faqBigAns",
+            "label": "FAQ Answer in Big Text"
+          },
+          {
+            "type": "text",
+            "id": "faqAnslih",
+            "label": "FAQ answes List item Heading 1"
+          },
+          {
+            "type": "text",
+            "id": "faqAnslih2",
+            "label": "FAQ answes List item Heading 2"
+          }, {
+            "type": "text",
+            "id": "faqAnsli",
+            "label": "FAQ answes List item 1"
+          }, {
+            "type": "text",
+            "id": "faqAnsli2",
+            "label": "FAQ answes List item 2"
+          }, {
+            "type": "text",
+            "id": "cta_url",
+            "label": "CTA Url"
+          }, {
+            "type": "text",
+            "id": "cta_txt",
+            "label": "CTA Txt"
+          }
+        ]
+      }, {
+        "name": "Faq Blocks Three",
+        "type": "faqBlock3",
         "settings": [
           {
             "type": "text",
