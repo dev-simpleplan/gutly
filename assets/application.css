@@ -625,7 +625,6 @@ div#shopify-section-header.backdrop{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
 }
 .nav-right-wrap {
     display: flex;
