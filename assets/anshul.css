@@ -2447,6 +2447,9 @@ section.recipe-inner-banner{
     .rib-text-wrapper .head h1 {
         font-size: 70px;
     }
+    .recipe-slides .para p{
+        font-size: 18px;
+    }
 }
 /* Max Width 1200px Ends */
 /* Max Width 1100px */
@@ -2745,6 +2748,9 @@ section.recipe-inner-banner{
         max-width: 20ch;
         line-height: 100%;
     }
+    .recipe-slides .para p{
+        font-size: 16px;
+    }
 }
 /* Max Width 991px Ends */
 /* Max Width 767px */
@@ -3004,6 +3010,9 @@ section.recipe-inner-banner{
     }
     .prod-sample-section .cta {
         margin-top: 32px;
+    }
+    .recipe-slides .para p{
+        font-size: 14px;
     }
 }
 @media(max-width: 500px){

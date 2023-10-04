@@ -37,8 +37,8 @@
       <div class="recipe-cards-wrapper">
         <div id="all" class="tabcontent">
           {% assign recipe = blogs.recipe.articles %}
-          {% paginate blogs.recipe.articles by 3 %}
-            <div class="tab-grid">
+          {% paginate blogs.recipe.articles by 6 %}
+            <div class="tab-grid" id="article-list">
               {% for article in blogs.recipe.articles %}
                 <div class="item">
                   <a href="{{ article.url }}">
@@ -124,7 +124,10 @@
                   {% endfor %}
 
                   {% if paginate.next %}
-                    <a href="{{ paginate.next.url }}" class="next-page">
+                    <a
+                      href="{{ paginate.next.url }}"
+                      class="next-page"
+                      id="pagination">
                       <svg
                         width="42"
                         height="24"
@@ -151,7 +154,7 @@
         </div>
 
         <div id="breakfast" class="tabcontent">
-          {% paginate blogs.recipe.articles by 3 %}
+          {% paginate blogs.recipe.articles by 6 %}
             <div class="tab-grid">
               {% for article in blogs.recipe.articles %}
                 {% if article.tags contains 'Breakfasts' %}
@@ -267,7 +270,7 @@
         </div>
 
         <div id="salad" class="tabcontent">
-          {% paginate blogs.recipe.articles by 3 %}
+          {% paginate blogs.recipe.articles by 6 %}
             <div class="tab-grid">
               {% for article in blogs.recipe.articles %}
                 {% if article.tags contains 'Salad' %}
@@ -383,7 +386,7 @@
         </div>
 
         <div id="smoothies" class="tabcontent">
-          {% paginate blogs.recipe.articles by 3 %}
+          {% paginate blogs.recipe.articles by 6 %}
             <div class="tab-grid">
               {% for article in blogs.recipe.articles %}
                 {% if article.tags contains 'Smoothies' %}
@@ -499,7 +502,7 @@
         </div>
 
         <div id="snack" class="tabcontent">
-          {% paginate blogs.recipe.articles by 3 %}
+          {% paginate blogs.recipe.articles by 6 %}
             <div class="tab-grid">
               {% for article in blogs.recipe.articles %}
                 {% if article.tags contains 'Snack' %}
@@ -639,14 +642,48 @@
   document.getElementById("defaultOpen").click();
 </script>
 
+<script>
+  $(document).ready(function() {
+    var currentPage = 1;
+    var totalPages = "{{ paginate.pages }}";
+    var loading = false;
+
+// Function to load more articles via AJAX
+    function loadMoreArticles(page) {
+      if (page <= totalPages && ! loading) {
+        loading = true;
+        $.ajax({
+          url: '{{ collection.url }} ?page=' + page,
+          method: 'GET',
+          dataType: 'html',
+          success: function(data) {
+            $('#article-list').append($(data).find('.item'));
+            currentPage = page;
+            loading = false;
+          }
+        });
+      }
+    }
+
+// Initial load of articles
+    loadMoreArticles(currentPage);
+
+// Load more articles when user clicks a "Load More" button
+    $('#pagination').on('click', '.next-page', function(e) {
+      e.preventDefault(); // Prevent the default link behavior
+      loadMoreArticles(currentPage + 1);
+    });
+  });
+</script>
+
 <script type="application/ld+json">
   {
   "@context": "http://schema.org",
-                                                    "@type": "Article",
-                                                    "articleBody": {{ article.content | strip_html | json }},
+                                                                    "@type": "Article",
+                                                                    "articleBody": {{ article.content | strip_html | json }},
   "mainEntityOfPage": {
-                                                      "@type": "WebPage",
-                                                      "@id": {{ request.origin | append: page.url | json }}
+                                                                      "@type": "WebPage",
+                                                                      "@id": {{ request.origin | append: page.url | json }}
   },
   "headline": {{ article.title | json }},
   {% if article.excerpt != blank %}
@@ -660,14 +697,14 @@
   "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
   "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
   "author": {
-                                                      "@type": "Person",
-                                                      "name": {{ article.author | json }}
+                                                                      "@type": "Person",
+                                                                      "name": {{ article.author | json }}
   },
   "publisher": {
-                                                      "@type": "Organization",{% if settings.share_image %}
+                                                                      "@type": "Organization",{% if settings.share_image %}
     "logo": {
     "@type": "ImageObject",
-                                                                                                            "height": {{ settings.share_image.height | json }},
+                                                                                                                                            "height": {{ settings.share_image.height | json }},
     "url": {{ settings.share_image | image_url: width: settings.share_image.width | prepend: "https:" | json }},
     "width": {{ settings.share_image.width | json }}
     },
