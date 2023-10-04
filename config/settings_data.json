@@ -103,7 +103,7 @@
       "loader": {
         "type": "loader",
         "settings": {
-          "bg_color": "#FFD12D",
+          "bg_color": "#F9F1E4",
           "img": "shopify:\/\/shop_images\/Gutly_logo_1_3.svg"
         }
       },
