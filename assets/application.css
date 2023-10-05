@@ -5337,10 +5337,18 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     }
     .ingredients .over-scroll{
         overflow: hidden;
-        overflow-x: scroll;
     }
-    .ingredients .ing-grid{
-        width: 120%;
+    .ingredients .ing-grid {
+        width: 100%;
+        scroll-snap-type: x mandatory;
+        overflow-x: auto;
+        overflow: hidden;
+        overflow-x: auto;
+    }
+    .ing-grid .item{
+        width: 40%;
+        padding-top: 40%;
+        flex-shrink: 0;
     }
 }
 /* Max Width 1200px Ends */
@@ -5465,9 +5473,6 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     }
     .ing-grid .item .ing-sh {
         font-size: 24px;
-    }
-    .ingredients .ing-grid{
-        width: 160%;
     }
     h2 {
         font-size: 80px;
@@ -6021,6 +6026,10 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .slfw-txt p, .slfw-cta a {
         font-size: 24px;
     }
+    .ing-grid .item {
+        width: 50%;
+        padding-top: 50%;
+    }
 }
 /* Max Width 991px Ends */
 /* Max Width 767px */
@@ -6205,9 +6214,6 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     }
     .slfw-img{
         margin-right: 10px;
-    }
-    .ingredients .ing-grid {
-        width: 190%;
     }
     h2 {
         font-size: 54px;
@@ -6659,6 +6665,10 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .article-product-cta a{
         font-size: 12px;
     }
+    .ing-grid .item {
+        width: 65%;
+        padding-top: 65%;
+    }
 }
 /* Max Width 767px Ends */
 /* Max width 500px */
@@ -6673,8 +6683,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .blogs-top-left-head h1{
         font-size: 50px;
     }
-    .ingredients .ing-grid {
-        width: 230%;
+    .ing-grid .item {
+        width: 75%;
+        padding-top: 75%;
     }
 }
 /* Max width 500px Ends */
@@ -6684,8 +6695,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .chart-section .heading, .chart-section .product-compare {
         width: 230%;
     }
-    .ingredients .ing-grid {
-        width: 285%;
+    .ing-grid .item {
+        width: 90%;
+        padding-top: 90%;
     }
 }
 /* Max width 390px */
