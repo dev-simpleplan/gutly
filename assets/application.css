@@ -1438,7 +1438,6 @@ footer{
     position: absolute;
     inset: 0;
     text-align: center;
-    scroll-snap-align: start;
 }
 
 /* Ingredients Section Ends */
@@ -5341,6 +5340,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         width: 40%;
         padding-top: 40%;
         flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+    .ing-grid-con{
         scroll-snap-align: start;
     }
 }
