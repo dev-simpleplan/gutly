@@ -6032,10 +6032,6 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         width: 50%;
         padding-top: 50%;
     }
-    .recipe-cards a:nth-child(1), .recipe-cards a:nth-child(3){
-        transform: translate(0);
-        opacity: 1;
-    }
 }
 /* Max Width 991px Ends */
 /* Max Width 767px */
