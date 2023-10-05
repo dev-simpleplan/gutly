@@ -11,7 +11,7 @@
           <p class="trans-sec">{{ section.settings.subhead }}</p>
         </div>
         <div class="cta over-hid trans-third">
-          <a href="{{ section.settings.cta_link }}" class="primary-button yellow-black">{{ section.settings.cta_text }}</a>
+          <a href="{{ section.settings.cta_link.url }}/#ingredients" class="primary-button yellow-black">{{ section.settings.cta_text }}</a>
         </div>
       </div>
       <div class="ing-grid trans">
@@ -49,7 +49,7 @@
         "id": "subhead",
         "label": "Section Sub Heading"
       }, {
-        "type": "text",
+        "type": "page",
         "id": "cta_link",
         "label": "Link For CTA"
       }, {
