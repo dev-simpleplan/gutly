@@ -2134,7 +2134,7 @@ section.recipe-inner-banner{
     justify-content: center;
     gap: 24px;
 }
-.pagination-section nav span{
+.pagination-section nav a.active{
     display: flex;
     color: #FFF;
     text-align: center;

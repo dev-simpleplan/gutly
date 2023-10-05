@@ -38,7 +38,7 @@
         <div id="all" class="tabcontent">
           {% assign recipe = blogs.recipe.articles %}
           {% paginate blogs.recipe.articles by 3 %}
-            <div class="tab-grid" id="article-list">
+            <div class="tab-grid" id="recipe-grid">
               {% for article in blogs.recipe.articles %}
                 <div class="item">
                   <a href="{{ article.url }}">
@@ -88,65 +88,58 @@
                 </div>
               {% endfor %}
             </div>
-            <div class="pagination-section">
-              {% if paginate.pages > 0 %}
-                <nav role="navigation">
-                  {% if paginate.previous %}
-                    <a href="{{ paginate.previous.url }}" class="prev-page">
-                      <svg
-                        width="42"
-                        height="24"
-                        viewBox="0 0 42 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M35.5 12.0001L5.5 12.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                        <path
-                          d="M11.5 5.00006L4.5 12.0001L11.5 19.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                      </svg>
-                    </a>
-                  {% endif %}
 
-                  {% for part in paginate.parts %}
-                    {% if part.is_link %}
-                      <a href="{{ part.url }}">{{ part.title }}</a>
-                    {% else %}
-                      <div class="active">
-                        <span>{{ part.title }}</span>
-                      </div>
-                    {% endif %}
+            <div class="pagination-section" id="pagination">
+              {% if paginate.pages > 1 %}
+                <nav role="navigation">
+                  <a href="{{ paginate.previous.url }}" class="prev-page">
+                    <svg
+                      width="42"
+                      height="24"
+                      viewBox="0 0 42 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M35.5 12.0001L5.5 12.0001"
+                        stroke="#222222"
+                        stroke-width="2"
+                        stroke-linecap="square" />
+                      <path
+                        d="M11.5 5.00006L4.5 12.0001L11.5 19.0001"
+                        stroke="#222222"
+                        stroke-width="2"
+                        stroke-linecap="square" />
+                    </svg>
+                  </a>
+
+                  {% for page in (1..paginate.pages) %}
+                    <a
+                      href="{{ request.path | append: '?page=' | append: page }}"
+                      class="page-link{% if page == paginate.page %} active{% endif %}"
+                      data-current="{{ page }}">
+                      {{ page }}
+                    </a>
                   {% endfor %}
 
-                  {% if paginate.next %}
-                    <a
-                      href="{{ paginate.next.url }}"
-                      class="next-page"
-                      id="pagination">
-                      <svg
-                        width="42"
-                        height="24"
-                        viewBox="0 0 42 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M6.5 12.0001L36.5 12.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                        <path
-                          d="M30.5 5.00006L37.5 12.0001L30.5 19.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                      </svg>
-                    </a>
-                  {% endif %}
+                  <a href="{{ paginate.next.url }}" class="next-page">
+                    <svg
+                      width="42"
+                      height="24"
+                      viewBox="0 0 42 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M6.5 12.0001L36.5 12.0001"
+                        stroke="#222222"
+                        stroke-width="2"
+                        stroke-linecap="square" />
+                      <path
+                        d="M30.5 5.00006L37.5 12.0001L30.5 19.0001"
+                        stroke="#222222"
+                        stroke-width="2"
+                        stroke-linecap="square" />
+                    </svg>
+                  </a>
                 </nav>
               {% endif %}
             </div>
@@ -155,7 +148,7 @@
 
         <div id="breakfast" class="tabcontent">
           {% paginate blogs.recipe.articles by 6 %}
-            <div class="tab-grid">
+            <div class="tab-grid" id="recipe-grid">
               {% for article in blogs.recipe.articles %}
                 {% if article.tags contains 'Breakfasts' %}
                   <div class="item">
@@ -207,71 +200,12 @@
                 {% endif %}
               {% endfor %}
             </div>
-            <div class="pagination-section">
-              {% if paginate.pages > 0 %}
-                <nav role="navigation">
-                  {% if paginate.previous %}
-                    <a href="{{ paginate.previous.url }}" class="prev-page">
-                      <svg
-                        width="42"
-                        height="24"
-                        viewBox="0 0 42 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M35.5 12.0001L5.5 12.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                        <path
-                          d="M11.5 5.00006L4.5 12.0001L11.5 19.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                      </svg>
-                    </a>
-                  {% endif %}
-
-                  {% for part in paginate.parts %}
-                    {% if part.is_link %}
-                      <a href="{{ part.url }}">{{ part.title }}</a>
-                    {% else %}
-                      <div class="active">
-                        <span>{{ part.title }}</span>
-                      </div>
-                    {% endif %}
-                  {% endfor %}
-
-                  {% if paginate.next %}
-                    <a href="{{ paginate.next.url }}" class="next-page">
-                      <svg
-                        width="42"
-                        height="24"
-                        viewBox="0 0 42 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M6.5 12.0001L36.5 12.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                        <path
-                          d="M30.5 5.00006L37.5 12.0001L30.5 19.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                      </svg>
-                    </a>
-                  {% endif %}
-                </nav>
-              {% endif %}
-            </div>
           {% endpaginate %}
         </div>
 
         <div id="salad" class="tabcontent">
           {% paginate blogs.recipe.articles by 6 %}
-            <div class="tab-grid">
+            <div class="tab-grid" id="recipe-grid">
               {% for article in blogs.recipe.articles %}
                 {% if article.tags contains 'Salad' %}
                   <div class="item">
@@ -323,71 +257,12 @@
                 {% endif %}
               {% endfor %}
             </div>
-            <div class="pagination-section">
-              {% if paginate.pages > 0 %}
-                <nav role="navigation">
-                  {% if paginate.previous %}
-                    <a href="{{ paginate.previous.url }}" class="prev-page">
-                      <svg
-                        width="42"
-                        height="24"
-                        viewBox="0 0 42 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M35.5 12.0001L5.5 12.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                        <path
-                          d="M11.5 5.00006L4.5 12.0001L11.5 19.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                      </svg>
-                    </a>
-                  {% endif %}
-
-                  {% for part in paginate.parts %}
-                    {% if part.is_link %}
-                      <a href="{{ part.url }}">{{ part.title }}</a>
-                    {% else %}
-                      <div class="active">
-                        <span>{{ part.title }}</span>
-                      </div>
-                    {% endif %}
-                  {% endfor %}
-
-                  {% if paginate.next %}
-                    <a href="{{ paginate.next.url }}" class="next-page">
-                      <svg
-                        width="42"
-                        height="24"
-                        viewBox="0 0 42 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M6.5 12.0001L36.5 12.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                        <path
-                          d="M30.5 5.00006L37.5 12.0001L30.5 19.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                      </svg>
-                    </a>
-                  {% endif %}
-                </nav>
-              {% endif %}
-            </div>
           {% endpaginate %}
         </div>
 
         <div id="smoothies" class="tabcontent">
           {% paginate blogs.recipe.articles by 6 %}
-            <div class="tab-grid">
+            <div class="tab-grid" id="recipe-grid">
               {% for article in blogs.recipe.articles %}
                 {% if article.tags contains 'Smoothies' %}
                   <div class="item">
@@ -439,71 +314,12 @@
                 {% endif %}
               {% endfor %}
             </div>
-            <div class="pagination-section">
-              {% if paginate.pages > 0 %}
-                <nav role="navigation">
-                  {% if paginate.previous %}
-                    <a href="{{ paginate.previous.url }}" class="prev-page">
-                      <svg
-                        width="42"
-                        height="24"
-                        viewBox="0 0 42 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M35.5 12.0001L5.5 12.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                        <path
-                          d="M11.5 5.00006L4.5 12.0001L11.5 19.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                      </svg>
-                    </a>
-                  {% endif %}
-
-                  {% for part in paginate.parts %}
-                    {% if part.is_link %}
-                      <a href="{{ part.url }}">{{ part.title }}</a>
-                    {% else %}
-                      <div class="active">
-                        <span>{{ part.title }}</span>
-                      </div>
-                    {% endif %}
-                  {% endfor %}
-
-                  {% if paginate.next %}
-                    <a href="{{ paginate.next.url }}" class="next-page">
-                      <svg
-                        width="42"
-                        height="24"
-                        viewBox="0 0 42 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M6.5 12.0001L36.5 12.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                        <path
-                          d="M30.5 5.00006L37.5 12.0001L30.5 19.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                      </svg>
-                    </a>
-                  {% endif %}
-                </nav>
-              {% endif %}
-            </div>
           {% endpaginate %}
         </div>
 
         <div id="snack" class="tabcontent">
           {% paginate blogs.recipe.articles by 6 %}
-            <div class="tab-grid">
+            <div class="tab-grid" id="recipe-grid">
               {% for article in blogs.recipe.articles %}
                 {% if article.tags contains 'Snack' %}
                   <div class="item">
@@ -555,65 +371,6 @@
                 {% endif %}
               {% endfor %}
             </div>
-            <div class="pagination-section">
-              {% if paginate.pages > 0 %}
-                <nav role="navigation">
-                  {% if paginate.previous %}
-                    <a href="{{ paginate.previous.url }}" class="prev-page">
-                      <svg
-                        width="42"
-                        height="24"
-                        viewBox="0 0 42 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M35.5 12.0001L5.5 12.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                        <path
-                          d="M11.5 5.00006L4.5 12.0001L11.5 19.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                      </svg>
-                    </a>
-                  {% endif %}
-
-                  {% for part in paginate.parts %}
-                    {% if part.is_link %}
-                      <a href="{{ part.url }}">{{ part.title }}</a>
-                    {% else %}
-                      <div class="active">
-                        <span>{{ part.title }}</span>
-                      </div>
-                    {% endif %}
-                  {% endfor %}
-
-                  {% if paginate.next %}
-                    <a href="{{ paginate.next.url }}" class="next-page">
-                      <svg
-                        width="42"
-                        height="24"
-                        viewBox="0 0 42 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M6.5 12.0001L36.5 12.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                        <path
-                          d="M30.5 5.00006L37.5 12.0001L30.5 19.0001"
-                          stroke="#222222"
-                          stroke-width="2"
-                          stroke-linecap="square" />
-                      </svg>
-                    </a>
-                  {% endif %}
-                </nav>
-              {% endif %}
-            </div>
           {% endpaginate %}
         </div>
       </div>
@@ -644,46 +401,112 @@
 
 <script>
   $(document).ready(function() {
-    var currentPage = 1;
-    var totalPages = "{{ paginate.pages }}";
-    var loading = false;
 
-// Function to load more articles via AJAX
-    function loadMoreArticles(page) {
-      if (page <= totalPages && ! loading) {
-        loading = true;
-        $.ajax({
-          url: '{{ blogs.all.url }} ?page=' + page,
-          method: 'GET',
-          dataType: 'html',
-          success: function(data) {
-            $('#article-list').append($(data).find('.item'));
-            currentPage = page;
-            loading = false;
-          }
-        });
+// Initialize a global variable to track the current page
+    var currentPage = {% paginate blogs.recipe.articles by 3 %}
+      {{ paginate.current_page | default: 1 }}
+    {% endpaginate %};;
+    var totalPages = {% paginate blogs.recipe.articles by 3 %}
+      {{ paginate.pages | default: 1 }}
+    {% endpaginate %};
+
+// Function to update the content using AJAX
+    function updateContent(url) {
+      $.ajax({
+        url: url,
+        dataType: 'html',
+        success: function(data) {
+
+// Replace the content of the tab grid with the new data
+          $('#recipe-grid').html($(data).find('#recipe-grid').html());
+
+// Update the URL without reloading the page
+          history.pushState(null, null, url);
+
+// Update the previous and next button URLs and visibility
+          updatePrevNextButtons(url);
+
+// Add the active class to the current page anchor
+          $('.page-link').removeClass('active');
+          $('.page-link[data-current="' + currentPage + '"]').addClass('active');
+        }
+      });
+    }
+
+// Function to update previous and next button URLs and visibility
+    function updatePrevNextButtons(url) {
+
+// Calculate the new page number based on the URL
+      var parts = url.split('?page=');
+      if (parts.length === 2) {
+        currentPage = parseInt(parts[1]);
+      } else {
+        currentPage = 1;
+      }
+
+// Update the URLs for previous and next buttons
+      if (currentPage > 1) {
+        $('.prev-page').attr('href', parts[0] + '?page=' + (
+          currentPage - 1
+        ));
+        $('.prev-page').show(); // Show the previous button
+      } else {
+        $('.prev-page').removeAttr('href');
+        $('.prev-page').hide(); // Hide the previous button
+      }if (currentPage < totalPages) {
+        $('.next-page').attr('href', parts[0] + '?page=' + (
+          currentPage + 1
+        ));
+        $('.next-page').show(); // Show the next button
+      } else {
+        $('.next-page').removeAttr('href');
+        $('.next-page').hide(); // Hide the next button
       }
     }
 
-// Initial load of articles
-    loadMoreArticles(currentPage);
-
-// Load more articles when user clicks a "Load More" button
-    $('#pagination').on('click', '.next-page', function(e) {
-      e.preventDefault(); // Prevent the default link behavior
-      loadMoreArticles(currentPage + 1);
+// Click event for previous and next buttons
+    $(document).on('click', '.prev-page, .next-page', function(event) {
+      event.preventDefault();
+      var url = $(this).attr('href');
+      if (url) {
+        updateContent(url);
+      }
     });
+
+// Click event for page links
+    $(document).on('click', '.page-link', function(event) {
+      event.preventDefault();
+      var pageUrl = $(this).attr('href');
+      if (pageUrl) {
+        updateContent(pageUrl);
+      }
+    });
+
+// Initially, check and hide the previous button if needed
+    if (currentPage === 1) {
+      $('.prev-page').hide();
+    }
+
+// Initially, hide the next button on the last page
+    if (currentPage === totalPages) {
+      $('.next-page').hide();
+    }
+
+// Add the active class to the current page anchor initially
+    $('.page-link[data-current="' + currentPage + '"]').addClass('active');
   });
 </script>
+
+
 
 <script type="application/ld+json">
   {
   "@context": "http://schema.org",
-                                                                          "@type": "Article",
-                                                                          "articleBody": {{ article.content | strip_html | json }},
+                                                                                                                                                                                                                                "@type": "Article",
+                                                                                                                                                                                                                                "articleBody": {{ article.content | strip_html | json }},
   "mainEntityOfPage": {
-                                                                            "@type": "WebPage",
-                                                                            "@id": {{ request.origin | append: page.url | json }}
+                                                                                                                                                                                                                                  "@type": "WebPage",
+                                                                                                                                                                                                                                  "@id": {{ request.origin | append: page.url | json }}
   },
   "headline": {{ article.title | json }},
   {% if article.excerpt != blank %}
@@ -697,19 +520,18 @@
   "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
   "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
   "author": {
-                                                                            "@type": "Person",
-                                                                            "name": {{ article.author | json }}
+                                                                                                                                                                                                                                  "@type": "Person",
+                                                                                                                                                                                                                                  "name": {{ article.author | json }}
   },
   "publisher": {
-                                                                            "@type": "Organization",{% if settings.share_image %}
+                                                                                                                                                                                                                                  "@type": "Organization",{% if settings.share_image %}
     "logo": {
     "@type": "ImageObject",
-                                                                                                                                                        "height": {{ settings.share_image.height | json }},
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                          "height": {{ settings.share_image.height | json }},
     "url": {{ settings.share_image | image_url: width: settings.share_image.width | prepend: "https:" | json }},
     "width": {{ settings.share_image.width | json }}
     },
   {% endif %}
   "name": {{ shop.name | json }}
   }
-  }
-</script>
+  }</script>
