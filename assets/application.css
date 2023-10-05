@@ -3172,7 +3172,7 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     padding: 11px 0;
 }
 .h_buttons{
-    justify-content: space-between;
+    justify-content: space-between !important;
 }
 .h_divider{
     margin-top: 24px !important;
