@@ -14,23 +14,26 @@
           <a href="{{ section.settings.cta_link }}" class="primary-button yellow-black">{{ section.settings.cta_text }}</a>
         </div>
       </div>
-      <div class="ing-grid trans">
-        {% for block in section.blocks %}
-          <div class="item">
-            <div class="ing-grid-con">
-              <p class="small ing-h">
-                {{ block.settings.head }}
-              </p>
-              <p class="ing-sh">
-                {{ block.settings.subhead }}
-              </p>
-              <p class="small ing-p">
-                {{ block.settings.para }}
-              </p>
+      <div class="over-scroll">
+        <div class="ing-grid trans">
+          {% for block in section.blocks %}
+            <div class="item">
+              <div class="ing-grid-con">
+                <p class="small ing-h">
+                  {{ block.settings.head }}
+                </p>
+                <p class="ing-sh">
+                  {{ block.settings.subhead }}
+                </p>
+                <p class="small ing-p">
+                  {{ block.settings.para }}
+                </p>
+              </div>
             </div>
-          </div>
-        {% endfor %}
+          {% endfor %}
+        </div>
       </div>
+
     </div>
   </div>
 </section>

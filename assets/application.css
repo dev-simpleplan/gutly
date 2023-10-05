@@ -1367,8 +1367,9 @@ footer{
     margin-top: 32px;
 }
 .ingredients .ing-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
     gap: 32px;
     text-align: center;
     width: 90%;
@@ -1380,14 +1381,13 @@ footer{
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 100%;
+    width: 33%;
     height: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 40px;
-    padding-top: 100%;
+    padding-top: 33%;
     transition: 1s all ease;
     transform: scale(0);
 }
@@ -4979,7 +4979,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .blogs-top-left-head h1{
         font-size: 80px;
     }
-
+    .ing-grid .item .ing-p{
+        max-width: 29ch;
+    }
 }
 /* Max Width 1400px Ends */
 /* Max Width 1300px */
@@ -5330,6 +5332,16 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .slfw-txt p, .slfw-cta a{
         font-size: 28px;
     }
+    .ing-grid .item .ing-p {
+        max-width: 27ch;
+    }
+    .ingredients .over-scroll{
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+    .ingredients .ing-grid{
+        width: 120%;
+    }
 }
 /* Max Width 1200px Ends */
 /* Max Width 1100px */
@@ -5455,7 +5467,7 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         font-size: 24px;
     }
     .ingredients .ing-grid{
-        grid-auto-columns: 55%;
+        width: 160%;
     }
     h2 {
         font-size: 80px;
@@ -6195,7 +6207,7 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         margin-right: 10px;
     }
     .ingredients .ing-grid {
-        grid-auto-columns: 85%;
+        width: 190%;
     }
     h2 {
         font-size: 54px;
@@ -6661,6 +6673,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .blogs-top-left-head h1{
         font-size: 50px;
     }
+    .ingredients .ing-grid {
+        width: 230%;
+    }
 }
 /* Max width 500px Ends */
 
@@ -6668,6 +6683,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
 @media(max-width: 390px){
     .chart-section .heading, .chart-section .product-compare {
         width: 230%;
+    }
+    .ingredients .ing-grid {
+        width: 285%;
     }
 }
 /* Max width 390px */
