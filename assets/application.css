@@ -5335,10 +5335,12 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .ing-grid .item .ing-p {
         max-width: 27ch;
     }
+    .ingredients .over-scroll{
+        overflow: hidden;
+    }
     .ingredients .ing-grid {
         width: 100%;
         scroll-snap-type: x mandatory;
-        overflow: hidden;
         overflow-x: auto;
     }
     .ing-grid .item{
