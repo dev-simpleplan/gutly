@@ -5342,9 +5342,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         flex-shrink: 0;
         scroll-snap-align: start;
     }
-    .ing-grid-con{
+    /* .ing-grid-con{
         scroll-snap-align: start;
-    }
+    } */
 }
 /* Max Width 1200px Ends */
 /* Max Width 1100px */
