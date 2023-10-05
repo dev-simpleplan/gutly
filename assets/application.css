@@ -5334,6 +5334,7 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .ingredients .ing-grid {
         scroll-snap-type: x mandatory;
         overflow-x: auto;
+        justify-content: flex-start;
     }
     .ing-grid .item{
         width: 40%;
