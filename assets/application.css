@@ -5169,13 +5169,6 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         height: 125px;
         padding: 5px;
     }
-    .ingredients .ing-grid{
-        grid-auto-flow: column;
-        grid-auto-columns: 40%;
-        grid-template-columns: unset;
-        grid-template-rows: unset;
-        overflow: scroll;
-    }
     .ing-grid .item .ing-sh{
         font-size: 26px;
     }
