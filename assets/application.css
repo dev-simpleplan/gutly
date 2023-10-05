@@ -1774,7 +1774,7 @@ footer{
     padding: 115px 0 0px 55px;
 }
 .review-section .heading{
-    width: 57%;
+    width: 60%;
     position: relative;
     z-index: 9;
 }
@@ -3164,6 +3164,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
 
 /* Accounts Pages */
 
+.h_google_button, .h_facebook_button{
+    background-color: #F8F2EA;
+}
 .account-page {
     display: flex;
     align-items: center;
@@ -3205,6 +3208,7 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     justify-content: center;
     gap: 13px;
     margin: 34px 0;
+    display: none;
 }
 .account-page .form-or .or{
     color: #4D4D4D;
@@ -4155,7 +4159,8 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     z-index: 1;
 }
 .recipe-card-content-head h6{
-    color:#FFFFFF
+    color:#FFFFFF;
+    text-align: center;
 }
 .recipe-card-content-body{
     padding-top: 20px;
@@ -4943,6 +4948,8 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         width: 75px;
         height: 75px;
         padding: 5px;
+        right: -25px;
+        bottom: -40px;
     }
     .ingredients .ing-grid{
         width: 100%;
@@ -4985,6 +4992,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     }
     .ing-grid .item .ing-p{
         max-width: 29ch;
+    }
+    .review-section .heading{
+        width: 67%;
     }
 }
 /* Max Width 1400px Ends */
@@ -5113,6 +5123,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .sl-foodmap-wrap{
         bottom: -30px;
         padding: 18px 0;
+    }
+    .review-section .heading {
+        width: 61%;
     }
 }
 /* Max Width 1300px Ends */
@@ -5349,6 +5362,16 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         flex-shrink: 0;
         scroll-snap-align: start;
     }
+    .sl-img-wrap .sl-img{
+        padding-top: 90%;
+    }
+    .ss-left .heading p{
+        right: -40px;
+        bottom: -40px;
+    }
+    .review-section .heading {
+        width: 65%;
+    }
     /* .ing-grid-con{
         scroll-snap-align: start;
     } */
@@ -5368,6 +5391,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     }
     .thank-you .ty-image.three{
         bottom: 140px;
+    }
+    .review-section .heading {
+        width: 66%;
     }
 }
 /* Max Width 1100px Ends */
@@ -5459,9 +5485,10 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     }
     .solution-problem-wrapper .problem{
         padding: 54px 21px 54px 21px;
+        gap: 80px;
     }
     .sl-img-wrap .sl-img{
-        padding-top: 100%;
+        padding-top: 120%;
     }
     .solution .sl-img-wrap{
         width: 70%;
@@ -5550,7 +5577,7 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         margin: 0 auto;
     }
     .review-section .heading {
-        width: 75%;
+        width: 77%;
     }
     .review-slider{
         margin-top: 40px;
@@ -6032,6 +6059,13 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         width: 50%;
         padding-top: 50%;
     }
+    .ss-left .heading p {
+        width: 65px;
+        height: 65px;
+        font-size: 10px;
+        right: -33px;
+        bottom: -37px;
+    }
 }
 /* Max Width 991px Ends */
 /* Max Width 767px */
@@ -6330,11 +6364,12 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         max-width: 26ch;
         margin: 0 auto;
     }
-    .ss-left .heading p{
-        font-size: 10px;
-        width: 60px;
-        height: 60px;
-        bottom: -40px;
+    .ss-left .heading p {
+        font-size: 8px;
+        width: 55px;
+        height: 55px;
+        bottom: -30px;
+        right: -25px;
     }
     .ss-left .ssu-img {
         width: 35px;
@@ -6670,6 +6705,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .ing-grid .item {
         width: 65%;
         padding-top: 65%;
+    }
+    .sl-img-wrap .sl-img {
+        padding-top: 100%;
     }
 }
 /* Max Width 767px Ends */

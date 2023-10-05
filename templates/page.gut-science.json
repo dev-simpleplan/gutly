@@ -76,13 +76,6 @@
                         "txt":"protein source"
                     }
                 },
-                "left3":{
-                    "type": "left-side",
-                    "settings": {
-                        "num":"71-76<span>%</span>",
-                        "txt":"protein source"
-                    }
-                },
                 "right1":{
                     "type": "right-side",
                     "settings": {
@@ -103,16 +96,9 @@
                         "num":"12-13<span>%</span>",
                         "txt":"milk"
                     }
-                },
-                "right4":{
-                    "type": "right-side",
-                    "settings": {
-                        "num":"12-13<span>%</span>",
-                        "txt":"milk"
-                    }
                 }
             },
-            "block_order": ["left1", "left2", "left3", "right1", "right2", "right3", "right4"]
+            "block_order": ["left1", "left2" , "right1", "right2", "right3"]
         },
         "gut-goodness":{
             "type": "gut-goodness",

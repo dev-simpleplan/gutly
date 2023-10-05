@@ -44,7 +44,7 @@
           "sl-sm-txt":"Clean ingredients",
           "foodmapImage":"shopify:\/\/shop_images\/logo-200x200_1.png?v=1693749553",
           "foodmapPara":"we are fodmap certified!",
-          "foodmapCta":"#!"
+          "foodmapCta":"https://www.monashfodmap.com/"
       },
       "blocks": {
           "pbgrid1":{

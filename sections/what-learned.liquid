@@ -1,22 +1,22 @@
-<section class="pad-180">
+<section class="pad-180 over-hid">
   <div class="container">
-    <div class="recipe-learned over-hid">
+    <div class="recipe-learned">
       <div class="heading center trans over-hid">
         <h2 class="trans-first">{{ section.settings.head }}</h2>
       </div>
       <div class="recipe-cards trans">
-        {% for block in section.blocks %}
-          <a href="#!">
+        {% for article in blogs.all.articles limit: 3 %}
+          <a href="{{ article.url }}">
             <div class="recipe-card">
               <div class="recipe-card-img">
-                <img src="{{ block.settings.imgLink | img_url: 'master' }}" alt="">
+                <img src="{{ article.image | img_url: 'master' }}" alt="">
               </div>
               <div class="recipe-card-content">
                 <div class="recipe-card-content-head">
-                  <h6>{{ block.settings.headText }}</h6>
+                  <h6>{{ article.title }}</h6>
                 </div>
                 <div class="recipe-card-content-body">
-                  <p>{{ block.settings.bodText }}</p>
+                  <p>{{ article.content | strip_html | truncatewords: 20 }}</p>
                 </div>
               </div>
             </div>

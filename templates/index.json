@@ -67,7 +67,7 @@
                 "sl-sm-txt":"Clean ingredients",
                 "foodmapImage":"shopify:\/\/shop_images\/logo-200x200_1.png?v=1693749553",
                 "foodmapPara":"Our Egg White Protein Powder is ",
-                "foodmapCta":"#!"
+                "foodmapCta":"https://www.monashfodmap.com/"
             },
             "blocks": {
                 "pbgrid1":{
@@ -456,7 +456,8 @@
             "settings": {
                 "sectionImage":"shopify:\/\/shop_images\/sample.png?v=1693831657",
                 "head":"We give back to the gut. And to our community!",
-                "cta_txt":"our practices"
+                "cta_txt":"our practices",
+                "cta_link":"sustainability"
             },
             "blocks": {
                 "para1":{
