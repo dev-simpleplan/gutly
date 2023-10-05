@@ -5338,7 +5338,6 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .ingredients .ing-grid {
         width: 100%;
         scroll-snap-type: x mandatory;
-        overflow-x: auto;
         overflow: hidden;
         overflow-x: auto;
     }
@@ -5346,6 +5345,7 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         width: 40%;
         padding-top: 40%;
         flex-shrink: 0;
+        scroll-snap-align: start;
     }
 }
 /* Max Width 1200px Ends */
