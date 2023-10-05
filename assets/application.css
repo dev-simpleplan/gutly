@@ -1371,7 +1371,6 @@ footer{
     align-items: flex-start;
     justify-content: space-between;
     gap: 32px;
-    text-align: center;
     width: 90%;
     margin: 0 auto;
 }
@@ -1387,6 +1386,7 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     padding-top: 33%;
     transition: 1s all ease;
     transform: scale(0);
