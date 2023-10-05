@@ -4,7 +4,6 @@
     --moret: 'MoretSemibold', sans-serif;
 }
 html{
-    scroll-behavior: smooth;
     -webkit-text-size-adjust: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
