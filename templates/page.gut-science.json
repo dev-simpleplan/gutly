@@ -247,5 +247,14 @@
             }
         }
     },
-    "order": ["banner-section", "happy-gut", "zig-zag", "what-you-eat", "gut-goodness", "gutly-way", "commited-section", "sample-section"]
+  "order": [
+    "banner-section",
+    "happy-gut",
+    "zig-zag",
+    "what-you-eat",
+    "gut-goodness",
+    "gutly-way",
+    "commited-section",
+    "sample-section"
+  ]
 }
