@@ -10,6 +10,13 @@ $(document).ready(function () {
     })     
 });
 
+$(document).ready(function(){
+    $(".shop-dd").click(function(){
+        $(this).toggleClass('active');
+        $(".shop-dd-menu").toggleClass('active');
+    })
+});
+
 $(document).ready(function () {
     // Event delegation for .remove
     $(document).on('click', '.remove', function() {
@@ -32,8 +39,15 @@ function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     const windowHeight = window.innerHeight || document.documentElement.clientHeight;
     const threshold = windowHeight;
-    return rect.top <= threshold && rect.bottom >= threshold;
+    const topThreshold = threshold;
+    const bottomThreshold = windowHeight - threshold;
+
+    return (
+        (rect.top <= topThreshold && rect.bottom >= topThreshold) ||
+        (rect.top <= bottomThreshold && rect.bottom >= bottomThreshold)
+    );
 }
+
 function toggleActiveClass() {
     transElements.forEach(function (element) {
         if (isInViewport(element)) {
@@ -43,9 +57,11 @@ function toggleActiveClass() {
         // }
     });
 }
+
 window.addEventListener('scroll', toggleActiveClass);
 window.addEventListener('resize', toggleActiveClass);
 toggleActiveClass();
+
 
 
 

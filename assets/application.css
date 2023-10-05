@@ -453,6 +453,11 @@ body.overflow-hide{
     height: 8px;
     display: block;
     position: relative;
+    transform: rotate(0deg);
+    transition: 0.6s all ease;
+}
+.shop-dd.active .shop-dd-anchor span{
+    transform: rotate(180deg);
 }
 .shop-dd-menu{
     display: flex;
@@ -473,7 +478,7 @@ body.overflow-hide{
     visibility: hidden;
     transition: 0.4s clip-path ease, 0.4s all ease;
 }
-.nav-shop:hover .shop-dd-menu{
+.shop-dd-menu.active{
     clip-path: inset(0% 0 0% 0);
     opacity: 1;
     visibility: visible;
