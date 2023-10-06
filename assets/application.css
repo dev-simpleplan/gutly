@@ -463,7 +463,6 @@ body.overflow-hide{
     align-items: flex-start;
     justify-content: space-between;
     background-color: #FDF9F3;
-    filter: drop-shadow(0px 19px 57px rgba(55, 55, 55, 0.07));
     position: absolute;
     width: 100%;
     left: 0;
@@ -476,9 +475,10 @@ body.overflow-hide{
     opacity: 0;
     visibility: hidden;
     transition: 0.4s clip-path ease, 0.4s all ease;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.3);
 }
 .shop-dd-menu.active{
-    clip-path: inset(0% 0 0% 0);
+    clip-path: inset(0% 0 -5% 0);
     opacity: 1;
     visibility: visible;
     transition: 0.6s clip-path ease, 0.6s all ease;
@@ -1931,13 +1931,14 @@ footer{
 .subscribe-section {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     background-color: #F9F1E4;
 }
 .subscribe-section .ss-left{
     width: 50%;
     background-color: #F9F1E4;
     padding: 41px 110px;
+    align-self: center;
 }
 .ss-left .ss-usp{
     display: flex;

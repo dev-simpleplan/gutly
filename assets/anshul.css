@@ -2147,6 +2147,9 @@ section.recipe-inner-banner{
     letter-spacing: 1.75px;
     text-transform: uppercase;
     background: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/gutlyNav.svg?v=1695153948');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
     width: 38px;
     height: 38px;
     align-items: center;

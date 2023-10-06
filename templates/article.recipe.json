@@ -17,7 +17,9 @@
                 "hempHead":"Hemp <br>Protein powder",
                 "hempPara":"Our power packed, hemp-based protein powder contains cleansing fibres and antioxidants that your gut will love!",
                 "cta_hemp_txt":"Buy now",
-                "vegan":"Vegan Friendly"
+                "vegan":"Vegan Friendly",
+                "cta_egg_url": "egg-white-protein-powder",
+                "cta_hemp_url": "vegan-protein-powder"
             }
         },
         "more-recipe":{
