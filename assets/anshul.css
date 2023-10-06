@@ -852,6 +852,7 @@ body.cart-open::after{
     padding: 12px 0;
     border-bottom: 1px solid #222;
     transition: 0.4s all ease;
+    color: #222;
 }
 .faq-page-main-wrapper .faq-contact .tab button:hover{
     color: #6a6a6a;
