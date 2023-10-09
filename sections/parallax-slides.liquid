@@ -1,81 +1,86 @@
 <div id="benefits">
   <section class="parallax-slides">
-  <div class="parallax-slides-wrap">
-    {% for block in section.blocks %}
-      <div class="parallax-slide">
-        <div class="parallax-slide-content">
-          <div class="parallax-slide-content-wrap">
-            <div class="parallax-slide-head">
-              <h3>{{ block.settings.headText }}</h3>
+    <div class="parallax-slides-wrap">
+      {% for block in section.blocks %}
+        <div class="parallax-slide">
+          <div class="parallax-slide-content">
+            <div class="parallax-slide-content-wrap">
+              <div class="parallax-slide-head">
+                <h3>{{ block.settings.headText }}</h3>
+              </div>
+              <div class="parallax-slide-body">
+                <p>{{ block.settings.bodText }}</p>
+              </div>
             </div>
-            <div class="parallax-slide-body">
-              <p>{{ block.settings.bodText }}</p>
+          </div>
+          <div class="parallax-slide-image">
+            <img src="{{ block.settings.imgLink | img_url: 'master' }}" alt="">
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="parallax-slides-mobile parallax-swiper">
+    <div class="parallax-slides-mobile-wrap swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="parallax-slide-mob swiper-slide">
+          <div class="parallax-slide-image-mob">
+            <img src="{{ block.settings.imgLink | img_url: 'master' }}" alt="">
+          </div>
+          <div class="parallax-slide-content-mob">
+            <div class="parallax-slide-content-mob-wrap">
+              <div class="parallax-slide-head">
+                <h3>{{ block.settings.headText }}</h3>
+              </div>
+              <div class="parallax-slide-body">
+                <p>{{ block.settings.bodText }}</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="parallax-slide-image">
-          <img src="{{ block.settings.imgLink | img_url: 'master' }}" alt="">
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-</section>
-<section class="parallax-slides-mobile parallax-swiper">
-  <div class="parallax-slides-mobile-wrap swiper-wrapper">
-    {% for block in section.blocks %}
-      <div class="parallax-slide-mob swiper-slide">
-        <div class="parallax-slide-image-mob">
-          <img src="{{ block.settings.imgLink | img_url: 'master' }}" alt="">
-        </div>
-        <div class="parallax-slide-content-mob">
-          <div class="parallax-slide-content-mob-wrap">
-            <div class="parallax-slide-head">
-              <h3>{{ block.settings.headText }}</h3>
-            </div>
-            <div class="parallax-slide-body">
-              <p>{{ block.settings.bodText }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-  <div class="parallax-slides-mobile-nav">
-    <div class="parallax-slides-mobile-nav-prev">
-      <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/arrow-right_1.svg?v=1693902975" alt="">
+      {% endfor %}
     </div>
-    <div class="parallax-slides-mobile-nav-next">
-      <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/arrow-right_1.svg?v=1693902975" alt="">
+    <div class="parallax-slides-mobile-nav">
+      <div class="parallax-slides-mobile-nav-prev">
+        <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/arrow-right_1.svg?v=1693902975" alt="">
+      </div>
+      <div class="parallax-slides-mobile-nav-next">
+        <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/arrow-right_1.svg?v=1693902975" alt="">
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 </div>
 
 
 <script>
   gsap.registerPlugin(ScrollTrigger);
 
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".parallax-slides",
-      markers: false,
-      start: "10% 19%",
-      end: "180% bottom",
-      pin: true,
-      scrub: 1,
-      onUpdate: (self) => {
-        const progress = self.progress;
-        if (progress === 0) {} else if (progress <= 0.50) {
-          gsap.set('.parallax-slide-image', {position: 'fixed'});
-        } else if (progress <= 1) {} else {};
+  const slides = document.querySelectorAll('.parallax-slide');
 
+  slides.forEach((slide, index) => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: slide,
+        markers: false,
+        start: "10% 19%",
+        pin: true, // Pin the section while scrolling through all slides
+        pinSpacing: false, // Ensure no space is added when pinning
+        scrub: 1,
+        onUpdate: (self) => {
+          const progress = self.progress;
+
+// Your conditions for each slide
+        }
       }
-    }
-  })
+    });
 
-  tl.to(".parallax-slide-content", {transform: 'translate3d(0,-100vh,0)'}).to(".parallax-slides-wrap .parallax-slide:nth-child(1) .parallax-slide-image", {
-    clipPath: 'inset(100% 0% 0% 0%)'
-  }, 0);
+// Add animations or transformations for each slide
+    tl.to(slide.querySelector('.parallax-slide-content'), {transform: 'translate3d(0,-100vh,0)'}).to(slide.querySelector('.parallax-slide-image'), {
+      clipPath: 'inset(100% 0% 0% 0%)'
+    }, 0);
+  });
+
+
   const swiper = new Swiper('.parallax-swiper', {
     loop: false,
     autoHeight: true,
@@ -94,10 +99,7 @@
     }
   });
 
-  new ScrollMagic
-    .Scene({triggerElement: "#benefits"})
-    .setClassToggle("#benefit", "active") // add class toggle
-    .addTo(controller1);
+  new ScrollMagic.Scene({triggerElement: "#benefits"}).setClassToggle("#benefit", "active") // add class toggle.addTo(controller1);
 </script>
 {% schema %}
   {
