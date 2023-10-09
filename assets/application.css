@@ -1365,7 +1365,7 @@ footer{
 .ingredients .heading .cta{
     margin-top: 32px;
 }
-.ingredients .ing-grid{
+.ingredients .ing-grid .scroll-container{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;

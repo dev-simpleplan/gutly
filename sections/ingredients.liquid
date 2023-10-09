@@ -15,21 +15,23 @@
         </div>
       </div>
       <div class="ing-grid trans">
-        {% for block in section.blocks %}
-          <div class="item">
-            <div class="ing-grid-con">
-              <p class="small ing-h">
-                {{ block.settings.head }}
-              </p>
-              <p class="ing-sh">
-                {{ block.settings.subhead }}
-              </p>
-              <p class="small ing-p">
-                {{ block.settings.para }}
-              </p>
+        <div class="scroll-container">
+          {% for block in section.blocks %}
+            <div class="item">
+              <div class="ing-grid-con">
+                <p class="small ing-h">
+                  {{ block.settings.head }}
+                </p>
+                <p class="ing-sh">
+                  {{ block.settings.subhead }}
+                </p>
+                <p class="small ing-p">
+                  {{ block.settings.para }}
+                </p>
+              </div>
             </div>
-          </div>
-        {% endfor %}
+          {% endfor %}
+        </div>
       </div>
 
     </div>
