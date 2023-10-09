@@ -58,109 +58,163 @@
       </div>
     </div>
     {% paginate blog.articles by 5 %}
-      <div class="blogs-bottom" style="{% if paginate.current_page > 1 %}display: none; {% else %}display: flex; {% endif %}">
-        <div class="blogs-bottom-left">
-          <div class="blogs-top-right-head">
-            <h6>Latest blogs</h6>
-          </div>
-          <div class="blogs-bottom-bottom-left-blogs">
-            {% for article in blog.articles %}
-              {% for tag in article.tags %}
-                {% if tag == 'latest' %}
-                  <a href="{{ article.url }}">
-                    <div class="blogs-bottom-bottom-left-blog">
-                      <div class="blogs-bottom-left-blog-img">
-                        <img src="{{ article.image | img_url: 'master' }}" alt="">
-                      </div>
-                      <div class="blogs-bottom-left-blog-content">
-                        <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
-                        <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
-                      </div>
-                    </div>
-                  </a>
-                {% endif %}
-              {% endfor %}
-            {% endfor %}
-          </div>
-        </div>
-        <div class="blogs-bottom-middle">
-          <div class="blogs-top-left-head">
-            <h1>Must Read</h1>
-          </div>
-          <div class="blogs-bottom-middle-blog">
-            {% for article in blog.articles %}
-              {% for tag in article.tags %}
-                {% if tag == 'must' %}
-                  <a href="{{ article.url }}">
-                    <div class="blogs-bottom-middle-blog-wrap">
-                      <div class="blogs-bottom-middle-blog-img">
-                        <img src="{{ article.image | img_url: 'master' }}" alt="">
-                      </div>
-                      <div class="blogs-bottom-middle-blog-content">
-                        <div class="blogs-top-left-article-title">
-                          <h5>{{ article.title }}</h5>
+      <div class="paginate-section-blogs" id="blog-paginate">
+        <div class="blogs-bottom" style="{% if paginate.current_page > 1 %}display: none; {% else %}display: flex; {% endif %}">
+          <div class="blogs-bottom-left">
+            <div class="blogs-top-right-head">
+              <h6>Latest blogs</h6>
+            </div>
+            <div class="blogs-bottom-bottom-left-blogs">
+              {% for article in blog.articles %}
+                {% for tag in article.tags %}
+                  {% if tag == 'latest' %}
+                    <a href="{{ article.url }}">
+                      <div class="blogs-bottom-bottom-left-blog">
+                        <div class="blogs-bottom-left-blog-img">
+                          <img src="{{ article.image | img_url: 'master' }}" alt="">
                         </div>
-                        <div class="blogs-top-left-article-author-date">
-                          <span>By: {{ article.author }}</span>
-                          <span class="author-separator"></span>
-                          <span>{{ article.published_at | date: "%d,%B %Y" }}</span>
+                        <div class="blogs-bottom-left-blog-content">
+                          <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
+                          <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
                         </div>
                       </div>
-                    </div>
-                  </a>
-                {% endif %}
+                    </a>
+                  {% endif %}
+                {% endfor %}
               {% endfor %}
-            {% endfor %}
+            </div>
+          </div>
+          <div class="blogs-bottom-middle">
+            <div class="blogs-top-left-head">
+              <h1>Must Read</h1>
+            </div>
+            <div class="blogs-bottom-middle-blog">
+              {% for article in blog.articles %}
+                {% for tag in article.tags %}
+                  {% if tag == 'must' %}
+                    <a href="{{ article.url }}">
+                      <div class="blogs-bottom-middle-blog-wrap">
+                        <div class="blogs-bottom-middle-blog-img">
+                          <img src="{{ article.image | img_url: 'master' }}" alt="">
+                        </div>
+                        <div class="blogs-bottom-middle-blog-content">
+                          <div class="blogs-top-left-article-title">
+                            <h5>{{ article.title }}</h5>
+                          </div>
+                          <div class="blogs-top-left-article-author-date">
+                            <span>By: {{ article.author }}</span>
+                            <span class="author-separator"></span>
+                            <span>{{ article.published_at | date: "%d,%B %Y" }}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+            </div>
+          </div>
+          <div class="blogs-bottom-right">
+            <div class="blogs-top-right-head">
+              <h6>Popular blogs</h6>
+            </div>
+            <div class="blogs-bottom-bottom-left-blogs">
+              {% for article in blog.articles %}
+                {% for tag in article.tags %}
+                  {% if tag == 'popular' %}
+                    <a href="{{ article.url }}">
+                      <div class="blogs-bottom-bottom-left-blog">
+                        <div class="blogs-bottom-left-blog-img">
+                          <img src="{{ article.image | img_url: 'master' }}" alt="">
+                        </div>
+                        <div class="blogs-bottom-left-blog-content">
+                          <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
+                          <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
+                        </div>
+                      </div>
+                    </a>
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+            </div>
           </div>
         </div>
-        <div class="blogs-bottom-right">
-          <div class="blogs-top-right-head">
-            <h6>Popular blogs</h6>
-          </div>
-          <div class="blogs-bottom-bottom-left-blogs">
-            {% for article in blog.articles %}
-              {% for tag in article.tags %}
-                {% if tag == 'popular' %}
-                  <a href="{{ article.url }}">
-                    <div class="blogs-bottom-bottom-left-blog">
-                      <div class="blogs-bottom-left-blog-img">
-                        <img src="{{ article.image | img_url: 'master' }}" alt="">
-                      </div>
-                      <div class="blogs-bottom-left-blog-content">
-                        <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
-                        <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
-                      </div>
+        {% if paginate.current_page > 1 %}
+          <div class="blogs-rest-container">
+            <div class="blogs-rest-container-wrap">
+              {% for article in blog.articles %}
+                <a href="{{ article.url }}">
+                  <div class="blogs-rest-blog">
+                    <div class="blogs-rest-blog-image">
+                      <img src="{{ article.image | img_url: 'master' }}" alt="">
                     </div>
-                  </a>
-                {% endif %}
+                    <div class="blogs-rest-blog-content">
+                      <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
+                      <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
+                    </div>
+                  </div>
+                </a>
               {% endfor %}
-            {% endfor %}
+            </div>
           </div>
-        </div>
+        {% endif %}
       </div>
-      {% if paginate.current_page > 1 %}
-        <div class="blogs-rest-container">
-          <div class="blogs-rest-container-wrap">
-            {% for article in blog.articles %}
-              <a href="{{ article.url }}">
-                <div class="blogs-rest-blog">
-                  <div class="blogs-rest-blog-image">
-                    <img src="{{ article.image | img_url: 'master' }}" alt="">
-                  </div>
-                  <div class="blogs-rest-blog-content">
-                    <div class="blogs-top-right-blog-right-head">{{ article.title }}</div>
-                    <div class="blogs-top-right-blog-right-date">{{ article.published_at | date: "%d,%B %Y" }}</div>
-                  </div>
-                </div>
+      <div class="pagination-section" id="pagination">
+        {% if paginate.pages > 1 %}
+          <nav role="navigation">
+            <a href="{{ paginate.previous.url }}" class="prev-page">
+              <svg
+                width="42"
+                height="24"
+                viewBox="0 0 42 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M35.5 12.0001L5.5 12.0001"
+                  stroke="#222222"
+                  stroke-width="2"
+                  stroke-linecap="square" />
+                <path
+                  d="M11.5 5.00006L4.5 12.0001L11.5 19.0001"
+                  stroke="#222222"
+                  stroke-width="2"
+                  stroke-linecap="square" />
+              </svg>
+            </a>
+
+            {% for page in (1..paginate.pages) %}
+              <a
+                href="{{ request.path | append: '?page=' | append: page }}"
+                class="page-link{% if page == paginate.page %} active{% endif %}"
+                data-current="{{ page }}">
+                {{ page }}
               </a>
             {% endfor %}
-          </div>
-        </div>
-      {% endif %}
+
+            <a href="{{ paginate.next.url }}" class="next-page">
+              <svg
+                width="42"
+                height="24"
+                viewBox="0 0 42 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.5 12.0001L36.5 12.0001"
+                  stroke="#222222"
+                  stroke-width="2"
+                  stroke-linecap="square" />
+                <path
+                  d="M30.5 5.00006L37.5 12.0001L30.5 19.0001"
+                  stroke="#222222"
+                  stroke-width="2"
+                  stroke-linecap="square" />
+              </svg>
+            </a>
+          </nav>
+        {% endif %}
+      </div>
     </div>
-    <div class="pagination-section">
-      {% render 'paginate', pagination: paginate %}
-    </div>
+
   {% endpaginate %}
 </section>
 
@@ -169,4 +223,100 @@
 <div class="blog">
 <h1>{{ article.title }}</h1>
 </div>
-{% endfor %} {% endcomment %}
+{% endfor %} {% endcomment %}<script>
+  $(document).ready(function() {
+
+// Initialize a global variable to track the current page
+    var currentPage = {% paginate blog.articles by 5 %}
+      {{ paginate.current_page | default: 1 }}
+    {% endpaginate %};;
+    var totalPages = {% paginate blog.articles by 5 %}
+      {{ paginate.pages | default: 1 }}
+    {% endpaginate %};
+
+// Function to update the content using AJAX
+    function updateContent(url) {
+      $.ajax({
+        url: url,
+        dataType: 'html',
+        success: function(data) {
+
+// Replace the content of the tab grid with the new data
+          $('#blog-paginate').html($(data).find('#blog-paginate').html());
+
+// Update the URL without reloading the page
+          history.pushState(null, null, url);
+
+// Update the previous and next button URLs and visibility
+          updatePrevNextButtons(url);
+
+// Add the active class to the current page anchor
+          $('.page-link').removeClass('active');
+          $('.page-link[data-current="' + currentPage + '"]').addClass('active');
+        }
+      });
+    }
+
+// Function to update previous and next button URLs and visibility
+    function updatePrevNextButtons(url) {
+
+// Calculate the new page number based on the URL
+      var parts = url.split('?page=');
+      if (parts.length === 2) {
+        currentPage = parseInt(parts[1]);
+      } else {
+        currentPage = 1;
+      }
+
+// Update the URLs for previous and next buttons
+      if (currentPage > 1) {
+        $('.prev-page').attr('href', parts[0] + '?page=' + (
+          currentPage - 1
+        ));
+        $('.prev-page').show(); // Show the previous button
+      } else {
+        $('.prev-page').removeAttr('href');
+        $('.prev-page').hide(); // Hide the previous button
+      }if (currentPage < totalPages) {
+        $('.next-page').attr('href', parts[0] + '?page=' + (
+          currentPage + 1
+        ));
+        $('.next-page').show(); // Show the next button
+      } else {
+        $('.next-page').removeAttr('href');
+        $('.next-page').hide(); // Hide the next button
+      }
+    }
+
+// Click event for previous and next buttons
+    $(document).on('click', '.prev-page, .next-page', function(event) {
+      event.preventDefault();
+      var url = $(this).attr('href');
+      if (url) {
+        updateContent(url);
+      }
+    });
+
+// Click event for page links
+    $(document).on('click', '.page-link', function(event) {
+      event.preventDefault();
+      var pageUrl = $(this).attr('href');
+      if (pageUrl) {
+        updateContent(pageUrl);
+      }
+    });
+
+// Initially, check and hide the previous button if needed
+    if (currentPage === 1) {
+      $('.prev-page').hide();
+    }
+
+// Initially, hide the next button on the last page
+    if (currentPage === totalPages) {
+      $('.next-page').hide();
+    }
+
+// Add the active class to the current page anchor initially
+    $('.page-link[data-current="' + currentPage + '"]').addClass('active');
+  });
+</script>
