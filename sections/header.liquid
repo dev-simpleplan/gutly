@@ -331,4 +331,19 @@
       $('#shopify-section-header').removeClass('backdrop');
     }
   });
+
+// Get the current page's URL
+  const currentPageURL = window.location.href;
+
+// Get all anchor elements inside menu items
+  const menuAnchors = document.querySelectorAll('.rl-ab a');
+
+// Loop through anchor elements to find the active one
+  menuAnchors.forEach((anchor) => {
+    const anchorURL = anchor.href;
+
+    if (currentPageURL === anchorURL) {
+      anchor.classList.add('active');
+    }
+  });
 </script>

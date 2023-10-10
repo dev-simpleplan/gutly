@@ -246,7 +246,7 @@
       "block_order": ["para1", "para2"]
     },
     "slidesParallax":{
-      "type":"parallax-slides",
+      "type":"parallax-slide-product",
       "blocks": {
           "slide1":{
               "type": "parallaxSlide",
@@ -267,7 +267,7 @@
           "slide3":{
             "type": "parallaxSlide",
             "settings": {
-                "imgLink":"shopify:\/\/shop_images\/parallax2.jpg",
+                "imgLink":"shopify:\/\/shop_images\/parallax1.jpg",
                 "headText":"BYE BYE BLOATING",
                 "bodText":"Begin managing your bloating problem with our third-party certified, bloating-free formula."
             }
