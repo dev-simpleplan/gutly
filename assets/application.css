@@ -1453,6 +1453,14 @@ footer{
     padding-top: 33%;
     transition: 1s all ease;
 }
+@supports (-webkit-overflow-scrolling: touch) {
+    .ing-grid .item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
 .ing-grid .item:nth-child(1){
     transition-delay: 0.2s;
 }
@@ -6850,6 +6858,14 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     }
     .sl-img-wrap .sl-img {
         padding-top: 100%;
+    }
+    .no-if-no-but .left-txt .ninb-item:nth-child(even) .ninb-para{
+        margin-right: 0;
+        margin-left: auto;
+    }
+    .no-if-no-but .right-txt .ninb-item:nth-child(even){
+        margin-right: auto;
+        margin-left: 0;
     }
 }
 /* Max Width 767px Ends */
