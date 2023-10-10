@@ -66,10 +66,11 @@
         scrub: 1,
         onUpdate: (self) => {
           const progress = self.progress;
-          if (progress === 0) {} else if (progress <= 1.50) {
+          if (progress <= 0.5) { // When the progress is less than or equal to 0.5 (scrolling down)
             gsap.set('.parallax-slide-image', {position: 'fixed'});
-          } else if (progress <= 1) {} else {};
-
+          } else { // When the progress is greater than 0.5 (scrolling up)
+            gsap.set('.parallax-slide-image', {position: 'static'});
+          }
         }
       }
     })
@@ -84,8 +85,11 @@
       clipPath: 'inset(0% 0% 0% 0%)'
     }, "0")
     .to(".parallax-slide-content", {transform: 'translate3d(0,-200vh,0)'})
+    .from(".parallax-slides-wrap .parallax-slide:nth-child(3) .parallax-slide-image", {
+      clipPath: 'inset(0% 0% 100% 0%)'
+    }, "0")
     .to(".parallax-slides-wrap .parallax-slide:nth-child(3) .parallax-slide-image", {
-      clipPath: 'inset(100% 0% 0% 0%)'
+      clipPath: 'inset(0% 0% 0% 0%)'
     }, "0");
 
 
