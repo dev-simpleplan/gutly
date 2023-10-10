@@ -1327,6 +1327,9 @@ ul.variant-wrapper li.variant-cats label p span{
 .nutrition-facts .nf-right .ei-prod .ei-para{
     margin-top: 24px;
 }
+.nutrition-facts .nf-right .ei-prod .ei-title h5{
+    text-transform: capitalize;
+}
 .nutrition-facts .nf-right .direction{
     margin-top: 31px;
 }
@@ -1461,6 +1464,11 @@ ul.variant-wrapper li.variant-cats label p span{
 .product-desp-acc .pda-desp{
     padding-top: 24px;
     display: none;
+}
+.product-desp-acc .pda-desp .metafield-rich_text_field{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 .product-desp-acc .pda-desp p{
     color: #655F5F;

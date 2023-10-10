@@ -1,14 +1,12 @@
 <section class="announce-bar">
   <div class="container">
     <div class="annouce-wrap">
-      <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/image_3.svg?v=1693566055" alt="">
       <p class="free-shipping">FREE SHIPPING OVER $50.</p>
       <p>90-DAY MONEY-BACK GUARANTEE.</p>
-      <a href="#!">Shop Now</a>
-      <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/image_4.png?v=1693566048" alt="">
+      <a href="#grab-section">Shop Now</a>
+      <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/Untitled_design_1_1.svg?v=1696857861" alt="">
     </div>
     <div class="annouce-wrap mob">
-      <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/image_3.svg?v=1693566055" alt="">
       <div class="owl-theme owl-carousel">
         <div class="item">
           <p class="free-shipping">FREE SHIPPING OVER $50.</p>
@@ -17,11 +15,33 @@
           <p>90-DAY MONEY-BACK GUARANTEE.</p>
         </div>
       </div>
-      <a href="#!">Shop Now</a>
-      <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/image_4.png?v=1693566048" alt="">
+      <a href="#grab-section">Shop Now</a>
     </div>
   </div>
 </section>
+
+{% schema %}
+  {
+    "name": "Announcement Bar",
+    "settings": [
+      {
+        "type": "text",
+        "id": "text1",
+        "label": "Text 1",
+        "default": "FREE SHIPPING OVER $50."
+      }, {
+        "type": "text",
+        "id": "text2",
+        "label": "Text 2",
+        "default": "FREE SHIPPING OVER $50."
+      }, {
+        "type": "page",
+        "id": "link",
+        "label": "CTA link"
+      }
+    ]
+  }
+{% endschema %}
 
 <script>
   $('.announce-bar .owl-carousel').owlCarousel({
