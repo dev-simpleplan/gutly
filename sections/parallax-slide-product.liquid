@@ -61,36 +61,31 @@
         trigger: ".parallax-slides",
         markers: false,
         start: "10% 19%",
-        end: "180% bottom",
+        end: "270% bottom",
         pin: true,
         scrub: 1,
         onUpdate: (self) => {
           const progress = self.progress;
-          if (progress <= 0.5) { // When the progress is less than or equal to 0.5 (scrolling down)
+          if (progress === 0) {} else if (progress <= 0.50) {
             gsap.set('.parallax-slide-image', {position: 'fixed'});
-          } else { // When the progress is greater than 0.5 (scrolling up)
-            gsap.set('.parallax-slide-image', {position: 'static'});
-          }
+          } else if (progress <= 1) {} else {};
         }
       }
     })
-
     tl
     .to(".parallax-slide-content", {transform: 'translate3d(0,-100vh,0)'})
     .to(".parallax-slides-wrap .parallax-slide:nth-child(1) .parallax-slide-image", {
       clipPath: 'inset(100% 0% 0% 0%)'
-    }, "0") // Start this animation 0.5 seconds before the previous one ends
-    .to(".parallax-slide-content", {transform: 'translate3d(0,-200vh,0)'})
+    }, 0)
+    .to(".parallax-slide-content", {
+      transform: 'translate3d(0,-200vh,0)'
+    }, 0)
+    .to(".parallax-slides-wrap .parallax-slide:nth-child(1) .parallax-slide-image", {
+      clipPath: 'inset(0% 0% 0% 0%)'
+    }, 0)
     .to(".parallax-slides-wrap .parallax-slide:nth-child(2) .parallax-slide-image", {
-      clipPath: 'inset(0% 0% 0% 0%)'
-    }, "0")
-    .to(".parallax-slide-content", {transform: 'translate3d(0,-200vh,0)'})
-    .from(".parallax-slides-wrap .parallax-slide:nth-child(3) .parallax-slide-image", {
-      clipPath: 'inset(0% 0% 100% 0%)'
-    }, "0")
-    .to(".parallax-slides-wrap .parallax-slide:nth-child(3) .parallax-slide-image", {
-      clipPath: 'inset(0% 0% 0% 0%)'
-    }, "0");
+      clipPath: 'inset(100% 0% 0% 0%)'
+    }, 0)
 
 
 
