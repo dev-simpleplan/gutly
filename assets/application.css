@@ -1464,8 +1464,8 @@ footer{
     bottom: -20px;
 }
 .slfw-img{
-    width: 47px;
-    height: 47px;
+    width: 100px;
+    height: auto;
     margin-right: 15px;
 }
 .slfw-txt p, .slfw-cta a{
@@ -6475,13 +6475,13 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     }
     .sl-foodmap-wrap{
         padding: 12px 8px;
+        bottom: 5px;
     }
     .slfw-img {
-        width: 37px;
-        height: 37px;
+        width: 70px;
     }
     .slfw-txt p, .slfw-cta a {
-        font-size: 16px;
+        font-size: 12px;
     }
     .solution-problem-wrapper {
         padding-bottom: 55px;
