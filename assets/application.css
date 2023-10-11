@@ -965,8 +965,21 @@ div#shopify-section-header{
     margin-right: 20px;
 }
 .annouce-wrap img{
-    width: 20px;
+    width: 20px !important;
     height: 20px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 1s all ease;
+}
+.annouce-wrap .owl-item.active img{
+    transform: translateY(0%);
+    opacity: 1;
+}
+.annouce-wrap.mob .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 .announce-bar{
     background: #F8F2EA;
@@ -988,7 +1001,7 @@ div#shopify-section-header{
     opacity: 0;
 }
 .annouce-wrap.mob .owl-carousel{
-    width: 20%;
+    width: 30%;
 }
 .annouce-wrap.mob .owl-item.active p{
     transform: translateY(0%);
@@ -5205,9 +5218,6 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .review-section .heading{
         width: 67%;
     }
-    .annouce-wrap.mob .owl-carousel{
-        width: 25%;
-    }
 }
 /* Max Width 1400px Ends */
 /* Max Width 1300px */
@@ -5588,7 +5598,7 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         width: 65%;
     }
     .annouce-wrap.mob .owl-carousel{
-        width: 30%;
+        width: 35%;
     }
     /* .ing-grid-con{
         scroll-snap-align: start;
@@ -6291,7 +6301,7 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         gap: 8px;
     }
     .annouce-wrap.mob .owl-carousel{
-        width: 40%;
+        width: 45%;
     }
     .paginate-section-blogs {
         padding-top: 110px;
