@@ -422,11 +422,13 @@ body.overflow-hide{
     height: 300px;
     max-height: 100%;
     transform: scale(1.1) rotate(180deg);
-    transition: 0.8s width ease, 0.8s height ease, 0.8s all ease ;
+    transition: 0.8s width ease, 0.8s height ease, 0.8s top ease, 0.8s all ease ;
     position: absolute;
     left: 0;
     right: 0;
-    margin: 0 auto;
+    top: 40px;
+    bottom: 0;
+    margin: auto;
     transition-delay: 1s;
 }
 .loader .active svg.circle-svg {
