@@ -4438,6 +4438,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     position: absolute;
     top: 0;
     right: 0;
+    height: 0vh;
+}
+.parallax-slides-wrap .parallax-slide:nth-child(1) .parallax-slide-image{
     height: 100vh;
 }
 .parallax-slide.fixed .parallax-slide-image{
@@ -4466,9 +4469,6 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
 .parallax-slide-head{
     max-width: 45ch;
     margin: 0 auto;
-}
-.parallax-slides-wrap .parallax-slide:nth-child(1) .parallax-slide-image{
-    z-index: 1;
 }
 .parallax-slide-mob{
     display: flex;

@@ -61,7 +61,7 @@
         trigger: ".parallax-slides",
         markers: false,
         start: "10% 19%",
-        end: "270% bottom",
+        end: "180% bottom",
         pin: true,
         scrub: 1,
         onUpdate: (self) => {
@@ -73,19 +73,18 @@
       }
     })
     tl
-    .to(".parallax-slide-content", {transform: 'translate3d(0,-100vh,0)'})
-    .to(".parallax-slides-wrap .parallax-slide:nth-child(1) .parallax-slide-image", {
-      clipPath: 'inset(100% 0% 0% 0%)'
+    .to(".parallax-slide-content", {
+      transform: 'translate3d(0,-100vh,0)'
+    }, 0)
+    .to(".parallax-slides-wrap .parallax-slide:nth-child(2) .parallax-slide-image", {
+      height: '100vh'
     }, 0)
     .to(".parallax-slide-content", {
       transform: 'translate3d(0,-200vh,0)'
-    }, 0)
-    .to(".parallax-slides-wrap .parallax-slide:nth-child(1) .parallax-slide-image", {
-      clipPath: 'inset(0% 0% 0% 0%)'
-    }, 0)
-    .to(".parallax-slides-wrap .parallax-slide:nth-child(2) .parallax-slide-image", {
-      clipPath: 'inset(100% 0% 0% 0%)'
-    }, 0)
+    }, 0.5)
+    .to(".parallax-slides-wrap .parallax-slide:nth-child(3) .parallax-slide-image", {
+      height: '100vh'
+    }, 0.5)
 
 
 
