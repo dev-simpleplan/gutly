@@ -67,7 +67,7 @@
                 "sl-sm-txt":"Clean ingredients",
                 "foodmapImage":"shopify:\/\/shop_images\/certificationstamp_1_1.png?v=1697027661",
                 "foodmapPara":"Our Egg White Protein Powder is ",
-                "foodmapCta":"https://www.monashfodmap.com/"
+                "foodmapCta":"https://www.monashfodmap.com/about-fodmap-and-ibs/"
             },
             "blocks": {
                 "pbgrid1":{
@@ -147,42 +147,42 @@
                 "item1":{
                     "type":"leftGrid",
                     "settings": {
-                        "head1":"EASY PROTEIN-RICH BREAKFAST",
+                        "head1":"01. EASY PROTEIN-RICH BREAKFAST",
                         "para1":"Easily meet protein goals with our simple solution, start a healthy diet with a high-protein meal."
                     }
                 },
                 "item2":{
                     "type":"leftGrid",
                     "settings": {
-                        "head1":"WEIGHT MANAGEMENT",
+                        "head1":"02. WEIGHT MANAGEMENT",
                         "para1":"Satisfy your hunger with an excellent source of >19g of high-quality protein, ensuring lasting fullness."
                     }
                 },
                 "item3":{
                     "type":"leftGrid",
                     "settings": {
-                        "head1":"SLOW-RELEASE PROTEIN",
+                        "head1":"03. SLOW-RELEASE PROTEIN",
                         "para1":"Maximise your muscle gain while you sleep, leaving behind any worries of bloating or uneasiness."
                     }
                 },
                 "item4":{
                     "type":"rightGrid",
                     "settings": {
-                        "head2":"SIMPLE LOW FODMAP DIET",
+                        "head2":"04. SIMPLE LOW FODMAP DIET",
                         "para2":"Following a strict diet can be tough, but we make it easy to incorporate into your meal plan."
                     }
                 },
                 "item5":{
                     "type":"rightGrid",
                     "settings": {
-                        "head2":"BYE-BYE BLOATING",
+                        "head2":"05. BYE-BYE BLOATING",
                         "para2":"Begin managing your bloating problem with our third-party certified, bloating-free formula."
                     }
                 },
                 "item6":{
                     "type":"rightGrid",
                     "settings": {
-                        "head2":"TRANSPARENT INGREDIENTS",
+                        "head2":"06. TRANSPARENT INGREDIENTS",
                         "para2":"No secret formula, no nasty additives, and no complicated ingredients. Gutly is a no brainer!"
                     }
                 },
@@ -339,6 +339,7 @@
                 "head":"Gutly's Mission:<br> A Healthier ‘N Happier You",
                 "para":"Our mission is simple yet powerful – crafting clean health supplements for your gut's happiness. With natural ingredients and gut-focused formulas, Gutly aims to revolutionise your well-being.",
                 "cta_text":"about us",
+                "cta_link":"about-happy-gut",
                 "image":"shopify:\/\/shop_images\/sample.png?v=1693831657"
             }
         },

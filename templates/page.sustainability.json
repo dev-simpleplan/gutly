@@ -58,31 +58,31 @@
                 "block1":{
                     "type": "zig-zag-org",
                     "settings": {
-                        "img":"shopify:\/\/shop_images\/parallax2.jpg?v=1694287787",
+                        "img":"shopify:\/\/shop_images\/oz-harvest.jpg?v=1697628149",
                         "head":"Meal Donations",
                         "para":"Together with Mary's Meals, we passionately provide nutritious school meals to children in the world's most impoverished regions. These meals not only feed hungry minds but also ignite the flame of hope for a brighter future. Our mission reaches children in Africa, Asia, Latin America, and the Caribbean, making a life-changing impact in their lives.",
-                        "org_cta_url":"#!",
-                        "org_cta_txt":"Mary's Meals"
+                        "org_cta_url":"https://www.ozharvest.org/",
+                        "org_cta_txt":"Oz Harvest"
                     }
                 },
                 "block2":{
                     "type": "zig-zag-org",
                     "settings": {
-                        "img":"shopify:\/\/shop_images\/sample.png?v=1693831657",
+                        "img":"shopify:\/\/shop_images\/ocean-plastic.png?v=1697628150",
                         "head":"Ocean Plastics",
                         "para":"We're proud to join hands with these ocean warriors in our mission to combat ocean plastic pollution. Our partnership enables us to proactively pull plastic from the ocean, championing a sustainable impact on marine environments. Together, we strive for a cleaner, healthier planet.",
-                        "org_cta_url":"#!",
-                        "org_cta_txt":"Seven Clean Seas"
+                        "org_cta_url":"https://www.plasticoceans.org.au/",
+                        "org_cta_txt":"Plastic Ocean"
                     }
                 },
                 "block3":{
                     "type": "zig-zag-org",
                     "settings": {
-                        "img":"shopify:\/\/shop_images\/sample_zig.jpg?v=1694098579",
+                        "img":"shopify:\/\/shop_images\/reforest.png?v=1697628149",
                         "head":"Tree Planting",
                         "para":"We wholeheartedly support Eden Reforestation's noble cause. By partnering with local communities, they bring about large-scale landscape restoration, job creation, and crucial protection for ecosystems. Together, we make strides in combating climate change and nurturing a sustainable future.",
-                        "org_cta_url":"#!",
-                        "org_cta_txt":"Eden Reforestation"
+                        "org_cta_url":"https://www.reforestnow.org.au/",
+                        "org_cta_txt":"ReForest Now"
                     }
                 }
             },

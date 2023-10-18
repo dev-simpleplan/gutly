@@ -959,7 +959,6 @@ div#shopify-section-header{
     letter-spacing: 0.84px;
     text-transform: uppercase;
     border-bottom: 1px solid #404040;
-    margin-left: -40px;
 }
 .annouce-wrap .free-shipping{
     margin-left: 20px;
@@ -1180,7 +1179,7 @@ footer{
 .indexBanner{
     background-color: #FFD12D;
     min-height: 800px;
-    height: 100vh;
+    height: calc(100vh - 100px);
     padding-top: 40px;
 }
 .index-banner{
@@ -1325,8 +1324,8 @@ footer{
     text-align: center;
 }
 .problem .prob-grid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: center;
     align-content: center;
     gap: 46px;
     overflow: hidden;
@@ -1339,6 +1338,7 @@ footer{
     transform: translateY(100%);
     opacity: 0;
     transition: 1s all ease;
+    flex: 1 1 25%;
 }
 .prob-grid.active .item{
     transform: translateY(0%);
@@ -3279,7 +3279,7 @@ section.subs-banner {
     font-weight: 500;
     line-height: 150%; /* 24px */
     letter-spacing: 0.16px;
-    border-bottom: 1px solid transparent;
+    text-decoration: underline;
     text-transform: uppercase;
     transition: 0.4s all ease;
     transform: translateY(100%);
@@ -3289,9 +3289,6 @@ section.subs-banner {
 .zig-zag-org .item.active .zzo-txt .org-cta a{
     transform: translateY(0%);
     opacity: 1;
-}
-.zig-zag-org .item .zzo-txt .org-cta a:hover{
-    border-bottom: 1px solid #686868;
 }
 .zig-zag-org .item .zzo-txt .para{
     margin-top: 48px;
@@ -3383,12 +3380,14 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     align-items: center;
     position: relative;
     overflow: hidden;
+    height: calc(100vh - 100px);
+    min-height: 800px;
 }
 .account-page::after{
     content: "";
     position: absolute;
     width: 10%;
-    height: 40%;
+    height: 50%;
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 100%;
@@ -3443,6 +3442,14 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     background: #F9F1E4;
     margin-top: 10px;
     padding: 14px 17px;
+}
+.account-page .form-con input::placeholder{
+    color: #B0AAA3;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.5px;
 }
 .account-page .form form{
     display: flex;
@@ -3539,8 +3546,7 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
 }
 .account-page .acc-img {
     width: 35%;
-    height: 0;
-    padding-top: 62%;
+    height: 100%;
     position: relative;
 }
 .account-page .acc-img img{
@@ -4190,7 +4196,7 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
 .founder-banner{
     background-color: #55B85F;
     padding-bottom: 40px;
-    height: 100vh;
+    height: calc(100vh - 100px);
     min-height: 640px;
     padding-top: 80px;
 }
@@ -5219,6 +5225,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .review-section .heading{
         width: 67%;
     }
+    .indexBanner{
+        min-height: 700px;
+    }
 }
 /* Max Width 1400px Ends */
 /* Max Width 1300px */
@@ -5401,7 +5410,10 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         font-size: 60px;
     }
     .problem .prob-grid{
-        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
+    }
+    .prob-grid .item{
+        flex: 1 1 45%;
     }
     .prob-grid .item .pb-img{
         width: 48px;
@@ -6133,7 +6145,6 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         gap: 16px;
     }
     .account-page .acc-img{
-        padding-top: 80%;
         width: 40%;
     }
     .contact-form-wrapper .cf-left .cf-para{
@@ -6306,6 +6317,16 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     }
     .paginate-section-blogs {
         padding-top: 110px;
+    }
+    .prob-grid .item {
+        flex: 1 1 35%;
+    }
+    .account-page{
+        height: 70vh;
+        min-height: 800px;
+    }
+    .account-page .form-con input::placeholder{
+        font-size: 14px;
     }
 }
 /* Max Width 991px Ends */
@@ -6960,6 +6981,10 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .no-if-no-but .right-txt .ninb-item:nth-child(even){
         margin-right: auto;
         margin-left: 0;
+    }
+    .account-page{
+        height: 100%;
+        min-height: 100%;
     }
 }
 /* Max Width 767px Ends */
