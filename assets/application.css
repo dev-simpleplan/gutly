@@ -3648,6 +3648,14 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     line-height: 24px; /* 171.429% */
     letter-spacing: 0.5px;
 }
+.contact-form-wrapper .cf-right .form-con input::placeholder, .contact-form-wrapper .cf-right .form-con textarea::placeholder{
+    color: #84817E;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: 0.5px;
+}
 .contact-form-wrapper .cf-right .form-con select{
     width: 100%;
     border-radius: 6px;
@@ -4172,12 +4180,8 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
 .what-you-eat-wrapper .wyew-wrap .mid-img{
     width: 33%;
     position: relative;
-    clip-path: inset(100% 0 0% 0);
     transition: 1s clip-path ease;
     transition-delay: 0.3s;
-}
-.what-you-eat-wrapper .wyew-wrap.active .mid-img{
-    clip-path: inset(0 0 0% 0);
 }
 .what-you-eat-wrapper .wyew-wrap .mid-img img{
     width: 100%;
@@ -5064,6 +5068,25 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         transform: scale(1);
     }
     
+}
+.blogs-template-share-icon{
+    width: 32px;
+    height: 32px;
+}
+.blogs-template-share-icon a{
+    width: 32px;
+    height: 32px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.blogs-template-share-icon a svg{
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    position: absolute;
+    inset: 0;
 }
 /* Article CSS Ends */
 

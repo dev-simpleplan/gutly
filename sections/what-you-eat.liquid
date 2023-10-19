@@ -1,5 +1,5 @@
 <section class="padt-90">
-  <div class="what-you-eat-wrapper">
+  <div class="what-you-eat-wrapper over-hid">
     <div class="heading center trans over-hid">
       <h2 class="trans-first">{{ section.settings.head }}</h2>
     </div>
@@ -124,6 +124,85 @@
     ]
   }
 {% endschema %}
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+  let mm = gsap.matchMedia();
+  mm.add("(min-width: 600px)", () => {
+      ScrollTrigger.defaults({
+      markers: true
+    });
+    const tl = gsap.timeline({
+      scrollTrigger: {
+      trigger: ".what-you-eat-wrapper",
+        
+        start: "-100% top",
+        end: "+=100",
+        scrub: 1,
+        pin: false
+      }
+    });
+    tl
+    .from(".wyew-wrap", {
+        y: "20%",
+        ease: "none" // No ease feels better with scrubed values
+      })
+    .to(".wyew-wrap", {
+      y: "0",
+      ease: "none" // No ease feels better with scrubed values
+    });
+  });
+  mm.add("(min-width: 992px)", () => {
+      ScrollTrigger.defaults({
+      markers: true
+    });
+    const tl = gsap.timeline({
+      scrollTrigger: {
+      trigger: ".what-you-eat-wrapper",
+        
+        start: "-25% top",
+        end: "90% 70%",
+        scrub: 1,
+        pin: false
+      }
+    });
+    tl
+    .from(".wyew-wrap", {
+        y: "20%",
+        ease: "none" // No ease feels better with scrubed values
+      })
+    .to(".wyew-wrap", {
+      y: "0",
+      ease: "none" // No ease feels better with scrubed values
+    });
+  });
+
+  mm.add("(min-width: 1300px)", () => {
+    ScrollTrigger.defaults({
+      markers: true
+    });
+    const tl = gsap.timeline({
+      scrollTrigger: {
+      trigger: ".what-you-eat-wrapper",
+        
+        start: "-22% top",
+        end: "90% 70%",
+        scrub: 1,
+        pin: false
+      }
+    });
+    tl
+    .from(".wyew-wrap", {
+        y: "20%",
+        ease: "none" // No ease feels better with scrubed values
+      })
+    .to(".wyew-wrap", {
+      y: "0",
+      ease: "none" // No ease feels better with scrubed values
+    });
+  });
+  
+</script>
 
 <script>
   $('.owl-carousel').owlCarousel({
