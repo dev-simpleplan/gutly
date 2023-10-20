@@ -7484,6 +7484,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         border-bottom: 1px solid #222;
         display: inline;
     }
+    .blogs-rest-container-wrap{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
 /* Max Width 767px Ends */
 /* Max width 500px */
