@@ -20,7 +20,7 @@
       {% endfor %}
     </div>
   </section>
-  <section class="parallax-slides-mobile parallax-swiper">
+  <section class="parallax-slides-mobile parallax-swiper" id="benefits">
     <div class="parallax-slides-mobile-wrap swiper-wrapper">
       {% for block in section.blocks %}
         <div class="parallax-slide-mob swiper-slide">
@@ -106,7 +106,7 @@
     }
   });
 
-  new ScrollMagic.Scene({triggerElement: "#benefits"}).setClassToggle("#benefit", "active") // add class toggle.addTo(controller1);
+  new ScrollMagic.Scene({triggerElement: "#benefits"}).setClassToggle("#benefit", "active") .addTo(controller1);
 </script>
 {% schema %}
   {

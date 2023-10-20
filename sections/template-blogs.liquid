@@ -218,105 +218,91 @@
   {% endpaginate %}
 </section>
 
-{% comment %} {% for article in blog.articles %}
-
-<div class="blog">
-<h1>{{ article.title }}</h1>
-</div>
-{% endfor %} {% endcomment %}<script>
+<script>
   $(document).ready(function() {
+  // Initialize a global variable to track the current page
+  var currentPage = {% paginate blog.articles by 5 %}
+    {{ paginate.current_page | default: 1 }}
+  {% endpaginate %};;
+  var totalPages = {% paginate blog.articles by 5 %}
+    {{ paginate.pages | default: 1 }}
+  {% endpaginate %};
 
-// Initialize a global variable to track the current page
-    var currentPage = {% paginate blog.articles by 5 %}
-      {{ paginate.current_page | default: 1 }}
-    {% endpaginate %};;
-    var totalPages = {% paginate blog.articles by 5 %}
-      {{ paginate.pages | default: 1 }}
-    {% endpaginate %};
+  // Variable to store the scroll position relative to the .pagination-section element
+  var scrollOffset = 0;
 
-// Function to update the content using AJAX
-    function updateContent(url) {
-      $.ajax({
-        url: url,
-        dataType: 'html',
-        success: function(data) {
+  // Function to update the content using AJAX
+  function updateContent(url) {
+    // Record the current scroll position
+    scrollOffset = $(window).scrollTop() - $(".pagination-section").offset().top;
 
-// Replace the content of the tab grid with the new data
-          $('#blog-paginate').html($(data).find('#blog-paginate').html());
+    $.ajax({
+      url: url,
+      dataType: 'html',
+      success: function(data) {
+        // Replace the content of the tab grid with the new data
+        $('#blog-paginate').html($(data).find('#blog-paginate').html());
 
-// Update the URL without reloading the page
-          history.pushState(null, null, url);
+        // Restore the scroll position
+        var newSectionTop = $(".pagination-section").offset().top;
+        $(window).scrollTop(newSectionTop + scrollOffset);
 
-// Update the previous and next button URLs and visibility
-          updatePrevNextButtons(url);
+        // Update the URL without reloading the page
+        history.pushState(null, null, url);
 
-// Add the active class to the current page anchor
-          $('.page-link').removeClass('active');
-          $('.page-link[data-current="' + currentPage + '"]').addClass('active');
-        }
-      });
-    }
+        // Update the previous and next button URLs and visibility
+        updatePrevNextButtons(url);
 
-// Function to update previous and next button URLs and visibility
-    function updatePrevNextButtons(url) {
-
-// Calculate the new page number based on the URL
-      var parts = url.split('?page=');
-      if (parts.length === 2) {
-        currentPage = parseInt(parts[1]);
-      } else {
-        currentPage = 1;
-      }
-
-// Update the URLs for previous and next buttons
-      if (currentPage > 1) {
-        $('.prev-page').attr('href', parts[0] + '?page=' + (
-          currentPage - 1
-        ));
-        $('.prev-page').show(); // Show the previous button
-      } else {
-        $('.prev-page').removeAttr('href');
-        $('.prev-page').hide(); // Hide the previous button
-      }if (currentPage < totalPages) {
-        $('.next-page').attr('href', parts[0] + '?page=' + (
-          currentPage + 1
-        ));
-        $('.next-page').show(); // Show the next button
-      } else {
-        $('.next-page').removeAttr('href');
-        $('.next-page').hide(); // Hide the next button
-      }
-    }
-
-// Click event for previous and next buttons
-    $(document).on('click', '.prev-page, .next-page', function(event) {
-      event.preventDefault();
-      var url = $(this).attr('href');
-      if (url) {
-        updateContent(url);
+        // Add the active class to the current page anchor
+        $('.page-link').removeClass('active');
+        $('.page-link[data-current="' + currentPage + '"]').addClass('active');
       }
     });
+  }
 
-// Click event for page links
-    $(document).on('click', '.page-link', function(event) {
-      event.preventDefault();
-      var pageUrl = $(this).attr('href');
-      if (pageUrl) {
-        updateContent(pageUrl);
-      }
-    });
-
-// Initially, check and hide the previous button if needed
-    if (currentPage === 1) {
-      $('.prev-page').hide();
+  // Function to update previous and next button URLs and visibility
+  function updatePrevNextButtons(url) {
+    // Calculate the new page number based on the URL
+    var parts = url.split('?page=');
+    if (parts.length === 2) {
+      currentPage = parseInt(parts[1]);
+    } else {
+      currentPage = 1;
     }
 
-// Initially, hide the next button on the last page
-    if (currentPage === totalPages) {
-      $('.next-page').hide();
-    }
+    // Rest of your existing code for updating previous and next buttons...
+  }
 
-// Add the active class to the current page anchor initially
-    $('.page-link[data-current="' + currentPage + '"]').addClass('active');
+  // Click event for previous and next buttons
+  $(document).on('click', '.prev-page, .next-page', function(event) {
+    event.preventDefault();
+    var url = $(this).attr('href');
+    if (url) {
+      updateContent(url);
+    }
   });
+
+  // Click event for page links
+  $(document).on('click', '.page-link', function(event) {
+    event.preventDefault();
+    var pageUrl = $(this).attr('href');
+    if (pageUrl) {
+      updateContent(pageUrl);
+    }
+  });
+
+  // Initially, check and hide the previous button if needed
+  if (currentPage === 1) {
+    $('.prev-page').hide();
+  }
+
+  // Initially, hide the next button on the last page
+  if (currentPage === totalPages) {
+    $('.next-page').hide();
+  }
+
+  // Add the active class to the current page anchor initially
+  $('.page-link[data-current="' + currentPage + '"]').addClass('active');
+});
+
 </script>

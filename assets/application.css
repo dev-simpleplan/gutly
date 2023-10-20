@@ -7487,6 +7487,14 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .blogs-rest-container-wrap{
         grid-template-columns: repeat(1,1fr);
     }
+    .parallax-slide-body{
+        min-height: 100px;
+    }
+    .parallax-slide-head{
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+    }
 }
 /* Max Width 767px Ends */
 /* Max width 500px */

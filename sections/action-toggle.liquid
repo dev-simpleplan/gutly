@@ -24,11 +24,10 @@
 
   $(document).ready(function() {
     if (screenWidth < 768) {
-      top = "55px"; // Set the offset for screens less than 768px wide
+      $(".action-toggle").parent(".shopify-section").css({"position": "sticky", "top": "50px", "z-index": "989"});
     } else {
-      top = "60px";
+      $(".action-toggle").parent(".shopify-section").css({"position": "sticky", "top": "58px", "z-index": "989"});
     }
-    $(".action-toggle").parent(".shopify-section").css({"position": "sticky", "top": "60px", "z-index": "989"});
   });
 </script>
 

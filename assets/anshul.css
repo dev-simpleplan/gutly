@@ -2808,8 +2808,9 @@ section.recipe-inner-banner{
         height: 60px;
     }
     .gut-goodness .gg-blocks{
-        flex-wrap: wrap;
-        gap: 35px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 25px;
     }
     .gutly-way .gw-left{
         padding: 30px 20px;
@@ -3048,6 +3049,11 @@ section.recipe-inner-banner{
     }
     .recipe-slides .para p{
         font-size: 14px;
+    }
+    .back-top-top{
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
     }
 }
 @media(max-width: 500px){
