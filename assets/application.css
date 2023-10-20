@@ -7515,6 +7515,10 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         text-align: center;
         margin-top: 52px;
     }
+    .video-slider .vs-txt{
+        opacity: 1;
+        transform: translateY(0%) rotate(-12.143deg);
+    }
 }
 /* Max Width 767px Ends */
 /* Max width 500px */
