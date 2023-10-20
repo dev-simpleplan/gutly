@@ -3091,6 +3091,12 @@ section.recipe-inner-banner{
     .click-to-section {
         width: 240vw;
     }
+    .my-cart__items .cart-prod-wrap:first-child {
+        padding: 60px 0;
+    }
+    .my-cart .cart-remove-confirm {
+        padding: 20px 15px;
+    }
 }
 /* Max Width 767px Ends */
 
