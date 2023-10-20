@@ -176,21 +176,24 @@
           <div class="shop-left-product">
             {% for block in section.blocks %}
               <div class="slp-item">
-                <div class="slp-img">
-                  <img src="{{ block.settings.navProduct.metafields.custom.nav_image }}" alt="">
-                </div>
-                <div class="slp-title">
-                  <h6>{{ block.settings.navProduct.title }}</h6>
-                </div>
-                <div class="slp-cta">
-                  <a href="{{ block.settings.navProduct.url }}">Buy Now</a>
-                </div>
+                <a href="{{ block.settings.navProduct.url }}">
+                    <div class="slp-img">
+                    <img src="{{ block.settings.navProduct.metafields.custom.nav_image }}" alt="">
+                  </div>
+                  <div class="slp-title">
+                    <h6>{{ block.settings.navProduct.title }}</h6>
+                  </div>
+                  <div class="slp-desp">
+                    <p>Buy Now</p>
+                  </div>
+                </a>
               </div>
             {% endfor %}
           </div>
+          <h5>Not Sure? <br> Try Our Sample Pack</h5>
           <div class="mob-sample-prod">
             <div class="mcp-wrap">
-              <a href="#!">
+              <a href="{{ section.settings.sampleProduct }}">
                 <div class="srspw-img">
                   <img
                     src="{{ section.settings.sampleImage | img_url: "master" }}"
@@ -201,7 +204,7 @@
               </a>
             </div>
             <div class="mcp-wrap">
-              <a href="#!">
+              <a href="{{ section.settings.sampleProduct1 }}">
                 <div class="srspw-img">
                   <img
                     src="{{ section.settings.sampleImage1 | img_url: "master" }}"
@@ -261,7 +264,7 @@
         "type": "text",
         "id": "sampleTitle1",
         "label": "Sample Title",
-        "default": "Hemp sample pack (25g)"
+        "default": "Vegan sample pack (25g)"
       }, {
         "type": "text",
         "id": "sampleProduct1",

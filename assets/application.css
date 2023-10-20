@@ -897,7 +897,7 @@ div#shopify-section-header.backdrop{
     align-items: center;
     justify-content: center;
     gap: 30px;
-    margin-top: 52px;
+    margin-top: 25px;
 }
 .mcp-wrap{
     width: 33.33%;
@@ -6023,7 +6023,7 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .srs-prod-con{
         display: flex;
         align-items: flex-start;
-        justify-content: space-between;
+        justify-content: center;
         gap: 60px;
     }
     .shop-right-sample .srs-head {
@@ -7494,6 +7494,27 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         min-height: 70px;
         display: flex;
         align-items: center;
+    }
+    .slp-item .slp-title h6{
+        max-width: 13ch;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .slp-item .slp-desp p{
+        color: #404040;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 144%; /* 17.28px */
+        letter-spacing: 0.72px;
+        text-transform: uppercase;
+        border-bottom: 1px solid #000;
+        display: inline;
+    }
+    .mhw-con-inner h5{
+        text-align: center;
+        margin-top: 52px;
     }
 }
 /* Max Width 767px Ends */
