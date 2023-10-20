@@ -128,79 +128,35 @@
 <script>
   gsap.registerPlugin(ScrollTrigger);
   let mm = gsap.matchMedia();
-  mm.add("(min-width: 600px)", () => {
-      ScrollTrigger.defaults({
-      markers: true
-    });
-    const tl = gsap.timeline({
-      scrollTrigger: {
-      trigger: ".what-you-eat-wrapper",
-        
-        start: "-100% top",
-        end: "+=100",
-        scrub: 1,
-        pin: false
-      }
-    });
-    tl
-    .from(".wyew-wrap", {
-        y: "20%",
-        ease: "none" // No ease feels better with scrubed values
-      })
-    .to(".wyew-wrap", {
-      y: "0",
-      ease: "none" // No ease feels better with scrubed values
-    });
-  });
-  mm.add("(min-width: 992px)", () => {
-      ScrollTrigger.defaults({
-      markers: true
-    });
-    const tl = gsap.timeline({
-      scrollTrigger: {
-      trigger: ".what-you-eat-wrapper",
-        
-        start: "-25% top",
-        end: "90% 70%",
-        scrub: 1,
-        pin: false
-      }
-    });
-    tl
-    .from(".wyew-wrap", {
-        y: "20%",
-        ease: "none" // No ease feels better with scrubed values
-      })
-    .to(".wyew-wrap", {
-      y: "0",
-      ease: "none" // No ease feels better with scrubed values
-    });
-  });
-
-  mm.add("(min-width: 1300px)", () => {
+  
+ mm.add("(min-width: 1301px)", () => {
     ScrollTrigger.defaults({
-      markers: true
-    });
-    const tl = gsap.timeline({
-      scrollTrigger: {
-      trigger: ".what-you-eat-wrapper",
-        
-        start: "-22% top",
+        markers: false
+      });
+      gsap.set(".wyew-wrap", {yPercent: 15}),
+        gsap.to(".wyew-wrap", {yPercent: 0, scrollTrigger: {
+        trigger: ".what-you-eat-wrapper",
+        start: "-35% top",
         end: "90% 70%",
-        scrub: 1,
-        pin: false
-      }
-    });
-    tl
-    .from(".wyew-wrap", {
-        y: "20%",
-        ease: "none" // No ease feels better with scrubed values
-      })
-    .to(".wyew-wrap", {
-      y: "0",
-      ease: "none" // No ease feels better with scrubed values
-    });
-  });
+        pin:false,
+        scrub: 1
+      
+      }})
+   });
+   mm.add("(min-width: 992px and max-width: 1300px)" , () => {
+    ScrollTrigger.defaults({
+        markers: false
+      });
+      gsap.set(".wyew-wrap", {yPercent: 15}),
+        gsap.to(".wyew-wrap", {yPercent: 0, scrollTrigger: {
+        trigger: ".what-you-eat-wrapper",
+        start: "-40% top",
+        end: "90% 70%",
+        pin:false,
+        scrub: 1
+      
+      }})
+   });
   
 </script>
 
@@ -208,11 +164,17 @@
   $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 0,
-    nav: false,
+    touchDrag: false,
+    mouseDrag: false,
+    nav: true,
     dots: false,
     autoplay: true,
     autoplayTimeout: 8000,
     autoplayHoverPause: false,
+    navText: [
+        	"<img src='https://cdn.shopify.com/s/files/1/0817/8067/0742/files/arrow-right_6.svg?v=1695971957'>",
+        	"<img src='https://cdn.shopify.com/s/files/1/0817/8067/0742/files/arrow-right_5.svg?v=1695971952'>"
+    		],
     animateOut: 'fadeOut',
     responsiveClass: true,
     responsive: {

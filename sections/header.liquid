@@ -13,7 +13,8 @@
               <div class="shop-left-product">
                 {% for block in section.blocks %}
                   <div class="slp-item">
-                    <div class="slp-img">
+                    <a href="{{ block.settings.navProduct.url }}">
+                      <div class="slp-img">
                       <img src="{{ block.settings.navProduct.metafields.custom.nav_image }}" alt="">
                     </div>
                     <div class="slp-title">
@@ -22,9 +23,7 @@
                     <div class="slp-desp">
                       <p>{{ block.settings.navProduct.metafields.custom.description_nav }}</p>
                     </div>
-                    <div class="slp-cta">
-                      <a href="{{ block.settings.navProduct.url }}">Buy Now</a>
-                    </div>
+                    </a>
                   </div>
                 {% endfor %}
               </div>
@@ -34,26 +33,24 @@
                 </div>
                 <div class="srs-prod-con">
                   <div class="srs-prod-wrap">
-                    <div class="srspw-img">
+                    <a href="{{ section.settings.sampleProduct }}">
+                      <div class="srspw-img">
                       <img src="{{ section.settings.sampleImage | img_url: "master" }}" alt="">
                     </div>
                     <div class="srspw-txt">
                       <p>{{ section.settings.sampleTitle }}</p>
-                      <div class="srspwt-cta">
-                        <a href="{{ section.settings.sampleProduct }}">Try Now</a>
-                      </div>
                     </div>
+                    </a>
                   </div>
                   <div class="srs-prod-wrap">
-                    <div class="srspw-img">
-                      <img src="{{ section.settings.sampleImage1 | img_url: "master" }}" alt="">
-                    </div>
-                    <div class="srspw-txt">
-                      <p>{{ section.settings.sampleTitle1 }}</p>
-                      <div class="srspwt-cta">
-                        <a href="{{ section.settings.sampleProduct1 }}">Try Now</a>
-                      </div>
-                    </div>
+                    <a href="{{ section.settings.sampleProduct1 }}">
+                        <div class="srspw-img">
+                          <img src="{{ section.settings.sampleImage1 | img_url: "master" }}" alt="">
+                        </div>
+                        <div class="srspw-txt">
+                          <p>{{ section.settings.sampleTitle1 }}</p>
+                        </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -278,7 +275,7 @@
         "type": "text",
         "id": "sampleTitle2",
         "label": "Sample Title",
-        "default": "Hemp sample pack (25g)"
+        "default": "Vegan sample pack (25g)"
       }, {
         "type": "text",
         "id": "sampleProduct2",

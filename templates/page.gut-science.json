@@ -65,36 +65,36 @@
                 "left1":{
                     "type": "left-side",
                     "settings": {
-                        "num":"2-7<span>%</span>",
-                        "txt":"flavour"
+                        "num":"71-76<span>%</span>",
+                        "txt":"protein source"
                     }
                 },
                 "left2":{
                     "type": "left-side",
                     "settings": {
-                        "num":"71-76<span>%</span>",
-                        "txt":"protein source"
+                        "num":"12-13<span>%</span>",
+                        "txt":"milk"
                     }
                 },
                 "right1":{
-                    "type": "right-side",
-                    "settings": {
-                        "num":"<1.9<span>%</span>",
-                        "txt":"Maltodextrin"
-                    }
-                },
-                "right2":{
                     "type": "right-side",
                     "settings": {
                         "num":"7-8<span>%</span>",
                         "txt":"sweeteners"
                     }
                 },
+                "right2":{
+                    "type": "right-side",
+                    "settings": {
+                        "num":"2-7<span>%</span>",
+                        "txt":"flavour"
+                    }
+                },
                 "right3":{
                     "type": "right-side",
                     "settings": {
-                        "num":"12-13<span>%</span>",
-                        "txt":"milk"
+                        "num":"<1.9<span>%</span>",
+                        "txt":"Maltodextrin"
                     }
                 }
             },

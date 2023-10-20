@@ -1,0 +1,149 @@
+<section class="cart-section padb-150">
+    <div class="container">
+        <div class="cart-heading">
+            <h3 class="head-text">{{ section.settings.cart-head }}</h3>
+        </div>
+        <div class="cart-con">
+            {% if cart.item_count > 0 %}
+                <div class="cart-info">
+                    <form action="{{ routes.cart_url }}" method="POST" novalidate>
+                    <div class="cart-txt">
+                        {% for item in cart.items %}
+                            <div class="cart-txt-wrapper">
+                                <div class="item-img">
+                                <a href="{{ item.url }}">
+                                    {% if item.image %}
+                                        <img src="{{ item.image | img_url: 'master' }}" alt="{{ item.title | escape }}" class="custom-img">
+                                    {% else %}
+                                        {{ 'product-1' | placeholder_svg_tag }}
+                                    {% endif %}
+                                </a>
+                            </div>
+                            <div class="item-desp">
+                                <p class="item-price">{{ item.line_price | money }}/unit</p>
+                                <div class="pro-head-del">
+                                    <a href="{{ item.url }}" class="pro-name">{{ item.product.title | truncatewords:5 }}</a>
+                                    <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0">{% render 'delete-icon' %}</a>
+                                </div>
+                                <div class="cart-page-variant">
+                                    <p>{{ item.variant.title }}</p>
+                                </div>
+                                <div class="quantity">
+                                    <div class="quan">
+                                        <label for="updates_{{ forloop.index }}">Quantity</label>
+                                        <input type="number" name="updates[]" class="update-quantity" id="updates_{{ forloop.index }}" value="{{ item.quantity }}" min=1>
+                                    </div>
+                                </div>
+                                <p class="small-para-txt spt-fw-400">
+                                    {{ item.product.description | truncatewords:25 }}
+                                </p>
+                            </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <div class="summary-head">
+                        <h5 class="head-text">{{ section.settings.summary }}</h5>
+                    </div>
+                    <div class="discount">
+                        <p class="summary-txt">Discount / referral code</p>
+                    </div>
+                    <div class="total-money">
+                        <div class="tm">
+                            <p class="summary-txt">Subtotal</p>
+                            <p class="summary-txt">{{ cart.items_subtotal_price | money }}</p>
+                        </div>
+                        <div class="tm">
+                            <p class="summary-txt">Shipping</p>
+                            <p class="summary-txt">Calculated at checkout</p>
+                        </div>
+                        <div class="tm">
+                            <p class="summary-txt">Discount applied</p>
+                            <p class="summary-txt">{{ cart.total_discounts | money }}</p>
+                        </div>
+                    </div>
+                    <div class="checkout">
+                        <div class="tm">
+                            <p class="total">Total</p>
+                            <p class="total">{{ cart.total_price | money }}</p>
+                        </div>
+                        <div class="checkout-button">
+                            <button name="checkout" type="submit" class="primary-button black-yellow"><div class="button-con"><span class="box"></span>Checkout<span class="box"></span></div></button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            {% else %}
+                <div class="cart-empty">
+                    <h1 class="head-text">{{ section.settings.cart-empty-head }}</h1>
+                    <a href="{{ routes.all_products_collection_url }}" class="plain-cta"><div class="button-plain-con"><span class="box"></span>{{ section.settings.cart-empty-cta }}<span class="box"></span></div></a>
+                </div>        
+            {% endif %}
+        </div>
+        <p class="small-para-txt spt-fw-400 refund-rr">
+            To learn about our refund or exchange policy <a href="{{ section.settings.static.url }}" class="click-here">click here</a>
+        </p>
+    </div>
+</section>
+<script>
+    $(document).ready(function() {
+        $('.minus').click(function () {
+            var $input = $(this).parent().find('input');
+            var count = parseInt($input.val()) - 1;
+            count = count < 1 ? 1 : count;
+            $input.val(count);
+            $input.change();
+            return false;
+        });
+        $('.plus').click(function () {
+            var $input = $(this).parent().find('input');
+            $input.val(parseInt($input.val()) + 1);
+            $input.change();
+            return false;
+        });
+    });
+</script>
+
+{% schema %}
+    {
+        "name":"Cart Section",
+        "settings":[
+            {
+                "type":"text",
+                "id":"cart-head",
+                "label":"Section Heading",
+                "default":"Your cart"
+            },
+            {
+                "type":"text",
+                "id":"cart-para",
+                "label":"Section Paragraph",
+                "default":"With our express shipping, your products should be delivered to you within 3-7 days."
+            },
+            {
+                "type":"text",
+                "id":"cart-empty-head",
+                "label":"Heading when Cart is Empty",
+                "default":"Cart Empty"
+            },
+            {
+                "type":"text",
+                "id":"cart-empty-cta",
+                "label":"Empty Cart Cta link",
+                "default":"Add Product"
+            },
+            {
+                "type":"text",
+                "id":"summary",
+                "label":"Summary Heading",
+                "default":"summary"
+            },
+            {
+                "type": "page",
+                "id": "static",
+                "label": "Return Policy Page"
+            }
+        ]
+    }
+{% endschema %}

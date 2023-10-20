@@ -31,10 +31,61 @@
           </div>
         {% endfor %}
       </div>
-
+      <div class="ing-mob-slider">
+        <div class="owl-carousel owl-theme">
+          {% for block in section.blocks %}
+            <div class="item">
+              <div class="ing-grid-con">
+                <div class="ing-h-con">
+                  <p class="small ing-h">
+                    {{ block.settings.head }}
+                  </p>
+                </div>
+                <div class="ing-sh-con">
+                  <p class="ing-sh">
+                    {{ block.settings.subhead }}
+                  </p>
+                </div>
+                <div class="ing-p-con">
+                  <p class="small ing-p">
+                    {{ block.settings.para }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  $('.ing-mob-slider .owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    items: 1,
+    nav: true,
+    dots: false,
+    navText: [
+        	"<img src='https://cdn.shopify.com/s/files/1/0817/8067/0742/files/arrow-right_6.svg?v=1695971957'>",
+        	"<img src='https://cdn.shopify.com/s/files/1/0817/8067/0742/files/arrow-right_5.svg?v=1695971952'>"
+    		],
+    animateOut: 'fadeOut',
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:1,
+        },
+        1000:{
+            items:1,
+        }
+    }
+})
+</script>
 
 {% schema %}
   {
