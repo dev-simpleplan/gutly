@@ -153,7 +153,11 @@
   </head>
   <body>
     <main role="main">
-      {% section 'loader' %}
+      {% if template == 'index' %}
+        {% section 'loader' %}
+      {% else %}
+        {% section 'loader-2' %}
+      {% endif %}
       {% section 'announcement-bar' %}
       {% section 'header' %}
       {{ content_for_layout }}

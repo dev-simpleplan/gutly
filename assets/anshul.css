@@ -529,6 +529,13 @@ body.cart-open::after{
 .my-cart .crc-button{
     margin-top: 21px;
 }
+body.js-ajax-cart-processing .my-cart{
+    background: url('https://cdn.shopify.com/s/files/1/0817/8067/0742/files/1496.gif?v=1697795068');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 0;
+}
 /* Ajax Cart Ends */
 
 /* Accounts and Addresses */
