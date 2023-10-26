@@ -1629,6 +1629,8 @@ footer{
     letter-spacing: 1.26px;
     text-transform: uppercase;
     color: #222;
+    border-bottom: 1px solid #222;
+    display: inline;
 }
 .ninb-para p{
     color: #686868;
