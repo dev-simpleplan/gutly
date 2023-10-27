@@ -3366,6 +3366,10 @@ section.subs-banner {
 .part-ticker .infiniteslide{
     height: 100%;
 }
+.part-ticker .infiniteslide .item{
+    max-width: 100%;
+    max-height: 40px;
+}
 .part-ticker .infiniteslide img{
     width: 100%;
     height: auto;
