@@ -98,10 +98,9 @@
         <div class="cart-empty">
           <h1 class="head-text">{{ section.settings.cart-empty-head }}</h1>
           <a href="{{ shop.url }}/#grab-section" class="primary-button black-green">
-            <div class="button-plain-con">
-              <span class="box"></span>
-              {{ section.settings.cart-empty-cta }}<span class="box"></span>
-            </div>
+
+            {{ section.settings.cart-empty-cta }}
+
           </a>
         </div>
       {% endif %}
