@@ -3366,12 +3366,13 @@ section.subs-banner {
 .part-ticker .infiniteslide{
     height: 100%;
 }
+.part-ticker .infiniteslide .item{
+    padding: 10px 0;
+}
 .part-ticker .infiniteslide img{
     width: 100%;
     height: auto;
-    max-height: 30px;
-    padding: 10px 0;
-    
+    max-height: 25px;
     object-fit: cover;
 }
 .partner-ticker .partner-wrapper{
