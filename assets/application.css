@@ -3374,7 +3374,7 @@ section.subs-banner {
     width: 100%;
     height: auto;
     max-height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 .partner-ticker .partner-wrapper{
     position: relative;
