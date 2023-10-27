@@ -3371,6 +3371,7 @@ section.subs-banner {
     height: auto;
     max-height: 30px;
     padding: 10px 0;
+    
     object-fit: cover;
 }
 .partner-ticker .partner-wrapper{
