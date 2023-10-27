@@ -26,7 +26,7 @@
                     </a>
                   </div>
                   <div class="item-desp">
-                    <p class="item-price">{{ item.line_price | money }}/unit</p>
+                    <p class="item-price">{{ item.price | money }}/unit</p>
                     <div class="pro-head-del">
                       <a href="{{ item.url }}" class="pro-name">{{ item.product.title | truncatewords: 5 }}</a>
                       <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0">{% render 'delete-icon' %}</a>
