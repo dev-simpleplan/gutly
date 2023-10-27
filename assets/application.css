@@ -637,7 +637,7 @@ div#shopify-section-header.backdrop{
 .slp-item .slp-cta{
     margin-top: 24px;
 }
-.slp-item .slp-cta a{
+.slp-item .slp-cta{
     color: #404040;
     text-align: center;
     font-size: 14px;
@@ -6729,7 +6729,7 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
     .shop-left-product .slp-item{
         text-align: center;
     }
-    .slp-item .slp-cta a{
+    .slp-item .slp-cta{
         font-size: 12px;
     }
     .slp-item .slp-cta{

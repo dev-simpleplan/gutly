@@ -15,14 +15,14 @@
                   <div class="slp-item">
                     <a href="{{ block.settings.navProduct.url }}">
                       <div class="slp-img">
-                      <img src="{{ block.settings.navProduct.metafields.custom.nav_image }}" alt="">
-                    </div>
-                    <div class="slp-title">
-                      <h6>{{ block.settings.navProduct.title }}</h6>
-                    </div>
-                    <div class="slp-desp">
-                      <p>{{ block.settings.navProduct.metafields.custom.description_nav }}</p>
-                    </div>
+                        <img src="{{ block.settings.navProduct.metafields.custom.nav_image }}" alt="">
+                      </div>
+                      <div class="slp-title">
+                        <h6>{{ block.settings.navProduct.title }}</h6>
+                      </div>
+                      <div class="slp-desp">
+                        <p>{{ block.settings.navProduct.metafields.custom.description_nav }}</p>
+                      </div>
                     </a>
                   </div>
                 {% endfor %}
@@ -35,21 +35,21 @@
                   <div class="srs-prod-wrap">
                     <a href="{{ section.settings.sampleProduct }}">
                       <div class="srspw-img">
-                      <img src="{{ section.settings.sampleImage | img_url: "master" }}" alt="">
-                    </div>
-                    <div class="srspw-txt">
-                      <p>{{ section.settings.sampleTitle }}</p>
-                    </div>
+                        <img src="{{ section.settings.sampleImage | img_url: "master" }}" alt="">
+                      </div>
+                      <div class="srspw-txt">
+                        <p>{{ section.settings.sampleTitle }}</p>
+                      </div>
                     </a>
                   </div>
                   <div class="srs-prod-wrap">
                     <a href="{{ section.settings.sampleProduct1 }}">
-                        <div class="srspw-img">
-                          <img src="{{ section.settings.sampleImage1 | img_url: "master" }}" alt="">
-                        </div>
-                        <div class="srspw-txt">
-                          <p>{{ section.settings.sampleTitle1 }}</p>
-                        </div>
+                      <div class="srspw-img">
+                        <img src="{{ section.settings.sampleImage1 | img_url: "master" }}" alt="">
+                      </div>
+                      <div class="srspw-txt">
+                        <p>{{ section.settings.sampleTitle1 }}</p>
+                      </div>
                     </a>
                   </div>
                 </div>
@@ -177,7 +177,7 @@
             {% for block in section.blocks %}
               <div class="slp-item">
                 <a href="{{ block.settings.navProduct.url }}">
-                    <div class="slp-img">
+                  <div class="slp-img">
                     <img src="{{ block.settings.navProduct.metafields.custom.nav_image }}" alt="">
                   </div>
                   <div class="slp-title">
@@ -185,6 +185,9 @@
                   </div>
                   <div class="slp-desp">
                     <p>Buy Now</p>
+                  </div>
+                  <div class="slp-cta">
+                    buy now
                   </div>
                 </a>
               </div>
