@@ -632,6 +632,7 @@ div#shopify-section-header.backdrop{
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 18px */
+    
     letter-spacing: 0.12px;
 }
 .slp-item .slp-cta{
