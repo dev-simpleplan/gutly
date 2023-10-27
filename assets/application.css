@@ -714,6 +714,7 @@ div#shopify-section-header.backdrop{
     text-transform: uppercase;
     border-bottom: 1px solid #404040;
     display: inline-flex;
+    max-width: 68px;
 }
 .shop-left-product .slp-item .slp-img{
     overflow: hidden;
