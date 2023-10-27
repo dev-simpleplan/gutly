@@ -632,7 +632,7 @@ div#shopify-section-header.backdrop{
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 18px */
-    
+
     letter-spacing: 0.12px;
 }
 .slp-item .slp-cta{
@@ -648,6 +648,7 @@ div#shopify-section-header.backdrop{
     letter-spacing: 0.84px;
     text-transform: uppercase;
     border-bottom: 1px solid #000;
+    display: inline-flex;
 }
 .shop-right-sample .srs-head {
     margin-bottom: 24px;
