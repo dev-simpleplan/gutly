@@ -1,190 +1,219 @@
 {
-    "sections": {
-        "banner": {
-            "type": "founder-banner",
-            "settings": {
-                "img":"shopify:\/\/shop_images\/Rectangle_24376.png?v=1693315294",
-                "image_tag":"Planet Friendly",
-                "head":"Crafted for planet",
-                "subhead":"Unleashing a revolution",
-                "para":"The founder's journey began as a sustainability engineer, fueled by a strong environmental commitment. This dedication has steered Gutly to embrace a planet-conscious ethos, undertaking a mission to protect our world for future generations."
-            }
-          },
-          "road-to-hp":{
-            "type": "road-to-hp-white",
-            "settings": {
-                "head":"Sustainability is embedded<br> in every pack we create",
-                "bod":"From sourcing ethically to using recyclable materials, we prioritize the planet's well-being in every step of our journey. Together, we can make a positive impact on the environment, one pack at a time.",
-                "color_bg":"#FDF9F3",
-                "body_enable": true
-            },
-            "blocks": {
-                "hp1":{
-                    "type": "road-to-hp-white",
-                    "settings": {
-                        "bgImg":"shopify:\/\/shop_images\/svg-found3.svg",
-                        "smallHead":"Recyclable",
-                        "bigHead":"Packaging",
-                        "mainHead":"Eco-friendly",
-                        "mainPara":"Our packaging is 100% recyclable. We've even ditched the plastic scoop, reducing plastic usage by 10%."
-                    }
-                },
-                "hp2":{
-                    "type": "road-to-hp-white",
-                    "settings": {
-                        "bgImg":"shopify:\/\/shop_images\/svg-found2.svg",
-                        "smallHead":"Green",
-                        "bigHead":"Shipping",
-                        "mainHead":"Carbon Neutral",
-                        "mainPara":"Partnering exclusively with Australia Post, a carbon-neutral carrier, ensures every order contributes to a cleaner, greener world."
-                    }
-                },
-                "hp3":{
-                    "type": "road-to-hp-white",
-                    "settings": {
-                        "bgImg":"shopify:\/\/shop_images\/svg-found1.svg",
-                        "smallHead":"Purchasing",
-                        "bigHead":"loving",
-                        "mainHead":"Ethically sourced",
-                        "mainPara":"Every penny spent supports a healthy economy and respects others’ lives. We make sure your choices leave a positive impact!"
-                    }
-                }
-            },
-            "block_order": ["hp1", "hp2", "hp3"]
-        },
-        "zig-zag":{
-            "type": "zig-zag-org",
-            "blocks": {
-                "block1":{
-                    "type": "zig-zag-org",
-                    "settings": {
-                        "img":"shopify:\/\/shop_images\/oz-harvest.jpg?v=1697628149",
-                        "head":"Meal Donations",
-                        "para":"Together with Mary's Meals, we passionately provide nutritious school meals to children in the world's most impoverished regions. These meals not only feed hungry minds but also ignite the flame of hope for a brighter future. Our mission reaches children in Africa, Asia, Latin America, and the Caribbean, making a life-changing impact in their lives.",
-                        "org_cta_url":"https://www.ozharvest.org/",
-                        "org_cta_txt":"Oz Harvest"
-                    }
-                },
-                "block2":{
-                    "type": "zig-zag-org",
-                    "settings": {
-                        "img":"shopify:\/\/shop_images\/ocean-plastic.png?v=1697628150",
-                        "head":"Ocean Plastics",
-                        "para":"We're proud to join hands with these ocean warriors in our mission to combat ocean plastic pollution. Our partnership enables us to proactively pull plastic from the ocean, championing a sustainable impact on marine environments. Together, we strive for a cleaner, healthier planet.",
-                        "org_cta_url":"https://www.plasticoceans.org.au/",
-                        "org_cta_txt":"Plastic Ocean"
-                    }
-                },
-                "block3":{
-                    "type": "zig-zag-org",
-                    "settings": {
-                        "img":"shopify:\/\/shop_images\/reforest.png?v=1697628149",
-                        "head":"Tree Planting",
-                        "para":"We wholeheartedly support Eden Reforestation's noble cause. By partnering with local communities, they bring about large-scale landscape restoration, job creation, and crucial protection for ecosystems. Together, we make strides in combating climate change and nurturing a sustainable future.",
-                        "org_cta_url":"https://www.reforestnow.org.au/",
-                        "org_cta_txt":"ReForest Now"
-                    }
-                }
-            },
-            "block_order": ["block1", "block2", "block3"]
-        },
-        "partner-ticker":{
-            "type": "partner-ticker",
-            "settings": {
-                "head":"Our partners in this journey",
-                "img":"shopify:\/\/shop_images\/Group_17211521.png?v=1694428628"
-            },
-            "blocks": {
-                "brand1":{
-                    "type": "partnerTicker",
-                    "settings": {
-                        "tickerImage":"shopify:\/\/shop_images\/Mask_group_3.png?v=1694429595",
-                        "cta_url":"#!"
-                    }
-                },
-                "brand2":{
-                    "type": "partnerTicker",
-                    "settings": {
-                        "tickerImage":"shopify:\/\/shop_images\/Mask_group_2.png?v=1694429537",
-                        "cta_url":"#!"
-                    }
-                },
-                "brand3":{
-                    "type": "partnerTicker",
-                    "settings": {
-                        "tickerImage":"shopify:\/\/shop_images\/Mask_group_1.png?v=1694429529",
-                        "cta_url":"#!"
-                    }
-                },
-                "brand4":{
-                    "type": "partnerTicker",
-                    "settings": {
-                        "tickerImage":"shopify:\/\/shop_images\/Mask_group_3.png?v=1694429595",
-                        "cta_url":"#!"
-                    }
-                },
-                "brand5":{
-                    "type": "partnerTicker",
-                    "settings": {
-                        "tickerImage":"shopify:\/\/shop_images\/Mask_group_2.png?v=1694429537",
-                        "cta_url":"#!"
-                    }
-                },
-                "brand6":{
-                    "type": "partnerTicker",
-                    "settings": {
-                        "tickerImage":"shopify:\/\/shop_images\/Mask_group_1.png?v=1694429529",
-                        "cta_url":"#!"
-                    }
-                }
-            },
-            "block_order": ["brand1", "brand2", "brand3", "brand4", "brand5", "brand6"]
-        },
-        "community":{
-            "type":"give-back-community",
-            "settings": {
-                "head":"We give back to the community",
-                "para":"Gutly is deeply dedicated to giving back. Our commitment to our planet is unwavering, touching every facet of our actions. We aspire not only for happy guts but also a happy planet.",
-                "img":"shopify:\/\/shop_images\/sample.jpg?v=1694189040"
-            }
-        },
-        "start-referring":{
-            "type": "start-referring",
-            "settings": {
-                "head":"How to contribute",
-                "enable_cta": false
-            },
-            "blocks": {
-                "ref1":{
-                    "type": "referring-flex",
-                    "settings": {
-                        "rfImg":"shopify:\/\/shop_images\/sample_zig.jpg?v=1694098579",
-                        "rfnum":"1.",
-                        "rfhead":"Choose",
-                        "rfPara":"At the checkout page, you'll have the power to select one of our three impactful causes that resonate with you the most."
-                    }
-                },
-                "ref2":{
-                    "type": "referring-flex",
-                    "settings": {
-                        "rfImg":"shopify:\/\/shop_images\/sample_zig1.jpg?v=1694098573",
-                        "rfnum":"2.",
-                        "rfhead":"Select",
-                        "rfPara":"Opt for the cause you wish to support, and we will donate a portion of your order to the chosen cause with no extra charge to you."
-                    }
-                },
-                "ref3":{
-                    "type": "referring-flex",
-                    "settings": {
-                        "rfImg":"shopify:\/\/shop_images\/sample.png?v=1693831657",
-                        "rfnum":"3.",
-                        "rfhead":" Track",
-                        "rfPara":"Feel the difference you're making! Opt-in to track your contributions and witness the positive change your donation brings to the chosen cause."
-                    }
-                }
-            },
-            "block_order": ["ref1", "ref2", "ref3"]
-        }
+  "sections": {
+    "banner": {
+      "type": "founder-banner",
+      "settings": {
+        "img": "shopify:\/\/shop_images\/Rectangle_24376.png",
+        "image_tag": "Planet Friendly",
+        "head": "Crafted for planet",
+        "subhead": "Unleashing a revolution",
+        "para": "The founder's journey began as a sustainability engineer, fueled by a strong environmental commitment. This dedication has steered Gutly to embrace a planet-conscious ethos, undertaking a mission to protect our world for future generations."
+      }
     },
-    "order": ["banner", "road-to-hp", "zig-zag", "partner-ticker", "community", "start-referring"]
+    "road-to-hp": {
+      "type": "road-to-hp-white",
+      "blocks": {
+        "hp1": {
+          "type": "road-to-hp-white",
+          "settings": {
+            "bgImg": "shopify:\/\/shop_images\/svg-found3.svg",
+            "smallHead": "Recyclable",
+            "bigHead": "Packaging",
+            "mainHead": "Eco-friendly",
+            "mainPara": "Our packaging is 100% recyclable. We've even ditched the plastic scoop, reducing plastic usage by 10%."
+          }
+        },
+        "hp2": {
+          "type": "road-to-hp-white",
+          "settings": {
+            "bgImg": "shopify:\/\/shop_images\/svg-found2.svg",
+            "smallHead": "Green",
+            "bigHead": "Shipping",
+            "mainHead": "Carbon Neutral",
+            "mainPara": "Partnering exclusively with Australia Post, a carbon-neutral carrier, ensures every order contributes to a cleaner, greener world."
+          }
+        },
+        "hp3": {
+          "type": "road-to-hp-white",
+          "settings": {
+            "bgImg": "shopify:\/\/shop_images\/svg-found1.svg",
+            "smallHead": "Purchasing",
+            "bigHead": "loving",
+            "mainHead": "Ethically sourced",
+            "mainPara": "Every penny spent supports a healthy economy and respects others’ lives. We make sure your choices leave a positive impact!"
+          }
+        }
+      },
+      "block_order": [
+        "hp1",
+        "hp2",
+        "hp3"
+      ],
+      "settings": {
+        "head": "Sustainability is embedded<br> in every pack we create",
+        "bod": "From sourcing ethically to using recyclable materials, we prioritize the planet's well-being in every step of our journey. Together, we can make a positive impact on the environment, one pack at a time.",
+        "color_bg": "#fdf9f3",
+        "body_enable": true
+      }
+    },
+    "zig-zag": {
+      "type": "zig-zag-org",
+      "blocks": {
+        "block1": {
+          "type": "zig-zag-org",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/oz-harvest.jpg",
+            "head": "Meal Donations",
+            "para": "Together with Mary's Meals, we passionately provide nutritious school meals to children in the world's most impoverished regions. These meals not only feed hungry minds but also ignite the flame of hope for a brighter future. Our mission reaches children in Africa, Asia, Latin America, and the Caribbean, making a life-changing impact in their lives.",
+            "org_cta_url": "https:\/\/www.ozharvest.org\/",
+            "org_cta_txt": "Oz Harvest"
+          }
+        },
+        "block2": {
+          "type": "zig-zag-org",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/ocean-plastic.png",
+            "head": "Ocean Plastics",
+            "para": "We're proud to join hands with these ocean warriors in our mission to combat ocean plastic pollution. Our partnership enables us to proactively pull plastic from the ocean, championing a sustainable impact on marine environments. Together, we strive for a cleaner, healthier planet.",
+            "org_cta_url": "https:\/\/www.plasticoceans.org.au\/",
+            "org_cta_txt": "Plastic Ocean"
+          }
+        },
+        "block3": {
+          "type": "zig-zag-org",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/reforest.png",
+            "head": "Tree Planting",
+            "para": "We wholeheartedly support Eden Reforestation's noble cause. By partnering with local communities, they bring about large-scale landscape restoration, job creation, and crucial protection for ecosystems. Together, we make strides in combating climate change and nurturing a sustainable future.",
+            "org_cta_url": "https:\/\/www.reforestnow.org.au\/",
+            "org_cta_txt": "ReForest Now"
+          }
+        }
+      },
+      "block_order": [
+        "block1",
+        "block2",
+        "block3"
+      ],
+      "settings": {
+      }
+    },
+    "partner-ticker": {
+      "type": "partner-ticker",
+      "blocks": {
+        "brand1": {
+          "type": "partnerTicker",
+          "settings": {
+            "cta_url": "#!",
+            "tickerImage": "shopify:\/\/shop_images\/signet.svg"
+          }
+        },
+        "brand2": {
+          "type": "partnerTicker",
+          "settings": {
+            "cta_url": "#!",
+            "tickerImage": "shopify:\/\/shop_images\/Mask_group_2.png"
+          }
+        },
+        "brand3": {
+          "type": "partnerTicker",
+          "settings": {
+            "cta_url": "#!",
+            "tickerImage": "shopify:\/\/shop_images\/Mask_group_1.png"
+          }
+        },
+        "brand4": {
+          "type": "partnerTicker",
+          "settings": {
+            "cta_url": "#!",
+            "tickerImage": "shopify:\/\/shop_images\/Mask_group_3.png"
+          }
+        },
+        "brand5": {
+          "type": "partnerTicker",
+          "settings": {
+            "cta_url": "#!",
+            "tickerImage": "shopify:\/\/shop_images\/Mask_group_2.png"
+          }
+        },
+        "brand6": {
+          "type": "partnerTicker",
+          "settings": {
+            "cta_url": "#!",
+            "tickerImage": "shopify:\/\/shop_images\/Mask_group_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "brand1",
+        "brand2",
+        "brand3",
+        "brand4",
+        "brand5",
+        "brand6"
+      ],
+      "settings": {
+        "head": "Our partners in this journey",
+        "img": "shopify:\/\/shop_images\/Group_17211521.png"
+      }
+    },
+    "community": {
+      "type": "give-back-community",
+      "settings": {
+        "img": "shopify:\/\/shop_images\/sample.jpg",
+        "head": "We give back to the community",
+        "para": "Gutly is deeply dedicated to giving back. Our commitment to our planet is unwavering, touching every facet of our actions. We aspire not only for happy guts but also a happy planet."
+      }
+    },
+    "start-referring": {
+      "type": "start-referring",
+      "blocks": {
+        "ref1": {
+          "type": "referring-flex",
+          "settings": {
+            "rfImg": "shopify:\/\/shop_images\/sample_zig.jpg",
+            "rfnum": "1.",
+            "rfhead": "Choose",
+            "rfPara": "At the checkout page, you'll have the power to select one of our three impactful causes that resonate with you the most."
+          }
+        },
+        "ref2": {
+          "type": "referring-flex",
+          "settings": {
+            "rfImg": "shopify:\/\/shop_images\/sample_zig1.jpg",
+            "rfnum": "2.",
+            "rfhead": "Select",
+            "rfPara": "Opt for the cause you wish to support, and we will donate a portion of your order to the chosen cause with no extra charge to you."
+          }
+        },
+        "ref3": {
+          "type": "referring-flex",
+          "settings": {
+            "rfImg": "shopify:\/\/shop_images\/sample.png",
+            "rfnum": "3.",
+            "rfhead": "Track",
+            "rfPara": "Feel the difference you're making! Opt-in to track your contributions and witness the positive change your donation brings to the chosen cause."
+          }
+        }
+      },
+      "block_order": [
+        "ref1",
+        "ref2",
+        "ref3"
+      ],
+      "settings": {
+        "head": "How to contribute",
+        "cta": "",
+        "enable_cta": false
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "road-to-hp",
+    "zig-zag",
+    "partner-ticker",
+    "community",
+    "start-referring"
+  ]
 }
