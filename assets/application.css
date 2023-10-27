@@ -704,7 +704,7 @@ div#shopify-section-header.backdrop{
     letter-spacing: 0.2px;
     text-transform: capitalize;
 }
-.srs-prod-wrap .srspw-txt a{
+.srs-prod-wrap .srspw-txt .slp-cta{
     color: #404040;
     font-size: 14px;
     font-style: normal;
