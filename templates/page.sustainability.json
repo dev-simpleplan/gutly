@@ -135,13 +135,6 @@
             "cta_url": "#!",
             "tickerImage": "shopify:\/\/shop_images\/Screenshot_2023-10-27_at_6.12.26_PM-removebg-preview.png"
           }
-        },
-        "brand6": {
-          "type": "partnerTicker",
-          "settings": {
-            "cta_url": "#!",
-            "tickerImage": "shopify:\/\/shop_images\/signet.svg"
-          }
         }
       },
       "block_order": [
@@ -149,8 +142,7 @@
         "brand2",
         "brand3",
         "brand4",
-        "brand5",
-        "brand6"
+        "brand5"
       ],
       "settings": {
         "head": "Our partners in this journey",
