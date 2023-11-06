@@ -60,6 +60,7 @@ function toggleActiveClass() {
 
 window.addEventListener('scroll', toggleActiveClass);
 window.addEventListener('resize', toggleActiveClass);
+window.addEventListener('inviewport', toggleActiveClass);
 toggleActiveClass();
 
 
