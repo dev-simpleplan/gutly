@@ -3074,7 +3074,14 @@ section.recipe-inner-banner{
   .account-details ul.Account-details-list {
     grid-template-columns: repeat(1 , 1fr);
 }
-    
+
+  .part-ticker .infiniteslide img {
+width: auto;
+height: auto;
+max-height: 36px;
+object-fit: cover;
+max-width: 110px;
+}
 }
 @media(max-width: 500px){
     .gs-banner-wrap .gsb-txt-con .gsb-txt{
@@ -3115,6 +3122,7 @@ section.recipe-inner-banner{
     .my-cart .cart-remove-confirm {
         padding: 20px 15px;
     }
+  
 }
 /* Max Width 767px Ends */
 
