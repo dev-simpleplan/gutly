@@ -3082,6 +3082,9 @@ max-height: 36px;
 object-fit: cover;
 max-width: 110px;
 }
+  .cart-empty{
+    padding:20px;
+  }
 }
 @media(max-width: 500px){
     .gs-banner-wrap .gsb-txt-con .gsb-txt{
