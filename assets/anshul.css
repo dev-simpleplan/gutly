@@ -3155,3 +3155,12 @@ path.circle {
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
 }
+ul.Account-details-list li {
+    /* border: 1px solid #D2CCC3; */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffffd4;
+    box-shadow: rgba(2, 6, 16, 0.2) 0px 2px 16px;
+}
