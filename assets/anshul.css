@@ -3102,6 +3102,9 @@ max-width: 110px;
     display: grid;
     grid-template-columns: repeat(2 , 1fr);
 }
+  .product-desp-acc .pda-desp p {
+    max-width: 100%;
+}
 }
 @media(max-width: 500px){
     .gs-banner-wrap .gsb-txt-con .gsb-txt{
