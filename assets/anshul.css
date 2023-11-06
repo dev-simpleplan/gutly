@@ -2184,7 +2184,11 @@ section.recipe-inner-banner{
     text-transform: uppercase;
 }
 
-
+.account-details ul.Account-details-list {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+  gap:24px;
+}
 /* Pagination Ends */
 
 /* Responsive Css Starts */
@@ -2773,6 +2777,9 @@ section.recipe-inner-banner{
     .wyew-wrap{
         margin-top: 40px;
     }
+  .account-details ul.Account-details-list {
+    grid-template-columns: repeat(2 , 1fr);
+}
 }
 /* Max Width 991px Ends */
 /* Max Width 767px */
@@ -3063,6 +3070,9 @@ section.recipe-inner-banner{
         bottom: 20px;
         left: 20px;
     }
+  .account-details ul.Account-details-list {
+    grid-template-columns: repeat(1 , 1fr);
+}
     
 }
 @media(max-width: 500px){
@@ -3151,11 +3161,7 @@ path.circle {
     background: transparent;
     border: none;
 }
-.account-details ul.Account-details-list {
-    display: grid;
-    grid-template-columns: repeat(3 , 1fr);
-  gap:24px;
-}
+
 ul.Account-details-list li {
     /* border: 1px solid #D2CCC3; */
     padding: 20px;
