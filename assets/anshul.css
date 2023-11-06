@@ -1482,7 +1482,7 @@ ul.variant-wrapper li.variant-cats label p span{
     font-style: normal;
     font-weight: 500;
     line-height: 160%; /* 19.2px */
-    max-width: 65ch;
+    max-width: 100%;
 }
 .product-desp-acc .pda-desp .desp-usp{
     margin-top: 40px;
