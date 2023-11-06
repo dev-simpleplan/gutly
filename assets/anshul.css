@@ -3085,6 +3085,10 @@ max-width: 110px;
   .cart-empty{
     padding:20px;
   }
+  .account-page .forgot-pass .form-con.submit-but {
+    gap: 24px;
+    flex-direction: column;
+}
 }
 @media(max-width: 500px){
     .gs-banner-wrap .gsb-txt-con .gsb-txt{
