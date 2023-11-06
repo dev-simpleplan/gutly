@@ -3093,6 +3093,11 @@ max-width: 110px;
         display: block;
     width: 100%;
   }
+  .slp-item .slp-title {
+    max-width: 20ch;
+    margin: 0 auto;
+    margin-top: 12px;
+}
 }
 @media(max-width: 500px){
     .gs-banner-wrap .gsb-txt-con .gsb-txt{
