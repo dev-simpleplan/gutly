@@ -3118,3 +3118,26 @@ path.circle {
 .shopify-challenge__container {
     margin: 80px auto;
 }
+.shopify-challenge__container input.shopify-challenge__button.btn {
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-feature-settings: "clig" off,"liga" off;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: .25px;
+    text-transform: capitalize;
+    z-index: 0;
+    transition: .8s cubic-bezier(.9,.03,.47,.89);
+    overflow: hidden;
+    padding: 12px 66.5px;
+    position: relative;
+    background: red;
+    margin-top: 30px;
+    background-color: #ffd12d;
+    color: #222;
+}
