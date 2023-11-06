@@ -3089,6 +3089,10 @@ max-width: 110px;
     gap: 24px;
     flex-direction: column;
 }
+  .account-page .form-con.submit-but button{
+        display: block;
+    width: 100%;
+  }
 }
 @media(max-width: 500px){
     .gs-banner-wrap .gsb-txt-con .gsb-txt{
