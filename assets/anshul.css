@@ -3115,3 +3115,6 @@ path.circle {
     animation: fillAnimation 2s linear;
     fill: #ffd12d;
 }
+.shopify-challenge__container {
+    margin: 80px auto;
+}
