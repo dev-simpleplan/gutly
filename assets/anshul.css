@@ -3154,6 +3154,7 @@ path.circle {
 .account-details ul.Account-details-list {
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
+  gap:24px;
 }
 ul.Account-details-list li {
     /* border: 1px solid #D2CCC3; */
