@@ -3165,3 +3165,22 @@ ul.Account-details-list li {
     background: #ffffffd4;
     box-shadow: rgba(2, 6, 16, 0.2) 0px 2px 16px;
 }
+a.plain-cta {
+    border-right: 1px solid #D2CCC3;
+    padding: 12px;
+    background: #222;
+    display: flex;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: .25px;
+    text-transform: uppercase;
+    color: #ffd12d;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+  text-decoration:none;
+}
