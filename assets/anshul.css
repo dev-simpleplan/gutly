@@ -3147,3 +3147,11 @@ path.circle {
     background-color: #ffd12d;
     color: #222;
 }
+.account-details {
+    background: transparent;
+    border: none;
+}
+.account-details ul.Account-details-list {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+}
