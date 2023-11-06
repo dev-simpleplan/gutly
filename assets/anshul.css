@@ -3098,6 +3098,10 @@ max-width: 110px;
     margin: 0 auto;
     margin-top: 12px;
 }
+  .product-desp-acc .pda-desp .desp-usp {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+}
 }
 @media(max-width: 500px){
     .gs-banner-wrap .gsb-txt-con .gsb-txt{
