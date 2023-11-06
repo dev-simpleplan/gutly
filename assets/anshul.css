@@ -3108,3 +3108,10 @@ section.recipe-inner-banner{
 /* Max Width 767px Ends */
 
 /* Responsive Css Ends */
+
+
+/* Extra CSS By Kartik */
+path.circle {
+    animation: fillAnimation 2s linear;
+    fill: #ffd12d;
+}
