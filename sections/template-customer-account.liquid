@@ -22,9 +22,14 @@
       <div class="right-con">
         <div id="details" class="tabcontent txt-center">
           <div class="account-details">
-            {% for address in customer.addresses %}
+            <ul class="Account-details-list">
+              <li>
+                {% for address in customer.addresses %}
               {{ address | format_address }}
             {% endfor %}
+              </li>
+            </ul>
+            
             <a href="{{ routes.account_addresses_url }}" class="plain-cta">
               <div class="button-plain-con">
                 View All Address
