@@ -3117,6 +3117,12 @@ path.circle {
 }
 .shopify-challenge__container {
     margin: 80px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+}
+.shopify-challenge__container p.shopify-challenge__message {
+    margin-bottom: 20px;
 }
 .shopify-challenge__container input.shopify-challenge__button.btn {
     border-radius: 6px;
@@ -3137,7 +3143,7 @@ path.circle {
     padding: 12px 66.5px;
     position: relative;
     background: red;
-    margin-top: 30px;
+    margin-top: 20px;
     background-color: #ffd12d;
     color: #222;
 }
