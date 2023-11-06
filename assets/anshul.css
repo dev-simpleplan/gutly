@@ -628,6 +628,7 @@ body.js-ajax-cart-processing .my-cart{
     transition: .25s all ease-in-out;
     align-items: center;
     justify-content: center;
+  width:100%;
 }
 .account-details {
     font-size: 16px;
@@ -3160,6 +3161,7 @@ path.circle {
 .account-details {
     background: transparent;
     border: none;
+  width:100%;
 }
 
 ul.Account-details-list li {
