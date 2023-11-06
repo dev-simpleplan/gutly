@@ -128,7 +128,7 @@
   });
 
 // build scenes
-  new ScrollMagic.Scene({triggerElement: "#nutrition"}).setClassToggle("#nutri", "active").addTo(controller1);
+  new ScrollMagic.Scene({triggerElement: "#nutrition"}).setClassToggle("#nutri", "active").addTo(controller1).scrollTo({left:40, behavior: 'smooth'});;
 </script>
 <script>
   var controller = new ScrollMagic.Controller();
