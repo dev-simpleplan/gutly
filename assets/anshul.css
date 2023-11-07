@@ -3306,7 +3306,7 @@ a.plain-cta {
   display:none;
 }
 .certified-content-modal {
-    width: 60%;
+    width: 50%;
 }
 .certified-content-para p{
   color: #222;
@@ -3326,4 +3326,10 @@ a.plain-cta {
     line-height: 150%;
     letter-spacing: 0.18px;
     text-decoration-line: underline;
+}
+.certified-link-flex {
+    display: flex;
+    align-items: start;
+    gap: 6px;
+    cursor: pointer;
 }
