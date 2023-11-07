@@ -100,9 +100,10 @@
   new ScrollMagic.Scene({triggerElement: "#benefits"}).setClassToggle("#benefit", "active") 
   .addTo(controller1);
 
-     new ScrollMagic
-    .Scene({triggerElement: "#benefits"})
-       console.log("hello")
+    new ScrollMagic.Scene({triggerElement: "#benefits"})
+    .on("enter", function () {
+        console.log("hello"); // This is now inside the "enter" event callback
+    })
     .setClassToggle(".click-to-section", "benefit-move-left") // add class toggle
     .addTo(controller1);
 </script>
