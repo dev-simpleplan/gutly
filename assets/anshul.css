@@ -3303,7 +3303,7 @@ a.plain-cta {
     height: 100%;
 }
 .certified-modal-box{
-  display:none;
+  /* display:none; */
 }
 .certified-content-modal {
     width: 50%;
