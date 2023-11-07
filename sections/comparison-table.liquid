@@ -119,7 +119,7 @@
 <script>
   var controller1 = new ScrollMagic.Controller({
     globalSceneOptions: {
-      duration: '110%'
+      duration: 200%'
     }
   });
 
@@ -134,4 +134,5 @@
     .Scene({triggerElement: "#us-v-them"})
     .setClassToggle(".click-to-section", "compare-move-left") // add class toggle
     .addTo(controller1);
+  .addIndicators();
 </script>
