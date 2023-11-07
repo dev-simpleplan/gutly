@@ -3317,3 +3317,13 @@ a.plain-cta {
   line-height: 150%; /* 27px */
   letter-spacing: 0.18px;
 }
+.certified-content-link {
+    color: #55B85F;
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.18px;
+    text-decoration-line: underline;
+}
