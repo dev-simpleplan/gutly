@@ -3240,3 +3240,6 @@ a.plain-cta {
 .click-to-section.faq-move-left {
     transform: translateX(-180px);
 }
+.click-to-section{
+  transition:0.4s ease all;
+}
