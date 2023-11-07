@@ -3336,7 +3336,7 @@ a.plain-cta {
 .certified-modal-box {
     background-color: #FDF9F3;
     border-radius: 17px;
-    /* overflow: hidden; */
+    overflow: hidden;
     position: absolute;
     top: -65px;
     z-index: 1;
@@ -3346,7 +3346,7 @@ a.plain-cta {
     margin: 0 auto;
     transition: .15s clip-path ease;
     padding: 55px 15px 28px;
-    /* clip-path: inset(0% 0% 100% 0%); */
+    clip-path: inset(0% 0% 100% 0%);
     width: 410px;
     /* background: red; */
 }
@@ -3373,4 +3373,8 @@ a.plain-cta {
       display: flex;
     align-items: center;
     justify-content: center;
+}
+.certified-modal-box.active{
+      clip-path: inset(0% 0% 0% 0%);
+    transition: 1s clip-path ease;
 }
