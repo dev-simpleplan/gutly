@@ -3305,3 +3305,15 @@ a.plain-cta {
 .certified-modal-box{
   display:none;
 }
+.certified-content-modal {
+    width: 60%;
+}
+.certified-content-para p{
+  color: #222;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 27px */
+  letter-spacing: 0.18px;
+}
