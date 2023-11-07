@@ -68,4 +68,9 @@
   });
 
   new ScrollMagic.Scene({triggerElement: "#faqs"}).setClassToggle("#faq", "active").addTo(controller1);
+
+   new ScrollMagic
+    .Scene({triggerElement: "#faqs"})
+    .setClassToggle(".click-to-section", "faq-move-left") // add class toggle
+    .addTo(controller1)
 </script>
