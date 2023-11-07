@@ -3249,3 +3249,21 @@ a.plain-cta {
     margin: 0 auto;
     max-width: 1160px;
 }
+.certified-section-box {
+    position: relative;
+}
+.certified-img {
+    position: relative;
+    padding-top: 60%;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+}
+.certified-img img{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    object-fit:cover;
+}
