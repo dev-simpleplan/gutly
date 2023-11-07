@@ -3232,11 +3232,11 @@ a.plain-cta {
     transform: scale(1);
 }
 .click-to-section.compare-move-left {
-    transform: translateX(-10px);
-}
-.click-to-section.benefit-move-left {
     transform: translateX(-30px);
 }
-.click-to-section.faq {
+.click-to-section.benefit-move-left {
     transform: translateX(-50px);
+}
+.click-to-section.faq-move-left {
+    transform: translateX(-80px);
 }
