@@ -3224,10 +3224,10 @@ a.plain-cta {
     justify-content: center;
   text-decoration:none;
 }
-.in-viewport .trans-first,  {
+.in-viewport .trans-first  {
     transform: translateY(0);
     opacity: 1;
 }
-.in-viewport item {
+.in-viewport .item {
     transform: scale(1);
 }
