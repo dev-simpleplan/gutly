@@ -3270,16 +3270,37 @@ a.plain-cta {
 .certified-content {
     position: absolute;
     height: 100%;
-    top: 0;
+    top: -60px;
     left: 0;
     right:0px;
     width: 70%;
     margin: 0 auto;
-    dis: f;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+.certified-content-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    margin-top: 42px;
+    width: 70%;
+}
+.certified-content-img {
+    width: 50%;
+    position: relative;
+    padding-top: 20%;
+    height: 0;
+    overflow: hidden;
+}
+.certified-content-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 .certified-modal-box{
   display:none;
