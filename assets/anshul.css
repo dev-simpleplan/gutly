@@ -3272,6 +3272,7 @@ a.plain-cta {
     height: 100%;
     top: 0;
     left: 0;
+    right:0px;
     width: 70%;
     margin: 0 auto;
     dis: f;
@@ -3279,4 +3280,7 @@ a.plain-cta {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+.certified-modal-box{
+  display:none;
 }
