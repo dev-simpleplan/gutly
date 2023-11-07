@@ -3289,11 +3289,11 @@ a.plain-cta {
     width: 75%;
 }
 .certified-content-img {
-    width: 50%;
+    width: 40%;
     position: relative;
-    padding-top: 20%;
+    padding-top: 18%;
     height: 0;
-    overflow: hidden;
+    overflow: hidden
 }
 .certified-content-img img {
     position: absolute;
