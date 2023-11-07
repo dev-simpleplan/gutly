@@ -3370,4 +3370,7 @@ a.plain-cta {
     top: 4px;
     right: 4px;
   background:#E9E2D8;
+      display: flex;
+    align-items: center;
+    justify-content: center;
 }
