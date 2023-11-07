@@ -3231,3 +3231,6 @@ a.plain-cta {
 .in-viewport .click-open-cards .item {
     transform: scale(1);
 }
+.click-to-section.move-left {
+    transform: translateX(-170px);
+}
