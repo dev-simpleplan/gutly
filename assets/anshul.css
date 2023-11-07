@@ -3228,6 +3228,6 @@ a.plain-cta {
     transform: translateY(0);
     opacity: 1;
 }
-.in-viewport .item {
+.in-viewport .click-open-cards .item {
     transform: scale(1);
 }
