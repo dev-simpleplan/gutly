@@ -3362,3 +3362,11 @@ a.plain-cta {
 .certified-content-para {
     position: relative;
 }
+.certified-cross-modal-link {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
