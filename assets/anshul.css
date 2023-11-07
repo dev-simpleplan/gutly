@@ -3373,6 +3373,7 @@ a.plain-cta {
       display: flex;
     align-items: center;
     justify-content: center;
+  cursor:pointer;
 }
 .certified-modal-box.active{
       clip-path: inset(0% 0% 0% 0%);

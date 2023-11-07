@@ -69,11 +69,10 @@ toggleActiveClass();
 // Certified JS
 
 $(".certified-link-flex").click(function(){
-  
   $(".certified-modal-box").addClass("active");
 });
 
-$(".certified-cross-modal-link").click(function(){
+$("certified-cross-modal-link").click(function(){
   $(".certified-modal-box").removeClass("active");
 });
 
