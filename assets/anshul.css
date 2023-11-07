@@ -3105,6 +3105,15 @@ max-width: 110px;
   .product-desp-acc .pda-desp p {
     max-width: 100%;
 }
+  .click-to-section.compare-move-left {
+    transform: translateX(-130px);
+}
+.click-to-section.benefit-move-left {
+    transform: translateX(-150px);
+}
+.click-to-section.faq-move-left {
+    transform: translateX(-180px);
+}
 }
 @media(max-width: 500px){
     .gs-banner-wrap .gsb-txt-con .gsb-txt{
@@ -3231,15 +3240,7 @@ a.plain-cta {
 .in-viewport .click-open-cards .item {
     transform: scale(1);
 }
-.click-to-section.compare-move-left {
-    transform: translateX(-130px);
-}
-.click-to-section.benefit-move-left {
-    transform: translateX(-150px);
-}
-.click-to-section.faq-move-left {
-    transform: translateX(-180px);
-}
+
 .click-to-section{
   transition:0.4s ease all;
 }
