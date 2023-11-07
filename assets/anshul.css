@@ -3338,7 +3338,7 @@ a.plain-cta {
     border-radius: 17px;
     /* overflow: hidden; */
     position: absolute;
-    top: -15px;
+    top: -65px;
     z-index: 1;
     width: 200%;
     left: 40px;
@@ -3358,4 +3358,7 @@ a.plain-cta {
   font-weight: 500;
   line-height: 150%; /* 21px */
   letter-spacing: 0.14px;
+}
+.certified-content-para {
+    position: relative;
 }
