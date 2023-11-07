@@ -1,10 +1,11 @@
+
 <section class="pad-180" id="ingredients">
   <div class="container">
     <div class="committed-gs">
-      <div class="heading center trans over-hid">
+      <div class="heading center trans over-hid element i-v ">
         <h3 class="trans-first">{{ section.settings.head }}</h3>
       </div>
-      <div class="click-open-cards trans">
+      <div class="click-open-cards trans element i-v">
         {% for block in section.blocks %}
           <div class="item">
             <div class="head">
@@ -97,7 +98,7 @@
     ]
   }
 {% endschema %}
-
+<script src="https://simpletesting.website/atrius/wp-content/themes/atrius/dev_assets/js/jquery.in-viewport-class.js"></script>
 <script>
   $(document).ready(function() {
     $('.plusminus').click(function() {
