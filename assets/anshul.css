@@ -2930,6 +2930,16 @@ section.recipe-inner-banner{
   .certified-content-link{
     font-size:16px;
   }
+  .certified-content-img {
+    width: 30%;
+    position: relative;
+    padding-top: 12%;
+    height: 0;
+    overflow: hidden;
+}
+  .certified-content{
+    top:-40px;
+  }
 }
 /* Max Width 991px Ends */
 /* Max Width 767px */
