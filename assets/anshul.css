@@ -3276,6 +3276,37 @@ max-width: 110px;
   .certified-img{
     display:none;
   }
+  .certified-section-box {
+  
+    background: #fff;
+    padding: 30px 0;
+}
+  .certified-content {
+    top: 0;
+    position: relative;
+}
+  .certified-content-flex {
+    flex-direction: column;
+    gap: 20px;
+}
+  .certified-content-img {
+    width: 100%;
+    padding-top: 44%;
+}
+  .certified-content-img img{
+    object-fit:cover;
+  }
+  .certified-content-modal {
+    width: 100%;
+}
+  .certified-content-para {
+    position: relative;
+    text-align: center;
+}
+  .certified-link-flex {
+    align-items: center;
+    justify-content: center;
+}
 }
 @media(max-width: 500px){
     .gs-banner-wrap .gsb-txt-con .gsb-txt{
