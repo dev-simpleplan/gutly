@@ -2916,6 +2916,9 @@ section.recipe-inner-banner{
   .account-details ul.Account-details-list {
     grid-template-columns: repeat(2 , 1fr);
 }
+  .solution-problem-wrapper {
+    padding-bottom: 0;
+}
 }
 /* Max Width 991px Ends */
 /* Max Width 767px */
