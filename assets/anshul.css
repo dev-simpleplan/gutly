@@ -2919,6 +2919,11 @@ section.recipe-inner-banner{
   .solution-problem-wrapper {
     padding-bottom: 0;
 }
+  .certified-content-flex {
+    gap: 40px;
+    margin-top: 16px;
+    width: 100%;
+}
 }
 /* Max Width 991px Ends */
 /* Max Width 767px */
