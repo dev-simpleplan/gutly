@@ -2924,6 +2924,12 @@ section.recipe-inner-banner{
     margin-top: 16px;
     width: 100%;
 }
+  .certified-content-para p {
+    font-size: 16px;
+}
+  .certified-content-link{
+    font-size:16px;
+  }
 }
 /* Max Width 991px Ends */
 /* Max Width 767px */
