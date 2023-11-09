@@ -2943,6 +2943,9 @@ section.recipe-inner-banner{
   .certified-modal-box{
     left:-40px;
   }
+  .certified-modal-box p{
+    font-size:14px;
+  }
 }
 /* Max Width 991px Ends */
 /* Max Width 767px */
