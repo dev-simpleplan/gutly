@@ -4115,6 +4115,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
   .click-open-cards.active .item{
     transform: scale(1);
   }
+.click-open-cards.in-viewport .item{
+  transform: scale(1);
+}
   .click-open-cards .item.active {
     z-index: 11;
   }
