@@ -76,7 +76,7 @@
         "left2": {
           "type": "left-side",
           "settings": {
-            "num": "12-13%",
+            "num": "2-7%",
             "txt": "milk"
           }
         },
@@ -97,7 +97,7 @@
         "right3": {
           "type": "right-side",
           "settings": {
-            "num": "<1.9<span>%<\/span>",
+            "num": "<1.9%",
             "txt": "Maltodextrin"
           }
         }
