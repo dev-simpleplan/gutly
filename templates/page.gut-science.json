@@ -69,21 +69,21 @@
         "left1": {
           "type": "left-side",
           "settings": {
-            "num": "71-76<span>%<\/span>",
+            "num": "71-76%",
             "txt": "protein source"
           }
         },
         "left2": {
           "type": "left-side",
           "settings": {
-            "num": "12-13<span>%<\/span>",
+            "num": "12-13%",
             "txt": "milk"
           }
         },
         "right1": {
           "type": "right-side",
           "settings": {
-            "num": "7-8<span>%<\/span>",
+            "num": "71-76%",
             "txt": "sweeteners"
           }
         },
