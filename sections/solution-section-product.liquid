@@ -75,8 +75,9 @@
                 <img src="https://cdn.shopify.com/s/files/1/0817/8067/0742/files/monash.png?v=1699361518" alt="Monash Logo">
               </div>
               <div class="certified-content-modal">
+            {% if product.metafields.custom.certified_ %}    
                 <div class="certified-content-para">
-                    <p>Our Egg White Protein Powder is </p>
+                    <p>Our {{ product.title }} is </p>
                   <div class="certified-modal-main">
                     <div class="certified-link-flex">
                       <a href="{{ section.settings.foodmapCta }}" class="certified-content-link">Low FODMAP Certified</a>
@@ -87,7 +88,15 @@
                         </svg>
                       </div>
                     </div>
-                        
+                    {% else %}
+                   <div class="certified-content-para">
+                    
+                  <div class="certified-modal-main">
+                    <div class="certified-link-flex">
+                      <p>We are awaiting <a href="{{ section.settings.foodmapCta }}" class="certified-content-link">Low FODMAP</a></p>
+                      <p>Certification for {{ product.title }}</p>
+                    </div>
+                      {% endif %}    
                     <div class="certified-modal-box">
                       <div class="certified-modal-cross">
                           <div  class="certified-cross-modal-link">
