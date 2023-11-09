@@ -68,7 +68,7 @@ toggleActiveClass();
 
 // Certified JS
 
-$(".certified-link-flex").click(function(){
+$(".certified-link-flex svg").click(function(){
   
   $(".certified-modal-box").addClass("active");
 });
