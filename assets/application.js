@@ -77,14 +77,3 @@ $(".certified-cross-modal-link").click(function(){
   console.log("hello");
   $(".certified-modal-box").removeClass("active");
 });
-
-
-
-
-
-
-
-
-
-
-
