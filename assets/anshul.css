@@ -3310,6 +3310,10 @@ max-width: 110px;
     align-items: center;
     justify-content: center;
 }
+  .certified-modal-box{
+    max-width:410px;
+    width:100%;
+  }
 }
 @media(max-width: 500px){
     .gs-banner-wrap .gsb-txt-con .gsb-txt{
