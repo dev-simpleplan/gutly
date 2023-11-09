@@ -135,6 +135,41 @@
             "cta_url": "#!",
             "tickerImage": "shopify:\/\/shop_images\/Screenshot_2023-10-27_at_6.12.26_PM-removebg-preview.png"
           }
+        },
+        "brand6": {
+          "type": "partnerTicker",
+          "settings": {
+            "cta_url": "#!",
+            "tickerImage": "shopify:\/\/shop_images\/signet.svg"
+          }
+        },
+        "brand7": {
+          "type": "partnerTicker",
+          "settings": {
+            "cta_url": "#!",
+            "tickerImage": "shopify:\/\/shop_images\/australiaPost.svg"
+          }
+        },
+        "brand8": {
+          "type": "partnerTicker",
+          "settings": {
+            "cta_url": "#!",
+            "tickerImage": "shopify:\/\/shop_images\/image.png"
+          }
+        },
+        "brand9": {
+          "type": "partnerTicker",
+          "settings": {
+            "cta_url": "#!",
+            "tickerImage": "shopify:\/\/shop_images\/POA_Logo.webp"
+          }
+        },
+        "brand10": {
+          "type": "partnerTicker",
+          "settings": {
+            "cta_url": "#!",
+            "tickerImage": "shopify:\/\/shop_images\/Screenshot_2023-10-27_at_6.12.26_PM-removebg-preview.png"
+          }
         }
       },
       "block_order": [
@@ -142,7 +177,12 @@
         "brand2",
         "brand3",
         "brand4",
-        "brand5"
+        "brand5",
+        "brand6",
+        "brand7",
+        "brand8",
+        "brand9",
+        "brand10"
       ],
       "settings": {
         "head": "Our partners in this journey",
