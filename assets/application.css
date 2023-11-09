@@ -7548,6 +7548,9 @@ section.referral-banner.give-back .rfb-txt-con .subhead p{
         width: 75%;
         padding-top: 75%;
     }
+  .annouce-wrap img{
+    width:13px !important;
+  }
 }
 /* Max width 500px Ends */
 
