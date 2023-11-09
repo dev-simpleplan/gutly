@@ -3313,6 +3313,7 @@ max-width: 110px;
   .certified-modal-box{
     max-width:410px;
     width:100%;
+    top:-220px;
   }
 }
 @media(max-width: 500px){
