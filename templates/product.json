@@ -1,295 +1,341 @@
 {
   "sections": {
-    "product":{
+    "product": {
       "type": "template-product",
       "settings": {
-        "save-more":"save <br> more",
         "enable_savemore": true,
-        "donateText":"For every order we donate $1 or equivalent to two meals!"
+        "save-more": "save <br> more",
+        "donateText": "For every order we donate $1 or equivalent to two meals!"
       }
     },
-    "action-toggle":{
-        "type": "action-toggle"
+    "action-toggle": {
+      "type": "action-toggle",
+      "settings": {
+      }
     },
-    "ingredient":{
+    "ingredient": {
       "type": "ingredient-product-page",
       "settings": {
-        "head":"Here’s everything that goes into each scoop",
-        "para":"We've meticulously curated a blend of premium ingredients to craft our exceptional protein powder formula. With every scoop, you'll experience the perfect balance of taste and nutrition, ensuring that you can conquer any challenge that comes your way while maintaining a happy gut.",
-        "bg1":"shopify:\/\/shop_images\/Star_5_6.svg?v=1694681978",
-        "bg2":"shopify:\/\/shop_images\/Star_5_5.svg?v=1694176368",
-        "background-color":"#F9F1E4"
+        "background-color": "#F9F1E4",
+        "head": "Here’s everything that goes into each scoop",
+        "para": "We've meticulously curated a blend of premium ingredients to craft our exceptional protein powder formula. With every scoop, you'll experience the perfect balance of taste and nutrition, ensuring that you can conquer any challenge that comes your way while maintaining a happy gut.",
+        "bg1": "shopify:\/\/shop_images\/Star_5_6.svg?v=1694681978",
+        "bg2": "shopify:\/\/shop_images\/Star_5_5.svg?v=1694176368"
       }
     },
-    "nutrition-facts":{
-      "type":"nutrition-facts",
+    "nutrition-facts": {
+      "type": "nutrition-facts",
       "settings": {
-        "head":"Nutrition Facts",
-        "serve-pack":"Servings per package",
-        "serve-size":"Serving size",
-        "disclaimer-head":"Disclaimer",
-        "disclaimer-para":"The product have not been evaluated by the Department of Agriculture, Fisheries and Forestry (DAFF). This product is not intended to diagnose, treat, cure or prevent any disease...",
-        "disclaimer-cta":"please read here.",
-        "disclaimer-cta-link":"#!"
+        "head": "Nutrition Facts",
+        "serve-pack": "Servings per package",
+        "serve-size": "Serving size",
+        "disclaimer-head": "Disclaimer",
+        "disclaimer-para": "The product have not been evaluated by the Department of Agriculture, Fisheries and Forestry (DAFF). This product is not intended to diagnose, treat, cure or prevent any disease...",
+        "disclaimer-cta": "please read here.",
+        "disclaimer-cta-link": "#!"
       }
     },
-    "solution-section":{
-      "type":"solution-section-product",
-      "settings": {
-          "problemHead":"Sick of protein powders causing bloating?",
-          "problemPara":"Did you know that approximately 1 in 7 people around the world are affected by Irritable Bowel Syndrome (IBS)? - Monash University.",
-          "solutionHead":"Say hello to the solution",
-          "solutionPara":"Our gut-friendly formula is carefully crafted using natural ingredients that ensure easy digestion and safe consumption.",
-          "slImage":"shopify:\/\/shop_images\/can_02c2b15b-054b-4fdf-b22b-2b28864a3dc3.png?v=1693748534",
-          "sl-sm-txt":"Clean ingredients",
-          "foodmapImage":"shopify:\/\/shop_images\/certificationstamp_1_1.png?v=1697027661",
-          "foodmapCta":"https://www.monashfodmap.com/about-fodmap-and-ibs/"
-      },
+    "solution-section": {
+      "type": "solution-section-product",
       "blocks": {
-          "pbgrid1":{
-              "type": "problemGrid",
-              "settings": {
-                  "pb_img":"shopify:\/\/shop_images\/Group_17211479.svg?v=1693573883",
-                  "pb_text":"Abdominal discomfort"
-              }
-          },
-          "pbgrid2":{
-              "type": "problemGrid",
-              "settings": {
-                  "pb_img":"shopify:\/\/shop_images\/Group_17211478.svg?v=1693573877",
-                  "pb_text":"bloating and cramping"
-              }
-          },
-          "pbgrid3":{
-              "type": "problemGrid",
-              "settings": {
-                  "pb_img":"shopify:\/\/shop_images\/Group_17211477.svg?v=1693573866",
-                  "pb_text":"Diarrhea"
-              }
-          },
-          "pbgrid4":{
-              "type": "problemGrid",
-              "settings": {
-                  "pb_img":"shopify:\/\/shop_images\/Group_17211476.svg?v=1693573861",
-                  "pb_text":"Gas and flatulence"   
-              }
+        "pbgrid1": {
+          "type": "problemGrid",
+          "settings": {
+            "pb_img": "shopify:\/\/shop_images\/Group_17211479.svg?v=1693573883",
+            "pb_text": "Abdominal discomfort"
           }
-      },
-      "block_order": ["pbgrid1","pbgrid2","pbgrid3","pbgrid4"]
-    },
-    "comparison-table":{
-      "type":"comparison-table",
-      "settings": {
-          "head":"We're off the chart!",
-          "subhead":"Gutly vs. others"
-      },
-      "blocks": {
-          "row1":{
-              "type":"table",
-              "settings": {
-                  "prodFeat":"Easy to digest formula",
-                  "tick": true,
-                  "cross": false,
-                  "tick1":true,
-                  "cross1":false
-              }
-          },
-          "row2":{
-              "type":"table",
-              "settings": {
-                  "prodFeat":"Low FODMAP certified",
-                  "tick": true,
-                  "cross": false,
-                  "tick1":true,
-                  "cross1":false
-              }
-          },
-          "row3":{
-              "type":"table",
-              "settings": {
-                  "prodFeat":"Simple ingredients",
-                  "tick": true,
-                  "cross": false,
-                  "tick1":true,
-                  "cross1":false
-              }
-          },
-          "row4":{
-              "type":"table",
-              "settings": {
-                  "prodFeat":"Minimally processed ingredients",
-                  "tick": true,
-                  "cross": false,
-                  "tick1":false,
-                  "cross1":true
-              }
-          },
-          "row5":{
-              "type":"table",
-              "settings": {
-                  "prodFeat":"Paleo friendly",
-                  "tick": true,
-                  "cross": false,
-                  "tick1":false,
-                  "cross1":true
-              }
-          },
-          "row6":{
-              "type":"table",
-              "settings": {
-                  "prodFeat":"Dairy free",
-                  "tick": true,
-                  "cross": false,
-                  "tick1":false,
-                  "cross1":true
-              }
-          },
-          "row7":{
-              "type":"table",
-              "settings": {
-                  "prodFeat":"Low GI (glycaemic index)",
-                  "tick": true,
-                  "cross": false,
-                  "tick1":false,
-                  "cross1":true
-              }
-          },
-          "row8":{
-              "type":"table",
-              "settings": {
-                  "prodFeat":"Soy free",
-                  "tick": true,
-                  "cross": false,
-                  "tick1":false,
-                  "cross1":true
-              }
-          },
-          "row9":{
-              "type":"table",
-              "settings": {
-                  "prodFeat":"Gluten Free",
-                  "tick": true,
-                  "cross": false,
-                  "tick1":false,
-                  "cross1":true
-              }
+        },
+        "pbgrid2": {
+          "type": "problemGrid",
+          "settings": {
+            "pb_img": "shopify:\/\/shop_images\/Group_17211478.svg?v=1693573877",
+            "pb_text": "bloating and cramping"
           }
-      },
-      "block_order": ["row1","row2", "row3", "row4", "row5", "row6", "row7", "row8", "row9"]
-    },
-    "protien-so-good":{
-      "type": "video-slider-section",
-      "settings": {
-          "head":"a protein<br> so gooooood"
-      },
-      "blocks": {
-          "video1":{
-              "type": "videoSlide",
-              "settings": {
-                  "slideVideo":"https://cdn.shopify.com/videos/c/o/v/745b00278adc4638b6d60e81e00d17f3.mp4",
-                  "slideText":"Vaneesa Lee"
-              }
-          },
-          "video2":{
-              "type": "videoSlide",
-              "settings": {
-                  "slideVideo":"https://cdn.shopify.com/videos/c/o/v/745b00278adc4638b6d60e81e00d17f3.mp4",
-                  "slideText":"Vaneesa Lee"
-              }
-          },
-          "video3":{
-              "type": "videoSlide",
-              "settings": {
-                  "slideVideo":"https://cdn.shopify.com/videos/c/o/v/745b00278adc4638b6d60e81e00d17f3.mp4",
-                  "slideText":"Vaneesa Lee"
-              }
-          },
-          "video4":{
-              "type": "videoSlide",
-              "settings": {
-                  "slideVideo":"https://cdn.shopify.com/videos/c/o/v/745b00278adc4638b6d60e81e00d17f3.mp4",
-                  "slideText":"Vaneesa Lee"
-              }
-          },
-          "video5":{
-              "type": "videoSlide",
-              "settings": {
-                  "slideVideo":"https://cdn.shopify.com/videos/c/o/v/745b00278adc4638b6d60e81e00d17f3.mp4",
-                  "slideText":"Vaneesa Lee"
-              }
+        },
+        "pbgrid3": {
+          "type": "problemGrid",
+          "settings": {
+            "pb_img": "shopify:\/\/shop_images\/Group_17211477.svg?v=1693573866",
+            "pb_text": "Diarrhea"
           }
-      },
-      "block_order": ["video1", "video2", "video3", "video4", "video5"]
-    },
-    "practices-section":{
-      "type":"practices-section",
-      "settings": {
-          "sectionImage":"shopify:\/\/shop_images\/sample.png?v=1693831657",
-          "head":"We give back to the gut. And to our community!",
-          "cta_txt":"our practices",
-          "cta_link":"sustainability"
-      },
-      "blocks": {
-          "para1":{
-              "type": "practiceParagraph",
-              "settings": {
-                  "para":"At Happy Gut, we believe that giving back to the community is an essential part of our mission. That's why we are committed to making a positive impact in the world around us."
-              }
-          },
-          "para2":{
-              "type": "practiceParagraph",
-              "settings": {
-                  "para":"From sourcing ethically to using recyclable materials, we prioritize the planet's well-being in every step of our journey."
-              }
+        },
+        "pbgrid4": {
+          "type": "problemGrid",
+          "settings": {
+            "pb_img": "shopify:\/\/shop_images\/Group_17211476.svg?v=1693573861",
+            "pb_text": "Gas and flatulence"
           }
-      },
-      "block_order": ["para1", "para2"]
-    },
-    "slidesParallax":{
-      "type":"parallax-slide-product",
-      "blocks": {
-          "slide1":{
-              "type": "parallaxSlide",
-              "settings": {
-                  "imgLink":"shopify:\/\/shop_images\/parallax1.jpg",
-                  "headText":"EASY PROTEIN-RICH BREAKFAST",
-                  "bodText":"Meet your daily protein needs effortlessly with our easy solution, starting your healthy diet with a high-protein meal."
-              }
-          },
-          "slide2":{
-              "type": "parallaxSlide",
-              "settings": {
-                  "imgLink":"shopify:\/\/shop_images\/parallax2.jpg",
-                  "headText":"SIMPLE LOW FODMAP DIET",
-                  "bodText":"Following a strict diet can be tough, but we make it easy to incorporate into your meal plan."
-              }
-          },
-          "slide3":{
-            "type": "parallaxSlide",
-            "settings": {
-                "imgLink":"shopify:\/\/shop_images\/parallax1.jpg",
-                "headText":"BYE BYE BLOATING",
-                "bodText":"Begin managing your bloating problem with our third-party certified, bloating-free formula."
-            }
         }
       },
-      "block_order": ["slide1", "slide2", "slide3"]
+      "block_order": [
+        "pbgrid1",
+        "pbgrid2",
+        "pbgrid3",
+        "pbgrid4"
+      ],
+      "settings": {
+        "problemHead": "Sick of protein powders causing bloating?",
+        "problemPara": "Did you know that approximately 1 in 7 people around the world are affected by Irritable Bowel Syndrome (IBS)? - Monash University.",
+        "solutionHead": "Say hello to the solution",
+        "solutionPara": "Our gut-friendly formula is carefully crafted using natural ingredients that ensure easy digestion and safe consumption.",
+        "slImage": "shopify:\/\/shop_images\/can_02c2b15b-054b-4fdf-b22b-2b28864a3dc3.png?v=1693748534",
+        "sl-sm-txt": "Clean ingredients",
+        "foodmapImage": "shopify:\/\/shop_images\/certificationstamp_1_1.png?v=1697027661",
+        "foodmapCta": "https:\/\/www.monashfodmap.com\/about-fodmap-and-ibs\/"
+      }
     },
-    "faq":{
+    "comparison-table": {
+      "type": "comparison-table",
+      "blocks": {
+        "row1": {
+          "type": "table",
+          "settings": {
+            "prodFeat": "Easy to digest formula",
+            "tick": true,
+            "cross": false,
+            "tick1": true,
+            "cross1": false
+          }
+        },
+        "row2": {
+          "type": "table",
+          "settings": {
+            "prodFeat": "Low FODMAP certified",
+            "tick": true,
+            "cross": false,
+            "tick1": true,
+            "cross1": false
+          }
+        },
+        "row3": {
+          "type": "table",
+          "settings": {
+            "prodFeat": "Simple ingredients",
+            "tick": true,
+            "cross": false,
+            "tick1": true,
+            "cross1": false
+          }
+        },
+        "row4": {
+          "type": "table",
+          "settings": {
+            "prodFeat": "Minimally processed ingredients",
+            "tick": true,
+            "cross": false,
+            "tick1": false,
+            "cross1": true
+          }
+        },
+        "row5": {
+          "type": "table",
+          "settings": {
+            "prodFeat": "Paleo friendly",
+            "tick": true,
+            "cross": false,
+            "tick1": false,
+            "cross1": true
+          }
+        },
+        "row6": {
+          "type": "table",
+          "settings": {
+            "prodFeat": "Dairy free",
+            "tick": true,
+            "cross": false,
+            "tick1": false,
+            "cross1": true
+          }
+        },
+        "row7": {
+          "type": "table",
+          "settings": {
+            "prodFeat": "Low GI (glycaemic index)",
+            "tick": true,
+            "cross": false,
+            "tick1": false,
+            "cross1": true
+          }
+        },
+        "row8": {
+          "type": "table",
+          "settings": {
+            "prodFeat": "Soy free",
+            "tick": true,
+            "cross": false,
+            "tick1": false,
+            "cross1": true
+          }
+        },
+        "row9": {
+          "type": "table",
+          "settings": {
+            "prodFeat": "Gluten Free",
+            "tick": true,
+            "cross": false,
+            "tick1": false,
+            "cross1": true
+          }
+        }
+      },
+      "block_order": [
+        "row1",
+        "row3",
+        "row4",
+        "row5",
+        "row6",
+        "row7",
+        "row8",
+        "row9"
+      ],
+      "settings": {
+        "head": "We're off the chart!",
+        "subhead": "Gutly vs. others"
+      }
+    },
+    "protien-so-good": {
+      "type": "video-slider-section",
+      "blocks": {
+        "video1": {
+          "type": "videoSlide",
+          "settings": {
+            "slideVideo": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/745b00278adc4638b6d60e81e00d17f3.mp4",
+            "slideText": "Vaneesa Lee"
+          }
+        },
+        "video2": {
+          "type": "videoSlide",
+          "settings": {
+            "slideVideo": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/745b00278adc4638b6d60e81e00d17f3.mp4",
+            "slideText": "Vaneesa Lee"
+          }
+        },
+        "video3": {
+          "type": "videoSlide",
+          "settings": {
+            "slideVideo": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/745b00278adc4638b6d60e81e00d17f3.mp4",
+            "slideText": "Vaneesa Lee"
+          }
+        },
+        "video4": {
+          "type": "videoSlide",
+          "settings": {
+            "slideVideo": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/745b00278adc4638b6d60e81e00d17f3.mp4",
+            "slideText": "Vaneesa Lee"
+          }
+        },
+        "video5": {
+          "type": "videoSlide",
+          "settings": {
+            "slideVideo": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/745b00278adc4638b6d60e81e00d17f3.mp4",
+            "slideText": "Vaneesa Lee"
+          }
+        }
+      },
+      "block_order": [
+        "video1",
+        "video2",
+        "video3",
+        "video4",
+        "video5"
+      ],
+      "settings": {
+        "head": "a protein<br> so gooooood"
+      }
+    },
+    "practices-section": {
+      "type": "practices-section",
+      "blocks": {
+        "para1": {
+          "type": "practiceParagraph",
+          "settings": {
+            "para": "At Happy Gut, we believe that giving back to the community is an essential part of our mission. That's why we are committed to making a positive impact in the world around us."
+          }
+        },
+        "para2": {
+          "type": "practiceParagraph",
+          "settings": {
+            "para": "From sourcing ethically to using recyclable materials, we prioritize the planet's well-being in every step of our journey."
+          }
+        }
+      },
+      "block_order": [
+        "para1",
+        "para2"
+      ],
+      "settings": {
+        "sectionImage": "shopify:\/\/shop_images\/sample.png?v=1693831657",
+        "head": "We give back to the gut. And to our community!",
+        "cta_txt": "our practices",
+        "cta_link": "sustainability"
+      }
+    },
+    "slidesParallax": {
+      "type": "parallax-slide-product",
+      "blocks": {
+        "slide1": {
+          "type": "parallaxSlide",
+          "settings": {
+            "imgLink": "shopify:\/\/shop_images\/parallax1.jpg",
+            "headText": "EASY PROTEIN-RICH BREAKFAST",
+            "bodText": "Meet your daily protein needs effortlessly with our easy solution, starting your healthy diet with a high-protein meal."
+          }
+        },
+        "slide2": {
+          "type": "parallaxSlide",
+          "settings": {
+            "imgLink": "shopify:\/\/shop_images\/parallax2.jpg",
+            "headText": "SIMPLE LOW FODMAP DIET",
+            "bodText": "Following a strict diet can be tough, but we make it easy to incorporate into your meal plan."
+          }
+        },
+        "slide3": {
+          "type": "parallaxSlide",
+          "settings": {
+            "imgLink": "shopify:\/\/shop_images\/parallax1.jpg",
+            "headText": "BYE BYE BLOATING",
+            "bodText": "Begin managing your bloating problem with our third-party certified, bloating-free formula."
+          }
+        }
+      },
+      "block_order": [
+        "slide1",
+        "slide2",
+        "slide3"
+      ],
+      "settings": {
+      }
+    },
+    "faq": {
       "type": "product-faq",
       "settings": {
-        "head":"FAQs"
+        "head": "FAQs"
       }
     },
-    "sample-section":{
-        "type": "product-page-sample"
+    "sample-section": {
+      "type": "product-page-sample",
+      "settings": {
+      }
     },
-    "related-products":{
-        "type": "related_products",
-        "settings": {
-            "head":"Wait, there's more"
-        }
+    "related-products": {
+      "type": "related_products",
+      "settings": {
+        "head": "Wait, there's more"
+      }
     }
   },
-  "order": ["product", "action-toggle", "ingredient", "nutrition-facts", "solution-section", "comparison-table", "protien-so-good", "practices-section", "slidesParallax", "faq", "sample-section", "related-products"]
+  "order": [
+    "product",
+    "action-toggle",
+    "ingredient",
+    "nutrition-facts",
+    "solution-section",
+    "comparison-table",
+    "protien-so-good",
+    "practices-section",
+    "slidesParallax",
+    "faq",
+    "sample-section",
+    "related-products"
+  ]
 }
