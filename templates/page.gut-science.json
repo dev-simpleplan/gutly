@@ -70,35 +70,35 @@
           "type": "left-side",
           "settings": {
             "num": "12-13%",
-            "txt": "protein source"
+            "txt": "coconut milk"
           }
         },
         "left2": {
           "type": "left-side",
           "settings": {
             "num": "2-7%",
-            "txt": "milk"
+            "txt": "flavour"
           }
         },
         "right1": {
           "type": "right-side",
           "settings": {
             "num": "71-76%",
-            "txt": "sweeteners"
+            "txt": "protein source"
           }
         },
         "right2": {
           "type": "right-side",
           "settings": {
             "num": "7-8%",
-            "txt": "flavour"
+            "txt": "sweeteners"
           }
         },
         "right3": {
           "type": "right-side",
           "settings": {
             "num": "<1.9%",
-            "txt": "Maltodextrin"
+            "txt": "Malto-dextrin"
           }
         }
       },
