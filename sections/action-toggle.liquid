@@ -52,13 +52,11 @@
 </script>
 <script>
  document.addEventListener('DOMContentLoaded', function () {
-    if (window.innerWidth < 767) {
-      document.getElementById('click-to-section').style.overflowX = 'hidden';
-    } else {
-      window.addEventListener('scroll', function () {
+    window.addEventListener('scroll', function () {
+      if (window.innerWidth < 767) {
         moveActiveToStart();
-      });
-    }
+      }
+    });
 
     function moveActiveToStart() {
       var activeButton = document.querySelector('.click-buttons a.active');
