@@ -1,7 +1,7 @@
 <div class="action-toggle">
   <div class="container">
     <div class="click-to-section" id="click-to-section">
-      <div class="click-buttons" id="click-buttons" ontouchstart="enableScroll()" ontouchmove="handleTouchMove(event)">
+      <div class="click-buttons" id="click-buttons">
         <ul>
           <li><a href="#ingredients" id="ingredient">Ingredients</a></li>
           <li><a href="#nutrition" id="nutri">Nutrition</a></li>
@@ -33,16 +33,6 @@
 
 <script>
   var isScrollEnabled = true;
-
-  function enableScroll() {
-    isScrollEnabled = true;
-  }
-
-  function handleTouchMove(event) {
-    if (!isScrollEnabled) {
-      event.preventDefault(); // Prevent default touch move behavior if scrolling is disabled
-    }
-  }
 
   document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', function () {
