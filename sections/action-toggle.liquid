@@ -51,13 +51,19 @@
   });
 </script>
 <script>
- function moveActiveToStart() {
-    if (window.innerWidth < 767) {
+ document.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener('scroll', function () {
+      if (window.innerWidth < 767) {
+        moveActiveToStart();
+      }
+    });
+
+    function moveActiveToStart() {
       var activeButton = document.querySelector('.click-buttons a.active');
       if (activeButton) {
         var listItem = activeButton.parentElement;
         document.querySelector('.click-buttons ul').prepend(listItem);
       }
     }
-  }
+  });
 </script>
