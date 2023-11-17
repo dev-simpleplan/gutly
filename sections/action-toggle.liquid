@@ -54,26 +54,19 @@
  document.addEventListener('DOMContentLoaded', function () {
     var buttonsContainer = document.getElementById('click-to-section');
     
-    function scrollActiveToStart() {
+    function autoScrollToActive() {
       var activeButton = document.querySelector('.click-buttons a.active');
 
       if (activeButton) {
-        var containerLeft = buttonsContainer.getBoundingClientRect().left;
-        var buttonLeft = activeButton.getBoundingClientRect().left;
-        var scrollAmount = buttonLeft - containerLeft;
-        
-        buttonsContainer.scrollLeft += scrollAmount;
+        activeButton.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',  // Adjust this to 'start', 'center', or 'end' as needed
+          inline: 'center'  // Adjust this to 'start', 'center', or 'end' as needed
+        });
       }
     }
 
-    // Call the function when the page loads
-    scrollActiveToStart();
-
-    // Add an event listener to handle changes in the active class
-    document.addEventListener('click', function (event) {
-      if (event.target.tagName === 'A' && event.target.classList.contains('click-buttons')) {
-        scrollActiveToStart();
-      }
-    });
+    // Call the function periodically or based on your requirements
+    setInterval(autoScrollToActive, 2000);  // Adjust the interval as needed
   });
 </script>
