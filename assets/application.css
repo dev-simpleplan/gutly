@@ -36,6 +36,7 @@ h1, h2, h3, h4, h5, h6{
 }
 ul{
     list-style: none;
+  transition: 1s all ease;
 }
 a{
     text-decoration: none;
