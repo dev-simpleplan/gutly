@@ -52,6 +52,9 @@
 </script>
 <script>
  function enableScroll() {
+    if (window.innerWidth < 767) {
+      return; // Do nothing if the screen size is less than 767 pixels
+    }
     document.getElementById('click-to-section').style.overflowX = 'scroll';
   }
 
