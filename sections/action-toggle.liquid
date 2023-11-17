@@ -51,22 +51,9 @@
   });
 </script>
 <script>
- var isScrollEnabled = false;
-
-  function enableScroll() {
-    isScrollEnabled = true;
-    document.getElementById('click-to-section').style.overflowX = 'auto';
-  }
-
-  function handleTouchMove(event) {
-    if (!isScrollEnabled) {
-      event.preventDefault(); // Prevent default touch move behavior if scrolling is disabled
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
+ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', function () {
-      if (window.innerWidth < 767 && isScrollEnabled) {
+      if (window.innerWidth < 767) {
         moveActiveToStart();
       }
     });
