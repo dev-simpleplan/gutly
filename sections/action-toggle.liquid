@@ -51,46 +51,14 @@
   });
 </script>
 <script>
- var isScrollEnabled = true;
-
-  function enableScroll() {
+ document.addEventListener('DOMContentLoaded', function () {
     if (window.innerWidth < 767) {
-      isScrollEnabled = false;
       document.getElementById('click-to-section').style.overflowX = 'hidden';
     } else {
-      isScrollEnabled = true;
-      document.getElementById('click-to-section').style.overflowX = 'auto';
-    }
-  }
-
-  function handleTouchStart(event) {
-    if (isScrollEnabled) {
-      var touch = event.touches[0];
-      startX = touch.clientX;
-      startY = touch.clientY;
-    }
-  }
-
-  function handleTouchMove(event) {
-    if (isScrollEnabled) {
-      var touch = event.touches[0];
-      var deltaX = startX - touch.clientX;
-      var deltaY = startY - touch.clientY;
-
-      if (Math.abs(deltaX) > Math.abs(deltaY)) {
-        event.preventDefault(); // Prevent vertical scrolling
-      }
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    enableScroll();
-
-    window.addEventListener('scroll', function () {
-      if (isScrollEnabled) {
+      window.addEventListener('scroll', function () {
         moveActiveToStart();
-      }
-    });
+      });
+    }
 
     function moveActiveToStart() {
       var activeButton = document.querySelector('.click-buttons a.active');
