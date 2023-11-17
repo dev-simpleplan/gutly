@@ -52,21 +52,22 @@
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var buttonsContainer = document.getElementsByClassName('click-buttons')[0];
-    var container = document.getElementsByClassName('click-to-section')[0];
-
-    function scrollToActive() {
+    var buttonsContainer = document.getElementById('click-buttons');
+    
+    function scrollActiveToStart() {
       var activeButton = buttonsContainer.querySelector('.active');
 
       if (activeButton) {
-        var offset = activeButton.offsetLeft - container.offsetLeft;
-        container.scrollLeft = offset;
+        var offset = activeButton.offsetLeft;
+        buttonsContainer.scrollLeft = offset;
       }
     }
 
-    // Call scrollToActive when the 'active' class is added dynamically
-    // For example, when using Shopify's Liquid sections
-    // The 'active' class should be added by your Liquid code
-    scrollToActive();
+    // Call the function when the page loads
+    scrollActiveToStart();
+
+    // You can also call scrollActiveToStart when the 'active' class is added dynamically.
+    // For example, after an event or a certain condition.
+
   });
 </script>
