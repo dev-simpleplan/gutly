@@ -3276,9 +3276,6 @@ max-width: 110px;
 .click-to-section.benefit-move-left {
     transform: translateX(-150px);
 }
-.click-to-section.faq-move-left {
-    transform: translateX(-180px);
-}
   .certified-img{
     display:none;
   }
