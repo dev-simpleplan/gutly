@@ -60,7 +60,10 @@
         // Perform prepend operation
         var listItem = activeButton.parentElement;
         var list = document.querySelector('.click-buttons ul');
-        list.insertAdjacentElement('afterbegin', listItem);
+
+        // Remove the active li and insert it at the beginning
+        list.removeChild(listItem);
+        list.insertBefore(listItem, list.firstChild);
 
         // Re-enable scrolling after the prepend operation
         isScrollEnabled = true;
