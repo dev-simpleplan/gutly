@@ -56,14 +56,15 @@
     function moveActiveToStart() {
       var activeButton = document.querySelector('.click-buttons a.active');
       if (activeButton) {
-        // Disable scrolling
+        // Prevent scrolling
         document.getElementById('click-to-section').style.overflowX = 'hidden';
         document.body.style.overflow = 'hidden';
 
+        // Perform prepend operation
         var listItem = activeButton.parentElement;
         document.querySelector('.click-buttons ul').prepend(listItem);
 
-        // Re-enable scrolling after the operation
+        // Allow scrolling after the prepend operation
         document.getElementById('click-to-section').style.overflowX = 'auto';
         document.body.style.overflow = 'auto';
       }
