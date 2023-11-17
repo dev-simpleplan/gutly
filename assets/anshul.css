@@ -3147,7 +3147,7 @@ section.recipe-inner-banner{
         font-size: 18px;
     }
     .click-to-section {
-        width: 200vw;
+        width: 150%;
     }
     .prod-ing .pi-wrapper .click-open-cards .item {
         width: 60%;
@@ -3350,7 +3350,7 @@ max-width: 110px;
         width: 65%;
     }
     .click-to-section {
-        width: 240vw;
+        width: 185%;
     }
     .my-cart__items .cart-prod-wrap:first-child {
         padding: 60px 0;
