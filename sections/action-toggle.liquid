@@ -52,12 +52,25 @@
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var activeButton = document.querySelector('.click-buttons a.active');
+    var buttonsContainer = document.getElementById('click-to-section');
 
-    if (activeButton) {
-      var buttonsContainer = document.getElementById('click-to-section');
-      var scrollAmount = activeButton.offsetLeft - buttonsContainer.scrollLeft;
-      buttonsContainer.scrollLeft += scrollAmount;
+    function scrollActiveToStart() {
+      var activeButton = document.querySelector('.click-buttons a.active');
+
+      if (activeButton) {
+        var scrollAmount = activeButton.offsetLeft - buttonsContainer.scrollLeft;
+        buttonsContainer.scrollLeft += scrollAmount;
+      }
     }
+
+    // Call the function when the page loads
+    scrollActiveToStart();
+
+    // Add an event listener to handle changes in the active class
+    document.addEventListener('click', function (event) {
+      if (event.target.tagName === 'A' && event.target.classList.contains('click-buttons')) {
+        scrollActiveToStart();
+      }
+    });
   });
 </script>
