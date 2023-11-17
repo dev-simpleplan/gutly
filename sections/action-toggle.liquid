@@ -52,11 +52,12 @@
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var firstButton = document.querySelector('.click-buttons a');
+    var activeButton = document.querySelector('.click-buttons a.active');
 
-    if (firstButton) {
+    if (activeButton) {
       var buttonsContainer = document.getElementById('click-to-section');
-      buttonsContainer.scrollLeft = firstButton.offsetLeft;
+      var offset = activeButton.offsetLeft;
+      buttonsContainer.scrollLeft = offset;
     }
   });
 </script>
