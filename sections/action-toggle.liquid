@@ -51,15 +51,14 @@
   });
 </script>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
+ document.addEventListener('DOMContentLoaded', function () {
     var buttonsContainer = document.getElementById('click-to-section');
 
     function scrollActiveToStart() {
       var activeButton = document.querySelector('.click-buttons a.active');
 
       if (activeButton) {
-        var scrollAmount = activeButton.offsetLeft - buttonsContainer.scrollLeft;
-        buttonsContainer.scrollLeft += scrollAmount;
+        activeButton.scrollIntoView({ behavior: 'smooth', inline: 'start' });
       }
     }
 
