@@ -1,6 +1,6 @@
 <div class="action-toggle">
   <div class="container">
-    <div class="click-to-section">
+    <div class="click-to-section" id="click-to-section">
       <div class="click-buttons" id="click-buttons">
         <ul>
           <li><a href="#ingredients" id="ingredient">Ingredients</a></li>
@@ -52,25 +52,10 @@
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var buttonsContainer = document.getElementById('click-to-section');
+    var activeButton = document.querySelector('.click-buttons a.active');
 
-    function scrollToActive() {
-      var activeButton = document.querySelector('.click-buttons a.active');
-
-      if (activeButton) {
-        var containerRect = buttonsContainer.getBoundingClientRect();
-        var activeRect = activeButton.getBoundingClientRect();
-
-        // Calculate the left offset of the active anchor relative to the container
-        var offset = activeRect.left - containerRect.left;
-
-        // Set the scrollLeft property of the container
-        buttonsContainer.scrollLeft = offset;
-      }
+    if (activeButton) {
+      activeButton.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-
-    // Call the function when the page loads
-    scrollToActive();
-
   });
 </script>
