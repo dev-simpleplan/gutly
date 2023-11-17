@@ -153,7 +153,13 @@
     <script src="{{ 'jquery.in-viewport-class.js' | asset_url }}" defer></script>
     <script src="{{ 'application.js' | asset_url }}" defer></script>
     
+
+      <script type="text/javascript" id="loop-subscription-script" src="{{ 'loop-widget.js' | asset_url }}"></script>
+    
   </head>
+
+    <style class="loop-style"> {% render 'loop-widget.css' %} </style>
+    
   <body>
     <main role="main">
       {% if template == 'index' %}
@@ -161,6 +167,11 @@
       {% endif %}
       {% section 'announcement-bar' %}
       {% section 'header' %}
+
+    {%- if request.path contains 'loop_subscriptions/bundle' or request.path contains 'loop_subscriptions/customer' -%}
+      {% render 'loop_loader' %}
+    {%- endif -%}
+  
       {{ content_for_layout }}
     </main>
     {% section 'ajax-cart' %}
