@@ -52,9 +52,11 @@
 </script>
 <script>
  document.addEventListener('DOMContentLoaded', function () {
-    window.addEventListener('scroll', function () {
-      moveActiveToStart();
-    });
+    if (window.innerWidth < 767) {
+      window.addEventListener('scroll', function () {
+        moveActiveToStart();
+      });
+    }
 
     function moveActiveToStart() {
       var activeButton = document.querySelector('.click-buttons a.active');
