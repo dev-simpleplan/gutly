@@ -52,8 +52,9 @@
 </script>
 <script>
  document.addEventListener('DOMContentLoaded', function () {
-    window.addEventListener('scroll', function () {
+    window.addEventListener('scroll', function (event) {
       if (window.innerWidth < 767) {
+        event.preventDefault(); // Prevent the default scroll behavior
         moveActiveToStart();
       }
     });
