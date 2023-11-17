@@ -52,22 +52,25 @@
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var buttonsContainer = document.getElementById('click-buttons');
-    
-    function scrollActiveToStart() {
-      var activeButton = buttonsContainer.querySelector('.active');
+    var buttonsContainer = document.getElementById('click-to-section');
+
+    function scrollToActive() {
+      var activeButton = document.querySelector('.click-buttons a.active');
 
       if (activeButton) {
-        var offset = activeButton.offsetLeft;
+        var containerRect = buttonsContainer.getBoundingClientRect();
+        var activeRect = activeButton.getBoundingClientRect();
+
+        // Calculate the left offset of the active anchor relative to the container
+        var offset = activeRect.left - containerRect.left;
+
+        // Set the scrollLeft property of the container
         buttonsContainer.scrollLeft = offset;
       }
     }
 
     // Call the function when the page loads
-    scrollActiveToStart();
-
-    // You can also call scrollActiveToStart when the 'active' class is added dynamically.
-    // For example, after an event or a certain condition.
+    scrollToActive();
 
   });
 </script>
