@@ -1,7 +1,7 @@
 <div class="action-toggle">
   <div class="container">
     <div class="click-to-section" id="click-to-section">
-      <div class="click-buttons" id="click-buttons">
+      <div class="click-buttons" id="click-buttons" ontouchstart="enableScroll()" ontouchmove="handleTouchMove(event)">
         <ul>
           <li><a href="#ingredients" id="ingredient">Ingredients</a></li>
           <li><a href="#nutrition" id="nutri">Nutrition</a></li>
@@ -32,12 +32,10 @@
 </script>
 
 <script>
-  var isScrollEnabled = false;
+  var isScrollEnabled = true;
 
   function enableScroll() {
     isScrollEnabled = true;
-    document.getElementById('click-to-section').style.overflowX = 'auto';
-    document.body.style.overflow = 'auto';
   }
 
   function handleTouchMove(event) {
@@ -56,17 +54,15 @@
     function moveActiveToStart() {
       var activeButton = document.querySelector('.click-buttons a.active');
       if (activeButton) {
-        // Prevent scrolling
-        document.getElementById('click-to-section').style.overflowX = 'hidden';
-        document.body.style.overflow = 'hidden';
+        // Disable scrolling during the operation
+        isScrollEnabled = false;
 
         // Perform prepend operation
         var listItem = activeButton.parentElement;
         document.querySelector('.click-buttons ul').prepend(listItem);
 
-        // Allow scrolling after the prepend operation
-        document.getElementById('click-to-section').style.overflowX = 'auto';
-        document.body.style.overflow = 'auto';
+        // Re-enable scrolling after the prepend operation
+        isScrollEnabled = true;
       }
     }
   });
