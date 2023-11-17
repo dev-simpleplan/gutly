@@ -51,9 +51,34 @@
   });
 </script>
 <script>
- document.addEventListener('DOMContentLoaded', function () {
+ var isScrollEnabled = false;
+  var startX, startY;
+
+  function handleTouchStart(event) {
+    isScrollEnabled = true;
+    var touch = event.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+  }
+
+  function handleTouchMove(event) {
+    if (!isScrollEnabled) {
+      event.preventDefault(); // Prevent default touch move behavior if scrolling is disabled
+      return;
+    }
+
+    var touch = event.touches[0];
+    var deltaX = startX - touch.clientX;
+    var deltaY = startY - touch.clientY;
+
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      event.preventDefault(); // Prevent vertical scrolling
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', function () {
-      if (window.innerWidth < 767) {
+      if (window.innerWidth < 767 && isScrollEnabled) {
         moveActiveToStart();
       }
     });
