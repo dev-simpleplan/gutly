@@ -1,6 +1,6 @@
 <div class="action-toggle">
   <div class="container">
-    <div class="click-to-section" id="click-to-section">
+    <div class="click-to-section" id="click-to-section" ontouchstart="enableScroll()">
       <div class="click-buttons" id="click-buttons">
         <ul>
           <li><a href="#ingredients" id="ingredient">Ingredients</a></li>
@@ -51,13 +51,18 @@
   });
 </script>
 <script>
- document.addEventListener('DOMContentLoaded', function () {
-    window.addEventListener('scroll', function (event) {
-      if (window.innerWidth < 767) {
-        event.preventDefault(); // Prevent the default scroll behavior
+ function enableScroll() {
+    document.getElementById('click-to-section').style.overflowX = 'scroll';
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.innerWidth < 767) {
+      document.getElementById('click-to-section').style.overflowX = 'hidden';
+    } else {
+      window.addEventListener('scroll', function () {
         moveActiveToStart();
-      }
-    });
+      });
+    }
 
     function moveActiveToStart() {
       var activeButton = document.querySelector('.click-buttons a.active');
