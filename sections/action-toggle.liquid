@@ -47,12 +47,15 @@
         // Disable scrolling during the operation
         isScrollEnabled = false;
 
-        // Perform append operation at the beginning
+        // Perform move to the beginning
         var listItem = activeButton.parentElement;
         var list = document.querySelector('.click-buttons ul');
-        list.insertBefore(listItem.cloneNode(true), list.firstChild);
 
-        // Re-enable scrolling after the append operation
+        // Remove the active li and insert it at the beginning
+        list.removeChild(listItem);
+        list.insertBefore(listItem, list.firstChild);
+
+        // Re-enable scrolling after the move
         isScrollEnabled = true;
       }
     }
