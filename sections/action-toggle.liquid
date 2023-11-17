@@ -1,8 +1,8 @@
 <div class="action-toggle">
   <div class="container">
-    <div class="click-to-section" id="click-to-section" ontouchstart="enableScroll()">
+    <div class="click-to-section" id="click-to-section">
       <div class="click-buttons" id="click-buttons">
-        <ul>
+        <ul ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)">
           <li><a href="#ingredients" id="ingredient">Ingredients</a></li>
           <li><a href="#nutrition" id="nutri">Nutrition</a></li>
           <li><a href="#how-to-use" id="use">Why US</a></li>
@@ -51,21 +51,46 @@
   });
 </script>
 <script>
- function enableScroll() {
+ var isScrollEnabled = true;
+
+  function enableScroll() {
     if (window.innerWidth < 767) {
-      return; // Do nothing if the screen size is less than 767 pixels
+      isScrollEnabled = false;
+      document.getElementById('click-to-section').style.overflowX = 'hidden';
+    } else {
+      isScrollEnabled = true;
+      document.getElementById('click-to-section').style.overflowX = 'auto';
     }
-    document.getElementById('click-to-section').style.overflowX = 'scroll';
+  }
+
+  function handleTouchStart(event) {
+    if (isScrollEnabled) {
+      var touch = event.touches[0];
+      startX = touch.clientX;
+      startY = touch.clientY;
+    }
+  }
+
+  function handleTouchMove(event) {
+    if (isScrollEnabled) {
+      var touch = event.touches[0];
+      var deltaX = startX - touch.clientX;
+      var deltaY = startY - touch.clientY;
+
+      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        event.preventDefault(); // Prevent vertical scrolling
+      }
+    }
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    if (window.innerWidth < 767) {
-      document.getElementById('click-to-section').style.overflowX = 'hidden';
-    } else {
-      window.addEventListener('scroll', function () {
+    enableScroll();
+
+    window.addEventListener('scroll', function () {
+      if (isScrollEnabled) {
         moveActiveToStart();
-      });
-    }
+      }
+    });
 
     function moveActiveToStart() {
       var activeButton = document.querySelector('.click-buttons a.active');
