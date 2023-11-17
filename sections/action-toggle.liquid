@@ -52,21 +52,16 @@
 </script>
 <script>
  document.addEventListener('DOMContentLoaded', function () {
-    var buttonsContainer = document.getElementById('click-to-section');
-    
-    function autoScrollToActive() {
-      var activeButton = document.querySelector('.click-buttons a.active');
+    window.addEventListener('scroll', function () {
+      moveActiveToStart();
+    });
 
+    function moveActiveToStart() {
+      var activeButton = document.querySelector('.click-buttons a.active');
       if (activeButton) {
-        activeButton.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center',  // Adjust this to 'start', 'center', or 'end' as needed
-          inline: 'center'  // Adjust this to 'start', 'center', or 'end' as needed
-        });
+        var listItem = activeButton.parentElement;
+        document.querySelector('.click-buttons ul').prepend(listItem);
       }
     }
-
-    // Call the function periodically or based on your requirements
-    setInterval(autoScrollToActive, 2000);  // Adjust the interval as needed
   });
 </script>
