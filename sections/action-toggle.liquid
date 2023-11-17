@@ -56,8 +56,8 @@
 
     if (activeButton) {
       var buttonsContainer = document.getElementById('click-to-section');
-      var scrollAmount = activeButton.offsetLeft;
-      buttonsContainer.scrollLeft = scrollAmount;
+      var scrollAmount = activeButton.offsetLeft - buttonsContainer.scrollLeft;
+      buttonsContainer.scrollLeft += scrollAmount;
     }
   });
 </script>
