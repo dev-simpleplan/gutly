@@ -8,6 +8,30 @@
         "donateText": "For every order we donate $1 or equivalent to two meals!"
       }
     },
+    "1706855810309f9194": {
+      "type": "apps",
+      "blocks": {
+        "subscriptions_app_block_YTECFX": {
+          "type": "shopify:\/\/apps\/subscriptions\/blocks\/app-block\/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
+          "settings": {
+            "color_text_title": "#6D7175",
+            "color_text_body": "#6D7175",
+            "dividers_color": "#8F8D8D",
+            "bacgkround_color": "#FFFFFF",
+            "border_thickness": 1,
+            "border_radius": 0,
+            "supporting_text_title": "Purchase options",
+            "subscription_policy_url": "",
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "subscriptions_app_block_YTECFX"
+      ],
+      "settings": {
+      }
+    },
     "action-toggle": {
       "type": "action-toggle",
       "settings": {
@@ -19,8 +43,8 @@
         "background-color": "#F9F1E4",
         "head": "Here’s everything that goes into each scoop",
         "para": "We've meticulously curated a blend of premium ingredients to craft our exceptional protein powder formula. With every scoop, you'll experience the perfect balance of taste and nutrition, ensuring that you can conquer any challenge that comes your way while maintaining a happy gut.",
-        "bg1": "shopify:\/\/shop_images\/Star_5_6.svg?v=1694681978",
-        "bg2": "shopify:\/\/shop_images\/Star_5_5.svg?v=1694176368"
+        "bg1": "shopify:\/\/shop_images\/Star_5_6.svg",
+        "bg2": "shopify:\/\/shop_images\/Star_5_5.svg"
       }
     },
     "nutrition-facts": {
@@ -41,28 +65,28 @@
         "pbgrid1": {
           "type": "problemGrid",
           "settings": {
-            "pb_img": "shopify:\/\/shop_images\/Group_17211479.svg?v=1693573883",
+            "pb_img": "shopify:\/\/shop_images\/Group_17211479.svg",
             "pb_text": "Abdominal discomfort"
           }
         },
         "pbgrid2": {
           "type": "problemGrid",
           "settings": {
-            "pb_img": "shopify:\/\/shop_images\/Group_17211478.svg?v=1693573877",
+            "pb_img": "shopify:\/\/shop_images\/Group_17211478.svg",
             "pb_text": "bloating and cramping"
           }
         },
         "pbgrid3": {
           "type": "problemGrid",
           "settings": {
-            "pb_img": "shopify:\/\/shop_images\/Group_17211477.svg?v=1693573866",
+            "pb_img": "shopify:\/\/shop_images\/Group_17211477.svg",
             "pb_text": "Diarrhea"
           }
         },
         "pbgrid4": {
           "type": "problemGrid",
           "settings": {
-            "pb_img": "shopify:\/\/shop_images\/Group_17211476.svg?v=1693573861",
+            "pb_img": "shopify:\/\/shop_images\/Group_17211476.svg",
             "pb_text": "Gas and flatulence"
           }
         }
@@ -78,9 +102,10 @@
         "problemPara": "Did you know that approximately 1 in 7 people around the world are affected by Irritable Bowel Syndrome (IBS)? - Monash University.",
         "solutionHead": "Say hello to the solution",
         "solutionPara": "Our gut-friendly formula is carefully crafted using natural ingredients that ensure easy digestion and safe consumption.",
-        "slImage": "shopify:\/\/shop_images\/can_02c2b15b-054b-4fdf-b22b-2b28864a3dc3.png?v=1693748534",
+        "slImage": "shopify:\/\/shop_images\/can_02c2b15b-054b-4fdf-b22b-2b28864a3dc3.png",
         "sl-sm-txt": "Clean ingredients",
-        "foodmapImage": "shopify:\/\/shop_images\/certificationstamp_1_1.png?v=1697027661",
+        "foodmapImage": "shopify:\/\/shop_images\/certificationstamp_1_1.png",
+        "foodmapPara": "",
         "foodmapCta": "https:\/\/www.monashfodmap.com\/about-fodmap-and-ibs\/"
       }
     },
@@ -91,16 +116,6 @@
           "type": "table",
           "settings": {
             "prodFeat": "Easy to digest formula",
-            "tick": true,
-            "cross": false,
-            "tick1": true,
-            "cross1": false
-          }
-        },
-        "row2": {
-          "type": "table",
-          "settings": {
-            "prodFeat": "Low FODMAP certified",
             "tick": true,
             "cross": false,
             "tick1": true,
@@ -264,7 +279,7 @@
         "para2"
       ],
       "settings": {
-        "sectionImage": "shopify:\/\/shop_images\/sample.png?v=1693831657",
+        "sectionImage": "shopify:\/\/shop_images\/sample.png",
         "head": "We give back to the gut. And to our community!",
         "cta_txt": "our practices",
         "cta_link": "sustainability"
@@ -326,6 +341,7 @@
   },
   "order": [
     "product",
+    "1706855810309f9194",
     "action-toggle",
     "ingredient",
     "nutrition-facts",
