@@ -4,20 +4,25 @@
       "type": "template-product",
       "settings": {
         "enable_savemore": true,
-        "save-more": "save <br> more",
+        "save-more": "save  more",
         "donateText": "For every order we donate $1 or equivalent to two meals!"
       }
     },
     "1706855810309f9194": {
       "type": "apps",
       "blocks": {
+        "vify_gift_cards_gift_card_block_6QUxCQ": {
+          "type": "shopify:\/\/apps\/vify-gift-cards\/blocks\/gift-card-block\/43d9e0cc-139a-4d15-b0b8-63f2863afb32",
+          "settings": {
+          }
+        },
         "subscriptions_app_block_YTECFX": {
           "type": "shopify:\/\/apps\/subscriptions\/blocks\/app-block\/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
           "settings": {
-            "color_text_title": "#6D7175",
-            "color_text_body": "#6D7175",
-            "dividers_color": "#8F8D8D",
-            "bacgkround_color": "#FFFFFF",
+            "color_text_title": "#6d7175",
+            "color_text_body": "#6d7175",
+            "dividers_color": "#8f8d8d",
+            "bacgkround_color": "#ffffff",
             "border_thickness": 1,
             "border_radius": 0,
             "supporting_text_title": "Purchase options",
@@ -27,6 +32,7 @@
         }
       },
       "block_order": [
+        "vify_gift_cards_gift_card_block_6QUxCQ",
         "subscriptions_app_block_YTECFX"
       ],
       "settings": {
