@@ -21,7 +21,7 @@
           </div>
         </div>
         {% assign recipe = blogs.recipe.articles %}
-        {% for article in recipe %}
+        {% for article in recipe limit:3 %}
           <div class="item">
             <div class="recipe-slides">
               <div class="rs-left">
