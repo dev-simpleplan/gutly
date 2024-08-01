@@ -367,6 +367,21 @@
       "settings": {
         "head": "Wait, there's more"
       }
+    },
+    "172251972864f49b4c": {
+      "type": "apps",
+      "blocks": {
+        "aiod_all_in_1_discount_volume_offer_x86VTB": {
+          "type": "shopify:\/\/apps\/aiod-all-in-1-discount\/blocks\/volume-offer\/9537caf0-36d5-4981-a648-8961a8e85652",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "aiod_all_in_1_discount_volume_offer_x86VTB"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -383,6 +398,7 @@
     "slidesParallax",
     "faq",
     "sample-section",
-    "related-products"
+    "related-products",
+    "172251972864f49b4c"
   ]
 }
