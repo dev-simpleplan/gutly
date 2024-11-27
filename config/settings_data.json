@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "sections": {
@@ -40,16 +40,16 @@
         ],
         "settings": {
           "menu": "main-menu",
-          "sampleImage": "shopify:\/\/shop_images\/Frame_17212779.png",
+          "sampleImage": "shopify://shop_images/Frame_17212779.png",
           "sampleTitle": "Egg white sample pack (25g)",
-          "sampleProduct": "https:\/\/gutly-ui.myshopify.com\/products\/egg-white-protein-powder?variant=46298263060758",
-          "sampleImage1": "shopify:\/\/shop_images\/Frame_17212779_1.png",
+          "sampleProduct": "https://gutly-ui.myshopify.com/products/egg-white-protein-powder?variant=46298263060758",
+          "sampleImage1": "shopify://shop_images/Frame_17212779_1.png",
           "sampleTitle1": "Hemp sample pack (25g)",
-          "sampleProduct1": "https:\/\/gutly-ui.myshopify.com\/products\/vegan-protein-powder?variant=46298269417750",
-          "sampleImage2": "shopify:\/\/shop_images\/Frame_17212779.png",
+          "sampleProduct1": "https://gutly-ui.myshopify.com/products/vegan-protein-powder?variant=46298269417750",
+          "sampleImage2": "shopify://shop_images/Frame_17212779.png",
           "sampleTitle2": "Egg white sample pack (25g)",
           "sampleProduct2": "#!",
-          "navLogo": "shopify:\/\/shop_images\/Gutly_logo_1.svg",
+          "navLogo": "shopify://shop_images/Gutly_logo_1.svg",
           "menu1": "mobile-header"
         }
       },
@@ -116,34 +116,30 @@
         "type": "loader",
         "settings": {
           "bg_color": "#F9F1E4",
-          "img": "shopify:\/\/shop_images\/Gutly_logo_1_3.svg"
+          "img": "shopify://shop_images/Gutly_logo_1_3.svg"
         }
       },
       "ajax-cart": {
         "type": "ajax-cart",
-        "settings": {
-        }
+        "settings": {}
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "6143736321357441667": {
-        "type": "shopify:\/\/apps\/tidio-live-chat-chatbots\/blocks\/app-embed\/1002274d-fb18-4939-98f6-5f05a8deeadc",
+        "type": "shopify://apps/tidio-live-chat-chatbots/blocks/app-embed/1002274d-fb18-4939-98f6-5f05a8deeadc",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "8776485610325655785": {
-        "type": "shopify:\/\/apps\/hiko-social-login\/blocks\/hiko-auth\/3832d7e1-5bcd-4b72-91da-236b57feef8f",
+        "type": "shopify://apps/hiko-social-login/blocks/hiko-auth/3832d7e1-5bcd-4b72-91da-236b57feef8f",
         "disabled": false,
         "settings": {
           "social_font": "enable"
         }
       },
       "1768834845299682660": {
-        "type": "shopify:\/\/apps\/subscriptions\/blocks\/app-embed-block\/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
+        "type": "shopify://apps/subscriptions/blocks/app-embed-block/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
         "disabled": false,
         "settings": {
           "color_text_title": "#6D7175",
@@ -157,23 +153,26 @@
         }
       },
       "17442089763355273418": {
-        "type": "shopify:\/\/apps\/vify-gift-cards\/blocks\/gift-card-issue\/43d9e0cc-139a-4d15-b0b8-63f2863afb32",
+        "type": "shopify://apps/vify-gift-cards/blocks/gift-card-issue/43d9e0cc-139a-4d15-b0b8-63f2863afb32",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "127709043890318779": {
-        "type": "shopify:\/\/apps\/aiod-all-in-1-discount\/blocks\/install-snippets\/9537caf0-36d5-4981-a648-8961a8e85652",
+        "type": "shopify://apps/aiod-all-in-1-discount/blocks/install-snippets/9537caf0-36d5-4981-a648-8961a8e85652",
         "disabled": false,
         "settings": {
           "aiod_v2_call": "",
           "aiod_dev_api_call": ""
         }
+      },
+      "6129977475812166837": {
+        "type": "shopify://apps/wishlistsuite/blocks/wishlist_embed/c2905ea4-a4c7-46db-b02a-fc294afa02e5",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
   "presets": {
-    "Default": {
-    }
+    "Default": {}
   }
 }
