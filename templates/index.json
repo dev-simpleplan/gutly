@@ -20,6 +20,50 @@
         "cta_link": "https://apps.shopify.com/wishlistsuite?search_id=d4764b06-a176-4b6c-adc7-f67ad729a80a&surface_detail=wishlistsuite&surface_inter_position=1&surface_intra_position=1&surface_type=search"
       }
     },
+    "1771863589739fddb7": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_943c5f3_nXkBFC": {
+          "type": "ai_gen_block_943c5f3",
+          "settings": {
+            "heading": "Collection",
+            "description": "Discover our handpicked selection",
+            "text_alignment": "center",
+            "product_1": "austin-power-glasses",
+            "product_2": "funk-shows",
+            "product_3": "",
+            "product_4": "mango-fizzy-dring",
+            "show_cta": true,
+            "cta_text": "Show all",
+            "cta_link": "shopify://collections",
+            "desktop_width_percent": 100,
+            "columns_desktop": 4,
+            "columns_mobile": "2",
+            "grid_gap": 20,
+            "section_padding": 40,
+            "background_color": "#ffffff",
+            "heading_color": "#000000",
+            "text_color": "#666666",
+            "card_background": "#ffffff",
+            "product_title_color": "#000000",
+            "price_color": "#000000",
+            "button_background": "#000000",
+            "button_hover_background": "#333333",
+            "button_text_color": "#ffffff",
+            "heading_size": 36,
+            "description_size": 16,
+            "button_font_size": 16,
+            "card_border_radius": 8,
+            "button_border_radius": 4
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_943c5f3_nXkBFC"
+      ],
+      "settings": {}
+    },
     "solution-section": {
       "type": "solution-section",
       "blocks": {
@@ -112,6 +156,10 @@
         "head": "See it, Love it, Just Wishlist.",
         "image": "shopify://shop_images/Fav_Icon_efc761c5-95c0-469d-a639-735b877e5c33.png"
       }
+    },
+    "17718634445391ed67": {
+      "type": "_blocks",
+      "settings": {}
     },
     "comparison-table": {
       "type": "comparison-table",
@@ -445,9 +493,11 @@
   },
   "order": [
     "banner-section",
+    "1771863589739fddb7",
     "solution-section",
     "ingredients",
     "no-if-no-but",
+    "17718634445391ed67",
     "comparison-table",
     "grab-a-pack",
     "gutly-mission",
