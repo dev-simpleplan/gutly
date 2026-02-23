@@ -40,13 +40,13 @@
         ],
         "settings": {
           "menu": "main-menu",
-          "sampleTitle": "Egg white sample pack (25g)",
-          "sampleProduct": "https://gutly-ui.myshopify.com/products/egg-white-protein-powder?variant=46298263060758",
-          "sampleTitle1": "Hemp sample pack (25g)",
-          "sampleProduct1": "https://gutly-ui.myshopify.com/products/vegan-protein-powder?variant=46298269417750",
-          "sampleTitle2": "Egg white sample pack (25g)",
-          "sampleProduct2": "#!",
-          "navLogo": "shopify://shop_images/Fav_Icon_efc761c5-95c0-469d-a639-735b877e5c33.png",
+          "sampleTitle": "",
+          "sampleProduct": "",
+          "sampleTitle1": "",
+          "sampleProduct1": "",
+          "sampleTitle2": "",
+          "sampleProduct2": "",
+          "navLogo": "shopify://shop_images/Full_Logo.png",
           "menu1": ""
         }
       },
