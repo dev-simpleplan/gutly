@@ -13,8 +13,8 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "text1": "FREE SHIPPING OVER $50.",
-          "text2": "FREE SHIPPING OVER $50.",
+          "text1": "",
+          "text2": "",
           "link": ""
         }
       },
