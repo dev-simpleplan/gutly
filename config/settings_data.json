@@ -112,8 +112,7 @@
       "loader": {
         "type": "loader",
         "settings": {
-          "bg_color": "#F9F1E4",
-          "img": "shopify://shop_images/Fav_Icon_efc761c5-95c0-469d-a639-735b877e5c33.png"
+          "bg_color": "#F9F1E4"
         }
       },
       "ajax-cart": {
