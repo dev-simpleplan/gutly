@@ -12,6 +12,7 @@
     "banner-section": {
       "type": "index_banner",
       "settings": {
+        "image": "shopify://shop_images/Frame_17212946.png",
         "heading": "Hello,",
         "subHead": "Welcome to our Demo Store",
         "body": "Go ahead and explore everything that you need for your store, from Product cards, Collections, Wishlist Page, Floating Icon etc.",
