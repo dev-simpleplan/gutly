@@ -11,52 +11,6 @@
   "sections": {
     "banner-section": {
       "type": "index_banner",
-      "blocks": {
-        "ticker1": {
-          "type": "banTicker",
-          "settings": {
-            "tickerText": "insane taste"
-          }
-        },
-        "ticker2": {
-          "type": "banTicker",
-          "settings": {
-            "tickerText": "Easy-to-digest"
-          }
-        },
-        "ticker3": {
-          "type": "banTicker",
-          "settings": {
-            "tickerText": "Low FODMAP certified"
-          }
-        },
-        "ticker4": {
-          "type": "banTicker",
-          "settings": {
-            "tickerText": "insane taste"
-          }
-        },
-        "ticker5": {
-          "type": "banTicker",
-          "settings": {
-            "tickerText": "All-organic"
-          }
-        },
-        "ticker6": {
-          "type": "banTicker",
-          "settings": {
-            "tickerText": "Donate a meal"
-          }
-        }
-      },
-      "block_order": [
-        "ticker1",
-        "ticker2",
-        "ticker3",
-        "ticker4",
-        "ticker5",
-        "ticker6"
-      ],
       "settings": {
         "heading": "Hello,",
         "subHead": "Welcome to our Demo Store",
@@ -153,79 +107,6 @@
     },
     "no-if-no-but": {
       "type": "no-if-no-but",
-      "blocks": {
-        "item1": {
-          "type": "leftGrid",
-          "settings": {
-            "head1": "EASY PROTEIN-RICH BREAKFAST",
-            "para1": "Easily meet protein goals with our simple solution, start a healthy diet with a high-protein meal."
-          }
-        },
-        "item2": {
-          "type": "leftGrid",
-          "settings": {
-            "head1": "WEIGHT MANAGEMENT",
-            "para1": "Satisfy your hunger with an excellent source of >19g of high-quality protein, ensuring lasting fullness."
-          }
-        },
-        "item3": {
-          "type": "leftGrid",
-          "settings": {
-            "head1": "SLOW-RELEASE PROTEIN",
-            "para1": "Maximise your muscle gain while you sleep, leaving behind any worries of bloating or uneasiness."
-          }
-        },
-        "item4": {
-          "type": "rightGrid",
-          "settings": {
-            "head2": "SIMPLE LOW FODMAP DIET",
-            "para2": "Following a strict diet can be tough, but we make it easy to incorporate into your meal plan."
-          }
-        },
-        "item5": {
-          "type": "rightGrid",
-          "settings": {
-            "head2": "BYE-BYE BLOATING",
-            "para2": "Begin managing your bloating problem with our third-party certified, bloating-free formula."
-          }
-        },
-        "item6": {
-          "type": "rightGrid",
-          "settings": {
-            "head2": "TRANSPARENT INGREDIENTS",
-            "para2": "No secret formula, no nasty additives, and no complicated ingredients. Gutly is a no brainer!"
-          }
-        },
-        "ticker1": {
-          "type": "ticker",
-          "settings": {
-            "tickerText": "Try Today"
-          }
-        },
-        "ticker2": {
-          "type": "ticker",
-          "settings": {
-            "tickerText": "Try Today"
-          }
-        },
-        "ticker4": {
-          "type": "ticker",
-          "settings": {
-            "tickerText": "Try Today"
-          }
-        }
-      },
-      "block_order": [
-        "item1",
-        "item2",
-        "item3",
-        "item4",
-        "item5",
-        "item6",
-        "ticker1",
-        "ticker2",
-        "ticker4"
-      ],
       "settings": {
         "head": "See it, Love it, Just Wishlist."
       }
