@@ -99,6 +99,7 @@
         "pbgrid3",
         "pbgrid4"
       ],
+      "disabled": true,
       "settings": {
         "problemHead": "Sick of protein powders causing bloating?",
         "problemPara": "Did you know that approximately 1 in 7 people around the world are affected by Irritable Bowel Syndrome (IBS)? - Monash University.",
@@ -142,6 +143,7 @@
         "ing2",
         "ing3"
       ],
+      "disabled": true,
       "settings": {
         "head": "Each scoop of Gutly contains",
         "subhead": "Our protein powder boasts natural sugars for a touch of sweetness, easy-to-digest protein for a happy tummy, and a clean formula with zero artificial additives!",
@@ -225,7 +227,7 @@
         "ticker4"
       ],
       "settings": {
-        "head": "No if, no but. Happy Gut."
+        "head": "See it, Love it, Just Wishlist."
       }
     },
     "comparison-table": {
