@@ -207,6 +207,7 @@
         "row8",
         "row9"
       ],
+      "disabled": true,
       "settings": {
         "head": "We're off the chart!",
         "subhead": "Gutly vs. others"
@@ -214,6 +215,7 @@
     },
     "grab-a-pack": {
       "type": "grab-a-pack",
+      "disabled": true,
       "settings": {
         "head": "grab a pack",
         "eggwhiteHead": "Egg white protein powder",
@@ -228,6 +230,7 @@
     },
     "gutly-mission": {
       "type": "gutly-mission",
+      "disabled": true,
       "settings": {
         "head": "Gutly's Mission:<br> A Healthier ‘N Happier You",
         "para": "Our mission is simple yet powerful – crafting clean health supplements for your gut's happiness. With natural ingredients and gut-focused formulas, Gutly aims to revolutionise your well-being.",
@@ -261,6 +264,7 @@
         "slide1",
         "slide2"
       ],
+      "disabled": true,
       "settings": {
         "head": "the reviews",
         "subhead": "hear what they're saying"
@@ -296,6 +300,7 @@
         "usp2",
         "usp3"
       ],
+      "disabled": true,
       "settings": {
         "head": "Subscribe for exclusive savings",
         "subhead": "Cancel anytime!"
@@ -347,6 +352,7 @@
         "video4",
         "video5"
       ],
+      "disabled": true,
       "settings": {
         "head": "a protein<br> so gooooood"
       }
@@ -371,6 +377,7 @@
         "para1",
         "para2"
       ],
+      "disabled": true,
       "settings": {
         "head": "We give back to the gut. And to our community!",
         "cta_txt": "our practices",
@@ -379,6 +386,7 @@
     },
     "sample-section": {
       "type": "sample-section",
+      "disabled": true,
       "settings": {
         "eggHead": "Egg-white <br>Protein Sample",
         "eggPara": "Our protein powder is not only delicious but also super friendly to your sensitive tummy. Say goodbye to bloating!",
@@ -431,6 +439,7 @@
         "tickImg6",
         "tickImg7"
       ],
+      "disabled": true,
       "settings": {}
     }
   },
