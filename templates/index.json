@@ -109,7 +109,8 @@
     "no-if-no-but": {
       "type": "no-if-no-but",
       "settings": {
-        "head": "See it, Love it, Just Wishlist."
+        "head": "See it, Love it, Just Wishlist.",
+        "image": "shopify://shop_images/Fav_Icon_efc761c5-95c0-469d-a639-735b877e5c33.png"
       }
     },
     "comparison-table": {
