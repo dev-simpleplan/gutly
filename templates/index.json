@@ -12,7 +12,6 @@
     "banner-section": {
       "type": "index_banner",
       "settings": {
-        "image": "shopify://shop_images/what-the-hell-is-this-make-it-related-to-wishlist.png",
         "heading": "Hello,",
         "subHead": "Welcome to our Demo Store",
         "body": "Go ahead and explore everything that you need for your store, from Product cards, Collections, Wishlist Page, Floating Icon etc.",
